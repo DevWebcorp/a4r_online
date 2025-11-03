@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile_stage
+    ports:
+      - "8095:80"
+      - "4435:433"
+    volumes:
+      - ./root_dir:/var/www/html
+      - ./conf/mattes.conf:/etc/apache2/sites-available/000-default.conf
+#      - ./certs/mattes.crt:/etc/ssl/certs/mattes.crt
+#      - ./certs/mattes.key:/etc/ssl/private/mattes.key
+    environment:
+      - CI_ENVIRONMENT=development

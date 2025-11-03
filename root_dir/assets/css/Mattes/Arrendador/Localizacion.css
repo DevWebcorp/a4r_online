@@ -1,0 +1,35 @@
+
+#searchResult {
+    list-style: none !important;
+    padding: 0px !important;
+    width: 250px !important;
+    position: absolute !important;
+    margin-top: 3px !important;
+    min-width: 100%;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+#searchResult:hover {
+    overflow-y: auto;
+    height: 465px;
+}
+
+#searchResult li {
+    background-color: var(--mattes) !important;
+    color: var(--blanco);
+    padding: 4px !important;
+    margin-bottom: 1px !important;
+}
+
+#searchResult li:nth-child(even) {
+    background-color: var(--blanco) !important;
+    color: var(--mattes) !important;
+}
+
+#searchResult li:hover {
+    cursor: pointer !important;
+}
+
+
+

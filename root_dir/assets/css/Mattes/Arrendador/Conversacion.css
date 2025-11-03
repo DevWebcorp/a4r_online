@@ -1,0 +1,18 @@
+.chat-box {
+    height: 350px;
+    overflow-y: scroll;
+    margin-top: 40px;
+}
+
+.enviado {
+    background-color: var(--mattes2);
+    border-radius: 20px;
+    border: none !important;
+    color: white;
+}
+
+.recibido {
+    background-color: lightgray;
+    border-radius: 20px;
+    border: none !important;
+}

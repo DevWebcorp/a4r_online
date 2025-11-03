@@ -1,0 +1,397 @@
+@media(min-width: 360px){
+    #map {
+        height: 500px;
+        border-radius: 10px;
+    }
+}
+
+/*Tamaños de desktop*/
+@media(min-width: 992px){
+    #map {
+        height: 480px;
+    }
+}
+
+@media(min-width: 1145px){
+    #map {
+        height:450px;
+        width: 550px;
+    }
+}
+@media(min-width: 1200px){
+    #map {
+        width: 600px;
+    }
+}
+
+@media(min-width: 1280px){
+    #map {
+        height:430px;
+        width: 640px;
+    }
+}
+@media(min-width: 1440px){
+    #map {
+        height:500px;
+        width: 720px;
+    }
+}
+@media(min-width: 1500px){
+    #map {
+        height:550px;
+        width: 800px;
+    }
+}
+
+@media(min-width: 1540px){
+    #map {
+        width: 820px;
+    }
+}
+
+@media(min-width: 1640px){
+    #map {
+        width: 900px;
+    }
+}
+
+#modal {
+    background-color: #fff;
+    color: #212529;
+    position: fixed;
+    top: -100vh;
+    left: 2%;
+    height: auto;
+    max-width: 500px;
+    transition: all 0.5s;
+    border: 1px solid #0087f6;
+    border-radius: 15px;
+}
+
+#modal p {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#mostrar-modal {
+    display: none;
+}
+
+#mostrar-modal+label {
+    background-color: #28a745;
+    border-color: #28a745;
+    display: table;
+    margin: auto;
+    color: #fff;
+    padding: .3em .5em;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+#mostrar-modal+label:hover {
+    background: #1c9a06;
+}
+
+#mostrar-modal:checked~#modal {
+    top: 85px;
+}
+
+#mostrar-modal:checked~#cerrar-modal+label {
+    display: block;
+}
+
+#cerrar-modal {
+    display: none;
+}
+
+#cerrar-modal+label {
+    position: absolute;
+    top: -65px;
+    right: 1em;
+    z-index: 100;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background: tomato;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    display: none;
+    transition: all 0.5s;
+}
+@media(min-width:430px){
+    #mostrar-modal:checked~#modal {
+        top: 94px;
+    }
+    #modal {
+        left: 1%;
+    }
+    #cerrar-modal+label {
+        top: -55px;
+        right: 1em;
+    }  
+}
+
+@media(min-width:474px){
+    #mostrar-modal:checked~#modal {
+        top: 94px;
+    }
+    #modal {
+        left: 4%;
+    }
+    #cerrar-modal+label {
+        right: 2em;
+    }  
+}
+@media(min-width:490px){    
+    #cerrar-modal+label {
+        right: 3em;
+    }  
+}
+
+@media(min-width:500px){
+    #modal {
+        left: 4%;
+    }
+    #cerrar-modal+label {
+        top: -50px;
+        right: 4em;
+    }  
+}
+@media(min-width:530px){
+    #modal {
+        left: 8%;
+    }
+    #cerrar-modal+label {
+        right: 6em;
+    }  
+}
+
+@media(min-width:575px){
+    #modal {
+        left: 11%;
+    }
+}
+
+@media(min-width:600px){
+    #modal {
+        left: 16%;
+    }
+}
+
+@media(min-width:640px){
+    #modal {
+        left: 20%;
+    }
+}
+
+@media(min-width:670px){
+    #cerrar-modal+label {
+        right: 8em;
+    } 
+}
+@media(min-width:700px){
+    #modal {
+        left: 16%;
+    }
+    #cerrar-modal+label {
+        right: 12em;
+    }  
+}
+@media(min-width:768px){
+    #cerrar-modal+label {
+        right: 15em;
+    }  
+}
+
+@media(min-width:800px){   
+    #modal {
+        left: 27%;
+    } 
+    #cerrar-modal+label {
+        right: 12em;
+    }  
+}
+
+@media(min-width:850px){    
+    #cerrar-modal+label {
+        right: 15em;
+    }  
+}
+
+@media(min-width:900px){    
+    #cerrar-modal+label {
+        right: 17em;
+    }  
+}
+
+@media(min-width:950px){    
+    #modal {
+        left: 50%;
+    }
+    #mostrar-modal:checked~#modal {
+        top: 119px;
+    }
+    #cerrar-modal+label {
+        top: -30px;
+        right: 5em;
+    }  
+}
+@media(min-width:992px){    
+    #cerrar-modal+label {
+        top: -67px;
+        right: calc(100% - 92%);        
+    }  
+    .mt-lg-50{
+        margin-top: 50px;
+    }
+}
+
+@media(min-width:1024px){
+    #cerrar-modal+label {
+        right: 6em;
+    }  
+}
+@media(min-width:1050px){
+    #cerrar-modal+label {
+        right: 7em;
+    }  
+}
+@media(min-width:1100px){
+    #cerrar-modal+label {
+        right: 8.5em;
+    }  
+}
+@media(min-width:1150px){
+    #cerrar-modal+label {
+        right: 10em;
+    }  
+}
+@media(min-width:1200px){
+    #cerrar-modal+label {
+        right: 12em;
+    }  
+}
+@media(min-width:1250px){
+    #cerrar-modal+label {
+        right: 13em;
+    }  
+}
+@media(min-width:1280px){
+    #cerrar-modal+label {
+        right: 14em;
+    }  
+}
+@media(min-width:1320px){
+    #cerrar-modal+label {
+        right: 17em;
+    }  
+}
+@media(min-width:1400px){
+    #cerrar-modal+label {
+        right: 18em;
+    }  
+}
+@media(min-width:1440px){
+    #cerrar-modal+label {
+        right: 19em;
+    }  
+}
+@media(min-width:1480px){
+    #cerrar-modal+label {
+        right: 23em;
+    }  
+}
+@media(min-width:1500px){
+    #cerrar-modal+label {
+        right: 25em;
+    }  
+}
+@media(min-width:1600px){
+    #cerrar-modal+label {
+        right: 27em;
+    }  
+}
+
+#cerrar-modal:checked~#modal {
+    top: -100vh;
+}
+
+#cerrar-modal:checked+label {
+    display: none;
+}
+
+
+@media(min-width: 360px){
+    #map {
+        height: 500px;
+        border-radius: 10px;
+    }
+}
+
+/*Tamaños de desktop*/
+@media(min-width: 992px){
+    #map {
+        height: 480px;
+    }
+}
+
+@media(min-width: 1145px){
+    #map {
+        height:450px;
+        width: 550px;
+    }
+}
+@media(min-width: 1200px){
+    #map {
+        width: 600px;
+    }
+}
+
+@media(min-width: 1280px){
+    #map {
+        height:430px;
+        width: 640px;
+    }
+}
+@media(min-width: 1440px){
+    #map {
+        height:500px;
+        width: 720px;
+    }
+}
+@media(min-width: 1500px){
+    #map {
+        height:550px;
+        width: 800px;
+    }
+}
+
+@media(min-width: 1540px){
+    #map {
+        width: 810px;
+    }
+}
+
+.boton-precio-bo {
+    padding: 9.5px 7px;
+    border: 1px solid green;
+    border-right: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.py-precio{
+    padding-top: .8rem !important;
+ }

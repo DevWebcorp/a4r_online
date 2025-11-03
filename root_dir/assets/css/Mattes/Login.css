@@ -1,0 +1,240 @@
+body{
+    font-family: "Gothic";
+    background: rgb(255,255,255);
+}
+
+.banner-mattes{
+    background-image: url('../../img/banner/login.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    height: 100vh;
+    position: relative; 
+}
+
+.login{
+    background-color: #fff;
+    border-radius: 17px;
+    filter: drop-shadow(4px 4px 3px #4e4c4c);
+    padding: 2.5rem 3rem;  
+    position: absolute; 
+    top: 10px;
+    right: -48px;
+    opacity: 0.8;
+}  
+
+@media (max-width: 992px) and (orientation: landscape) {
+    .login {       
+        top: 0px !important;
+        min-height: 77.6vh;
+        height: auto;
+        padding: 1.5rem 3rem;
+    } 
+    .banner-mattes{
+        height: 440px;
+    }
+} 
+
+@media (min-width:350px){
+    .login{
+        top: 170px;
+        right: -20px;
+    }   
+}
+
+@media (min-width:360px){
+    .login{
+        top: 48px;
+    }   
+}
+
+@media (min-width:370px){
+    .login{
+        top: 55px;
+        right: -14px;
+    }   
+}
+
+@media (min-width:400px){
+    .login{
+        right: 10px;
+        top: 93px;
+    }   
+}
+
+@media (min-width:450px){
+    .login{
+        right: 30px;
+    }   
+}
+
+@media (min-width:500px){
+    .login{
+        right: 55px;
+    }   
+}
+
+@media (min-width:600px){
+    .login{
+        right: 100px;
+    }   
+}
+
+@media (min-width:768px){
+    .login{
+        right: 150px;
+    }   
+}
+
+@media (min-width:900px){
+    .login{
+        top: 175px;
+        right: 165px;
+    }   
+}
+
+@media (min-width:1100px){
+    .login{
+        top: 104px;
+        right: 190px;
+    }   
+}
+
+.ingresa{
+    font-size: 2.5rem;
+    font-family: "Gothicb";
+    color: #009ef9;
+}
+
+.btn-entrar{
+    background-color: #009ef9;
+    color: #fff;
+    text-transform: none !important;
+    font-size: 1.3rem;
+    font-family: "Gothicb";
+    cursor: pointer;
+    border-radius: 10px;
+    filter: drop-shadow(4px 5px 3px gray);
+    transition: all .5s ease;
+    border: 2px solid transparent;
+}
+
+.btn-entrar:hover{
+    color: #fff;
+    background-color: #009ef9;
+    border: 2px solid #009ef9;
+}
+.contrasenia{
+    color: #000 !important;
+    font-family: "Gothicb";
+    transition: all .5s ease;
+}
+.contrasenia:hover{
+    color: #009ef9 !important;
+}
+
+.btn-cuenta{
+    font-size: 1.1rem;
+    font-family: "Gothicb";
+    text-transform: none !important;
+    border: 3px solid #009ef9;
+    border-radius: 10px;
+    transition: .5s all ease;    
+    cursor: pointer;
+    color: #000;
+}
+
+
+.btn-cuenta:hover{
+    background-color: #009ef9;   
+    border: 3px solid #009ef9;
+    color: #fff;
+}
+
+label{
+    font-size: 1.2rem;
+}
+/* .aviso{
+    font-size: .9rem;
+}
+ */
+
+/*Estilo al checkbox de aviso de privacidad del login*/
+/* input[type=checkbox] {
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	outline: #009ef9;
+	content: none;	
+}
+
+input[type=checkbox]:before {
+	font-family: "FontAwesome";
+    content: "\f00c";
+    font-size: 11px;
+    color: transparent !important;
+    background: #fef2e0;
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #009ef9;
+}
+
+input[type=checkbox]:checked:before {
+	color: #009ef9 !important;
+} */
+
+.check {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px !important;
+    appearance: none;
+    background-color: #bbb;
+    transition: all .3s;
+}
+   
+.check::before {
+    content: '';
+    position: absolute;
+    border: solid #fff;
+    display: block;
+    width: .5em;
+    height: 1em;
+    border-width: 0 .2em .2em 0;
+    z-index: 1;
+    opacity: 0;
+    right: calc(50% - .3em);
+    top: calc(50% - .6em);
+    transform: rotate(0deg);
+    transition: all .3s;
+    transform-origin: center center;
+}
+   
+.check:checked {
+    animation: a .3s ease-in forwards;
+    background-color: #0088F7;
+}
+   
+.check:checked::before {
+    opacity: 1;
+    transform: rotate(405deg);
+}
+   
+@keyframes a {
+    0% {
+     opacity: 1;
+     transform: scale(1) rotateY(0deg);
+   }
+   
+    50% {
+     opacity: 0;
+     transform: scale(.8) rotateY(180deg);
+    }
+   
+    100% {
+     opacity: 1;
+     transform: scale(1) rotateY(360deg);
+    }
+}

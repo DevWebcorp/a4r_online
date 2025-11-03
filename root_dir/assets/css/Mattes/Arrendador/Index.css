@@ -1,0 +1,217 @@
+/*Buscador */
+#busqueda-casas{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.input-buscar,
+.lupa-buscar {
+    background-color: transparent;
+    color: #0d0f10;
+    font-weight: lighter
+}
+
+.lupa-buscar {
+    border-top: 1px solid #0d0f10;
+    border-bottom: 1px solid #0d0f10;
+    border-left: 1px solid #0d0f10;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.input-buscar {
+    border-top: 1px solid #0d0f10;
+    border-bottom: 1px solid #0d0f10;
+    border-left: none;
+    border-right: 1px solid #0d0f10;
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+}
+
+.lupa-buscar:hover,
+.lupa-buscar:focus,
+.input-buscar:focus {
+    background-color: transparent !important;
+    color: #0d0f10;
+    border-color: none !important;
+    outline: none;
+}
+
+.form-control{
+    font-size: 18px !important;
+    border: 1px solid black !important;
+    padding: 1.375rem .75rem !important;
+    color: #000 !important;
+}
+
+.form-control:focus {
+    border: 1px solid #0d0f10 !important;
+    box-shadow: none !important;
+}
+
+.input-buscar::-webkit-input-placeholder {    
+    font-size: 18px;
+}
+
+.input-buscar:-ms-input-placeholder {
+    font-size: 18px;
+}
+
+.input-buscar::placeholder {
+    font-size: 18px;
+}
+
+
+/*Sellos*/
+.sello-mattes {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    right: 215px;
+    visibility: visible;
+}
+
+.verifica-propiedad {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    right: 190px;
+    visibility: visible;
+}
+
+.posiciona-propiedad {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    right: 170px;
+    color: var(--mattes10);
+    visibility: visible;
+}
+
+.sin-propiedadesiedad {
+    position: absolute;
+	bottom: 65px;
+	left:3px;
+    color: #F49917;
+	visibility: visible;
+}
+
+
+/*Informacion de las propiedades*/
+.info-casa{
+    font-size: 1.2rem !important;
+    font-family: "Gothic";
+    margin-left: 6px;
+  }
+  
+  .info-casa:nth-of-type(1){
+      font-family: "Gothicb";
+      line-height: 1;
+  }
+  
+  .info-casa:nth-of-type(2),
+  .info-casa:nth-of-type(3),
+  .info-casa:nth-of-type(4){
+    color: #0088F7;
+    font-family: "Gothicb";
+    line-height: 11px;
+  }
+  
+  span:nth-of-type(1),
+  span:nth-of-type(3){
+    color: black !important;
+    font-family: "Gothic";
+  }
+  
+  .info-casa span{
+      font-family: "Gothic";
+  }
+  
+  /*Imagenes de las propiedades en el card*/
+  .casas figure {
+      overflow: hidden;    
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+  
+  .casas #img-1 {
+      transition: .5s all;
+  }
+  
+  .casas #img-1:hover {
+      transform: scale(1.1);
+  }	
+  
+  /*Boton de editar propiedad*/
+  input, button, submit { 
+      border:none;
+      background-color: transparent;
+   } 
+
+.sin-propiedades{
+    color: var(--mattes);
+    opacity: 0.7;
+    font-family: "Gothicb";
+    text-decoration: underline;
+}
+@media(min-width:576px) {
+    .sin-propiedades {
+        text-decoration: none;
+    }
+    .sin-propiedades::after,
+    .sin-propiedades::before {
+        content: ' ';
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        background-color: currentcolor;
+        top:2.5rem;
+    }
+    .sin-propiedades::before {
+        left: 20px;
+    }
+    .sin-propiedades::after {
+        right: 20px;
+    }
+}
+@media(min-width:768px) {
+    .sin-propiedades::before {
+        left: 105px;
+    }
+    .sin-propiedades::after {
+        right: 105px;
+    }
+}
+@media(min-width:992px) {
+    .sin-propiedades::before {
+        left: 230px;
+    }
+    .sin-propiedades::after {
+        right: 230px;
+    }
+}
+@media(min-width:1200px) {
+    .sin-propiedades::before {
+        left: 320px;
+    }
+    .sin-propiedades::after {
+        right: 320px;
+    }
+}
+
+
+/* @media(min-width: 992px){
+    .footer{
+        position: fixed;
+        z-index: 9999;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+} */

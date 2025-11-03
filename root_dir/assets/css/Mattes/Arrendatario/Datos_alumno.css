@@ -1,0 +1,274 @@
+/*Estilos animados a los inputs*/
+
+.form-control,
+.dataTables_filter input {
+    border-radius: 0px !important;
+}
+
+.form__group {
+    margin: auto;
+    position: relative;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    background: none;
+    color: #000;
+    font-size: 18px;
+    padding: 8px 12px 8px 5px;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+.form__input:focus {
+    outline: none;
+    color: #000;
+    padding-bottom: 8px;
+}
+
+input {
+    caret-color: var(--mattes);
+}
+
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
+    position: absolute;
+    top: -23px;
+    left: 16px;
+    font-size: 18px;
+    color: #212529;
+    width: 95%;
+}
+
+.form__label {
+    position: absolute;
+    color: #212529;
+    font-size: 18px;
+    left: 24px;
+    top: 6px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input[type=text]:valid:not(:focus):not(:placeholder-shown),
+input[type=tel]:valid:not(:focus):not(:placeholder-shown),
+input[type=email]:valid:not(:focus):not(:placeholder-shown),
+input[type=number]:valid:not(:focus):not(:placeholder-shown),
+input[type=date]:valid:not(:focus):not(:placeholder-shown),
+select:valid:not(:focus):not(:placeholder-shown),
+textarea:valid:not(:focus):not(:placeholder-shown) {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    border: 1px solid #28a745;
+    padding-right: calc(1.5em + .75rem) !important;
+}
+
+input[type=text]:invalid:not(:focus):not(:placeholder-shown),
+input[type=tel]:invalid:not(:focus):not(:placeholder-shown),
+input[type=email]:invalid:not(:focus):not(:placeholder-shown),
+input[type=number]:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    border: 1px solid #dc3545;
+    padding-right: calc(1.5em + .75rem) !important;
+}
+
+input[type=text]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+input[type=tel]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+input[type=email]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+input[type=date]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
+    max-height: 200px;
+}
+
+.requirements {
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-family: "Gothici";
+}
+
+.datos-personales-alumno,
+.documentos-alumno,
+.notificaciones-alumno {
+    text-decoration: underline;
+    color: var(--mattes);
+}
+
+@media(min-width:576px) {
+    .datos-personales-alumno,
+    .documentos-alumno,
+    .notificaciones-alumno {
+        text-decoration: none;
+    }
+    .datos-personales-alumno::after,
+    .datos-personales-alumno::before,
+    .documentos-alumno::after,
+    .documentos-alumno::before,
+    .notificaciones-alumno::after,
+    .notificaciones-alumno::before {
+        content: ' ';
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background-color: currentcolor;
+        top: 0.6em;
+    }
+    .datos-personales-alumno::before {
+        left: -5px;
+    }
+    .datos-personales-alumno::after {
+        right: -5px;
+    }
+    .documentos-alumno::before {
+        left: 42px;
+    }
+    .documentos-alumno::after {
+        right: 42px;
+    }
+    .notificaciones-alumno::before {
+        left: 40px;
+    }
+    .notificaciones-alumno::after {
+        right: 40px;
+    }
+}
+
+@media(min-width:768px) {
+    .datos-personales-alumno::before {
+        left: 90px;
+    }
+    .datos-personales-alumno::after {
+        right: 90px;
+    }
+    .documentos-alumno::before {
+        left: 132px;
+    }
+    .documentos-alumno::after {
+        right: 132px;
+    }
+    .notificaciones-alumno::before {
+        left: 134px;
+    }
+    .notificaciones-alumno::after {
+        right: 134px;
+    }
+}
+
+@media(min-width:992px) {
+    .datos-personales-alumno::before {
+        left: 210px;
+    }
+    .datos-personales-alumno::after {
+        right: 210px;
+    }
+    .documentos-alumno::before {
+        left: 252px;
+    }
+    .documentos-alumno::after {
+        right: 252px;
+    }
+    .notificaciones-alumno::before {
+        left: 250px;
+    }
+    .notificaciones-alumno::after {
+        right: 250px;
+    }
+    .height-cuentanos{
+        height: 546px;
+    }
+    .height-notificaciones{
+        height: 490px;
+    }
+}
+
+@media(min-width:1200px) {
+    .datos-personales-alumno::before {
+        left: 300px;
+    }
+    .datos-personales-alumno::after {
+        right: 300px;
+    }
+    .documentos-alumno::before {
+        left: 342px;
+    }
+    .documentos-alumno::after {
+        right: 342px;
+    }
+    .notificaciones-alumno::before {
+        left: 340px;
+    }
+    .notificaciones-alumno::after {
+        right: 340px;
+    }
+}
+
+/* .form-border {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1), 3px 5px 20px rgba(0, 0, 0, .2);
+} */
+
+.tab {
+    width: 100%;
+    background-color: #fff;
+    border: transparent;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    transition: 0.3s;
+    
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.datos-alumno .tablinks {
+    background-color: white !important;
+    color: black;
+    border: 1px solid #ddd;
+}
+.datos-alumno .tablinks:nth-child(6){
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.datos-alumno .tablinks.active,
+.datos-alumno .tablinks:hover {
+    background-color: #0088F7 !important;
+    color: white;
+    border-radius: 8px !important;
+}
+
+@media(min-width:992px) {
+    .datos-alumno .tablinks {
+        background-color: #ddd !important;
+        color: black;
+        border-right: 1px solid #aaa;
+    }
+    .datos-alumno .tablinks:nth-child(6){
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+    .datos-alumno .tablinks:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }  
+    .tab {
+        border: transparent;
+    }
+}

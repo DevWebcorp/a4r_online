@@ -1,0 +1,107 @@
+/*.bordeado{
+    border-radius: 7px 7px 7px 7px;
+}*/
+/*Botones*/
+.primario,
+.primrio:active{
+    color: #fff !important;
+    background-color: #0866C6 !important;
+    border-color: #0866C6 !important;  
+    -webkit-transition: .5s all ease;  
+    -o-transition: .5s all ease;  
+    transition: .5s all ease;   
+}
+.primario:hover{
+    opacity: .9;
+}
+
+.envio-exito,
+.envio-exito:active{
+    color: #fff !important;
+    background-color: #23BF08 !important;
+    border-color: #23BF08 !important;  
+    -webkit-transition: .5s all ease;  
+    -o-transition: .5s all ease;  
+    transition: .5s all ease;   
+}
+.envio-exito:hover{
+    opacity: .9;
+}
+
+.alerta,
+.alerta:active{
+    color: #fff !important;
+    background-color: #F49917 !important;
+    border-color: #F49917 !important;  
+    -webkit-transition: .5s all ease;  
+    -o-transition: .5s all ease;  
+    transition: .5s all ease;  
+}
+.alerta:hover{
+    opacity: .9;
+}
+
+.peligro-irreversible,
+.peligro-irreversible:active{
+    color: #fff !important;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;     
+}
+.peligro-irreversible:hover{
+    opacity: .9;
+}
+
+.secundario,
+.secundario:active{
+    color: #fff !important;
+    background-color: #1CAF9A !important;
+    border-color: #1CAF9A !important;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;    
+}
+.secundario:hover{
+    opacity: .9;
+}
+
+.terciario,
+.terciario:active{
+    color: #fff !important;
+    background-color: #6610f2 !important;
+    border-color: #6610f2 !important;
+    -webkit-transition: .5s all ease;
+    -o-transition: .5s all ease;
+    transition: .5s all ease;   
+}
+.terciario:hover{
+    opacity: .9;
+}
+
+.cuaternario,
+.cuaternario:active{
+    color: #fff !important;
+    background-color: #6f42c1 !important;
+    border-color: #6f42c1 !important; 
+    -webkit-transition: .5s all ease; 
+    -o-transition: .5s all ease; 
+    transition: .5s all ease;    
+}
+.cuaternario:hover{
+    opacity: .9;
+}
+
+.quintagenario,
+.quintagenario:active{
+    color: #fff !important;
+    background-color: #e83e8c !important;
+    border-color: #e83e8c !important;    
+    -webkit-transition: .5s all ease;    
+    -o-transition: .5s all ease;    
+    transition: .5s all ease; 
+}
+.quintagenario:hover{
+    opacity: .9;
+}

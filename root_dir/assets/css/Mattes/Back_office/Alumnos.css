@@ -1,0 +1,157 @@
+.tabla-alumnos{
+    display: block;
+    overflow-x: auto !important;
+}
+
+@media(min-width:2410px) {
+    .tabla-alumnos {
+        display: inline-table;
+        overflow-x: hidden !important;
+    }
+}
+
+   .alumnos {
+    color: var(--mattes);
+    text-decoration: underline;
+    position: relative;
+    text-align: center;
+}
+
+
+@media(min-width: 576px) {
+    .alumnos {
+        text-decoration: none;
+    }
+
+    .alumnos::after,
+    .alumnos::before {
+        content: ' ';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: currentcolor;
+        top: 0.6em;
+    }
+
+    .alumnos::after,
+    .alumnos::before {
+        width: 100px;
+    }
+
+    .alumnos::before {
+        left: 95px;
+    }
+
+    .alumnos::after {
+        right: 95px;
+    }
+}
+
+@media(min-width: 768px) {
+    .alumnos::before {
+        left: 180px;
+    }
+
+    .alumnos::after {
+        right: 180px;
+    }
+}
+
+@media(min-width: 992px) {
+    .alumnos::before {
+        left: 300px;
+    }
+
+    .alumnos::after {
+        right: 300px;
+    }
+    .height-alumnos{
+        height: 845px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .alumnos::before {
+        left: 395px;
+    }
+
+    .alumnos::after {
+        right: 395px;
+    }
+}
+
+/* ARCHIVOS */ 
+
+@media(min-width:2410px) {
+    .tabla-alumnos {
+        display: inline-table;
+        overflow-x: hidden !important;
+    }
+}
+    .archivos {
+    color: var(--mattes);
+    text-decoration: underline;
+    position: relative;
+    text-align: center;
+}
+
+@media(min-width: 576px) {
+    .archivos {
+        text-decoration: none;
+    }
+
+    .archivos::after,
+    .archivos::before {
+        content: ' ';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background-color: currentcolor;
+        top: 0.6em;
+    }
+
+    .archivos::after,
+    .archivos::before {
+        width: 100px;
+    }
+
+    .archivos::before {
+        left: 376px;
+    }
+
+    .archivos::after {
+        right: 376px;
+    }
+}
+
+@media(min-width: 768px) {
+    .archivos::before {
+        left: 124px;
+    }
+
+    .archivos::after {
+        right: 124px;
+    }
+}
+
+@media(min-width: 992px) {
+    .archivos::before {
+        left: 244px;
+    }
+
+    .archivos::after {
+        right: 244px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .archivos::before {
+        left: 334px;
+    }
+
+    .archivos::after {
+        right: 334px;
+    }
+}
+
+

@@ -1,0 +1,323 @@
+.logo {
+    width: 215px;
+}
+
+.nav-item {
+    font-size: 1.2rem !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0, 0, 0) !important;
+}
+
+.dropdown-menu {
+    top: 40px !important;
+    left: auto !important;
+    right: 0px;
+    background-color: #b7e9f3 !important;
+    color: white !important;
+    width: 280px;
+}
+
+.dropdown-item {
+    border-bottom: 1px solid #fff !important;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: #0088f7 !important;
+    color: white !important;
+}
+
+.dropdown-item:focus>img,
+.dropdown-item:hover>img {
+    filter: invert(1) !important;
+}
+
+.notificacion {
+    background-color: red !important;
+    color: #fff !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 114px !important;
+    border-radius: 10px !important;
+    padding: 0 7px !important;
+    font-family: 'Gothicb' !important;
+    font-size: 14px !important;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: "\f00d";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2132f9;
+}
+
+input:checked+.slider {
+    background-color: #006425;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #006425;
+}
+
+input:checked+.slider:before {
+    content: "\f00c";
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media (min-width:350px) {
+    .notificacion {
+        right: 126px !important;
+    }
+}
+
+@media (min-width:380px) {
+    .notificacion {
+        right: 140px !important;
+    }
+}
+
+@media (min-width:400px) {
+    .notificacion {
+        right: 155px !important;
+    }
+}
+
+@media (min-width:425px) {
+    .notificacion {
+        right: 165px !important;
+    }
+}
+
+@media (min-width:450px) {
+    .notificacion {
+        right: 175px !important;
+    }
+}
+
+@media (min-width:470px) {
+    .notificacion {
+        right: 190px !important;
+    }
+}
+
+@media (min-width:500px) {
+    .notificacion {
+        right: 205px !important;
+    }
+}
+
+@media (min-width:530px) {
+    .notificacion {
+        right: 220px !important;
+    }
+}
+
+@media (min-width:560px) {
+    .notificacion {
+        right: 235px !important;
+    }
+}
+
+@media (min-width:768px) {
+    .notificacion {
+        right: 323px !important;
+    }
+}
+
+@media (min-width:992px) {
+    .notificacion {
+        right: -9px !important;
+    }
+    .mg-t-80{
+        margin-top: 120px !important;
+    }
+}
+
+.fa-heart {
+    color: var(--mattes) !important;
+}
+
+.boton-menu:before {
+    content: '\f142 ';
+    font-family: 'FontAwesome';
+    color: #0088F7;
+    font-size: 3rem;
+}
+
+.icono-cerrar:before {
+    content: '\f00d';
+    position: absolute;
+    font-size: 3rem;
+    top: 19px;
+    right: 23px;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent !important;
+}
+
+
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+}
+
+ .navbar-light .navbar-nav .nav-link {   
+    /*text-align: center;*/
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--mattes);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: rgba(0,0,0,1) !important;
+}
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+    color: white !important;
+}
+
+@media(min-width:992px){
+    .navbar-light .navbar-nav .nav-link {   
+        border-bottom: 2px solid transparent;
+        text-transform: none;
+        background-color: transparent !important;
+    }
+    .navbar-light:hover .navbar-nav:hover .nav-link:hover{
+        color: var(--mattes) !important;
+        border-bottom: 2px solid var(--mattes);
+    }
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--blanco);
+  background-color: var(--mattes);
+}
+
+.height-reportes{
+    height: 404px;
+}
+
+@media(min-width:576px){
+    .height-reportes{
+        height: 450px;
+    }
+}
+
+
+@media(min-width:992px){
+    .navbar-light .navbar-nav .nav-link {
+        background-color: transparent;
+        border-radius: none;
+        color: var(--mattes2);
+    }
+    .height-reportes{
+        height: 455px;
+    }
+    .height-inicio{
+        height: auto;
+    }
+    .height-propietarios{
+        height:auto;
+    }
+    .height-propiedades{
+        height: 750px;
+    }
+    .altura-alumnos{
+        height: 1050px;
+    }
+}
+
+@media(min-width:1200px){
+    .height-reportes{
+        height: 560px;
+    }
+}
+
+.nav-link:focus > img, .nav-link:hover > img {
+    filter: invert(1) !important;
+}
+
+.backoffice .tablinks {
+    background-color: white !important;
+    color: var(--mattes);
+    border: 1px solid #0088F7;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.tab {
+    border: transparent;
+    background-color: transparent !important;
+}
+
+@media(min-width:768px) {
+    .tab {
+        border-bottom: 1px solid var(--mattes);
+    }
+    .backoffice .tablinks {
+        background-color: white !important;
+        color: var(--mattes);
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+}
+
+.backoffice .tabcontent {
+    border: none;
+}
+
+.backoffice .tablinks.active,
+.backoffice .tablinks:hover {
+    background-color: #0088F7 !important;
+    color: white;
+}

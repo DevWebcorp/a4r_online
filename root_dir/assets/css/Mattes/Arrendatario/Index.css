@@ -1,0 +1,381 @@
+@media(min-width: 360px){
+    #map {
+        height: 500px;
+        border-radius: 10px;
+    }
+}
+
+/*Tamaños de desktop*/
+@media(min-width: 992px){
+    #map {
+        height: 480px;
+    }
+}
+
+@media(min-width: 1145px){
+    #map {
+        height:450px;
+        width: 550px;
+    }
+}
+@media(min-width: 1200px){
+    #map {
+        width: 600px;
+    }
+}
+
+@media(min-width: 1280px){
+    #map {
+        height:590px;
+        width: 640px;
+    }
+}
+@media(min-width: 1440px){
+    #map {
+       /*  height:500px; */
+        width: 720px;
+    }
+}
+@media(min-width: 1500px){
+    #map {
+        /* height:550px; */
+        width: 800px;
+    }
+}
+
+@media(min-width: 1540px){
+    #map {
+        width: 810px;
+    }
+}
+
+.boton-filtro {
+    position: fixed !important;
+    z-index: 10;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.sello-mattes {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    right: 215px;
+    visibility: visible;
+}
+
+.verifica-propiedad {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    right: 190px;
+    visibility: visible;
+}
+
+.posiciona-propiedad {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: 0px;
+    right: 170px;
+    visibility: visible;
+}
+
+.detalle-propiedad {
+    position: absolute;
+    bottom: 65px;
+    left: 3px;
+    color: #F49917;
+    visibility: visible;
+}
+
+
+/*Informacion de las propiedades*/
+
+.info-casa {
+    font-size: 1.2rem !important;
+    font-family: "Gothic";
+    margin-left: 46px;
+    margin-bottom: 10px !important;
+}
+
+.info-casa:nth-of-type(1) {
+    font-family: "Gothicb";
+    line-height: 11px;
+}
+
+.info-casa:nth-of-type(2),
+.info-casa:nth-of-type(3),
+.info-casa:nth-of-type(4) {
+    color: #0088F7;
+    font-family: "Gothicb";
+    line-height: 11px;
+}
+
+span:nth-of-type(1),
+span:nth-of-type(3) {
+    color: black !important;
+    font-family: "Gothicb";
+}
+
+.info-casa span {
+    font-family: "Gothic";
+}
+
+
+/*Imagenes de las propiedades en el card*/
+
+.casas figure {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.casas #img-1 {
+    transition: .5s all;
+}
+
+.casas #img-1:hover {
+    transform: scale(1.1);
+}
+
+
+/*Boton de editar propiedad*/
+
+input,
+button,
+submit {
+    border: none;
+    background-color: transparent;
+}
+
+.grid {
+    column-count: 4;
+    column-gap: 16px;
+}
+
+.grid-item {
+    width: 250px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 1px #000;
+    transition: all .5s ease;
+}
+
+/* .grid-item:hover {
+    box-shadow: 0px 0px 4px 1px var(--mattes);
+    transform: scale(1.12);
+    z-index: 100;
+} */
+
+
+/*colapse*/
+
+.wrapper {
+    width: 70%;
+}
+
+@media(max-width:992px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+
+.panel-heading {
+    padding: 0;
+    border: 0;
+}
+
+.panel-title>a,
+.panel-title>a:active {
+    display: block;
+    padding: 15px;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    text-decoration: none;
+}
+
+.panel-heading a:before {
+    font-family: 'FontAwesome';
+    content: "\f063";
+    float: right;
+    transition: all 0.5s;
+}
+
+.panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.btn-mattes {
+    background-color: var(--mattes);
+    color: var(--blanco);
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.gm-style .gm-style-iw-c {
+    max-width: 475px !important;
+}
+
+@media(min-width: 992px) {
+    .position-lg-fixed {
+        position: fixed;
+    }
+}
+
+.boton-precio {
+    padding: 10px 7px;
+    border: 1px solid green;
+    border-right: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#max,
+#min {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+
+.propiedades-busqueda {
+    overflow-y: auto !important;
+    height: 590px !important;
+}
+
+.duda-arrendatario::before {
+    content: ' ';
+    position: absolute;
+    width: 2px;
+    height: 18px;
+    background-color: var(--mattes);
+    top: 2rem;
+}
+
+.duda-arrendatario::before {
+    left: 54px;
+}
+
+.duda-arrendatario::after {
+    content: ' ';
+    position: absolute;
+    width: 17px;
+    height: 2px;
+    background-color: var(--mattes);
+    top: 46px;
+}
+
+.duda-arrendatario::after {
+    left: 54px;
+}
+
+.filtro-icono {
+    transform: rotate(90deg);
+}
+
+@media(min-width:992px){
+    .mt-lg-120{
+        margin-top: 165px !important;
+    }
+    .mt-lg-prop{
+        margin-top: 5.1rem;
+    }
+}
+
+@media(min-width:1487px){
+    .mt-lg-prop{
+        margin-top: 4.1rem;
+    }
+}
+  
+  /* Animación */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animarsuperior {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* Botón cerrar */
+  .close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.bg-filter{
+    background-color: rgb(204,204,204);
+}
+
+.bg-filtros-mattes{
+    background: rgb(204,204,204);
+        background: linear-gradient(180deg, rgba(204,204,204,1) 0%, rgba(204,204,204,1) 20%, rgba(255,255,255,1) 100%);
+}
+
+.fixed-top {
+    z-index: 9999;
+}
+
+.filtros-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 400;
+}
+
+.resultados-busqueda{
+    color: var(--mattes);
+    text-align: center;
+    font-family: "Gothicb";
+    margin-top: 3rem;
+}
+
+.autoComplete_wrapper > ul {
+    left: 0 !important;
+}
+
+.autoComplete_wrapper > ul > li {
+    height: 55px !important; 
+    overflow-x: auto !important; 
+}
+
+.carousel-inner>.carousel-item>.w-new{
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+@media(min-width: 992px) {
+    .autoComplete_wrapper > ul > li {
+        height: 60px !important; 
+    }
+}
+
+@media(min-width: 992px){
+    .grid{
+        height: 440px !important;
+    }
+} 
+
+.autoComplete_wrapper > ul > li {
+    height: 75px !important;
+}

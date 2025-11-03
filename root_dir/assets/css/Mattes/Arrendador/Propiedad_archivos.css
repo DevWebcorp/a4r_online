@@ -1,0 +1,238 @@
+.detalle-prop{
+    color: var(--mattes);
+    font-family: "Gothicb";
+    text-decoration: underline;
+}
+
+@media(min-width:576px) {
+    .detalle-prop{
+        text-decoration: none;
+    }
+    .detalle-prop::after,
+    .detalle-prop::before {
+        content: ' ';
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        background-color: currentcolor;
+        top:1.5rem;
+    }
+
+ 
+    .detalle-prop::before {
+        left: 2px;
+    }
+    .detalle-prop::after {
+        right: 2px;
+    }
+    
+}
+
+@media(min-width:768px) {
+    .detalle-prop::after,
+    .detalle-prop::before {
+        width: 120px;
+    }
+    .detalle-prop::before {
+        left: 50px;
+    }
+    .detalle-prop::after {
+        right: 50px;
+    }
+  
+}
+
+@media(min-width:992px) {
+    .detalle-prop::before {
+        left: 90px;
+    }
+    .detalle-prop::after {
+        right: 90px;
+    }
+
+}
+
+@media(min-width:1200px) {
+    .detalle-prop::before {
+        left: 165px;
+    }
+    .detalle-prop::after {
+        right: 165px;
+    }
+
+}
+
+.badge {
+    font-family: "Gothicb";
+}
+
+.stepper {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #025272;
+	display: inline-flex;
+	flex-direction: column;
+	position: relative;
+	list-style: none;
+	overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+@media(min-width:576px){
+    .stepper {
+        flex-direction: row;
+        background-color: #025272;
+    } 
+}
+.stepper__wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+.stepper__item:first-child .stepper__link {
+	padding-left: 5px;    
+}
+
+.stepper__item:last-child .stepper__link {
+	padding-right: 5px;
+}
+
+.stepper__item .badge {
+    color: white;
+}
+
+.stepper__link {
+	background: #ccc;
+	color: black;
+	display: flex;
+    justify-content: center;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	position: relative;
+    border-right: 1px solid #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;    
+}
+
+
+
+@media(min-width:576px){
+    .stepper__link {
+        padding: 2px 10px 2px 10px;        
+	    flex-direction: column;
+    }
+}
+ .stepper__link::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 42%;
+    margin-top: -27px;
+    left: 100%;
+    width: 23px;
+    display: block;
+    width: 20px;
+    height: 65px;
+    border-color: #025272;
+    border-radius: 0% 80% 80% 0% ;
+    z-index: 2;
+} 
+
+/* .stepper__link::before {
+	content: " ";
+	display: block;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-bottom: 50px solid transparent;
+	border-left: 30px solid white;
+	position: absolute;
+	top: 50%;
+	margin-top: -50px;
+	margin-left: 1px;
+	left: 100%;
+	z-index: 1;
+}  */
+
+/* .stepper__icon {
+	margin-bottom: 10px;
+} */
+
+/* .stepper__link:hover {
+	background-color: white;
+	color: #000;
+} */
+
+/* .stepper__link:hover::after {
+	border-left-color: white;
+} */
+
+.stepper__link--active, .stepper__link--active:hover {
+	background-color: #025272;
+	color: #fff;
+}
+
+/* .stepper__link--active::after, .stepper__link--active:hover::after {
+	border-left-color: #025272;
+} */
+
+/* .stepper__link--done {
+	background-color: #ccc;
+	color: #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+
+/* .stepper__link--done::after {
+	border-left-color: white;
+} */
+
+.stepper__link--disabled, .stepper__link--disabled:hover {
+	background-color: #ccc;
+	color: #333;
+}
+
+.stepper__link--disabled::after, .stepper__link--disabled:hover::after {
+	border-left-color: #ccc;
+}  
+
+.tab{
+    border: none;
+    background-color: transparent;
+    
+}
+
+.tab button{
+    padding: 6px 16px;
+}
+
+.tablinks.faltante{
+    background-color: var(--gris) !important;
+    color: white;
+    border-radius: 8px !important;
+    border: 1px solid black;
+}
+
+.tablinks.visited{
+    background-color: var(--verde) !important;
+    color: white;
+    border-radius: 8px !important;
+    border: 1px solid black;
+}
+
+.tablinks.active {
+    background-color: #0088F7 !important;
+    color: white;
+    border-radius: 8px !important;
+    border: 1px solid black;
+}
+
+@media(min-width: 768px){
+    .tab button{
+        padding: 12px 16px;
+    }
+}

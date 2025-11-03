@@ -1,0 +1,104 @@
+.principal {
+    background-image: url("./../../../../assets/img/banner/sofa%20gris.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+#agente {
+    height: 50px;
+    width: 50px;
+}
+
+.card-comienzo {
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 0.9;
+    padding-bottom: 5px;
+    box-shadow: 5px 5px 5px black;
+    width: 302px;
+}
+
+#primera-vez{
+    font-size:10px !important;
+}
+
+#titulo {
+    font-family: "Gothicb";
+    color: #fff;
+    text-align: center;
+}
+
+.btn-mattes{
+    padding: 0.5rem 0.75rem;
+    font-size: 15px;
+    border-radius: 10px !important;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    font-family: "Gothic";
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-mattes:hover {
+    background-color: #0088f7;
+    color:white;
+    border: 2px solid #0088f7;
+    font-family: "Gothic";
+}
+
+.subtitulo {
+    font-family: "Gothicb";
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+}
+
+.mt-primeravez{
+    margin-top: 40px !important;
+}
+.mb-primeravez{
+    margin-bottom: 185px;
+}
+
+@media(min-width: 576px){
+    .primvez{
+        height: auto;
+        width: auto;
+    }
+    .card-comienzo {
+        width: auto;
+    }
+    #agente {
+        width: 50%;
+        height: auto;
+    }
+    .mt-primeravez{
+        margin-top: 140px !important;
+    }
+    .mb-primeravez{
+        margin-bottom: 105px;
+    }
+    #primera-vez{
+        font-size:13px !important;
+    }
+}
+
+@media(min-width:768px){
+    .mt-primeravez{
+        margin-top: 100px !important;
+    }
+}
+
+@media(min-width:992px){
+    .mt-primeravez{
+        margin-top: 130px !important;
+    }
+}
+
+@media(min-width:1200px){
+    .mt-primeravez{
+        margin-top: 160px !important;
+    }
+}

@@ -1,0 +1,680 @@
+#btnRuser i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 32px;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.navicon-right i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 30px;
+    position: relative;
+}
+
+#btnLeftMenu i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 35px;
+    margin-top: 0;
+    margin-left: 15px;
+}
+
+#addagent {
+    font-size: 16px;
+    background-color: none !important;
+    border: none;
+    color: black;
+    padding: 0x;
+    cursor: pointer;
+}
+
+.navicon-left {
+    background-color: black !important;
+    text-align: left;
+    justify-content: left;
+    z-index: 100;
+    position: static;
+    box-sizing: inherit;
+}
+
+.navicon-right {
+    background-color: black !important;
+    align-items: flex-end;
+    justify-content: right;
+    z-index: 100;
+    position: static;
+}
+
+.navicon-middle {
+    background-color: black !important;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 100;
+    position: static;
+}
+
+.logo-mattes {
+    max-width: 85px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    justify-content: center;
+}
+
+.tab {
+    width: 100%;
+    background-color: #fff;
+    border: transparent;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 30px;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: "\f00d";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2132f9;
+}
+
+input:checked+.slider {
+    background-color: #006425;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #006425;
+}
+
+input:checked+.slider:before {
+    content: "\f00c";
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/*Estilos al input de subir archivo*/
+
+.file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 650px;
+    max-width: 100%;
+    padding: 25px;
+    border: 1px dashed rgba(33, 140, 230, 10);
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.choose-file-button {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(33, 140, 230, 0.6);
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.file-message {
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.foto-agente{
+    width:80px; 
+    height: 80px;
+    border-radius: 40px;
+    border: 3px solid var(--mattes);
+}
+
+.datos-empresa button:disabled {
+    background-color: green !important;
+    color: white !important;
+    border: 1px solid white;
+}
+
+.datos-empresa .tablinks {
+    background-color: white !important;
+    color: var(--mattes);
+    border: 1px solid #ddd;
+   /*  border-radius: 8px; */
+   /*  border-top-left-radius: 8px;
+    border-top-right-radius: 8px; */
+}
+
+.d-empresa .tab {
+    border: transparent;
+}
+
+.datos-empresa .tablinks:nth-child(5){
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.mb-340{
+    margin-bottom: 340px;
+}
+
+@media(min-width:768px) {
+    
+    .datos-empresa .tablinks {
+        background-color: #ddd !important;
+        color: black;
+        border-right: 1px solid #aaa;
+    }
+
+    .datos-empresa .tablinks:nth-child(5){
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .datos-empresa .tablinks:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }    
+    .tab button {
+        padding: 0;
+    }
+
+}
+
+@media(min-width:1024px) {
+    /* .d-empresa .tab {
+        border-bottom: 1px solid #ddd;
+    } */
+    .datos-empresa .tablinks {
+        background-color: #ddd !important;
+        color: black;
+        border-right: 1px solid #aaa;
+        /* border-bottom: 1px solid transparent;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px; */
+    }
+    .datos-empresa .tablinks:nth-child(5){
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .datos-empresa .tablinks:first-child{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }    
+    .tab button {
+        padding: 10px 30px;
+    }
+}
+
+.d-empresa .tabcontent {
+    border: none;
+}
+
+.datos-empresa .tablinks.active,
+.datos-empresa .tablinks:hover {
+    background-color: #0088F7 !important;
+    color: white;
+    border-radius: 8px !important;
+}
+
+.datos-agentes {
+    overflow-x: auto !important;
+    display: block;
+    background-color: white;
+}
+
+@media (min-width:992px) {
+    .datos-agentes {
+        overflow-x: hidden !important;
+        display: inline-table !important;
+    }
+}
+
+.mb-430 {
+    margin-bottom: 430px;
+}
+
+.mb-470{
+    margin-bottom: 470px;
+}
+
+.mb-500{
+    margin-bottom: 500px;
+}
+
+.mb-580{
+    margin-bottom: 580px;
+}
+.mb-xl-270 {
+    margin-bottom: 370px;
+}
+.mb-xl-235 {
+    margin-bottom: 235px;
+}
+
+@media (min-width:768px) {
+    .mb-xl-235 {
+        margin-bottom: 120px;
+    }
+}
+
+
+.datos-personales-empresa,
+.datos-bancarios-empresa,
+.datos-fiscales-empresa,
+.notificaciones-empresa,
+.agentes-empresa,
+.perfil-agente-empresa {
+    color: var(--mattes);
+    font-family: "Gothicb";
+    text-decoration: underline;
+}
+
+@media(min-width:576px) {
+    .datos-personales-empresa,
+    .datos-bancarios-empresa,
+    .datos-fiscales-empresa,
+    .notificaciones-empresa,
+    .agentes-empresa,
+    .perfil-agente-empresa {
+        text-decoration: none;
+    }
+    .datos-personales-empresa::after,
+    .datos-personales-empresa::before,
+    .datos-bancarios-empresa::after,
+    .datos-bancarios-empresa::before,
+    .datos-fiscales-empresa::after,
+    .datos-fiscales-empresa::before,
+    .notificaciones-empresa::after,
+    .notificaciones-empresa::before,
+    .agentes-empresa::after,
+    .agentes-empresa::before,
+    .perfil-agente-empresa::after,
+    .perfil-agente-empresa::before {
+        content: ' ';
+        position: absolute;
+        width: 120px;
+        height: 2px;
+        background-color: currentcolor;
+        top: 0.6em;
+    }
+
+    .datos-personales-empresa::before {
+        left: -20px;
+    }
+    .datos-personales-empresa::after {
+        right: -20px;
+    }
+    /*DATOS BANCARIOS*/
+    .datos-bancarios-empresa::before {
+        left: 14px;
+    }
+    .datos-bancarios-empresa::after {
+        right: 14px;
+    }
+    /*DATOS FISCALES*/
+    .datos-fiscales-empresa::before {
+        left: 27px;
+    }
+    .datos-fiscales-empresa::after {
+        right: 27px;
+    }
+    /*NOTIFICACIONES*/
+    .notificaciones-empresa::before {
+        left: 12px;
+    }
+    .notificaciones-empresa::after {
+        right: 12px;
+    }
+    /*AGENTES*/
+    .agentes-empresa::before {
+        left: 65px;
+    }
+    .agentes-empresa::after {
+        right: 65px;
+    }
+    /*PERFIL AGENTE*/
+    .perfil-agente-empresa::before {
+        left: 35px;
+    }
+    .perfil-agente-empresa::after {
+        right: 35px;
+    }
+    .mb-sm-360 {
+        margin-bottom: 360px;
+    }
+    .mb-sm-410{
+        margin-bottom: 410px;
+    }
+    
+}
+
+@media(min-width:768px) {
+    .datos-personales-empresa::before {
+        left: 70px;
+    }
+    .datos-personales-empresa::after {
+        right: 70px;
+    }
+    /*DATOS BANCARIOS*/
+    .datos-bancarios-empresa::before {
+        left: 100px;
+    }
+    .datos-bancarios-empresa::after {
+        right: 100px;
+    }
+    /*DATOS FISCALES*/
+    .datos-fiscales-empresa::before {
+        left: 114px;
+    }
+    .datos-fiscales-empresa::after {
+        right: 114px;
+    }
+    /*NOTIFICACIONES*/
+    .notificaciones-empresa::before {
+        left: 102px;
+    }
+    .notificaciones-empresa::after {
+        right: 102px;
+    }
+    /*AGENTES*/
+    .agentes-empresa::before {
+        left: 155px;
+    }
+    .agentes-empresa::after {
+        right: 155px;
+    }
+    /*PERFIL AGENTE*/
+    .perfil-agente-empresa::before {
+        left: 125px;
+    }
+    .perfil-agente-empresa::after {
+        right: 125px;
+    }
+    .mb-md-280 {
+        margin-bottom: 280px;
+    }
+    .mb-sm-327 {
+        margin-bottom: 327px;
+    }
+    .mb-md-400{
+        margin-bottom: 400px;
+    }
+}
+
+@media(min-width:992px) {
+    .datos-personales-empresa::before {
+        left: 190px;
+    }
+    .datos-personales-empresa::after {
+        right: 190px;
+    }
+    /*DATOS BANCARIOS*/
+    .datos-bancarios-empresa::before {
+        left: 220px;
+    }
+    .datos-bancarios-empresa::after {
+        right: 220px;
+    }
+    /*DATOS FISCALES*/
+    .datos-fiscales-empresa::before {
+        left: 235px;
+    }
+    .datos-fiscales-empresa::after {
+        right: 235px;
+    }
+    /*NOTIFICACIONES*/
+    .notificaciones-empresa::before {
+        left: 222px;
+    }
+    .notificaciones-empresa::after {
+        right: 222px;
+    }
+    /*AGENTES*/
+    .agentes-empresa::before {
+        left: 275px;
+    }
+    .agentes-empresa::after {
+        right: 275px;
+    }
+    /*PERFIL AGENTE*/
+    .perfil-agente-empresa::before {
+        left: 245px;
+    }
+    .perfil-agente-empresa::after {
+        right: 245px;
+    }
+    .mb-lg-270 {
+        margin-bottom: 270px !important;
+    }
+    .mb-lg-380 {
+        margin-bottom: 380px !important;
+    }
+    .height-agentes{
+        height: 530px !important;
+    }
+}
+
+@media(min-width:1200px) {
+    .datos-personales-empresa::before {
+        left: 280px;
+    }
+    .datos-personales-empresa::after {
+        right: 280px;
+    }
+    /*DATOS BANCARIOS*/
+    .datos-bancarios-empresa::before {
+        left: 310px;
+    }
+    .datos-bancarios-empresa::after {
+        right: 310px;
+    }
+    /*DATOS FISCALES*/
+    .datos-fiscales-empresa::before {
+        left: 324px;
+    }
+    .datos-fiscales-empresa::after {
+        right: 324px;
+    }
+    /*NOTIFICACIONES*/
+    .notificaciones-empresa::before {
+        left: 312px;
+    }
+    .notificaciones-empresa::after {
+        right: 312px;
+    }
+    /*AGENTES*/
+    .agentes-empresa::before {
+        left: 365px;
+    }
+    .agentes-empresa::after {
+        right: 365px;
+    }
+    /*PERFIL AGENTE*/
+    .perfil-agente-empresa::before {
+        left: 335px;
+    }
+    .perfil-agente-empresa::after {
+        right: 335px;
+    }
+    .mb-xl-250 {
+        margin-bottom: 250px;
+    }
+    
+}
+
+
+/*Estilos animados a los inputs*/
+
+.form-control,
+.dataTables_filter input {
+    border-radius: 0px !important;
+}
+
+.form__group {
+    margin: auto;
+    position: relative;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    background: none;
+    color: #000;
+    font-size: 18px;
+    padding: 8px 12px 8px 5px;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+.form__input:focus {
+    outline: none;
+    color: #000;
+    padding-bottom: 8px;
+}
+
+input {
+    caret-color: var(--mattes);
+}
+
+.form__input:focus+.form__label,
+.form__input:not(:placeholder-shown)+.form__label {
+    position: absolute;
+    top: -23px;
+    left: 16px;
+    font-size: 18px;
+    color: #212529;
+    width: 95%;
+}
+
+.form__label {
+    position: absolute;
+    color: #212529;
+    font-size: 18px;
+    left: 24px;
+    top: 6px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input[type=text]:valid:not(:focus):not(:placeholder-shown),
+input[type=tel]:valid:not(:focus):not(:placeholder-shown),
+input[type=email]:valid:not(:focus):not(:placeholder-shown),
+input[type=number]:valid:not(:focus):not(:placeholder-shown) {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    border: 1px solid #28a745;
+    padding-right: calc(1.5em + .75rem) !important;
+}
+
+input[type=text]:invalid:not(:focus):not(:placeholder-shown),
+input[type=tel]:invalid:not(:focus):not(:placeholder-shown),
+input[type=email]:invalid:not(:focus):not(:placeholder-shown),
+input[type=number]:invalid:not(:focus):not(:placeholder-shown) {
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    border: 1px solid #dc3545;
+    padding-right: calc(1.5em + .75rem) !important;
+}
+
+input[type=text]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+input[type=tel]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+input[type=email]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
+input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
+    max-height: 200px;
+    /* padding: 0 20px 20px 50px; */
+}
+
+.requirements {
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-family: "Gothici";
+}
+
+.bg-warning,
+.btn-warning{
+    background-color: var(--amarillo) !important;
+}
+
+

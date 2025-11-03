@@ -1,0 +1,123 @@
+.grid{        
+	column-count: 4;
+	column-gap: 16px;
+}
+
+.grid-item {
+    width: 272px;
+    margin-bottom: 7px;
+    background-color: #fff;
+    border-radius: 10px;
+	box-shadow: 0px 0px 4px 1px #000;
+}
+
+.gutter-sizer {
+  width: 2%;
+}
+
+.info-casa{
+    font-size: 1.2rem !important;
+    font-family: "Gothic";
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+.calificar {
+    position: absolute;
+    font-size: 15px;
+    font-family: "Gothicb";
+	bottom: 10px;
+    right: 10px; 
+    visibility: visible;
+    border-radius: 5px;
+    background-color: #e98c35 !important;
+    border-color: #e98c35 !important;
+}
+    
+.propiedades-rentadas{
+    color: var(--mattes);
+    text-decoration: underline;
+    position: relative;
+  }
+
+.height-rent{
+    height: 340px !important;
+}
+
+  
+@media(min-width: 576px){
+    .propiedades-rentadas{
+        text-decoration: none;
+    }
+
+    .propiedades-rentadas::after,
+    .propiedades-rentadas::before {
+        content: ' ';
+        position: absolute;
+        width: 100px;
+        height: 3px;
+        background-color: currentcolor;
+        top: 0.6em;
+    }
+    
+    .propiedades-rentadas::before {
+        left: 15px;
+    }
+    
+    .propiedades-rentadas::after {
+        right: 15px;
+    }
+    .height-rent{
+        height: 370px !important;
+    }
+  }
+  
+  @media(min-width: 768px){
+    .propiedades-rentadas::before {
+        left: 105px;
+    }  
+    .propiedades-rentadas::after {
+        right: 105px;
+    }
+  }
+  
+@media(min-width: 992px){
+    .propiedades-rentadas::before {
+        left: 225px;
+    }  
+    .propiedades-rentadas::after {
+        right: 225px;
+    }
+    .height-rent{
+        height: 375px !important;
+    }
+}
+  
+  @media(min-width: 1200px){
+    .propiedades-rentadas::before {
+        left: 315px;
+    }  
+    .propiedades-rentadas::after {
+        right: 315px;
+    }
+    .height-rent{
+        height: 485px !important;
+    }
+  }
+
+  /*Imagenes de las propiedades en el card*/
+
+.casas figure {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.casas #img-1 {
+    transition: .5s all;
+}
+
+.casas #img-1:hover {
+    transform: scale(1.1);
+}
+

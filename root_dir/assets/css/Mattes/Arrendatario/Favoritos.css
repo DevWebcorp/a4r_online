@@ -1,0 +1,285 @@
+.grid {
+  column-count: 4;
+  column-gap: 16px;
+}
+
+.grid-item {
+  width: 272px;
+  margin-bottom: 7px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px 1px #000;
+  z-index: 50;
+}
+
+.gutter-sizer {
+  width: 2%;
+}
+
+.div-fav{
+  position: relative !important;
+  z-index: 100 !important;
+  background-color: red !important;
+  bottom: 28px;
+}
+
+.page-load-status {
+  display: none;
+  /* hidden by default */
+  padding-top: 20px;
+  border-top: 1px solid #DDD;
+  text-align: center;
+  color: #777;
+}
+
+.loader-ellips {
+  font-size: 20px;
+  /* change size here */
+  position: relative;
+  width: 4em;
+  height: 1em;
+  margin: 10px auto;
+}
+
+.loader-ellips__dot {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  background: #555;
+  /* change color here */
+  position: absolute;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+  left: 0;
+}
+
+.loader-ellips__dot:nth-child(3) {
+  left: 1.5em;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  left: 3em;
+}
+
+@keyframes reveal {
+  from {
+    transform: scale(0.001);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(1.5em)
+  }
+}
+
+.loader-ellips__dot:nth-child(1) {
+  animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+  animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  animation-name: reveal;
+  animation-direction: reverse;
+}
+
+.mg-t-200 {
+  margin-top: 200px;
+}
+
+.info-casa {
+  font-size: 1.2rem !important;
+  font-family: "Gothic";
+  margin-left: 20px;
+}
+
+.info-casa:nth-of-type(1) {
+  font-family: "Gothicb";
+  line-height: 11px;
+}
+
+.info-casa:nth-of-type(2),
+.info-casa:nth-of-type(3),
+.info-casa:nth-of-type(4) {
+  color: #0088F7;
+  font-family: "Gothicb";
+  line-height: 11px;
+}
+
+span:nth-of-type(1),
+span:nth-of-type(3) {
+  color: black !important;
+  font-family: "Gothicb";
+}
+
+.info-casa span {
+  font-family: "Gothic";
+}
+
+/*Imagenes de las propiedades en el card*/
+.casas figure {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.casas #img-1 {
+  transition: .5s all;
+}
+
+.casas #img-1:hover {
+  transform: scale(1.1);
+}
+
+.sello-mattes {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 0px;
+  right: 215px;
+  visibility: visible;
+}
+
+.verifica-propiedad {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 0px;
+  right: 190px;
+  color: #23BF08;
+  visibility: visible;
+}
+
+.posiciona-propiedad {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 0px;
+  right: 170px;
+  visibility: visible;
+}
+
+.mandar-mensaje {
+  position: absolute;
+  font-size: 15px;
+  /*color: white;*/
+  font-family: "Gothicb";
+  bottom: 10px;
+  right: 10px;
+  visibility: visible;
+  border-radius: 5px;
+  background-color: #e98c35;
+}
+
+.iconos-s {
+  margin-left: 30px;
+
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  visibility: visible;
+}
+
+.heart-fav {
+  font-size: 1.4rem;
+  position: absolute;
+  padding: 10px;
+  position: absolute;
+  top: 180px;
+  left: 230px;
+  color: #0088F7;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mis-favoritas {
+  color: var(--mattes);
+  text-decoration: underline;
+  position: relative;
+}
+
+.height-favoritas{
+  height: 320px;
+}
+
+@media(min-width: 576px) {
+  .mis-favoritas {
+    text-decoration: none;
+  }
+
+  .mis-favoritas::after,
+  .mis-favoritas::before {
+    content: ' ';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: currentcolor;
+    top: 0.6em;
+  }
+
+  .mis-favoritas::before {
+    left: -15px;
+  }
+
+  .mis-favoritas::after {
+    right: -15px;
+  }
+
+  .height-favoritas{
+    height: 370px;
+  }
+}
+
+@media(min-width: 768px) {
+  .mis-favoritas::before {
+    left: 75px;
+  }
+
+  .mis-favoritas::after {
+    right: 75px;
+  }
+}
+
+@media(min-width: 992px) {
+  .mis-favoritas::before {
+    left: 205px;
+  }
+
+  .mis-favoritas::after {
+    right: 205px;
+  }
+
+  .height-fav{
+    height: 300px !important;
+  }
+  .height-favoritas{
+    height: 500px;
+  }
+}
+
+@media(min-width: 1200px) {
+  .mis-favoritas::before {
+    left: 285px;
+  }
+
+  .mis-favoritas::after {
+    right: 285px;
+  }
+}

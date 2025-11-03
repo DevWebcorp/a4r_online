@@ -1,0 +1,117 @@
+/*Menu principal del sitio*/
+
+.logo {
+    width: 215px;
+}
+
+#menu-principal .navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    font-family: 'Gothic';
+    border-bottom: 1px solid #000;
+}
+
+@media(min-width:992px) {
+    #menu-principal .navbar-nav .nav-link {
+        border: 2px solid transparent;
+        transition: all .5s ease;
+    }
+    .b-lg-none {
+        border: none !important;
+    }
+    .b-lg-none:hover {
+        border: none !important;
+    }
+    .soy-propietario {
+        border: 3px solid black;
+        border-radius: 10px;
+        transition: all .5s ease;
+    }
+    #menu-principal .inicio-sesion {
+        background-color: #0088F7;
+        border: 3px solid #0088F7;
+        border-radius: 10px;
+        transition: all .5s ease;
+    }
+    .navbar-nav .inicio-sesion .nav-link {
+        color: #fff !important;
+    }
+    #menu-principal .inicio-sesion:hover {
+        background-color: #009EF9;
+    }
+}
+
+
+/*Menu para dispositivos moviles*/
+
+.bg-menu {
+    background-color: #fff;
+}
+
+
+/*Iconos del menu tipo hamburgesa para dispositivo movil*/
+
+.boton-menu:before {
+    content: '\f142 ';
+    font-family: 'FontAwesome';
+    color: #0088F7;
+    font-size: 3rem;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: transparent !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+}
+
+.icono-cerrar:before {
+    content: '\f00d';
+    position: absolute;
+    font-size: 3rem;
+    top: 17px;
+    right: 28px;
+}
+
+.navbar-light .navbar-nav .nav-link {   
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--mattes);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+    color: white !important;
+    background-color: var(--mattes) !important;
+}
+
+@media(min-width:992px){
+    .navbar-light .navbar-nav .nav-link {   
+        border-bottom: 2px solid transparent;
+        color: rgba(0,0,0,1) !important;
+        text-transform: none;
+    }
+    .navbar-light:hover .navbar-nav:hover .nav-link:hover{
+        background-color: transparent !important;
+        color: var(--mattes) !important;
+    }
+    #prop > .nav-link:hover{
+        background-color: transparent !important;
+        color: black !important;
+        
+    }
+    #ses > .nav-link{
+        background-color: transparent !important;
+        color: white !important;
+        border-bottom: 2px solid transparent !important;
+    }
+}
+
+@media (min-width:1200px) {
+    #menu-principal .navbar-nav .nav-link:hover {
+        border-bottom: 2px solid #0088F7;
+    }
+}

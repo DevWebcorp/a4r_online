@@ -1,0 +1,153 @@
+.logo {
+    width: 150px;
+}
+
+.home {
+    color: #286e3a;
+}
+
+.nav-tabs {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #0370b8;
+}
+
+.nav-tabs .nav-link {
+    margin-right: .3rem;
+    border: 1px solid var(--mattes);
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: white;
+    font-size: 16.8px;
+    background-color: var(--mattes);
+    border-color: var(--mattes);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+    color: var(--blanco);
+    background-color: var(--mattes);
+    border-color: var(--mattes);
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+}
+
+.nav-tabs>li>a,
+.nav-tabs a {
+    font-size: 16.8px;
+    color: var(--mattes);
+    border-top-left-radius: .25rem !important;
+    border-top-right-radius: .25rem !important;
+}
+
+.pregunta,
+.comunicados,
+#preguntas_propiedades,
+#preguntas_agentes {
+    overflow-x: auto !important;
+    display: block;
+    background-color: transparent;
+}
+
+@media (min-width:529px) {
+    .pregunta,
+    .comunicados,
+    #preguntas_propiedades{
+        width: 100%;
+        overflow-x: hidden !important;
+        display: inline-table;
+    }
+}
+
+@media (min-width:768px) {
+    #preguntas_agentes{
+        width: 100%;
+        overflow-x: hidden !important;
+        display: inline-table;
+    }
+    .height-avisos{
+        height: 600px;
+    }
+}
+
+.img-con {
+    width: 30% !important;
+    height: 30% !important;
+}
+
+.img-can {
+    width: 30% !important;
+    height: 30% !important;
+}
+
+.btn-can {
+    margin-right: 7px !important;
+}
+
+.propiedad {
+    color: #2b60f1;
+    text-decoration: underline;
+    font-family: "Gothicb";
+    visibility: visible;
+    cursor: pointer;
+    border: 0;
+    background: none;
+}
+
+.form-control,
+.dataTables_filter input,
+.modal-content {
+    border-radius: 10px !important;
+}
+.modal-header{
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+th:first-child { 
+    border-top-left-radius: 10px; 
+}
+th:last-child {   
+    border-top-right-radius: 10px; 
+}
+
+table{
+    border-radius: 10px;
+}
+
+table.dataTable.no-footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.notificacion-propiedad{
+    background-color: red;
+    color: #fff;
+    top: 0;
+    /*right: 140px;*/
+    border-radius: 10px;
+    padding: 0 7px;
+    font-family: 'Gothicb';
+    font-size: 14px;
+}
+
+.mg-b-210{
+    margin-bottom: 210px;
+}
+
+@media(min-width:992px) {
+    .height-preguntas{
+        height: 280px;
+    }
+    .height-visitas-agente{
+        height: 220px;
+    }
+    .height-visitas{
+        height: 280px;
+    }    
+}

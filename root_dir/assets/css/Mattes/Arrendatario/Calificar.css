@@ -1,0 +1,16 @@
+.starrr a {
+    font-size: 30px !important;
+}
+
+.calificar {
+    font-size: 15px;
+    font-family: "Gothicb";
+    visibility: visible;
+    border-radius: 5px;
+    background-color: #e98c35 !important;
+    border-color: #e98c35 !important;
+}
+
+.title{
+    font-family: 'Gothicb';
+}

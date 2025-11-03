@@ -1,0 +1,266 @@
+/*General*/
+
+.logo {
+    width: 215px;
+}
+
+.home {
+    color: #286e3a;
+}
+
+.grid-item:hover .detalle-propiedad{
+    visibility: visible;
+}
+
+#map {
+    height: 300px;
+}
+
+.borde {
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+}
+
+/* ############  CP SEARCH ############### */
+#cpResult {
+    list-style: none !important;
+    padding: 0px !important;
+    width: 250px !important;
+    position: absolute !important;
+    margin-top: 39px;
+    min-width: 100%;
+    z-index: 999999;
+    overflow-y: auto;
+}
+
+#searchResult:hover {
+    overflow-y: auto;
+    height: 500px;
+}
+
+#cpResult li {
+    background-color: var(--mattes) !important;
+    color: var(--blanco);
+    z-index:100;
+    padding: 4px !important;
+    margin-bottom: 1px !important;
+}
+
+#cpResult li:nth-child(even) {
+    background-color: var(--blanco) !important;
+    color: var(--mattes) !important;
+    z-index:100;
+}
+
+#cpResult li:hover {
+    cursor: pointer !important;
+}
+
+#succes-alert {
+    display: none !important;
+}
+
+.mg-t-200 {
+    margin-top: 130px;
+}
+
+.tabcontent  {
+    border: none !important; 
+}
+
+/*Gradiente del color al header de agregar propiedades*/
+.gradiente-header{
+    background: rgb(204,204,204);
+    background: linear-gradient(180deg, rgba(204,204,204,1) 0%, rgba(204,204,204,1) 20%, rgba(255,255,255,1) 100%);
+}
+
+/*Estilo al carousel como flechas, tamaño, etc*/
+.carousel-control-prev,
+.carousel-control-next{
+    top: 32px !important;
+    color: var(--mattes)  !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: transparent !important;
+} 
+
+.carousel-control-prev-icon::before {
+    left: 20px !important;
+    background-color: var(--blanco);
+    border-radius: 10px !important;
+    padding: 0 .5rem !important;
+}
+
+.carousel-control-next-icon::before{
+    right: 20px !important;
+    background-color: var(--blanco);
+    border-radius: 10px !important;
+    padding: 0 .5rem !important;
+}
+
+.b-elemento,
+.delete-elemento{
+    margin-top: .5rem !important;
+    margin-bottom: .5rem !important;
+}
+
+/*Sobreescribo estilos de starlight del carousel*/
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+   font-weight: bold;
+   font-size: 30px;
+}
+
+.cajon{
+   height: 352px !important;
+   width: 540px !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    font-weight: bold;
+    font-size: 30px;
+    opacity: .8 !important;    
+}
+
+.carousel-indicators li.active{
+    background-color: var(--mattes) !important;
+}
+
+.carousel-indicators li{
+    background-color: var(--blanco) !important;
+}
+
+
+/*Estilos a los recuadros de carga de archivos de la propiedad*/
+.file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 650px;
+    max-width: 100%;
+    padding: 25px;
+    border: 1px dashed rgba(33, 140, 230, 10);
+    border-radius: 3px;
+    transition: 0.2s;
+}
+
+.choose-file-button {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(33, 140, 230, 0.6);
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.file-message {
+    font-size: small;
+    font-weight: 300;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.form-control,
+.dataTables_filter input,
+.modal-content {
+    border-radius: 10px !important;
+}
+.modal-header{
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+th:first-child { 
+    border-top-left-radius: 10px; 
+}
+th:last-child {   
+    border-top-right-radius: 10px; 
+}
+
+table.dataTable.no-footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.mg-b-210{
+    margin-bottom: 210px;
+}
+
+.carousel-inner>.carousel-item>.w-new{
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.height-primeravez{
+    height: 810px;
+}
+
+@media(min-width: 768px){
+    .mb-md-270{
+        margin-bottom: 270px !important;
+    }
+    .mb-md-355{
+        margin-bottom: 355px !important;
+    }
+    .mb-md-75{
+        margin-bottom: 75px !important;
+    }
+    .mb-md-100{
+        margin-bottom: 100px;
+    }
+    .height-primeravez{
+        height: 708px;
+    }
+} 
+
+@media(min-width:992px) {
+    .height-beneficios{
+        height: 510px;
+    }
+    .height-bancarios{
+        height: 550px;
+    }
+    .height-fiscales{
+        height: 611px;
+    }
+    .height-visitas{
+        height: 530px;
+    }
+    .height-visitas-agentes{
+        height: 442px;
+    }
+    .height-casas{
+        height: 622px;
+    }
+    .height-invitacion{
+        height: 742px;
+    }
+    .mb-sm-327{
+        margin-bottom: 178px;
+    }   
+}
+@media(min-width:1200px){
+    .height-primeravez{
+        height: 770px;
+    }
+    .mr-lg-16{
+        margin-right: 16rem;
+    }
+}
+
