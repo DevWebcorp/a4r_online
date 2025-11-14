@@ -25,7 +25,8 @@ class App extends BaseConfig
 	 */
 		#public $baseURL = 'https://mattes.mx/';
 		#public $baseURL = 'http://localhost/mattes/';
-		public $baseURL = 'http://192.168.15.228:8095';
+		//public $baseURL = 'http://192.168.15.228:8095';
+		public $baseURL = 'http://localhost:8095/';
 	/**
 	 * --------------------------------------------------------------------------
 	 * Index File

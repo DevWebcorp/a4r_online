@@ -30,7 +30,7 @@ class Filters extends BaseConfig
 	 */
 	public $globals = [
 		'before' => [
-			'auth' =>['except' => ['Home','Mattes/Principal','about', 'registro-estudiante','contacto', 'registro-propietario','Registro_propietario/*', 'Registro_estudiante/*', 'Terminos-condiciones', 'inicia-session','Registro', 'aviso-privacidad', 'preguntas-frecuentes','Mattes/Api/*','detalle-propiedad/*','Login/verify_login','Login/sign_out','inicio','Recuperar-contrasena', 'Register/*','Login/password_update']]
+			//'auth' =>['except' => ['Home','Mattes/Principal','about', 'registro-estudiante','contacto', 'registro-propietario','Registro_propietario/*', 'Registro_estudiante/*', 'Terminos-condiciones', 'inicia-session','Registro', 'aviso-privacidad', 'preguntas-frecuentes','Mattes/Api/*','detalle-propiedad/*','Login/verify_login','Login/sign_out','inicio','Recuperar-contrasena', 'Register/*','Login/password_update']]
 			
 			// 'honeypot',
 			// 'csrf',
