@@ -2,7 +2,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile_stage
+      dockerfile: Dockerfile
     ports:
       - "8095:80"
       - "4435:433"

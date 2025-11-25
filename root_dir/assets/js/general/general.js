@@ -12,7 +12,7 @@ switch (BASE_URL) {
         break;
     case "DEV":
         //BASE_URL = 'http://localhost/mattes/';
-        BASE_URL = 'http://192.168.15.228:8095/';
+        BASE_URL = 'http://localhost:172.17.0.4/';
         break;
     default:
         break;
