@@ -11,19 +11,7 @@
                 <div class="container">
                     <div class="row">
 
-                        <!-- WIDGET MAILCHIMP -->
-                        <div class="col-lg-9">
-                            <div class="mailchimp">
-                                <h4>News &amp; Offers</h4>
-                                <div class="mailchimp-form">
-                                    <form action="#" method="POST">
-                                        <input type="text" name="email" placeholder="Your email address" class="input-text">
-                                        <button class="awe-btn">SIGN UP</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END / WIDGET MAILCHIMP -->
+                        
                         
                         <!-- WIDGET SOCIAL -->
                         <div class="col-lg-3">
