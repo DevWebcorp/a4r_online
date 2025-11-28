@@ -10,7 +10,13 @@
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
 
-
+<style>
+    .ot-out-best .content .item img {
+        max-height: 60px;
+        margin: 0 auto;
+        margin-bottom: 0px;
+    }
+</style>
  <!-- SUB BANNER -->
         <section class="section-sub-banner bg-16">
             <div class="awe-overlay"></div>
@@ -176,8 +182,8 @@
                                                 <ul>
                                                     <li>Max: 4 Personas</li>
                                                     <li>Tamaño: 35 m2 / 376 ft2</li>
-                                                    <li>View: Ocen</li>
-                                                    <li>Cama: King-size or twin beds</li>
+                                                    <li>Vista: Oceáno</li>
+                                                    <li>Cama: King-size o dos camas</li>
                                                 </ul>
                                             </div>
                                             <div class="col-xs-6 col-md-4">
@@ -603,6 +609,72 @@
                 </div>
                 <!-- END / TAB -->
 
+                <!-- OUR BEST -->
+                <section class="ot-out-best mt60">
+                    <div class="container">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col col-xs-12 col-lg-6 col-lg-offset-3">
+                                    <div class="ot-heading mb40 row-20 text-center">
+                                        <h2>Nuestros servicios</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-single owl-best" data-single_item="false" data-desktop="6"
+                                data-small_desktop="4"
+                                data-tablet="3" data-mobile="2"
+                                data-nav="true"
+                                data-pagination="false">
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-11.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Wifi gratis</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-12.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Estacionamiento</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-13.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Servicio de habitacion</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-14.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Aire acondicionado</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-15.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">TV de paga</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-16.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Equipaje</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-12.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Estacionamiento</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-13.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Servicio de habitación</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-11.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Wifi gratis</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-14.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">Aire acondicionado</span>
+                                </div>
+                                <div class="item text-center">
+                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-15.png') ?>" alt="icon">
+                                    <span class="font-hind f-500">TV de paga</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- END / OUR BEST -->
+
                 <!-- COMPARE ACCOMMODATION -->
                 <div class="room-detail_compare">
                     <h2 class="room-compare_title">COMPARAR ALOJAMIENTO</h2>
@@ -624,8 +696,8 @@
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Personas</li>
-                                            <li><i class="lotus-icon-bed"></i> Cama: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
+                                            <li><i class="lotus-icon-bed"></i> Cama: King-size o dos camas</li>
+                                            <li><i class="lotus-icon-view"></i> Vista: Oceáno</li>
                                         </ul>
                                 
                                         <a href="#" class="awe-btn awe-btn-default">VER DETALLE</a>
@@ -650,8 +722,8 @@
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Personas</li>
-                                            <li><i class="lotus-icon-bed"></i> Cama: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
+                                            <li><i class="lotus-icon-bed"></i> Cama: King-size o dos camas</li>
+                                            <li><i class="lotus-icon-view"></i> Vista: Oceáno</li>
                                         </ul>
                                 
                                         <a href="#" class="awe-btn awe-btn-default">VER DETALLE</a>
@@ -676,8 +748,8 @@
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Personas</li>
-                                            <li><i class="lotus-icon-bed"></i> Cama: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
+                                            <li><i class="lotus-icon-bed"></i> Cama: King-size o dos camas</li>
+                                            <li><i class="lotus-icon-view"></i> Vista: Oceáno</li>
                                         </ul>
                                 
                                         <a href="#" class="awe-btn awe-btn-default">VER DETALLE</a>
@@ -702,8 +774,8 @@
                                 
                                         <ul>
                                             <li><i class="lotus-icon-person"></i> Max: 2 Personas</li>
-                                            <li><i class="lotus-icon-bed"></i> Cama: King-size or twin beds</li>
-                                            <li><i class="lotus-icon-view"></i> View: Ocen</li>
+                                            <li><i class="lotus-icon-bed"></i> Cama: King-size o dos camas</li>
+                                            <li><i class="lotus-icon-view"></i> Vista: Oceáno</li>
                                         </ul>
                                 
                                         <a href="#" class="awe-btn awe-btn-default">VER DETALLE</a>
