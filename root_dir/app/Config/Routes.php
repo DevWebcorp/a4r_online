@@ -24,6 +24,12 @@ $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
 
+// A4R_ONLINE
+//$routes->get('Habitaciones', 'a4r/Habitaciones_depto::index');
+
+
+// MATTES
+
 //home
 $routes->get('registro-propietario', 'Registro_propietario::index');
 $routes->post('Registro','Registro_propietario::register');
