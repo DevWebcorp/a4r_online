@@ -276,14 +276,14 @@
                                         <div class="room-package_item">
                                         
                                             <div class="text">
-                                                <h4><a href="#">package standar</a></h4>
+                                                <h4><a href="#">Paquete básico</a></h4>
                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
                                                                     
                                                 <div class="room-package_price">
                                                     <p class="price">
-                                                        <span class="amout">$260</span> / Package
+                                                        <span class="amout">$260</span>
                                                     </p>
-                                                    <a href="#" class="awe-btn awe-btn-default">Book package</a>
+                                                    <a href="#" class="awe-btn awe-btn-default">Elegir paquete</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -293,14 +293,14 @@
                                         <div class="room-package_item">
                                         
                                             <div class="text">
-                                                <h4><a href="#">package standar</a></h4>
+                                                <h4><a href="#">Paquete estandar</a></h4>
                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
                                                                     
                                                 <div class="room-package_price">
                                                     <p class="price">
-                                                        <span class="amout">$260</span> / Package
+                                                        <span class="amout">$360</span>
                                                     </p>
-                                                    <a href="#" class="awe-btn awe-btn-default">Book package</a>
+                                                    <a href="#" class="awe-btn awe-btn-default">Elegir paquete</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -310,14 +310,14 @@
                                         <div class="room-package_item">
                                         
                                             <div class="text">
-                                                <h4><a href="#">package standar</a></h4>
+                                                <h4><a href="#">Paquete premium</a></h4>
                                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
                                                                     
                                                 <div class="room-package_price">
                                                     <p class="price">
-                                                        <span class="amout">$260</span> / Package
+                                                        <span class="amout">$460</span>
                                                     </p>
-                                                    <a href="#" class="awe-btn awe-btn-default">Book package</a>
+                                                    <a href="#" class="awe-btn awe-btn-default">Elegir paquete</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -334,20 +334,20 @@
                                         <table>
                                             <thead>
                                                 <tr>
-                                                    <th>Rate Period</th>
-                                                    <th>Nightly</th>
-                                                    <th>Weekend Night</th>
-                                                    <th>Weekly</th>
-                                                    <th>Monthly</th>
-                                                    <th>Event</th>
+                                                    <th>Periodo</th>
+                                                    <th>Noche</th>
+                                                    <th>Fin de semana</th>
+                                                    <th>Semanal</th>
+                                                    <th>Mensual</th>
+                                                    <th>Evento</th>
                                                 </tr>
                                             </thead>
                                             <tr>
                                                 <td>
-                                                    <h6>Spring/Summer Season</h6>
+                                                    <h6>Primavera/Verano</h6>
                                                     <ul>
-                                                        <li>Jun 1 - Aug 31</li>
-                                                        <li>3 night minimum stay</li>
+                                                        <li>Marzo 21 - Agosto 31</li>
+                                                        <li>3 noches de estancia minima</li>
                                                     </ul>
                                                 </td>
                                                 <td>
@@ -368,10 +368,10 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <h6>Summer/Fall Season</h6>
+                                                    <h6>Verano/Otoño</h6>
                                                     <ul>
-                                                        <li>Jun 1 - Aug 31</li>
-                                                        <li>3 night minimum stay</li>
+                                                        <li>Septiembre - Noviembre</li>
+                                                        <li>3 noches de estancia minima</li>
                                                     </ul>
                                                 </td>
                                                 <td>
@@ -392,10 +392,10 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <h6>Christmas Season</h6>
+                                                    <h6>Invierno</h6>
                                                     <ul>
-                                                        <li>Jun 1 - Aug 31</li>
-                                                        <li>3 night minimum stay</li>
+                                                        <li>Diciembre - Febrero</li>
+                                                        <li>3 noches de estancia minima</li>
                                                     </ul>
                                                 </td>
                                                 <td>
@@ -430,8 +430,8 @@
                                             <div class="calendar_custom">
                                         
                                                 <div class="calendar_title">
-                                                    <span class="calendar_month">JUNE</span>
-                                                    <span class="calendar_year">2015</span>
+                                                    <span class="calendar_month">JUNIO</span>
+                                                    <span class="calendar_year">2025</span>
                                             
                                                     <a href="#" class="calendar_prev calendar_corner"><i class="lotus-icon-left-arrow"></i></a>
                                                 </div>
@@ -440,13 +440,13 @@
 
                                                     <thead>
                                                         <tr>
-                                                            <th>Su</th>
-                                                            <th>Mo</th>
-                                                            <th>Tu</th>
-                                                            <th>We</th>
-                                                            <th>Th</th>
-                                                            <th>Fr</th>
-                                                            <th>Sa</th>
+                                                            <th>Dom</th>
+                                                            <th>Lun</th>
+                                                            <th>Mar</th>
+                                                            <th>Mie</th>
+                                                            <th>Jue</th>
+                                                            <th>Vie</th>
+                                                            <th>Sab</th>
                                                         </tr>
                                                     </thead>
 
@@ -514,8 +514,8 @@
                                             <div class="calendar_custom">
                                         
                                                 <div class="calendar_title">
-                                                    <span class="calendar_month">JUNE</span>
-                                                    <span class="calendar_year">2015</span>
+                                                    <span class="calendar_month">JULIO</span>
+                                                    <span class="calendar_year">2025</span>
                                             
                                                     <a href="#" class="calendar_next calendar_corner"><i class="lotus-icon-right-arrow"></i></a>
                                                 </div>
@@ -524,13 +524,13 @@
 
                                                     <thead>
                                                         <tr>
-                                                            <th>Su</th>
-                                                            <th>Mo</th>
-                                                            <th>Tu</th>
-                                                            <th>We</th>
-                                                            <th>Th</th>
-                                                            <th>Fr</th>
-                                                            <th>Sa</th>
+                                                            <th>Dom</th>
+                                                            <th>Lun</th>
+                                                            <th>Mar</th>
+                                                            <th>Mie</th>
+                                                            <th>Jue</th>
+                                                            <th>Vie</th>
+                                                            <th>Sab</th>
                                                         </tr>
                                                     </thead>
 
@@ -593,8 +593,8 @@
                                         </div>
                                         
                                         <div class="calendar_status text-center col-sm-12">
-                                            <span>Available</span>
-                                            <span class="not-available">Not Available</span>
+                                            <span>Disponible</span>
+                                            <span class="not-available">No disponible</span>
                                         </div>
                                     </div>
 
@@ -637,10 +637,10 @@
                                     <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-13.png') ?>" alt="icon">
                                     <span class="font-hind f-500">Servicio de habitacion</span>
                                 </div>
-                                <div class="item text-center">
+                               <!--  <div class="item text-center">
                                     <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-14.png') ?>" alt="icon">
                                     <span class="font-hind f-500">Aire acondicionado</span>
-                                </div>
+                                </div> -->
                                 <div class="item text-center">
                                     <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-15.png') ?>" alt="icon">
                                     <span class="font-hind f-500">TV de paga</span>
@@ -661,10 +661,7 @@
                                     <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-11.png') ?>" alt="icon">
                                     <span class="font-hind f-500">Wifi gratis</span>
                                 </div>
-                                <div class="item text-center">
-                                    <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-14.png') ?>" alt="icon">
-                                    <span class="font-hind f-500">Aire acondicionado</span>
-                                </div>
+                               
                                 <div class="item text-center">
                                     <img class="img-responsive mb10" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home-3/icon/icon-15.png') ?>" alt="icon">
                                     <span class="font-hind f-500">TV de paga</span>

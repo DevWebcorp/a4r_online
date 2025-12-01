@@ -32,52 +32,87 @@
 }
 </style>
 
-<!-- SUB BANNER -->
-<!-- <section class="section-sub-banner bg-9">
-    <div class="awe-overlay"></div>
-    <div class="sub-banner">
-        <div class="container">
-            <div class="text text-center">
-                <h2>MAPA</h2>
-                <p>Visualiza la ubicación del lugar donde quieres rentar</p>
-            </div>
-        </div>
+ <!-- BANNER SLIDER -->
+<section class="section-slider">
+    <h1 class="element-invisible">Slider</h1>
+    <div id="slider-revolution">
+        <ul>
+            <li data-transition="fade">
+                <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/img-5.jpg') ?>" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                
+                <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="100" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                    <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/hom1-slide1.png') ?>" alt="icons"> 
+                </div>
+
+                <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="240" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                    Bienvenido a
+                </div>
+
+                <div class="tp-caption sfb fadeout slider-caption slider-caption-sub-1" data-x="center" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">THE LOTUS HOTEL</div>
+                
+            </li> 
+
+            <li data-transition="fade">
+                <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/img-4.jpg') ?>" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                
+
+                <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300" data-easing="easeOutBack">
+                    <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/icon-slider-1.png') ?>" alt="">
+                </div>
+    
+                <div class="tp-caption sft fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="220" data-speed="700" data-start="1500" data-easing="easeOutBack">
+                    Cada habitacion es diferente
+                </div>
+
+                <div class="tp-caption sfb fadeout slider-caption slider-caption-3" data-x="center" data-y="260" data-speed="700" data-easing="easeOutBack"  data-start="2000">
+                   60% de descuento
+                </div>
+                
+                <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="365" data-easing="easeOutBack" data-speed="700" data-start="2200">Justo ahora</div>
+
+                <div class="tp-caption sfb fadeout slider-caption-sub slider-caption-sub-3" data-x="center" data-y="395" data-easing="easeOutBack" data-speed="700" data-start="2400">
+                    <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/icon-slider-2.png') ?>" alt="">
+                </div>
+            </li> 
+
+        </ul>
     </div>
-</section> -->
-<!-- END / SUB BANNER -->
+</section>
+<!-- END / BANNER SLIDER -->
 
 <!-- CHECK AVAILABILITY -->
-<!-- <section class="section-check-availability availability-style-2 clearfix">
- -->
-<section class="" style="margin-top: 220px;">
+<section class="section-check-availability">
     <div class="container">
         <div class="check-availability">
-           <!--  <div class="ot-heading">
-                <h2 class="mb40">Filtros</h2>
-            </div> -->
-            <form id="ajax-form-search-room" class="mt40 mb50" action="https://landing.engotheme.com/html/lotus/demo/search_step_2.php" method="post">
-                <div class="availability-form mb40">
-                    <h2 class="" style="display: inline; float: left;">Filtros</h2>
-                    <input type="text" name="arrive" class="awe-calendar from" placeholder="Llegada">
-                    <input type="text" name="departure" class="awe-calendar to" placeholder="Partida">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h2>Filtros</h2>
+                </div>
+                <div class="col-lg-9">
+                    <form id="ajax-form-search-room" action="https://landing.engotheme.com/html/lotus/demo/search_step_2.php" method="post">
+                        <div class="availability-form">
+                            <input type="text" name="arrive" class="awe-calendar from" placeholder="Llegada">
+                            <input type="text" name="departure" class="awe-calendar to" placeholder="Partida">
 
-                    <select class="awe-select" name="adults">
-                        <option>Adultos</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
-                    <select class="awe-select" name="children">
-                        <option>Precio</option>
-                        <option>Menos de $15000</option>
-                        <option>Menos de $10000</option>
-                        <option>Menos de $5000</option>
-                    </select>
-                    <div class="vailability-submit">
-                    <button class="awe-btn awe-btn-13 pr30 pl30 f16 bold font-hind">Buscar</button>
+                            <select class="awe-select" name="adults">
+                                <option>Adultos</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            <select class="awe-select" name="children">
+                                <option>Precio</option>
+                                <option>Menos de $5000</option>
+                                <option>Menos de $10000</option>
+                                <option>Menos de $15000</option>
+                            </select>
+                            <div class="vailability-submit">
+                                <button class="awe-btn awe-btn-13">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </section>
