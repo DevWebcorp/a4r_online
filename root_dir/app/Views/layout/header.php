@@ -25,7 +25,7 @@
                     <!-- HEADER LOGO -->
                     <div class="header_logo">
                         <a href="<?=base_url()?>/a4r/Mapa">
-                            <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/logo-header.png') ?>" alt="">
+                            <img src="<?= base_url('../assets/img/Logo-PlataformA4R.png') ?>" alt="">
                         </a>
                     </div>
                     <!-- END / HEADER LOGO -->

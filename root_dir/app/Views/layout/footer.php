@@ -38,7 +38,7 @@
                             <div class="widget widget_logo">
                                 <div class="widget-logo">
                                     <div class="img">
-                                        <a href="#"><img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/logo-footer.png') ?>" alt=""></a>
+                                        <a href="#"><img src="<?= base_url('../assets/img/Logo-PlataformA4R.png') ?>" alt=""></a>
                                     </div>
                                     <div class="text">
                                         <p><i class="lotus-icon-location"></i> CDMX</p>
