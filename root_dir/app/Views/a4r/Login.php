@@ -17,12 +17,13 @@
                 <div class="login-register">
                     <div class="text text-center">
                         <h2>Inicio de sesión</h2>
+                        <h2>Ingresa tu correo y contraseña</h2>
                         <form action="#" class="account_form">
                             <div class="field-form">
-                                <input type="text" class="field-text" placeholder="Usuario">
+                                <input type="text" class="field-text" name="correo" placeholder="Usuario" required>
                             </div>
                             <div class="field-form">
-                                <input type="password" class="field-text" placeholder="Contraseña">
+                                <input type="password" class="field-text" placeholder="Contraseña" name="password" required>
                                 <span class="view-pass"><i class="lotus-icon-view"></i></span>
                             </div>
                             <div class="field-form field-submit">

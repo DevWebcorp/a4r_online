@@ -30,6 +30,10 @@
     <!-- MAIN STYLE -->
     <link rel="stylesheet" type="text/css" href="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/style.css') ?>">
 
+    <!--Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
      <!-- LIBRERÍAS DINÁMICAS POR PÁGINA -->
     <?= $this->renderSection('css') ?>
 
