@@ -18,7 +18,7 @@
                     <div class="text text-center">
                         <h2>Inicio de sesión</h2>
                         <p>Ingresa tu correo y contraseña</p>
-                        <form action="#" class="account_form">
+                        <form method="POST" action="<?php echo base_url() . '/Login/verify_login' ?>" class="account_form">
                             <div class="field-form">
                                 <input type="text" class="field-text" name="correo" placeholder="Usuario" required>
                             </div>
