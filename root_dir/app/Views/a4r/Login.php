@@ -17,7 +17,7 @@
                 <div class="login-register">
                     <div class="text text-center">
                         <h2>Inicio de sesión</h2>
-                        <h2>Ingresa tu correo y contraseña</h2>
+                        <p>Ingresa tu correo y contraseña</p>
                         <form action="#" class="account_form">
                             <div class="field-form">
                                 <input type="text" class="field-text" name="correo" placeholder="Usuario" required>
