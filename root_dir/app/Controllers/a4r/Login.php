@@ -13,7 +13,7 @@ class Login extends BaseController{
     } else {
       $data_header['title'] = "A4r Login";
       $data_header['description'] = "Login del usuario";
-	  echo view('layout/head', $data_header);
+	    echo view('layout/head', $data_header);
       echo view('a4r/Login');
     }
   }

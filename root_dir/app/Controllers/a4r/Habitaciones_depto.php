@@ -9,7 +9,7 @@ class Habitaciones_depto extends BaseController
     $data_header['title'] = "Habitaciones depto";
     $data_header['description'] = "Vista para mostrar los departamentos para renta-compra de un edificio";
 	  echo view('layout/head', $data_header);
-    return view('a4r/Habitaciones_depto');
+    echo view('a4r/Habitaciones_depto');
   }
   
 }

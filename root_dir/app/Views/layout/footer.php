@@ -17,8 +17,8 @@
                         <div class="col-lg-3">
                             <div class="social">
                                 <div class="social-content">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-facebook" style="margin-top: 5px;"></i></a>
+                                    <a href="#"><i class="fa fa-instagram" style="margin-top: 5px;"></i></a>
                                 </div>
                             </div>
                         </div>
