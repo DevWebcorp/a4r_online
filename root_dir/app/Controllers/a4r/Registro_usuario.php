@@ -5,8 +5,8 @@ use App\Controllers\BaseController;
 
 class Registro_usuario extends BaseController
 {
-  public function index(){
-    $session = session();
+    public function index(){
+        $session = session();
 		if( $session->get('logged_in') != null){
 			return redirect()->to(base_url().'/inicio');
 		}else{
@@ -19,11 +19,9 @@ class Registro_usuario extends BaseController
 
     public function register(){
 		helper('sendmail');
-		$url_confirmation = base_url()."/a4r/Registro/confirm_email/";
-		//$username=$_POST['name'];
-		$password=$_POST['password'];
+		$url_confirmation = base_url()."/a4r/Registro_usuario/confirm_email/";
 		$email = $_POST['email'];
-		//$tel = $_POST['tel'];
+		$password=$_POST['password'];
 		$confirm_password = $_POST['confirm_password'];
 		$password_hashed=password_hash($password,PASSWORD_DEFAULT);
 	    $id_group=4; //group arrendatario
@@ -54,18 +52,15 @@ class Registro_usuario extends BaseController
 
 		if(isset($error)){
 			$data_header['error'] = $error ;
-			//$data['username'] = $username;
 			$data_header['email'] = $email;
-			//$data['tel'] = $tel;
 
-      $data_header['title'] = "Registro de usuario";
-      $data_header['description'] = "Vista donde se registra el usuario";
-      echo view('layout/head', $data_header);
-			echo view('a4r/Registro_propietario', $data_header);
+            $data_header['title'] = "Registro de usuario";
+            $data_header['description'] = "Error de registro del usuario";
+            echo view('layout/head', $data_header);
+			echo view('a4r/Registro_usuario', $data_header);
 		}else{
 			date_default_timezone_set('America/Mexico_City');
 			$datos = [
-				//"user_name" => $username,
 				"created_at"=>date("Y-m-d h:i:s"),
 				"password" => $password_hashed,
 				"email"=>$email,
@@ -77,7 +72,7 @@ class Registro_usuario extends BaseController
 			$model_register=model('App\Models\Model_register\Register');
 			$id = $model_register->insert_user($datos);
 			if($id > 0){
-				$model_users = model('App\Models\a4r\Registro_propietario');
+				$model_users = model('App\Models\a4r\Datos_users');
 				$user_id = $model_users->select('id')->where('email', $email)->first();
 				$session = session();
 				$newdata = [
@@ -104,15 +99,12 @@ class Registro_usuario extends BaseController
 				return redirect()->to(base_url().'/inicio'); 
 				
 			}else{
-				//$data['username'] = $username;
-				
 				$data['email'] = $email;
-				//$data['tel'] = $tel;
 				$data['title'] = "A4r";
 				$data['error'] = "Ha ocurrido un error inesperado, por favor intentelo de nuevo. Si el problema persiste, por favor envie un correo electrónico a mattes" ;
 				//echo view('Login/sign_up' ,  $data);
 				echo view('layout/head', $data);
-				echo view('a4r/Registro_propietario',  $data);
+				echo view('a4r/Registro_usuario',  $data);
 			}
 		}
 	}
@@ -143,11 +135,21 @@ class Registro_usuario extends BaseController
 		}
 	}
 
+    /* 
+	* Funcion para saber si un usuario ya esta registrado a traves de su correo
+	* @param string email
+	* @return boolean
+	*/
 	private function user_exist($email){
 		$model_register = model('App\Models\Model_register\Register');
 		return $model_register->user_exist($email) > 0 ? true : false;
 	}
 
+    /* 
+	* Funcion para validar la estructura predeterminada de la contraseña
+	* @param string password
+	* @return boolean
+	*/
 	private function validate_password($password){
 		$uppercase = preg_match('@[A-Z]@', $password);
 		$lowercase = preg_match('@[a-z]@', $password);

@@ -14,13 +14,12 @@ class Login extends BaseController{
     } else {
       $data_header['title'] = "A4r Login";
       $data_header['description'] = "Login del usuario";
-	    echo view('layout/head', $data_header);
+	  echo view('layout/head', $data_header);
       echo view('a4r/Login');
     }
   }
 
-  public function verify_login()
-	{
+  public function verify_login() {
 		$email=$_POST['email'];
 		$password=$_POST['password'];
 		$user = array();
@@ -56,7 +55,7 @@ class Login extends BaseController{
 		}
 		$data['stage'] = $_SERVER['CI_ENVIRONMENT'];
 		if(isset($error) && !$active ){ // Cuenta inactiva
-			$data_header['title'] = "Mattes";
+			$data_header['title'] = "A4r";
 			$data_header['error_warning'] = $error;
 
 			$data_header['styles'] = ["starlight.css", "Mattes/Principal.css", "Mattes/Login.css", "Mattes/Menu_principal.css"];
@@ -75,7 +74,7 @@ class Login extends BaseController{
 			echo view('Login/Login' ,  $data);
 			echo view('fotter_panel', $data_fotter);
 		}else if(isset($error)){ // Error de autenticacion
-			$data_header['title'] = "Mattes";
+			$data_header['title'] = "A4r";
 			$data['error'] = $error;
 
 			$data_header['styles'] = ["starlight.css", "Mattes/Principal.css", "Mattes/Login.css", "Mattes/Menu_principal.css"];
@@ -87,7 +86,7 @@ class Login extends BaseController{
 			  "Mattes/Principal.js"
 			];    
 
-    		$data_header['description'] = "Login del usuario";
+    		$data_header['description'] = "Login del usuario error de autenticacion";
 
 			echo view('header', $data_header);
 			echo view('Mattes/Menu_principal');
@@ -117,8 +116,7 @@ class Login extends BaseController{
 		}
 	}
 
-	public function sign_out()
-	{
+	public function sign_out() {
 		$session = session();
 		$session->destroy();
 	/* 	$model_sesssion_events = model('App\Models\Astsuite\supervisor\Session_events');
