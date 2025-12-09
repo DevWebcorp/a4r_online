@@ -34,7 +34,7 @@
                             </div><!-- alert -->';
                     }
                 ?>
-                <form method="POST" action="<?= base_url() ?>/a4r/Registro/register" class="account_form">
+                <form method="POST" action="<?= base_url() ?>/a4r/Registro_usuario/register" class="account_form">
                     <div class="field-form">
                         <input type="email" name="email" class="field-text" placeholder="Correo*" required <?php if (isset($email)) {
                                                                                                                             echo 'value="' . $email . '"';

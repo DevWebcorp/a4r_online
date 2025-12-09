@@ -10,14 +10,14 @@ class Registro_usuario extends BaseController
 		if( $session->get('logged_in') != null){
 			return redirect()->to(base_url().'/inicio');
 		}else{
-      $data_header['title'] = "Registro de usuario";
-      $data_header['description'] = "Vista donde se registrar un usuario para comprar o rentar";
-      echo view('layout/head', $data_header);
-      echo view('a4r/Registro_usuario');
-    }  
-}
+            $data_header['title'] = "Registro de usuario";
+            $data_header['description'] = "Vista donde se registrar un usuario para comprar o rentar";
+            echo view('layout/head', $data_header);
+            echo view('a4r/Registro_usuario');
+        }  
+    }
 
-public function register(){
+    public function register(){
 		helper('sendmail');
 		$url_confirmation = base_url()."/a4r/Registro/confirm_email/";
 		//$username=$_POST['name'];
@@ -26,7 +26,7 @@ public function register(){
 		//$tel = $_POST['tel'];
 		$confirm_password = $_POST['confirm_password'];
 		$password_hashed=password_hash($password,PASSWORD_DEFAULT);
-		//$id_group=4;
+	    $id_group=4; //group arrendatario
 		$activation_token = password_hash($email,PASSWORD_DEFAULT);
 		$search = ['/','.'];
 		$remplace = ['&&&','z'];
@@ -70,7 +70,7 @@ public function register(){
 				"password" => $password_hashed,
 				"email"=>$email,
 				"activation_token"=> $activation_token,
-				//"id_group"=>$id_group,
+				"id_group"=>$id_group,
 				"active"=>0
 			];
 
@@ -84,7 +84,7 @@ public function register(){
 					'unique'    => $user_id['id'],
 					'email'     => $email,
 					'token'		=> $activation_token,
-					//'utype'		=> $id_group,
+					'utype'		=> $id_group,
 					'logged_in' => TRUE
 				];
 				$session->set($newdata);
