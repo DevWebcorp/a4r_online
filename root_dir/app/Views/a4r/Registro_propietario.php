@@ -36,7 +36,16 @@
                 ?>
                 <form method="POST" action="<?= base_url() ?>/a4r/Registro_propietario/register" class="account_form">
                     <div class="field-form">
-                        <input type="email" name="email" class="field-text" placeholder="Correo*" required <?php if (isset($email)) {
+                        <input type="text" class="field-text"  name="nombre" placeholder="Nombre completo" required>
+                    </div>                    
+                    <div class="field-form">
+                        <input type="date" class="field-text" name="fec_nac" placeholder="Fecha de nacimiento" required>
+                    </div>
+                    <div class="field-form">
+                        <input type="number" class="field-text" name="num_cel" placeholder="Número celular" required>
+                    </div>
+                    <div class="field-form">
+                        <input type="email" name="email" class="field-text" placeholder="Correo electrónico*" required <?php if (isset($email)) {
                                                                                                                             echo 'value="' . $email . '"';
                                                                                                                         } ?>>
                     </div>
