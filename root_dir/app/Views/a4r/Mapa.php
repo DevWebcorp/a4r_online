@@ -4,10 +4,6 @@
 <!--LIBRERIAS DINAMICAS PARA CSS-->
 <?= $this->section('css') ?>
 <!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/lib/helper.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/lib/custom.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/lib/responsive.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/lib/style.css') ?>">
 
 <?= $this->endSection() ?>
 
@@ -16,20 +12,26 @@
 <?= $this->section('content') ?>
 <style>
     .item.room-item .price {
-  font: 600 16px 'Montserrat';
-  color: #E1BD85;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-.item.room-item .info p .number {
-  font: 300 24px 'Montserrat';
-}
-.item.room-item .info p {
-    display: inline-block;
-    max-width: 80px;
-    margin: 0 20px; 
-    color: black;
-}
+        font: 600 16px 'Montserrat';
+        color: #E1BD85;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    .item.room-item .info p .number {
+        font: 300 24px 'Montserrat';
+    }
+    .item.room-item .info p {
+        display: inline-block;
+        max-width: 80px;
+        margin: 0 20px; 
+        color: black;
+    }
+    .section-slider{
+        height: auto !important;
+    }
+    .attraction-maps{
+        overflow: inherit !important;
+    }
 </style>
 
  <!-- BANNER SLIDER -->
@@ -55,7 +57,6 @@
             <li data-transition="fade">
                 <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/img-4.jpg') ?>" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
                 
-
                 <div class="tp-caption sft fadeout" data-x="center" data-y="195" data-speed="700" data-start="1300" data-easing="easeOutBack">
                     <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/icon-slider-1.png') ?>" alt="">
                 </div>
@@ -74,7 +75,6 @@
                     <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/slider/icon-slider-2.png') ?>" alt="">
                 </div>
             </li> 
-
         </ul>
     </div>
 </section>
@@ -120,7 +120,6 @@
 
  <!-- ATTRACTIONS -->
 <section class="section-attractions bg-white" style="padding-top: 5px;">
-
     <!-- MAPS -->
     <div class="attraction-maps" id="attraction-maps"></div>
     <!-- END / MAPS -->

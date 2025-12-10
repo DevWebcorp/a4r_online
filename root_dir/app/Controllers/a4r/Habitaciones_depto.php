@@ -6,7 +6,10 @@ use App\Controllers\BaseController;
 class Habitaciones_depto extends BaseController
 {
   public function index(){
-    return view('a4r/Habitaciones_depto');
+    $data_header['title'] = "Habitaciones depto";
+    $data_header['description'] = "Vista para mostrar los departamentos para renta-compra de un edificio";
+	  echo view('layout/head', $data_header);
+    echo view('a4r/Habitaciones_depto');
   }
   
 }

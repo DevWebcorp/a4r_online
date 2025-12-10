@@ -141,36 +141,6 @@
                                 </div>
                                 <!-- END / ITEM -->
 
-                                <!-- ITEM -->
-                                <div class="cart-item">
-                                    <div class="img">
-                                        <a href="#">
-                                            <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/cart/img-3.jpg') ?>">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <a href="#">Habitación estandar</a>
-                                        <p><span>2 días  - 3 recámaras</span> <b>$960</b></p>
-                                    </div>
-                                    <a href="#" class="remove"><i class="fa fa-close"></i></a>
-                                </div>
-                                <!-- END / ITEM -->
-
-                                <!-- ITEM -->
-                                <div class="cart-item">
-                                    <div class="img">
-                                        <a href="#">
-                                            <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/cart/img-2.jpg') ?>">
-                                        </a>
-                                    </div>
-                                    <div class="text">
-                                        <a href="#">Habitación en pareja</a>
-                                        <p><span>2 días  - 3 recámaras</span> <b>$960</b></p>
-                                    </div>
-                                    <a href="#" class="remove"><i class="fa fa-close"></i></a>
-                                </div>
-                                <!-- END / ITEM -->
-
                             </div>
 
                             <div class="checkout_cartinfo">

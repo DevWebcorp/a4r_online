@@ -54,25 +54,15 @@ class Register extends BaseController
 	public function password_recover(){
 		$data_header['title'] = 'Recupera tu cuenta';
 		$data_header['description'] = 'Correo en el cual se recuperara la contraseña';
-		$data_header['styles'] = ["starlight.css", "Mattes/Principal.css", "Mattes/Login.css", "Mattes/Menu_principal.css", "Mattes/Registro.css"];
-
-		$data_fotter['scripts'] = [
-		"dashboard.js",
-		"../lib/jquery/jquery.js",
-		"../lib/jquery-ui/jquery-ui.js",
-		"/Mattes/Principal.js"
-		];    
-		
-		echo view('header', $data_header);
-		echo view('Mattes/Menu_principal');
+		$data_header['title'] = "Recuperacion de contraseña";
+		$data_header['description'] = "Vista para recuperar contraseñ";
+		echo view('layout/head', $data_header);		
 		echo view('Login/password_recover', $data_header);
-		echo view('Mattes/Footer');
-		echo view('fotter_panel' , $data_fotter);
 	}
 
 	public function update_password(){
 		$email = $_POST['email'];
-		$url_confirmation = base_url().'/register/password_update/'; 
+		$url_confirmation = base_url().'/Register/password_update/'; 
 		$model_users = model('App\Models\Mattes\Arrendador_models\Datos_users');
 		$email_val = $model_users->validar_email($email);
 		$val = $email_val[0]->validar;
