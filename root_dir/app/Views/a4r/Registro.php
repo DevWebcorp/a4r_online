@@ -21,6 +21,7 @@
     }
 </style>
 
+
 <!-- ACCOUNT -->
 <section class="section-account parallax bg-11 section-deals">
     <div class="awe-overlay"></div>
@@ -74,8 +75,7 @@
 
 <?= $this->endSection() ?>
 
-<?= $this->section('scripts') ?>
-    <script>
-        // Aquí van los scripts específicos de esta página
-    </script>
+<?= $this->section('scripts') ?>   
+ 
+
 <?= $this->endSection() ?>

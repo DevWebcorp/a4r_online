@@ -34,6 +34,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
+    <link href="<?=base_url()?>/assets/css/Mattes/royal_preloader.min.css" rel="stylesheet">
+
      <!-- LIBRERÍAS DINÁMICAS POR PÁGINA -->
     <?= $this->renderSection('css') ?>
 
