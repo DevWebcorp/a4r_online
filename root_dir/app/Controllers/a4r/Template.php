@@ -6,7 +6,9 @@ use App\Controllers\BaseController;
 class Template extends BaseController
 {
   public function index(){
+
     return view('a4r/Template');
+    
   }
   
 }

@@ -1,0 +1,13 @@
+# Ignore writable runtime files
+writable/debugbar/
+writable/session/
+
+# Common PHP / Composer ignores
+/vendor/
+/.env
+/node_modules/
+/public/build/
+
+# OS files
+.DS_Store
+Thumbs.db
