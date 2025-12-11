@@ -4,66 +4,80 @@
 <!--LIBRERIAS DINAMICAS PARA CSS-->
 <?= $this->section('css') ?>
 <!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
- <link rel="stylesheet" type="text/css" href="<?= base_url('/../templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/helper.css') ?>">
-<link rel="stylesheet" type="text/css" href="<?= base_url('/../templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/custom.css') ?>">
-<link rel="stylesheet" type="text/css" href="<?= base_url('/../templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/responsive.css') ?>">
-
 <?= $this->endSection() ?>
 
 
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
 <style>
-    .section-deals .item-deal:hover img {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-    }
+    
 </style>
 
-
 <!-- ACCOUNT -->
-<section class="section-account parallax bg-11 section-deals">
+<section class="section-account parallax bg-11">
     <div class="awe-overlay"></div>
-        <div class="container">
-            <div class="login-register">
-                <div class="text text-center">
-                    <div class="container">
-                        <div class="content">
-                            <div class="row">
-                                <div class="col col-xs-12 col-lg-6 col-lg-offset-3">
-                                    <div class="ot-heading row-20 mb30 text-center">
-                                        <h2>Registro</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row v-align">
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="item item-deal">
-                                        <div class="img">
-                                            <img class="img-responsive" src="<?= base_url('../assets/img/anuncio8.jpg') ?>"> 
-                                        </div>
-                                        <div class="info">
-                                            <a class="title bold f26 font-monserat upper" href="<?=base_url()?>/a4r/Registro_propietario">Registro <br> propietario</a> <br>
-                                            <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12" href="<?=base_url()?>/a4r/Registro_propietario">Registrarse</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6">
-                                    <div class="item item-deal">
-                                        <div class="img">
-                                            <img class="img-responsive" src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/home/ourbest/img-1.jpg') ?>"> 
-                                        </div>
-                                        <div class="info">
-                                            <a class="title bold f26 font-monserat upper" href="<?=base_url()?>/a4r/Registro_usuario">Registro <br> usuario</a> <br>
-                                            <a class="awe-btn awe-btn-12 btn-medium font-hind bold f12" href="<?=base_url()?>/a4r/Registro_usuario">Registrarse</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+    <div class="container">
+        <div class="login-register">
+            <div class="text text-center">
+                <h2>Formulario de registro</h2>
+                <?php 
+                    if(isset($error)){
+                        echo '<div class="alert alert-danger" role="alert">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                    <span><strong>¡Ha ocurrido un error! <br></strong>'.$error.'</span>
+                                </div><!-- d-flex -->
+                            </div><!-- alert -->';
+                    }else if (isset($success)) {
+                        echo '<div class="alert alert-success" role="alert">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+                                    <span><strong>Genial! <br></strong>' . $success . '</span>
+                                </div><!-- d-flex -->
+                            </div><!-- alert -->';
+                    }
+                ?>
+                <form method="POST" action="<?= base_url() ?>/a4r/Registro_propietario/register" class="account_form">
+                    <div class="field-form">
+                        <input type="text" class="field-text"  name="nombre" placeholder="Nombre completo" required>
+                    </div>                    
+                    <div class="field-form">
+                        <input type="date" class="field-text" name="fec_nac" placeholder="Fecha de nacimiento" required>
+                    </div>
+                    <div class="field-form">
+                        <input type="number" class="field-text" name="num_cel" placeholder="Número celular" required>
+                    </div>
+                    <div class="field-form">
+                        <input type="email" name="email" class="field-text" placeholder="Correo electrónico*" required <?php if (isset($email)) {
+                                                                                                                            echo 'value="' . $email . '"';
+                                                                                                                        } ?>>
+                    </div>
+                    <div class="field-form">
+                        <input type="password" name="password" class="field-text" placeholder="Contraseña*" required>
+                        <span class="view-pass"><i class="lotus-icon-view"></i></span>
+                    </div>
+                    <div class="field-form">
+                        <input type="password" name="confirm_password" class="field-text" placeholder="Confirmar contraseña*" required>
+                        <span class="view-pass"><i class="lotus-icon-view"></i></span>
+                    </div>
+                    <div class="field-form">
+                        <p class="text-left">Escoja el tipo de usuario</p>
+                        <div style="display: flex;">
+                            <label for="usr" style="color: white;">
+                                <input type="checkbox" id="usr" value="Usuario" /> 
+                                Usuario
+                            </label><br/>
+                            
+                            <label for="prop" style="margin-left: 10px; color: white;">
+                                <input type="checkbox" id="prop" value="Propietario" />
+                                Propietario
+                            </label>
                         </div>
                     </div>
-                </div>
+                    <div class="field-form field-submit">
+                        <button type="submit" class="awe-btn awe-btn-13">Registrarse</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -75,7 +89,8 @@
 
 <?= $this->endSection() ?>
 
-<?= $this->section('scripts') ?>   
- 
-
+<?= $this->section('scripts') ?>
+    <script>
+        // Aquí van los scripts específicos de esta página
+    </script>
 <?= $this->endSection() ?>

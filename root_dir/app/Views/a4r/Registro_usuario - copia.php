@@ -9,9 +9,6 @@
 
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
-<style>
-    
-</style>
 
 <!-- ACCOUNT -->
 <section class="section-account parallax bg-11">
@@ -19,7 +16,7 @@
     <div class="container">
         <div class="login-register">
             <div class="text text-center">
-                <h2>Registro de propietario</h2>
+                <h2>Registro de usuario</h2>
                 <?php 
                     if(isset($error)){
                         echo '<div class="alert alert-danger" role="alert">
@@ -37,18 +34,9 @@
                             </div><!-- alert -->';
                     }
                 ?>
-                <form method="POST" action="<?= base_url() ?>/a4r/Registro_propietario/register" class="account_form">
+                <form method="POST" action="<?= base_url() ?>/a4r/Registro_usuario/register" class="account_form">
                     <div class="field-form">
-                        <input type="text" class="field-text"  name="nombre" placeholder="Nombre completo" required>
-                    </div>                    
-                    <div class="field-form">
-                        <input type="date" class="field-text" name="fec_nac" placeholder="Fecha de nacimiento" required>
-                    </div>
-                    <div class="field-form">
-                        <input type="number" class="field-text" name="num_cel" placeholder="Número celular" required>
-                    </div>
-                    <div class="field-form">
-                        <input type="email" name="email" class="field-text" placeholder="Correo electrónico*" required <?php if (isset($email)) {
+                        <input type="email" name="email" class="field-text" placeholder="Correo*" required <?php if (isset($email)) {
                                                                                                                             echo 'value="' . $email . '"';
                                                                                                                         } ?>>
                     </div>
@@ -59,20 +47,6 @@
                     <div class="field-form">
                         <input type="password" name="confirm_password" class="field-text" placeholder="Confirmar contraseña*" required>
                         <span class="view-pass"><i class="lotus-icon-view"></i></span>
-                    </div>
-                    <div class="field-form">
-                        <p class="text-left">Escoja el tipo de usuario</p>
-                        <div style="display: flex;">
-                            <label>
-                                <input type="checkbox" id="cbox1" value="Usuario" /> 
-                                Usuario
-                            </label><br/>
-                            
-                            <label for="cbox2" style="margin-left: 10px;">
-                                <input type="checkbox" id="cbox2" value="Propietario" />
-                                Propietario
-                            </label>
-                        </div>
                     </div>
                     <div class="field-form field-submit">
                         <button type="submit" class="awe-btn awe-btn-13">Registrarse</button>
