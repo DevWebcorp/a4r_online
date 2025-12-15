@@ -27,6 +27,11 @@ class Registro extends BaseController
 		$confirm_password = $_POST['confirm_password'];
 		$password_hashed=password_hash($password,PASSWORD_DEFAULT);
 		$id_group = $_POST['id_group'];
+
+		$name = $_POST['name'];
+		$birth_date = $_POST['birth_date'];
+		$phone = $_POST['phone'];
+
 		if($id_group == "Usuario"){
 			$id_group = 3;
 		}else{
@@ -74,12 +79,28 @@ class Registro extends BaseController
 				"activation_token"=> $activation_token,
 				"id_group"=>$id_group,
 				"active"=>0
-			];
+			];			
 
 			$model_register=model('App\Models\Model_register\Register');
 			$id = $model_register->insert_user($datos);
-			if($id > 0){
-				$model_users = model('App\Models\a4r\Datos_users');
+
+			$last_id = $this->db->insertID();
+
+			$datos_user = [
+				'name' => $name,
+				'birth_date' => $birth_date,
+				'phone'	=> $phone,
+				'id_user' => $last_id
+			];
+			$model_identityowner = model('App\Models\a4r\Identity');
+			//$result = $model_identityowner->insert($datos_user);
+			 
+			var_dump($datos); 
+			var_dump($id); 
+			var_dump($last_id); 
+			//var_dump($datos_user);
+			/* if($id > 0){
+				$model_users = model('App\Models\a4r\Datos_users');				
 				$user_id = $model_users->select('id')->where('email', $email)->first();
 				$session = session();
 				$newdata = [
@@ -95,6 +116,7 @@ class Registro extends BaseController
 				$data_up = [
 					'c_date' => $fecha
 				];
+				
 				$model_users->update($id, $data_up);
 				$subject = "Gracias por unirte a A4r";
 				$activation_token = str_replace( '/' , '&&&' , $activation_token);
@@ -112,7 +134,7 @@ class Registro extends BaseController
 				//echo view('Login/sign_up' ,  $data);
 				echo view('layout/head', $data);
 				echo view('a4r/Registro',  $data);
-			}
+			} */
 		}
 	}
 

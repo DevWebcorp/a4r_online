@@ -38,14 +38,14 @@
                     }
                 ?>
                 <form method="POST" action="<?= base_url() ?>/a4r/Registro/register" class="account_form">
-                    <div class="field-form">
-                        <input type="text" class="field-text" name="nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" placeholder="Nombre completo" required>
+                    <div class="field-form">                        
+                        <input type="text" class="field-text" name="name" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" placeholder="Nombre completo" required>
                     </div>                    
                     <div class="field-form">
-                        <input type="date" class="field-text" name="fec_nac" placeholder="Fecha de nacimiento">
+                        <input type="date" class="field-text" name="birth_date" placeholder="Fecha de nacimiento">
                     </div>
                     <div class="field-form">
-                        <input type="tel" class="field-text" name="num_cel" pattern="^[0-9]+" minlength="10" maxlength="10" placeholder="Número celular">
+                        <input type="tel" class="field-text" name="phone" pattern="^[0-9]+" minlength="10" maxlength="10" placeholder="Número celular">
                     </div>
                     <div class="field-form">
                         <input type="email" name="email" class="field-text" placeholder="Correo electrónico*" required <?php if (isset($email)) {
