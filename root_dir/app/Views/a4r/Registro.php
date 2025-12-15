@@ -37,15 +37,15 @@
                             </div><!-- alert -->';
                     }
                 ?>
-                <form method="POST" action="<?= base_url() ?>/a4r/Registro_propietario/register" class="account_form">
+                <form method="POST" action="<?= base_url() ?>/a4r/Registro/register" class="account_form">
                     <div class="field-form">
-                        <input type="text" class="field-text"  name="nombre" placeholder="Nombre completo" required>
+                        <input type="text" class="field-text" name="nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" placeholder="Nombre completo" required>
                     </div>                    
                     <div class="field-form">
-                        <input type="date" class="field-text" name="fec_nac" placeholder="Fecha de nacimiento" required>
+                        <input type="date" class="field-text" name="fec_nac" placeholder="Fecha de nacimiento">
                     </div>
                     <div class="field-form">
-                        <input type="number" class="field-text" name="num_cel" placeholder="Número celular" required>
+                        <input type="tel" class="field-text" name="num_cel" pattern="^[0-9]+" minlength="10" maxlength="10" placeholder="Número celular">
                     </div>
                     <div class="field-form">
                         <input type="email" name="email" class="field-text" placeholder="Correo electrónico*" required <?php if (isset($email)) {
@@ -64,12 +64,12 @@
                         <p class="text-left">Escoja el tipo de usuario</p>
                         <div style="display: flex;">
                             <label for="usr" style="color: white;">
-                                <input type="checkbox" id="usr" value="Usuario" /> 
+                                <input type="radio" name="id_group" id="usr" value="Usuario" required/> 
                                 Usuario
                             </label><br/>
                             
                             <label for="prop" style="margin-left: 10px; color: white;">
-                                <input type="checkbox" id="prop" value="Propietario" />
+                                <input type="radio" name="id_group" id="prop" value="Propietario" required/>
                                 Propietario
                             </label>
                         </div>
