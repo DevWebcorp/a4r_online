@@ -84,7 +84,7 @@ class Registro extends BaseController
 			$model_register=model('App\Models\Model_register\Register');
 			$id = $model_register->insert_user($datos);
 
-			$last_id = $this->db->insertID();
+			$last_id = $model_register->insertID();
 
 			$datos_user = [
 				'name' => $name,
@@ -93,13 +93,9 @@ class Registro extends BaseController
 				'id_user' => $last_id
 			];
 			$model_identityowner = model('App\Models\a4r\Identity');
-			//$result = $model_identityowner->insert($datos_user);
+			$result = $model_identityowner->insert($datos_user);
 			 
-			var_dump($datos); 
-			var_dump($id); 
-			var_dump($last_id); 
-			//var_dump($datos_user);
-			/* if($id > 0){
+			if($id > 0){
 				$model_users = model('App\Models\a4r\Datos_users');				
 				$user_id = $model_users->select('id')->where('email', $email)->first();
 				$session = session();
@@ -134,7 +130,7 @@ class Registro extends BaseController
 				//echo view('Login/sign_up' ,  $data);
 				echo view('layout/head', $data);
 				echo view('a4r/Registro',  $data);
-			} */
+			} 
 		}
 	}
 
