@@ -32,10 +32,10 @@ class Registro extends BaseController
 		$birth_date = $_POST['birth_date'];
 		$phone = $_POST['phone'];
 
-		if($id_group == "Usuario"){
-			$id_group = 3;
+		if($id_group === "Propietario"){
+			$id_group = 4; //mattes/arrendador/primeravez
 		}else{
-			$id_group = 4;
+			$id_group = 3; // arrendador? //registro-alumno
 		}
 		$activation_token = password_hash($email,PASSWORD_DEFAULT);
 		$search = ['/','.'];
@@ -118,11 +118,12 @@ class Registro extends BaseController
 				$activation_token = str_replace( '/' , '&&&' , $activation_token);
 				$data['url'] = $url_confirmation.urlencode($activation_token);
 				$message = view('Login/confirm_mail' , $data);
+				//$message = view('a4r/Registro/confirm_email' , $data);
 				$file_path = null;
 				send_email($email,$subject,$message,$file_path);
 				
-				return redirect()->to(base_url().'/inicio'); 
-				
+				//return redirect()->to(base_url().'/inicio'); 
+				return redirect()->to(base_url().'/a4r/Login'); 				
 			}else{
 				$data['email'] = $email;
 				$data['title'] = "A4r";
@@ -148,7 +149,7 @@ class Registro extends BaseController
 				$data_header['title'] = "A4r";
 				$data_header['description'] = "A4r - confirmacion de correo";
 				$data['success'] = "Tu correo ha sido confirmado, ahora puedes iniciar sesión en A4r. Muchas gracias por tu confianza.";
-        echo view('layout/head', $data_header);			
+        		echo view('layout/head', $data_header);			
 				echo view('a4r/Login', $data_header);
 			}else{
 				$data_header['title'] = "A4r";

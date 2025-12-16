@@ -112,7 +112,8 @@ class Login extends BaseController{
 				'c_date' => $fecha
 			];
 			$model_users->update($user_id, $data_up);
-			return redirect()->to(base_url().'/inicio'); 
+			//return redirect()->to(base_url().'/inicio'); 
+			return redirect()->to(base_url().'/a4r/Login'); 
 		}
 	}
 
@@ -126,9 +127,14 @@ class Login extends BaseController{
 			'id_user' => $session->get('unique')
 		];
 		$result = $model_sesssion_events->insert($data); */
-		return redirect()->to(base_url());
+		return redirect()->to(base_url().'/a4r/Login');
 	}
 
+	/* 
+	* Funcion para saber si un usuario ya esta registrado a traves de su correo
+	* @param string email
+	* @return boolean
+	*/
 	private function user_exist($email , &$array ){
 		$log = new Model_login();
 		$array = $log->get_login($email);
