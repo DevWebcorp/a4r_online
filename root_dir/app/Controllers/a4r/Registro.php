@@ -9,8 +9,7 @@ class Registro extends BaseController
 		$data_header['title'] = "Registro general";
 		$data_header['description'] = "Vista de registro general donde deciden si es propietario o cliente";
 		echo view('layout/head', $data_header);
-		echo view('a4r/Registro');	
-	}  
+		echo view('a4r/Registro');
+	}
 	
-
-} 
+}

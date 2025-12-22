@@ -56,7 +56,7 @@
                     
                         <div class="bot">
                             <span class="price">Desde <span class="amout">$260</span> /día</span>
-                            <a href="#" class="awe-btn awe-btn-13">Ver detalles</a>
+                            <a href="<?= base_url('a4r/Detalle_habitacion') ?>" class="awe-btn awe-btn-13">Ver detalles</a>
                         </div>
                     
                     </div>
@@ -87,7 +87,7 @@
                     
                         <div class="bot">
                             <span class="price">Desde <span class="amout">$260</span> /día</span>
-                            <a href="#" class="awe-btn awe-btn-13">Ver detalles</a>
+                            <a href="<?= base_url('a4r/Detalle_habitacion') ?>" class="awe-btn awe-btn-13">Ver detalles</a>
                         </div>
                     
                     </div>
@@ -118,7 +118,7 @@
                     
                         <div class="bot">
                             <span class="price">Desde <span class="amout">$260</span> /día</span>
-                            <a href="#" class="awe-btn awe-btn-13">Ver detalles</a>
+                            <a href="<?= base_url('a4r/Detalle_habitacion') ?>" class="awe-btn awe-btn-13">Ver detalles</a>
                         </div>
                     
                     </div>
@@ -149,7 +149,7 @@
                     
                         <div class="bot">
                             <span class="price">Desde <span class="amout">$260</span> /día</span>
-                            <a href="#" class="awe-btn awe-btn-13">Ver detalles</a>
+                            <a href="<?= base_url('a4r/Detalle_habitacion') ?>" class="awe-btn awe-btn-13">Ver detalles</a>
                         </div>
                     
                     </div>

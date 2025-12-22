@@ -17,28 +17,28 @@
         <div class="login-register">
             <div class="text text-center">
                 <h2>Registro de usuario</h2>
-                <?php 
-                    if(isset($error)){
-                        echo '<div class="alert alert-danger" role="alert">
+                <?php
+                if (isset($error)) {
+                    echo '<div class="alert alert-danger" role="alert">
                                 <div class="d-flex align-items-center justify-content-start">
                                     <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
-                                    <span><strong>¡Ha ocurrido un error! <br></strong>'.$error.'</span>
+                                    <span><strong>¡Ha ocurrido un error! <br></strong>' . $error . '</span>
                                 </div><!-- d-flex -->
                             </div><!-- alert -->';
-                    }else if (isset($success)) {
-                        echo '<div class="alert alert-success" role="alert">
+                } else if (isset($success)) {
+                    echo '<div class="alert alert-success" role="alert">
                                 <div class="d-flex align-items-center justify-content-start">
                                     <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
                                     <span><strong>Genial! <br></strong>' . $success . '</span>
                                 </div><!-- d-flex -->
                             </div><!-- alert -->';
-                    }
+                }
                 ?>
                 <form method="POST" action="<?= base_url() ?>/a4r/Registro_usuario/register" class="account_form">
                     <div class="field-form">
                         <input type="email" name="email" class="field-text" placeholder="Correo*" required <?php if (isset($email)) {
-                                                                                                                            echo 'value="' . $email . '"';
-                                                                                                                        } ?>>
+                                                                                                                echo 'value="' . $email . '"';
+                                                                                                            } ?>>
                     </div>
                     <div class="field-form">
                         <input type="password" name="password" class="field-text" placeholder="Contraseña*" required>
@@ -64,7 +64,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
-    <script>
-        // Aquí van los scripts específicos de esta página
-    </script>
+<script>
+    // Aquí van los scripts específicos de esta página
+</script>
 <?= $this->endSection() ?>
