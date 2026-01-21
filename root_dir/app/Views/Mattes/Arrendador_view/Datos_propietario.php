@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="alert bg-warning mg-t-100 d-none" id="alert_correo" role="alert">
     <button type="button" class="close" aria-label="Close">
