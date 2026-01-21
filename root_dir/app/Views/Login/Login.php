@@ -1,80 +1,79 @@
-<section class="banner-mattes">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">   
-                <form method="POST" action="<?php echo base_url() . '/Login/verify_login' ?>">
-                    <div class="row justify-content-right">
-                        <div class="col-12">
+<?= $this->extend('layout/main') ?>
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+    <style>
+        .logo-container {
+            margin: 20px 0 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-                            <div class="wd-400 wd-md-500 login">
-                                <?php if (!isset($stage)) {
-                                    $stage = "production";
-                                }
-                                if ($stage == 'development') {
-                                    echo '';
-                                    // echo '<div class="card card-body tx-white-8 bg-danger bd-0">ESTAS ENTRANDO A LA VERSION DE DESARROLLO DE MATTES WEBCORP. TODOS LOS DATOS QUE SE INGRESEN EN ESTA INSTANCIA SERAN ELIMINADOS EN UN FUTURO.</div>';
-                                } else {
-                                } ?>
-                                <div class="ingresa">Ingresa</div>
-                                <?php if (isset($error)) {
-                                    echo '<div class="alert alert-danger" role="alert">
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
-                                            <span><strong>Ha ocurrido un error! <br></strong>' . $error . '</span>
-                                        </div><!-- d-flex -->
-                                    </div><!-- alert -->';
-                                } else if (isset($error_warning)) {
-                                    echo '<div class="alert alert-warning" role="alert">
-                                            <div class="d-flex align-items-center justify-content-start">
-                                                <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
-                                            <span><strong>oh no! <br></strong>' . $error_warning . '</span>
-                                            </div><!-- d-flex -->
-                                        </div><!-- alert -->';
-                                } else if (isset($success)) {
-                                    echo '<div class="alert alert-success" role="alert">
-                                        <div class="d-flex align-items-center justify-content-start">
-                                            <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
-                                            <span><strong>Genial! <br></strong>' . $success . '</span>
-                                        </div><!-- d-flex -->
-                                    </div><!-- alert -->';
-                                }
-                                ?>
-                                <div class="form-group">
-                                    <label class="form-control-label">Usuario* </label>
-                                    <input type="text" class="form-control" style="padding: 0.8rem;" name="email" placeholder=" " required>
-                                </div>
-                                <div class="row mg-t-20 formulario__grupo" id="grupo__password">
-                                    <label class="col-12 form-control-label">Contraseña* </label>
-                                    <div class="col-sm-12 mg-t-10 mg-sm-t-0 input-group" id="show_hide_password">
-                                        <input placeholder=" " type="password" class="form-control" name="password" id="update_password" required>
-                                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
-                                        <div class="input-group-addon" style="border-radius: 10px;">
-                                            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group mt-3">
-                                 
-                                </div> 
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn btn-entrar disable px-5">Entrar</button>
-                                </div>
-                                <div class="col-12 mt-5">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <a href="<?= base_url()?>/Recuperar-contrasena" class=" contrasenia" >¿Olvidaste tu contraseña?</a>
-                                        <a href="<?= base_url()?>/Registro" class="btn btn-cuenta ml-5">Crear cuenta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        .logo-login {
+            max-width: 300px;
+            height: auto;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        /* Responsive para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .logo-login {
+                max-width: 150px;
+            }
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 480px) {
+            .logo-login {
+                max-width: 120px;
+            }
+        }
+    </style>
+<?= $this->endSection() ?>
+
+<?= $this->section('content') ?>
+    <section class="section-account parallax bg-11">
+        <div class="awe-overlay"></div>
+        <div class="container">
+            <div class="login-register">
+                <div class="text text-center">
+                    
+                    <div class="logo-container">
+                        <img src="<?= base_url('../assets/img/Logo-PlataformA4R.png') ?>" alt="Logo A4R" class="logo-login">
                     </div>
-                </form>
-            </div><!-- /.gradiente-->
+                    <h5>Iniciar Sesión</h5>
+                    <form method="$_POST" class="account_form">
+                        <div class="field-form">
+                            <input type="text" class="field-text" placeholder="Correo" name="email">
+                        </div>
+                        <div class="field-form">
+                            <input type="password" class="field-text" placeholder="Contraseña" name="password">
+                            <span class="view-pass"><i class="lotus-icon-view"></i></span>
+                        </div>
+                        <div class="field-form field-submit">
+                            <button type="submit" id="btnLoginSubmit" class="awe-btn awe-btn-13">Entrar</button>
+                        </div>
+                        <span class="account-desc">No tengo una cuenta - <a href="#">Olvidé la contraseña</a></span>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?= $this->endSection() ?>
 
-
+<?= $this->section('scripts') ?>
+<script>
+    var baseUrl = "<?= base_url() ?>";
+</script>
 <script src="<?= base_url() ?>/assets/lib/jquery/jquery.js"></script>
 <script src="<?= base_url() ?>/assets/js/Mattes/Login.js"></script>
+<?= $this->endSection() ?>
+
+
+
+
+
+
+
 
