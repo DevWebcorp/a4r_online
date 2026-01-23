@@ -41,12 +41,12 @@
         //Preloader
         Royal_Preloader.config({
             mode           : 'logo',
-            logo           : '<?=base_url()?>/assets/img/Mattes.png',
-            logo_size      : [120, 75],
+            logo           : '<?=base_url()?>/assets/img/Logo-PlataformA4R.png',
+            logo_size      : [240, 75],
             /* showProgress   : true, */
             /* showPercentage : true, */
-            text_colour: '#ffffff',
-            background: '#000000'
+            text_colour: '#000000',
+            background: '#ffffff'
         });
     })(jQuery);
 </script> 

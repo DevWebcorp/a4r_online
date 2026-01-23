@@ -36,15 +36,15 @@ class Datos_propietario extends BaseController
 
           $data_fotter['external_scripts'] = ["https://maps.googleapis.com/maps/api/js?key=AIzaSyCwD3Bk71LnFRTi329E7GRyqPQDTpDGXgk&libraries=places" , "https://polyfill.io/v3/polyfill.min.js?features=default"];
 
-          $data_header['styles'] = ["starlight.css" , "../lib/jquery-timepicker/jquery.timepicker.css" , "../lib/datatables/jquery.dataTables.css"];
+          $data_header['styles'] = ["starlight.css" , "../lib/jquery-timepicker/jquery.timepicker.css" , "../lib/datatables/jquery.dataTables.css",  "Mattes/Arrendador/Arrendador.css", "Mattes/Arrendador/Menu_arrendador.css"];
 
-          $data_header['title'] = "A4r";
+          $data_header['title'] = "A4r datos propietario";
           $data_header['description'] = "Datos de registro del propietario";
           echo view('header' , $data_header);
           //echo view('Mattes/Arrendador_view/Menu_arrendador',$data);
-          //echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
+          echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
           echo view('Mattes/Arrendador_view/Datos_propietario');
-          echo view('right_panel');
+          //echo view('right_panel');
           //echo view('Mattes/Footer');
           echo view('fotter_panel' , $data_fotter);   
 

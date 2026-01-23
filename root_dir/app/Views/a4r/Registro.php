@@ -13,6 +13,8 @@
 
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
+
+<?= $this->include('Layout/header') ?>
 <style>
     .section-deals .item-deal:hover img {
         -webkit-transform: scale(1.1);

@@ -9,6 +9,7 @@
 
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
+<?= $this->include('Layout/header') ?>
 
  <!-- ACCOUNT -->
         <section class="section-account parallax bg-11">

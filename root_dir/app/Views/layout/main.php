@@ -8,7 +8,6 @@
     </div>
 
     <div id="page-wrap">
-        <?= $this->include('Layout/header') ?>
         <!-- Contenido dinámico -->
         <?= $this->renderSection('content') ?>
         <?= $this->include('Layout/footer') ?>
