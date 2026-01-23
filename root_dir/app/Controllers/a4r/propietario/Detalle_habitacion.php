@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Controllers\a4r;
+namespace App\Controllers\a4r\propietario;
 use App\Controllers\BaseController;
 
 class Detalle_habitacion extends BaseController
@@ -9,7 +9,7 @@ class Detalle_habitacion extends BaseController
     $data_header['title'] = "Detalle de la habitacion";
     $data_header['description'] = "Vista con detalles de la habitacion";
 	  echo view('layout/head', $data_header);
-    echo view('a4r/Detalle_habitacion');
+    echo view('a4r/Propietario/Detalle_habitacion');
   }
   
 }
