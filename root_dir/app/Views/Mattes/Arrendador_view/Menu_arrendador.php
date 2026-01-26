@@ -18,9 +18,10 @@
             <!-- HEADER MENU -->
             <nav class="header_menu">
                 <ul class="menu">
-                    <li><a href="<?=base_url()?>/a4r/Habitaciones_casa">Mi cuenta</a></li>
-                    <li class="current-menu-item">
-                        <a href="<?=base_url()?>/a4r/Mapa">Mis propiedades</a>
+                    <li><a href="<?=base_url()?>/datos-propietario">Mi cuenta</a></li>
+                    <!-- <li class="current-menu-item"> -->
+                    <li>
+                        <a href="<?=base_url()?>/a4r/propietario/Home_propietario">Mis propiedades</a>
                     </li>
                     <li>
                         <a href="<?=base_url()?>/a4r/Habitaciones_casa">Alta propiedad</a>
