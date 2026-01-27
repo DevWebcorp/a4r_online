@@ -61,7 +61,6 @@ function get_propiedades() {
                                         <div class="d-flex row">
                                             <div class="col-2">
                                                 <button class = "detalle-propiedad" id = " ${v.id} " type="button">
-                                                    <i class="ionicons ion-edit h2  text-warning"></i>
                                                 </button>
                                                 <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
                                                     <i class="fa fa-trash" aria-hidden="true"></i>

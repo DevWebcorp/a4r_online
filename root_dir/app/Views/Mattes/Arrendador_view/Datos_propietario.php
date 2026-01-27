@@ -39,7 +39,7 @@
 
                 <div class="col-12">
                     <div class="contact-form">
-                        <form id="send-contact-form" action="https://landing.engotheme.com/html/lotus/demo/send_mail_contact.php" method="post">
+                        <form id="form-personales" method="post" enctype="multipart/form-data">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
