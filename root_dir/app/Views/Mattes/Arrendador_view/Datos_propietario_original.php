@@ -18,22 +18,15 @@
     </div>
 </div>
 
-<style>
-    .form-group input {
-        display: block; 
-        margin-bottom: 5px; 
-        border: 2px solid #232323;
-        width: 100%;f
-        color: #232323;
-        line-height: 35px;
-        height: 40px;
-    }
-
-    .form-group label {
-        display: block; 
-    }
-</style>
-
+<div class="alert bg-warning mg-t-100 d-none" id="alert_correo" role="alert">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="d-flex align-items-center justify-content-start">
+        <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+        <span><strong>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA</strong> <span id="success"></span></span>
+    </div><!-- d-flex -->
+</div><!-- alert -->
 
 <div class="mb-120 mg-t-120">
     <div class="container">
@@ -51,9 +44,16 @@
             ===== DATOS PERSONALES =====
         =============================================-->
         <div id="Personales" class="tabcontent">
-            <form class="mg-b-30" id="form-personales" enctype="multipart/form-data">
-                <div class="container">
-                    <div class="row"> 
+            <div class="col-12">
+                <div class="form-layout " style="border: none;">
+                    <div class="text-center">
+                        <h3 class="datos-personales mt-3 mb-5"> Ahora un poco de ti </h3>
+                        <p class="col-lg-7 mx-auto">En Mattes buscamos la seguridad de toda nuestra comunidad, tanto estudiantes
+                            como propietarios, es por esto que los
+                            documentos que pedimos a continuación son necesarios para poder subir tu
+                            propiedad en la plataforma. </p>
+                    </div>
+                    <form class="mg-b-30" id="form-personales" enctype="multipart/form-data">
                         <div class="row justify-content-center mg-t-20">
                             <div class="col-lg-7 mg-b-20 ">
                                 <label class="text-left">Foto de perfil</label>
@@ -69,73 +69,88 @@
                                 </div>
                             </div>
                         </div>
-                            
-                        <div class="col-lg-4 ">
-                            <div class="form-group">
-                                <label class="">
-                                    Nombre<span class="tx-danger">*</span>
-                                </label>
-                                <input type="text" class="" id="nombre" name="nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                            </div>
-                        </div>
-                    
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="">
-                                    Primer apellido<span class="tx-danger">*</span>
-                                </label>
-                                <input type="text" class="" id="apellido" name="apellido" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                            </div>
-                        </div>
-                        
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="">
-                                    Segundo apellido<span class="tx-danger">*</span>
-                                </label>
-                                <input type="text" class="" id="am" name="segundo_apellido"  pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="4" maxlength="25" autocomplete="off" placeholder=" " required>
-                            </div>
-                        </div>
-                            
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="">Fecha de nacimiento<span class="tx-danger">*</span></label>
-                                <input type="date" id="f_nacimiento"  class="" name="f_nacimiento" minlength="10" maxlength="10" required>
-                            </div>
-                        </div>
-                    
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="">Número celular<span class="tx-danger">*</span></label>
-                                <input type="tel" class=""  id="telefono" name="celular" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
-                            </div>
-                        </div>
-                            
-                            
-                            <div class="col-lg-3 mt-4">
-                                <div class="form-group mt-3 text-center">
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <!-- <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-                                        <label class="custom-control-label" for="customControlValidation1">Aviso de privacidad</label>
-                                        <div class="invalid-feedback">Selecciona</div> -->
-                                        <input id="id_usuarioper" type="hidden" name="id_usuarioper">
-
-                                    </div>
+                        <div class="row justify-content-center mg-t-40">
+                            <div class="col-lg-7 form__group">
+                                <input type="text" class="form__input" id="nombre" name="nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
+                                <label class="form__label">Nombre<span class="tx-danger">*</span></label>
+                                <div class="requirements">
+                                    Tiene que tener mínimo 3 caracteres
                                 </div>
                             </div>
-
-                            <div class="col-lg-7 row mx-auto px-0 px-lg-2 mt-5">
-                                <div class="col-sm-12 text-center text-md-right px-0">
-                                    <div class="d-flex flex-column flex-sm-row justify-content-end">
-                                        <button class="btn btn-info continuar-momento mr-sm-2 mb-2 mb-sm-0" id="continuar-momento" type="button"><i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar</button>
-                                        <button class="btn btn-success px-4 py-1" type="submit"><i class="fa fa-floppy-o fa-lg mr-1" aria-hidden="true"></i>Guardar</button>
-                                    </div>
+                        </div>
+                        <div class="row justify-content-center mg-t-40">
+                            <div class="col-lg-7 form__group">
+                                <input type="text" class="form__input" id="apellido" name="apellido" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
+                                <label class="form__label">Primer apellido<span class="tx-danger">*</span></label>
+                                <div class="requirements">
+                                    Tiene que tener mínimo 3 caracteres
                                 </div>
                             </div>
-                    </div>
+                        </div>
+                        <div class="row justify-content-center mg-t-40">
+                            <div class="col-lg-7 form__group">
+                                <input type="text" class="form__input" id="am" name="segundo_apellido"  pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="4" maxlength="25" autocomplete="off" placeholder=" " required>
+                                <label class="form__label">Segundo apellido<span class="tx-danger">*</span></label>
+                                <div class="requirements">
+                                    Tiene que tener mínimo 4 caracteres
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center mg-t-40">
+                            <div class="col-lg-7 form__group">
+                                <input type="date" id="f_nacimiento"  class="form__input" name="f_nacimiento" minlength="10" maxlength="10" required>
+                                <label class="form__label">Fecha de nacimiento<span class="tx-danger">*</span></label>          
+                            </div>
+                        </div>
+
+
+                        <div class="row justify-content-center mg-t-40">
+                            <div class="col-lg-7 form__group">
+                                <input type="tel" class="form__input"  id="telefono" name="celular" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
+                                <label class="form__label">Número celular<span class="tx-danger">*</span></label>
+                                <div class="requirements">
+                                    Tiene que tener 10 dígitos
+                                </div>
+                            </div>
+                        </div>
+                       <!--  <div class="files-d row justify-content-center mg-t-20">
+                            <label class="col-lg-7 form-control-label">Identificación oficial<span class="tx-danger">*</span> (INE o pasaporte)<sub> Archivos pdf o imagen</sub></label>
+                            <div class="col-lg-7 ">
+                                <div class="file-drop-area">
+                                    <span class="choose-file-button">Subir Archivo</span>
+                                    <span class="file-message">Arrastra el archivo aqui</span>
+                                    <input id="file-identificacion" class="file-input" type="file" required name="file_identificacion" accept=".pdf, .png , .jpeg, .jpg" multiple>
+                                </div> -->
+                                <!-- <small id="passwordHelpBlock" class="form-text text-muted">
+                                    El archivo debe ser pdf
+                                </small> -->
+                           <!--  </div>
+                        </div> -->
+                        <div class="col-sm-12 mt-4">
+                            <div class="form-group mt-3 text-center">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <!-- <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                                    <label class="custom-control-label" for="customControlValidation1">Aviso de privacidad</label>
+                                    <div class="invalid-feedback">Selecciona</div> -->
+                                    <input id="id_usuarioper" type="hidden" name="id_usuarioper">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 row mx-auto px-0 px-lg-2 mt-5">
+                            <div class="col-sm-12 text-center text-md-right px-0">
+                                <div class="d-flex flex-column flex-sm-row justify-content-end">
+                                    <button class="btn btn-info continuar-momento mr-sm-2 mb-2 mb-sm-0" id="continuar-momento" type="button"><i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar</button>
+                                    <button class="btn btn-success px-4 py-1" type="submit"><i class="fa fa-floppy-o fa-lg mr-1" aria-hidden="true"></i>Guardar</button>
+                                </div>
+                            </div>
+                        </div>
                 </div>
+                </form>
+            </div>
         </div>
-        </form>
     </div> <!-- div row fin -->
 
 
