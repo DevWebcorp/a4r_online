@@ -1,13 +1,20 @@
-<script src="<?= base_url() ?>/assets/lib/jquery/jquery.js"></script>
-<script src="<?= base_url() ?>/assets/lib/jquery-ui/jquery-ui.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
+
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -16,47 +23,13 @@
             </div>
         </div>
     </div>
-</div>
-
-<style>
-    .form-group input {
-        display: block; 
-        margin-bottom: 5px; 
-        border: 2px solid #232323;
-        width: 100%;f
-        color: #232323;
-        line-height: 35px;
-        height: 40px;
-    }
-
-    .form-group label {
-        display: block; 
-    }
-    .btn-save{
-        margin-top: 20px !important;
-        width: 200px !important;
-        padding-top: 12px !important;
-        padding-bottom: 12px !important;
-        font-size: 15px !important;
-        border: 2px solid #e1bd85;
-        background-color: #e1bd85;
-        color: #fff;
-        border-radius: 0;
-    }
-    .btn-save:hover {
-        border-color: #e1bd85 !important;
-        background-color: #fff !important;
-        color: #e1bd85 !important;
-    }
-    
-</style>
-
+</div> --> 
 
 <section class="section-sub-banner bg-9">
     <div class="sub-banner">
         <div class="container">
             <div class="text text-center">
-                <h2>DATOS PROPIETARIO</h2><!-- 
+                <h2>MI CUENTA</h2><!-- 
                 <p>Lorem Ipsum is simply dummy text of the printing</p> -->
             </div>
         </div>
@@ -65,31 +38,33 @@
 
 <div class="mb-120 mg-t-120">
     <div class="container">
-        <div class="tab datos-propietario d-flex flex-column flex-md-row  justify-content-center mb-4">
+        <div class="tab datos-propietario d-none mb-4">
             <button class="tablinks mr-md-2" onclick="openCity(event, 'Personales')" id="defaultOpen"><i class="fa fa-user mr-2" aria-hidden="true"></i>Datos
-                personales</button>
-           <!--  <button class="tablinks mr-md-2" onclick="openCity(event, 'Bancarios')" id="d_bancarios"><i class="fa fa-university mr-2" aria-hidden="true"></i>Datos
-                bancarios</button>
-            <button class="tablinks mr-md-2" onclick="openCity(event, 'Fiscales')" id="d_fiscales"><i class="fa fa-file-text mr-2" aria-hidden="true"></i>Datos
-                fiscales</button> -->
-            <button class="tablinks" onclick="openCity(event, 'Notificaciones')" id="notificaciones"><i class="fa fa-bell mr-2" aria-hidden="true"></i>Notificaciones</button>
-        </div>
+                personales</button>          
+            <!-- <button class="tablinks mr-md-2" onclick="openCity(event, 'Fiscales')" id="d_fiscales"><i class="fa fa-file-text mr-2" aria-hidden="true"></i>Datos
+                fiscales</button> 
+            <button class="tablinks" onclick="openCity(event, 'Notificaciones')" id="notificaciones"><i class="fa fa-bell mr-2" aria-hidden="true"></i>Notificaciones</button> -->
+        </div> 
 
         <!--=========================================
             ===== DATOS PERSONALES =====
         =============================================-->
-        <div id="Personales" class="tabcontent">
+        <div id="Personales" class="">
             <form class="mg-b-30" id="form-personales" enctype="multipart/form-data">
                 <div class="container">
                     <div class="row"> 
+                         <div class="text container">
+                            <h2 class="titulo">Datos del propietario</h2>
+                            <!-- <p>En A4r buscamos la seguridad de toda nuestra comunidad, es por esto que los documentos que pedimos a continuación son necesarios para poder subir tu propiedad en la plataforma. </p> -->
+                        </div>
                         <div class="row justify-content-center mg-t-20">
-                            <div class="col-lg-7 mg-b-20 ">
+                            <div class="col-lg-4 mg-b-20 ">
                                 <label class="text-left">Foto de perfil</label>
-                                <div id="img-datos" class="col-sm-6 mx-auto text-center">
+                                <div id="img-datos" class="">
                                     <img style="width: 140px; height: 140px;" class="img-fluid rounded-circle" id="img" src="<?= base_url() ?>/assets/img/default.png" />
                                 </div>
                             </div>
-                            <div class="col-lg-7 mg-t-20 mg-sm-t-0">
+                            <div class="col-lg-7 mg-t-20 mg-sm-t-0 mg-b-20">
                                 <div class="file-drop-area">
                                     <span class="choose-file-button">Subir foto de perfil</span>
                                     <span class="file-message">Arrastra el archivo aqui</span>
@@ -376,4 +351,14 @@
         </div>
     </div>
 </div>
-</div> <!-- div container fin -->
+</div>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+    <script src="<?= base_url() ?>/assets/lib/jquery/jquery.js"></script>
+    <script src="<?= base_url() ?>/assets/lib/jquery-ui/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">   
+<?= $this->endSection() ?>
