@@ -32,8 +32,36 @@
     .form-group label {
         display: block; 
     }
+    .btn-save{
+        margin-top: 20px !important;
+        width: 200px !important;
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        font-size: 15px !important;
+        border: 2px solid #e1bd85;
+        background-color: #e1bd85;
+        color: #fff;
+        border-radius: 0;
+    }
+    .btn-save:hover {
+        border-color: #e1bd85 !important;
+        background-color: #fff !important;
+        color: #e1bd85 !important;
+    }
+    
 </style>
 
+
+<section class="section-sub-banner bg-9">
+    <div class="sub-banner">
+        <div class="container">
+            <div class="text text-center">
+                <h2>DATOS PROPIETARIO</h2><!-- 
+                <p>Lorem Ipsum is simply dummy text of the printing</p> -->
+            </div>
+        </div>
+    </div>
+</section>
 
 <div class="mb-120 mg-t-120">
     <div class="container">
@@ -124,12 +152,10 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-7 row mx-auto px-0 px-lg-2 mt-5">
-                                <div class="col-sm-12 text-center text-md-right px-0">
-                                    <div class="d-flex flex-column flex-sm-row justify-content-end">
-                                        <button class="btn btn-info continuar-momento mr-sm-2 mb-2 mb-sm-0" id="continuar-momento" type="button"><i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar</button>
-                                        <button class="btn btn-success px-4 py-1" type="submit"><i class="fa fa-floppy-o fa-lg mr-1" aria-hidden="true"></i>Guardar</button>
-                                    </div>
+                            <div class="col-lg-12 row mx-auto px-0 mt-5">
+                                <div class="col-sm-12 text-center text-md-right">
+                                    <!-- <button class="btn btn-info continuar-momento mr-sm-2 mb-2 mb-sm-0" id="continuar-momento" type="button"><i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar</button> -->
+                                    <button class="btn btn-save px-4 py-1" type="submit">Guardar</button>
                                 </div>
                             </div>
                     </div>
