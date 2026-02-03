@@ -75,7 +75,7 @@
                             
                         <div class="col-lg-4 ">
                             <div class="form-group">
-                                <label class="">
+                                <label class="" for="nombre">
                                     Nombre<span class="tx-danger">*</span>
                                 </label>
                                 <input type="text" class="" id="nombre" name="nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
@@ -84,7 +84,7 @@
                     
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label class="">
+                                <label class="" for="apellido">
                                     Primer apellido<span class="tx-danger">*</span>
                                 </label>
                                 <input type="text" class="" id="apellido" name="apellido" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
@@ -93,7 +93,7 @@
                         
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label class="">
+                                <label class="" for="am">
                                     Segundo apellido<span class="tx-danger">*</span>
                                 </label>
                                 <input type="text" class="" id="am" name="segundo_apellido"  pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="4" maxlength="25" autocomplete="off" placeholder=" " required>
@@ -102,30 +102,30 @@
                             
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label class="">Fecha de nacimiento<span class="tx-danger">*</span></label>
-                                <input type="date" id="f_nacimiento"  class="" name="f_nacimiento" minlength="10" maxlength="10" required>
+                                <label class="" for="f_nacimiento">Fecha de nacimiento<span class="tx-danger">*</span></label>
+                                <input type="date" id="f_nacimiento" class="" name="f_nacimiento" minlength="10" maxlength="10" required>
                             </div>
                         </div>
                     
                         <div class="col-lg-4">
                             <div class="form-group">
-                                <label class="">Número celular<span class="tx-danger">*</span></label>
+                                <label class="" for="telefono">Número celular<span class="tx-danger">*</span></label>
                                 <input type="tel" class=""  id="telefono" name="celular" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
                             </div>
                         </div>
                             
                             
-                            <div class="col-lg-3 mt-4">
-                                <div class="form-group mt-3 text-center">
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <!-- <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
-                                        <label class="custom-control-label" for="customControlValidation1">Aviso de privacidad</label>
-                                        <div class="invalid-feedback">Selecciona</div> -->
-                                        <input id="id_usuarioper" type="hidden" name="id_usuarioper">
+                        <div class="col-lg-3 mt-4">
+                            <div class="form-group mt-3 text-center">
+                                <div class="custom-control custom-checkbox mb-3">
+                                    <!-- <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+                                    <label class="custom-control-label" for="customControlValidation1">Aviso de privacidad</label>
+                                    <div class="invalid-feedback">Selecciona</div> -->
+                                    <input id="id_usuarioper" type="hidden" name="id_usuarioper">
 
-                                    </div>
                                 </div>
                             </div>
+                        </div>
 
                             <div class="col-lg-12 row mx-auto px-0 mt-5">
                                 <div class="col-sm-12 text-center text-md-right">

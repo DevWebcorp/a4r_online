@@ -44,7 +44,7 @@ class Detalle_propiedad extends BaseController
     $data_fotter['external_scripts'] = ["https://maps.googleapis.com/maps/api/js?key=AIzaSyCwD3Bk71LnFRTi329E7GRyqPQDTpDGXgk&libraries=places", "https://polyfill.io/v3/polyfill.min.js?features=default"];
 
     $data_header['styles'] = ["starlight.css", "../lib/jquery-timepicker/jquery.timepicker.css", "../lib/datatables/jquery.dataTables.css", "Mattes/Arrendador/Detalle_propiedad.css",  "Mattes/Principal.css", "Mattes/Arrendador/Arrendador.css", "Mattes/Arrendador/Menu_arrendador.css"];
-    $data_header['title'] = "MATTES";
+    $data_header['title'] = "Detalle de la propiedad";
     $data_header['description'] = "Llenado de detalle de propiedad";
 
     $data['grupo'] = $type_group;
@@ -56,7 +56,7 @@ class Detalle_propiedad extends BaseController
       echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
       echo view('Mattes/Arrendador_view/Detalle_propiedad', $data);
       echo view('right_panel');
-      echo view('Mattes/Footer');
+      //echo view('Mattes/Footer');
       echo view('fotter_panel', $data_fotter);
 
       if (isset($data_tradename[0]->id_tradename)) {
