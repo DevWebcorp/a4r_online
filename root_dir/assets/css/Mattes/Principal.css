@@ -186,12 +186,12 @@ span {
     background-color: #da850a !important;
 }
 
-input,
+/* input,
 select, 
 textarea,
 .form-control{
     border-radius: 10px !important;
-}
+} */
 
 .table thead.bg-primary > tr > th, .table thead.bg-primary > tr > td, .table tfoot.bg-primary > tr > th,
 table.dataTable tbody th, table.dataTable tbody td{

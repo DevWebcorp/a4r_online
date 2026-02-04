@@ -3,14 +3,27 @@
     font-size: 14px;
 }
 /*DATOS DEL PROPIETARIO*/
-.form-group input {
+.form-group input, select {
     display: block !important; 
     margin-bottom: 5px; 
     border: 2px solid #232323;
     width: 100%;
     line-height: 35px;
     height: 40px;
+    padding: 0 12px;
 }
+input,
+select, 
+textarea,
+.form-control{
+    border-radius: 0px !important;
+    display: block;
+} 
+textarea{
+    width: 100%;
+    border: 2px solid #232323;
+}
+
 input[type="text"]{
     color: #000;
 }
@@ -18,9 +31,6 @@ input[type="tel"], input[type="date"]{
     padding: 0 12px;
 }
 
-.form-group label {
-    display: block; 
-}
 .btn-save{
     margin-top: 20px !important;
     width: 200px !important;
@@ -51,4 +61,22 @@ input[type="tel"], input[type="date"]{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 20px;
+}
+.tablinks.active{
+  background-color: #e1bd85 !important;
+  border-radius: 0px !important;
+  border: 1px solid #e1bd85;
+}
+.tablinks.faltante {
+  background-color: white !important;
+  color: #e1bd85;
+  border-radius: 8px !important;
+  border: 1px solid #e1bd85;
+  border-radius: 0px !important;
+}
+.tablinks.faltante:hover {
+  background-color: #e1bd85 !important;
+  border-radius: 0px !important;
+  border: 1px solid #e1bd85;
+  color: white;
 }

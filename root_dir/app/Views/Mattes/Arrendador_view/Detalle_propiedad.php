@@ -34,8 +34,8 @@
     </div>
 </section>
 
-<div class="container form-border mg-t-70 mg-b-170">
-    <div class="row" style="margin-top: 135px;">
+<div class="container form-border mg-b-170">
+    <div class="row">
         <div class="col-12 mg-t-10">
             <div class="tab generales d-flex flex-column flex-lg-row justify-content-center">
                 <button class="tablinks active mb-1 mr-lg-1"><i class="fa fa-address-card-o mr-2" aria-hidden="true"></i>Generales</button>
@@ -79,7 +79,7 @@
                 </div>
               
                 <div class="col-lg-6">
-                    <div class="form__group">
+                    <div class="form-group">
                         <label class="" for="disponibilidad">
                             Disponible a partir de<span class="tx-danger">*</span>
                         </label>
@@ -90,7 +90,7 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="form__group">
+                    <div class="form-group">
                         <label class="" for="tipo-alojamiento">Tipo de alojamiento<span class="text-danger">*</span></label>
                         <select id="tipo-alojamiento" name="tipo_alojamiento" class="" data-placeholder="Choose Browser" required>
                             <div class="valid-feedback">Valido.</div>
@@ -99,7 +99,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7 row mx-auto px-0 text-md-right mt-5">
+                <div class="col-lg-12 row mx-auto px-0 text-md-right mt-5">
                     <div class="col-sm-12 text-center text-md-right pl-lg-0">
                         <div class="d-flex flex-column flex-sm-row justify-content-end">
                             <!-- <button class="btn-danger mr-sm-2 mb-2 mb-sm-0 px-4 py-1" id="btncontinuar_detalles" name="continuar-detalles">
@@ -113,8 +113,6 @@
                     </div>
                 </div>
             </form>
-
-
         </div>
     </div> 
 </div> 
