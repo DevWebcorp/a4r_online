@@ -1,11 +1,19 @@
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
-<script src="https://unpkg.com/currency.js@2.0.4/dist/currency.min.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
+
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
 
 <style>
     .cajon{
@@ -14,7 +22,7 @@
     }
 </style>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -23,17 +31,17 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
+<!-- <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span><strong>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA</strong> <span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div> -->
 
 <div class="container">
     <div class="row">
@@ -75,22 +83,16 @@
                 <div class="tab-pane fade show active mt-5" id="generales" role="tabpanel" aria-labelledby="generales-tab">
                     <!-- <h3 class="text-center mt-4 mb-5 generales-alumno ">Generales</h3>   -->                  
                     <form class="mb-200" id="upd_generales" enctype="multipart/form-data">
-                        <div class="row mg-t-20 px-3">
-                            <div class="col-lg-7 form__group">
-                               <input type="text" class="form__input" id="nombre_propiedad" name="upd_propiedad" pattern="[A-Za-z\s]+" minlength="5" maxlength="30"  placeholder=" ">
-                               <label class="form__label">Nombre corto</label>
-                               <div class="requirements">
-                                    Tienen que ser mínimo 5 caracteres
-                                </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="">Nombre corto</label>
+                                <input type="text" class="" id="nombre_propiedad" name="upd_propiedad" pattern="[A-Za-z\s]+" minlength="5" maxlength="30"  placeholder=" ">
                             </div>
                         </div>
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <textarea class="form__input" id="descripcion" name="upd_descripcion" pattern="[A-Za-z\s]+" minlength="5" maxlength="250" placeholder=" "></textarea>
-                                <label class="form__label">Describe tu propiedad</label>
-                                <div class="requirements">
-                                    Tienen que ser mínimo 5 caracteres
-                                </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="">Describe tu propiedad</label>
+                                <textarea class="" id="descripcion" name="upd_descripcion" pattern="[A-Za-z\s]+" minlength="5" maxlength="250" placeholder=" "></textarea>
                             </div>
                         </div>
                         <!-- <div class="row mg-t-40 px-3">
@@ -102,31 +104,31 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="date" id="disponibilidad" name="upd_disponibilidad" class="form__input" placeholder=" ">
-                                <label class="form__label">Disponible a partir de: </label>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="">Disponible a partir de: </label>
+                                <input type="date" id="disponibilidad" name="upd_disponibilidad" class="" placeholder=" ">
                             </div>
                         </div>
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <select id="tipo_alojamiento" name="upd_alojamiento" class="form__input select2">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label class="">Tipo de alojamiento</label>
+                                <select id="tipo_alojamiento" name="upd_alojamiento" class="">
                                 </select>
-                                <label class="form__label">Tipo de alojamiento</label>
                             </div>
                         </div>
 
                         <input type="hidden" id="id" name="id">
 
-                        <div class="col-lg-7 row mx-auto px-0 text-md-right mt-5">
+                        <div class="col-lg-12 row mx-auto px-0 text-md-right mt-5">
                             <div class="col-sm-12 text-center text-md-right pl-lg-0">
-                                <div class="d-flex flex-column flex-sm-row justify-content-end">
-                                    <button type="button" class="btn-danger mr-sm-2 mb-2 mb-sm-0 px-4 py-1" id="btncontinuar_detalles" name="continuar-detalles">
+                                <div class="d-flex flex-column flex-sm-row justify-content-end mb-5">
+                                    <button type="button" class="btn-danger mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_detalles" name="continuar-detalles">
                                         <a href="<?= base_url() ?>/Mattes/Arrendador/Index" class="text-white text-decoration-none">
                                             <i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar
                                         </a>
                                     </button>
-                                    <button type="submit" class="btn-teal px-4 py-1" style="font-size:1.2rem;"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i>Actualizar</button>
+                                    <button type="submit" class="btn-teal" style="font-size:1.2rem;"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i>Actualizar</button>
                                 </div>
                             </div>
                         </div>
@@ -570,20 +572,34 @@
     </div><!-- modal-dialog -->
 </div><!-- modal -->
 
-<script>
-    let id_propiedad = <?php echo json_encode($id_propiedad); ?>;
-    let id_goup = <?php echo json_encode($grupo); ?>;
-</script>
+<?= $this->endSection() ?>
 
-<script type="text/javascript">
-    function showContent() {
-        element = document.getElementById("num_estac");
-        check = document.getElementById("estacionamiento");
-        if (check.checked) {
-            element.style.display='block';
+<?= $this->section('scripts') ?>    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
+
+    <script src="https://unpkg.com/currency.js@2.0.4/dist/currency.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+    <script>
+        let id_propiedad = <?php echo json_encode($id_propiedad); ?>;
+        let id_goup = <?php echo json_encode($grupo); ?>;
+    </script>
+
+    <script type="text/javascript">
+        function showContent() {
+            element = document.getElementById("num_estac");
+            check = document.getElementById("estacionamiento");
+            if (check.checked) {
+                element.style.display='block';
+            }
+            else {
+                element.style.display='none';
+            }
         }
-        else {
-            element.style.display='none';
-        }
-    }
-</script>
+    </script>
+    
+<?= $this->endSection() ?>
+

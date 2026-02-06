@@ -181,7 +181,7 @@ input {
 }
 
 
-input[type=text]:valid:not(:focus):not(:placeholder-shown),
+/* input[type=text]:valid:not(:focus):not(:placeholder-shown),
 input[type=tel]:valid:not(:focus):not(:placeholder-shown),
 input[type=email]:valid:not(:focus):not(:placeholder-shown),
 input[type=number]:valid:not(:focus):not(:placeholder-shown),
@@ -225,7 +225,7 @@ textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
     color: red;
     font-family: "Gothici";
 }
-
+ */
 
 /*Lineas a lado de la palabra registrate*/
 

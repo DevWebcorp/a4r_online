@@ -241,13 +241,13 @@ class Detalle_propiedad extends BaseController
           $data_header['styles'] = ["starlight.css", "../lib/jquery-timepicker/jquery.timepicker.css", "../lib/datatables/jquery.dataTables.css",   "Mattes/Principal.css", "Mattes/Arrendador/Detalle_propiedad.css", "Mattes/Arrendador/Arrendador.css", "Mattes/Arrendador/Localizacion.css", "Mattes/Arrendador/Menu_arrendador.css"];
 
           //Vars
-          $data_header['title'] = "Mattes";
+          $data_header['title'] = "Actualizacion de propiedad";
           $data_header['description'] = "Actualizacion de detalle de propiedad";
           echo view('header', $data_header);
           echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
           echo view('Mattes/Arrendador_view/Detalle_propiedad_update', $data);
           echo view('right_panel');
-          echo view('Mattes/Footer');
+         // echo view('Mattes/Footer');
           echo view('fotter_panel', $data_fotter);
         } else {
           return redirect()->to(base_url('/home-propietario'));

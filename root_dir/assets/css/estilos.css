@@ -37,16 +37,48 @@ input[type="tel"], input[type="date"]{
     padding-top: 12px !important;
     padding-bottom: 12px !important;
     font-size: 15px !important;
-    border: 2px solid #e1bd85;
-    background-color: #e1bd85;
+    border: 2px solid #4cae4c;
+    background-color: #4cae4c;
     color: #fff;
     border-radius: 0;
 }
 .btn-save:hover {
-    border-color: #e1bd85 !important;
+    border-color: #4cae4c !important;
     background-color: #fff !important;
-    color: #e1bd85 !important;
+    color: #4cae4c !important;
 }    
+.btn-teal{
+    margin-top: 20px !important;
+    width: 200px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    font-size: 15px !important;
+    border: 2px solid #eea236 !important;
+    background-color: #eea236 !important;
+    color: #fff;
+    border-radius: 0 !important;
+}
+.btn-teal:hover {
+    border-color: #eea236 !important;
+    background-color: #fff !important;
+    color: #eea236 !important;
+} 
+.btn-danger{
+    margin-top: 20px !important;
+    width: 200px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    font-size: 15px !important;
+    border: 2px solid #ee242a;
+    background-color: #ee242a;
+    color: #fff;
+    border-radius: 0 !important;
+}
+.btn-danger:hover {
+    border-color: #ee242a !important;
+    background-color: #fff !important;
+    color: #ee242a !important;
+} 
 .file-drop-area {
     border: 2px solid rgb(0, 0, 0);
     padding: 1px;
@@ -63,20 +95,39 @@ input[type="tel"], input[type="date"]{
     font-size: 20px;
 }
 .tablinks.active{
-  background-color: #e1bd85 !important;
+  background-color: #357ebd !important;
   border-radius: 0px !important;
-  border: 1px solid #e1bd85;
+  border: 1px solid #357ebd;
 }
 .tablinks.faltante {
   background-color: white !important;
-  color: #e1bd85;
+  color: #357ebd;
   border-radius: 8px !important;
-  border: 1px solid #e1bd85;
+  border: 1px solid #357ebd;
   border-radius: 0px !important;
 }
 .tablinks.faltante:hover {
-  background-color: #e1bd85 !important;
+  background-color: #357ebd !important;
   border-radius: 0px !important;
-  border: 1px solid #e1bd85;
+  border: 1px solid #357ebd;
   color: white;
 }
+/*PALETA DE COLORES DEL TEMPLATE*/
+/* .colores{
+    color:#fff;
+    color:#d4d4d4;
+    color:#666;
+    color:#232323;
+    color:#888888;
+    color:#eee;
+    color:#f7f7f7;
+    color:#ee242a; 
+    color:#000;
+    color:#e1bd85;
+    color:#4cae4c;
+    color:#46b8da;
+    color:#eea236;
+    color:#d43f3a;
+    color:#357ebd;    
+}
+ */
