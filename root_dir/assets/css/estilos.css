@@ -22,6 +22,7 @@ textarea,
 textarea{
     width: 100%;
     border: 2px solid #232323;
+    color: #000;
 }
 
 input[type="text"]{
@@ -62,6 +63,7 @@ input[type="tel"], input[type="date"]{
     border-color: #eea236 !important;
     background-color: #fff !important;
     color: #eea236 !important;
+    border-radius: 0px !important;    
 } 
 .btn-danger{
     margin-top: 20px !important;
@@ -69,16 +71,21 @@ input[type="tel"], input[type="date"]{
     padding-top: 12px !important;
     padding-bottom: 12px !important;
     font-size: 15px !important;
-    border: 2px solid #ee242a;
-    background-color: #ee242a;
+    border: 2px solid #ee242a !important;
+    background-color: #ee242a !important;
     color: #fff;
     border-radius: 0 !important;
 }
 .btn-danger:hover {
-    border-color: #ee242a !important;
+    border: 2px solid #ee242a !important;
     background-color: #fff !important;
     color: #ee242a !important;
+    border-radius: 0px !important;
 } 
+.btn-danger:hover > a{
+    color: #ee242a !important;
+}
+
 .file-drop-area {
     border: 2px solid rgb(0, 0, 0);
     padding: 1px;
@@ -94,24 +101,40 @@ input[type="tel"], input[type="date"]{
     font-weight: bold;
     font-size: 20px;
 }
-.tablinks.active{
+.tablinks.active,
+.nav-tabs .nav-link.active{
   background-color: #357ebd !important;
   border-radius: 0px !important;
   border: 1px solid #357ebd;
 }
-.tablinks.faltante {
+.tablinks.faltante,
+.nav-tabs .nav-link {
   background-color: white !important;
   color: #357ebd;
   border-radius: 8px !important;
   border: 1px solid #357ebd;
   border-radius: 0px !important;
 }
-.tablinks.faltante:hover {
+.tablinks.faltante:hover,
+.nav-tabs .nav-link:hover {
   background-color: #357ebd !important;
   border-radius: 0px !important;
   border: 1px solid #357ebd;
   color: white;
 }
+.cajon{
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.input-group-addon {
+    padding: 10px 17px 10px 7px;
+    color: #000;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 0px !important;
+}
+
 /*PALETA DE COLORES DEL TEMPLATE*/
 /* .colores{
     color:#fff;

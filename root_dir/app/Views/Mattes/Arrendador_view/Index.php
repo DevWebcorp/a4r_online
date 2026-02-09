@@ -25,13 +25,13 @@
 
 <style>
     .accomd-modations-room .text {
-  position: absolute;
-  background-color: rgba(0,0,0,0.7);
-  padding: 10px 20px;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-}
+        position: absolute;
+        background-color: rgba(0,0,0,0.7);
+        padding: 10px 20px;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+    }
 </style>
 
 <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
