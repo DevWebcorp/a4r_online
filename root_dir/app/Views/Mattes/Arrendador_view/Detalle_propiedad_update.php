@@ -50,7 +50,7 @@
     <div class="row">
         <div class="col-12 ">
             <div class="d-flex flex-column align-items-center flex-sm-row justify-content-center justify-content-lg-end mt-3">
-           <!--  <h3>Detalle de propiedad</h3> -->
+                
                 <div class="text-center mr-5"> 
                     <button class = "" type="button" title="Da clic solicitar tu sello mattes por un costo" data-toggle="modal" data-target="#model_sello">
                         <i class="ionicons ion-checkmark-circled display-4 text-danger"></i>
@@ -181,17 +181,17 @@
                                         <input id="lat" type="hidden" name="lat" class="form-control">
                                         <input id="lon" type="hidden" name="long" class="form-control">
                                             
-                                        <div class="row mg-t-20">
+                                        <div class="row">
                                             <label class=" d-none">Dirección 2</label>
                                             <div class="col-sm-8 mg-t-10 mg-sm-t-0">
                                                 <input type="hidden" id="direccion_dos" name="direccion_dos" class="form-control" placeholder="">
                                             </div>
                                         </div>
 
-                                        <div class="col-lg-3 mg-t-30">
+                                        <div class="col-lg-3">
                                             <div class="form-group">
-                                                <input type="text" id="delegacion" name="delegacion" class="form__input" placeholder=" " readonly style="background-color: #e9ecef;">
-                                                <label class="form__label">Delegación o municipio</label>
+                                                <label class="">Delegación o municipio</label>
+                                                <input type="text" id="delegacion" name="delegacion" class="" placeholder=" " readonly style="background-color: #e9ecef;">
                                             </div>
                                         </div>
                                         <div class="col-lg-3">
@@ -239,25 +239,24 @@
                                             </div>
                                             
                                         </div>
-                                                <br>
-                                                <br>
-                                                <!--  <div class="col-12 col-lg-11 px-0 mt-2 mb-4 my-lg-0 pr-lg-4">
-                                                    <div class="d-flex flex-column flex-sm-row justify-content-end">
-                                                        <button class="btn btn-outline-primary" id = "calcular" type="button"><i class="fa fa-calculator mr-1" aria-hidden="true"></i>Calcular Distancia</button>
-                                                    </div>
-                                                </div> -->
-                                            
+                                        <br>
+                                        <br>
+                                        <!--  <div class="col-12 col-lg-11 px-0 mt-2 mb-4 my-lg-0 pr-lg-4">
+                                            <div class="d-flex flex-column flex-sm-row justify-content-end">
+                                                <button class="btn btn-outline-primary" id = "calcular" type="button"><i class="fa fa-calculator mr-1" aria-hidden="true"></i>Calcular Distancia</button>
+                                            </div>
+                                        </div> -->
+                                    
                                         <div class="col-12 mx-auto mt-3 mt-lg-5 px-0 px-lg-4">
                                             <div class="col-12 pt-4" id="map" style="height: 500px;">
                                             </div>
-                                        </div>
-                                        </div>
+                                        </div>                                    
 
                                         <input type="hidden" id="id_ubicacion" name="id_ubicacion">
 
                                         <div class="col-12 row mx-auto px-0 text-md-right mt-5">
                                             <div class="col-12 text-center text-md-right px-0 pr-lg-3">
-                                                <div class="d-flex flex-column flex-sm-row justify-content-end">
+                                                <div class="d-flex flex-column flex-sm-row justify-content-end mb-5">
                                                     <button type="button" class="btn-danger  mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_detalles" name="continuar-detalles">
                                                         <a href="<?= base_url() ?>/Mattes/Arrendador/Index" class="text-white text-decoration-none">
                                                             <i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar
@@ -267,8 +266,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
+                                    
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </section>
@@ -278,53 +278,52 @@
                                         SERVICIOS
                 -------------------------------------------------------->
                 <div class="tab-pane fade mt-5" id="servicios" role="tabpanel" aria-labelledby="servicios-tab">
-                    <!-- <h3 class="text-center mt-4 mb-5 servicios-alumno">Servicios</h3> -->
-                    <form id="upd_servicios" class="mb-200 " enctype="multipart/form-data">
-                        <div class="col-12">
-                            <div class="row">                                
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="">Número de roomies</label>
-                                        <input type="number" class="" id="num_roomies" name="upd_numero_roomies" placeholder=" " pattern="^[0-9]+" min="0" max="10" required>
+                    <div class="container">
+                        <div class="row">
+                            <!-- <h3 class="text-center mt-4 mb-5 servicios-alumno">Servicios</h3> -->
+                            <form id="upd_servicios" class="mb-5 " enctype="multipart/form-data">
+                                
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="">Número de roomies</label>
+                                            <input type="number" class="" id="num_roomies" name="upd_numero_roomies" placeholder=" " pattern="^[0-9]+" min="0" max="10" required>
+                                        </div>
                                     </div>
-                                </div>
-                                    
-                                <div class="col-lg-3 ">
-                                    <div class="form-group">
-                                        <label class="">Número de camas</label>
-                                        <input type="number" class="" id="num_camas" name="upd_numero_camas" placeholder=" " pattern="^[0-9]+" min="0" max="10" required>
-                                        <input type="hidden" class="id_propiedad" name="id_propiedad" placeholder=" ">
+                        
+                                    <div class="col-lg-3 ">
+                                        <div class="form-group">
+                                            <label class="">Número de camas</label>
+                                            <input type="number" class="" id="num_camas" name="upd_numero_camas" placeholder=" " pattern="^[0-9]+" min="0" max="10" required>
+                                            <input type="hidden" class="id_propiedad" name="id_propiedad" placeholder=" ">
+                                        </div>
                                     </div>
-                                </div>                            
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="">Número de baños</label>
-                                        <select name="upd_numero_banos" id="num_banos" class="" data-placeholder="Choose Browser" required>
-                                            <option value="">Selecciona</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="">Número de baños</label>
+                                            <select name="upd_numero_banos" id="num_banos" class="" data-placeholder="Choose Browser" required>
+                                                <option value="">Selecciona</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="">Baño</label>
-                                        <select id="tipo_bano" name="upd_status_bano" class="f" data-placeholder="Choose Browser" required>
-                                            <option value="">Selecciona</option>
-                                            <option value="Compartido">Compartido</option>
-                                            <option value="Privado">Privado</option>
-                                        </select>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="">Baño</label>
+                                            <select id="tipo_bano" name="upd_status_bano" class="f" data-placeholder="Choose Browser" required>
+                                                <option value="">Selecciona</option>
+                                                <option value="Compartido">Compartido</option>
+                                                <option value="Privado">Privado</option>
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>                            
-                            
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <label class="">Petfriendly</label>
-                                        <div class="">
+                        
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="">Petfriendly</label>
                                             <select id="mascotas" name="upd_petfriendly" class="" data-placeholder="Choose Browser" required>
                                                 <option value="">Selecciona</option>
                                                 <option value="Si">Si</option>
@@ -332,12 +331,10 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
-                                    
-                                <div class="col-lg-3 mb-md-3 mt-md-4 mt-lg-0">
-                                    <div class="form-group">
-                                        <label class="">Disponible para: </label>
-                                        <div class="">
+                        
+                                    <div class="col-lg-3 mb-md-3 mt-md-4 mt-lg-0">
+                                        <div class="form-group">
+                                            <label class="">Disponible para: </label>
                                             <select name="upd_disponible" id="disponible_para" class="" data-placeholder="Choose Browser" required>
                                                 <option value="">Selecciona</option>
                                                 <option value="Mujeres">Mujeres</option>
@@ -346,72 +343,67 @@
                                             </select>
                                         </div>
                                     </div>
-                                </div>
+                        
+                                    <div class="col-lg-6 pl-1 pl-lg-4 mt-lg-4">
+                                        <label for="capacidades_diferentes"> Acceso para personas con capacidades diferentes</label>
+                                        <input class="check" type="checkbox" id="capacidades_diferentes" name="upd_capacidades" checked>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <label for="wifi"> Wifi</label>
+                                        <input type="checkbox" id="wifi" name="upd_wifi" checked>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <label for="limpieza"> Limpieza</label>
+                                        <input type="checkbox" id="limpieza" name="upd_limpieza" checked>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label for="estacionamiento"> Estacionamiento</label>
+                                        <input type="checkbox" id="estacionamiento" name="upd_estacionamiento" onchange="javascript:showContent()" checked>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <div class="form-group mb-3" id="num_estac">
+                                            <label class="" style="left: 3px;">Número de cajones</label>
+                                            <select name="upd_cajones" id="num_cajones" class="" data-placeholder="Choose Browser">
+                                                <option value="">Selecciona</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="col-lg-1">
+                                        <label for="seguridad"> Seguridad</label>
+                                        <input type="checkbox" id="seguridad" name="upd_seguridad" checked>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <label for="lavadora"> Lavadora</label>
+                                        <input type="checkbox" id="lavadora" name="upd_lavadora" checked>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <label for="cocina"> Cocina</label>
+                                        <input type="checkbox" id="cocina" name="upd_cocina" checked>
+                                    </div>
+                                    <input type="hidden" id="id_servicios" name="id_servicios">
+                                    <div class="col-12 row mx-auto px-0 text-md-right mt-5">
+                                        <div class="col-12 text-md-right">
+                                            <div class="d-flex flex-column flex-sm-row justify-content-end">
+                                                <button type="button" class="btn-danger mr-sm-1 mb-2 mb-sm-0" id="btncontinuar_detalles" name="continuar-detalles">
+                                                    <a href="<?= base_url() ?>/Mattes/Arrendador/Index" class="text-white text-decoration-none">
+                                                        <i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar
+                                                    </a>
+                                                </button>
+                                                <button type="submit" class="btn-teal" id="btnsiguiente_detalles" name="siguiente_detalles" style="font-size:1.2rem;"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i>Actualizar</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 
-                                <div class="col-lg-6 pl-1 pl-lg-4 mt-lg-4">
-                                    <label for="capacidades_diferentes"> Acceso para personas con capacidades diferentes</label>
-                                    <input class="check" type="checkbox" id="capacidades_diferentes" name="upd_capacidades" checked>
-                                </div>
-                                <div class="col-lg-1">
-                                    <label for="wifi"> Wifi</label>
-                                    <input type="checkbox" id="wifi" name="upd_wifi" checked>
-                                </div>                                        
-                                <div class="col-lg-1">
-                                    <label for="limpieza"> Limpieza</label>
-                                    <input type="checkbox" id="limpieza" name="upd_limpieza" checked>
-                                </div>
-                                <div class="col-lg-2">
-                                    <label for="estacionamiento"> Estacionamiento</label>
-                                    <input type="checkbox" id="estacionamiento" name="upd_estacionamiento" onchange="javascript:showContent()" checked>
-                                </div>
-                                <div class="col-lg-3 ">
-                                    <div class="form-group mb-3" id="num_estac">
-                                        <label class="" style="left: 3px;">Número de cajones</label>
-                                        <select name="upd_cajones" id="num_cajones" class="" data-placeholder="Choose Browser">
-                                            <option value="">Selecciona</option>
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                    </div>
-                                </div>                               
-                                        
-                                <div class="col-lg-1">
-                                    <label for="seguridad"> Seguridad</label>
-                                    <input type="checkbox" id="seguridad" name="upd_seguridad" checked>
-                                </div>
-                                <div class="col-lg-1">
-                                    <label for="lavadora"> Lavadora</label>
-                                    <input type="checkbox" id="lavadora" name="upd_lavadora" checked>
-                                </div>
-                                <div class="col-lg-1">
-                                    <label for="cocina"> Cocina</label>
-                                    <input type="checkbox" id="cocina" name="upd_cocina" checked>
-                                </div>
-
-                                <input type="hidden" id="id_servicios" name="id_servicios">
-                                    
-                            </div>
-                               
-
-                            <div class="col-12 col-xl-10 row mx-auto px-0 text-md-right mt-5 pr-lg-3">
-                                <div class="col-12 text-center text-md-right px-0 pr-lg-3">
-                                    <div class="d-flex flex-column flex-sm-row justify-content-end">
-                                        <button type="button" class="btn-danger mr-sm-1 mb-2 mb-sm-0" id="btncontinuar_detalles" name="continuar-detalles">
-                                            <a href="<?= base_url() ?>/Mattes/Arrendador/Index" class="text-white text-decoration-none">
-                                                <i class="fa fa-sign-out fa-lg mr-1" aria-hidden="true"></i>Salir sin guardar
-                                            </a>
-                                        </button>
-                                        <button type="submit" class="btn-teal" id="btnsiguiente_detalles" name="siguiente_detalles" style="font-size:1.2rem;"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i>Actualizar</button>
-                                    </div>
-                                </div>
-                            </div>
-                            
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
                 <!-------------------------------------------------------

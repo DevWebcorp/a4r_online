@@ -244,7 +244,7 @@ class Detalle_propiedad extends BaseController
           $data_header['title'] = "Actualizacion de propiedad";
           $data_header['description'] = "Actualizacion de detalle de propiedad";
           echo view('header', $data_header);
-          echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
+          //echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
           echo view('Mattes/Arrendador_view/Detalle_propiedad_update', $data);
           echo view('right_panel');
          // echo view('Mattes/Footer');
