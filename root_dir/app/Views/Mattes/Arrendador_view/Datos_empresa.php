@@ -36,6 +36,17 @@
   </div>
 </div> -->
 
+<section class="section-sub-banner bg-9">
+    <div class="sub-banner">
+        <div class="container">
+            <div class="text text-center">
+                <h2>Datos de la inmobiliaria</h2><!-- 
+                <p>Lorem Ipsum is simply dummy text of the printing</p> -->
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
   <button type="button" class="close" aria-label="Close">
       <span aria-hidden="true">&times;</span>
