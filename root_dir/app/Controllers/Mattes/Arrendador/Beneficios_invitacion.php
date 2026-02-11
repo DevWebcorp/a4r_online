@@ -33,17 +33,17 @@ class Beneficios_invitacion extends BaseController
     $data_header['styles'] = ["starlight.css", "Mattes/Principal.css", "Mattes/Arrendador/Arrendador.css", "Mattes/Arrendador/Menu_arrendador.css"];
     
     
-    $data_header['title'] = "Mattes";
+    $data_header['title'] = "Beneficios de la invitacion";
     $data_header['description'] = "Página del arrendador donde invita a personas con su correo a obtener los beneficios que ofrece";
     echo view('header', $data_header);
     //echo view('head_panel');
     echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
     //echo view('left_panel',$data_left);
-    echo view('Mattes/Arrendador_view/Header_arrendador');
+    //echo view('Mattes/Arrendador_view/Header_arrendador');
     //var_dump($id_user);
     echo view('Mattes/Arrendador_view/Beneficios_invitacion', $data);
-    echo view('right_panel');
-    echo view('Mattes/Footer');
+    //echo view('right_panel');
+    //echo view('Mattes/Footer');
     echo view('fotter_panel' , $data_fotter);  
   }
 }
