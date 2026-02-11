@@ -81,7 +81,7 @@ function get_fiscales() {
                 $('#direccion_fiscal').val(res[0].fiscal_address);
             }
             $('#omitir').children().remove();
-            $('#omitir').append('<button class="btn btn-warning  mr-sm-2 mb-2 mb-sm-0" id="omitir" name="continuar-notis-inmob">Omitir</button>');
+            $('#omitir').append('<button class="btn btn-teal mr-sm-2 mb-2 mb-sm-0" id="omitir" name="continuar-notis-inmob">Omitir</button>');
         }
     });
 }
