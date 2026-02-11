@@ -1,6 +1,5 @@
 var total;
 
-
 $(document).on("click", "#documentos-tab", function () {
     //alert(id_propiedad);
     //$('#loader').toggle();
@@ -9,8 +8,6 @@ $(document).on("click", "#documentos-tab", function () {
     get_documentos();
 
 });
-
-
 
 function get_documentos() {
     $('#loader').toggle();
