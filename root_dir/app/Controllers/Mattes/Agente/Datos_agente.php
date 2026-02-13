@@ -59,12 +59,12 @@ class Datos_agente extends BaseController
           "Mattes/Principal.js"];
           
      
-      $data_header['title'] = "Mattes";
+      $data_header['title'] = "Datos del agente";
       $data_header['description'] = "Actualiza datos del agente dado de alta por la inmobiliaria";
       echo view('header' , $data_header);
-      echo view('Mattes/Agente_view/Menu_agente', $data_menu);
+      //echo view('Mattes/Agente_view/Menu_agente', $data_menu);
       echo view('Mattes/Agente_view/Actualiza_datos_agente');
-      echo view('Mattes/Footer');
+      //echo view('Mattes/Footer');
       echo view('fotter_panel' , $data_fotter);  
     }
 }

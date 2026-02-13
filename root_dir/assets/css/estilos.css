@@ -140,6 +140,12 @@ input[type="tel"], input[type="date"]{
     border: 2px solid #000;
     border-radius: 0px !important;
 }
+.input-group-addon a .fa{
+    color: #000;
+}
+.input-group-addon:not(:last-child) {
+  border-right: 2px solid #000;
+}
 
 /*PALETA DE COLORES DEL TEMPLATE*/
 /* .colores{
