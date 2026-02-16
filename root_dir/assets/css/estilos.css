@@ -134,7 +134,7 @@ input[type="tel"], input[type="date"]{
 }
 
 .input-group-addon {
-    padding: 10px 17px 10px 7px;
+    padding: 10px 22px 10px 7px;
     color: #000;
     background-color: #fff;
     border: 2px solid #000;
@@ -145,8 +145,11 @@ input[type="tel"], input[type="date"]{
 }
 .input-group-addon:not(:last-child) {
   border-right: 2px solid #000;
+  border-left: 0;
 }
-
+.input-group-addon, .input-group-btn {
+  height: 40px;
+}
 /*PALETA DE COLORES DEL TEMPLATE*/
 /* .colores{
     color:#fff;

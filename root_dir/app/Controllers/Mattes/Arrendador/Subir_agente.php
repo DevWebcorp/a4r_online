@@ -36,7 +36,7 @@ class Subir_agente extends BaseController
     
             $data_fotter['external_scripts'] = ["https://maps.googleapis.com/maps/api/js?key=AIzaSyCwD3Bk71LnFRTi329E7GRyqPQDTpDGXgk&libraries=places" , "https://polyfill.io/v3/polyfill.min.js?features=default"];
             $data_header['styles'] = ["starlight.css" , "../lib/jquery-timepicker/jquery.timepicker.css" , "../lib/datatables/jquery.dataTables.css", "Mattes/Arrendador/Datos_empresa.css", "Mattes/Principal.css", "Mattes/Arrendador/Arrendador.css", "Mattes/Arrendador/Menu_arrendador.css"];
-            $data_header['title'] = "Mattes";
+            $data_header['title'] = "Perfil del agente";
             $data_header['description'] = "AQUI VA LA DESCRIPCION DEL MODULO";
             
             echo view('header' , $data_header);

@@ -10,7 +10,7 @@
     }
 </style>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -19,7 +19,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
@@ -394,22 +394,16 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="text" class="form__input" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                                <label class="form__label">Nombre<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que tener mínimo 3 caracteres
-                                </div>
+                        <div class="col-lg-4">
+                            <div class=" form-group">
+                                <label class="">Nombre<span class="tx-danger">*</span></label>
+                                <input type="text" class="" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
                             </div>
                         </div>
-                        <div class="row justify-content-center mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="text" class="form__input" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                                <label class="form__label">Primer Apellido<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que tener mínimo 3 caracteres
-                                </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Primer Apellido<span class="tx-danger">*</span></label>
+                                <input type="text" class="" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
                             </div>
                         </div>
                         <div class="row justify-content-center mg-t-40 px-3">

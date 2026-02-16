@@ -61,7 +61,7 @@
                             <input type="text" class="form__input" id="apellidof" name="apellidof"
                             pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3"
                             maxlength="25" autocomplete="off" placeholder=" " required>
-                            <label class="form__label">Primer Apellido<span
+                            <label class="form__label">Primer Apellidooiñoi<span
                                     class="tx-danger">*</span></label>
                             <div class="requirements">
                                 Tiene que tener mínimo 3 caracteres
