@@ -165,9 +165,9 @@
                                         <div class="form-group">
                                             <label class="">Código postal </label>
                                             <div class="input-group">
-                                                <span class="input-group-addon"><i class="icon ion-search tx-16 lh-0"></i></span>
                                                 <input type="text" name="ZIP_CODE" id="cp_search" class="form-control formulario__input" placeholder="" autocomplete="off" minlength="13" maxlength="200" >
                                                 <input type="hidden" name="ID_CODE" id="cp_id" class="form-control " placeholder="">
+                                                 <span class="input-group-addon"><i class="icon ion-search tx-16 lh-0"></i></span>
                                                 <ul id="cpResult"></ul>
                                                 <div class="clear"></div>
                                             </div>

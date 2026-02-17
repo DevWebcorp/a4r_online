@@ -59,20 +59,33 @@ function get_propiedades() {
                                         </figure>
                                         
                                         <div class="d-flex row">
-                                            <div class="col-2">
+                                            <div class="col-2 d-flex">
                                                 <button class = "detalle-propiedad" id = " ${v.id} " type="button">
                                                 </button>
                                                 <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
                                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                                 </button>
                                                 <div class = "iconos2"></div>
-                                            </div>
+                                            </div>                                            
                                             
-                                            <div class="col-8">
-                                                <p class="info-casa mt-1 overflow-hidden"> ${v.name}</p>
-                                                <p class="info-casa" style="line-height: 24px;">Estatus: <span> ${status}</span></p>
-                                                <p class="info-casa">Renta mensual</p>
-                                                <p class="info-casa">Costo: <span>$${precio}</span></p>
+                                            <div class="row">
+                                                <div class="col-2">
+
+                                                </div>
+                                                <div class="col-10">
+                                                    <p class="info-casa mt-1 overflow-hidden"> ${v.name}</p>
+                                                </div>
+                                                <div class="col-1">
+
+                                                </div>
+                                                <div class="col-5" style="border-top: 1px solid #9a9a9a; border-right:1px solid #9a9a9a; ">
+                                                   
+                                                    <p class="info-casa" style="line-height: 24px;">Estatus: <span> ${status}</span></p>
+                                                </div>
+                                                <div class="col-5" style="border-top: 1px solid #9a9a9a;">
+                                                    <!-- <p class="info-casa">Renta mensual</p> -->
+                                                    <p class="info-casa">Costo: <span>$${precio}</span></p>
+                                                </div>
                                             </div>
                                         </div>
                                        

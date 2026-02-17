@@ -25,7 +25,7 @@ class Index extends BaseController
        
       $data_header['styles'] = ["starlight.css", "Mattes/Principal.css", "Mattes/Arrendador/Arrendador.css", "Mattes/Arrendador/Menu_arrendador.css", "Mattes/Arrendador/simplePagination.css", "Mattes/Arrendador/Index.css"];
       
-      $data_header['title'] = "Mattes";
+      $data_header['title'] = "Mis propiedades";
       $data_header['description'] = "Página principal del arrendador donde ve sus propiedades";
     
       $model_users = model('App\Models\Mattes\Arrendador_models\Datos_users');        

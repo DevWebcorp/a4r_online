@@ -375,7 +375,6 @@
          ===== PERFIL AGENTE =====
       =============================================-->
       <div id="Perfil-agentes" class="tabcontent mb-xl-235">
-        <div class="card form-layout mb-xl-270" style="border:none;">
           <div class="text-center">
             <h3 class="perfil-agente-empresa">Perfil agente </h3>
           </div>
@@ -386,58 +385,42 @@
                   <img style="width: 140px; height: 140px;" id="img-user" class="img-fluid rounded-circle" src="<?= base_url() ?>/assets/img/default.png" />
                 </div>
               </div>
-              <div class="col-lg-7 mg-t-10 mg-sm-t-0 mt-4">
+              <div class="col-lg-7 mg-t-10 mg-sm-t-0 mt-4 mb-lg-5">
                 <div class="file-drop-area">
                   <span class="choose-file-button">Subir foto de perfil</span>
                   <span id="file-msg" class="file-message">Arrastra el archivo aqui</span>
                   <input id="file_user-img" class="file-input" type="file" required name="file_agente" accept=".jpeg, .png, .jpg">
-
                 </div>
               </div>
             </div>
-            <div class="row justify-content-center mg-t-40 px-3">
-              <div class="col-lg-7 form__group">
-                <input type="text" class="form__input" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                <label class="form__label">Nombre<span class="tx-danger">*</span></label>
-                <div class="requirements">
-                  Tiene que tener mínimo 3 caracteres
-                </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="">Nombre<span class="tx-danger">*</span></label>
+                <input type="text" class="" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
               </div>
             </div>
-            <div class="row justify-content-center mg-t-40 px-3">
-              <div class="col-lg-7 form__group">
-                <input type="text" class="form__input" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                <label class="form__label">Primer Apellido<span class="tx-danger">*</span></label>
-                <div class="requirements">
-                  Tiene que tener mínimo 3 caracteres
-                </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="">Primer Apellido<span class="tx-danger">*</span></label>
+                <input type="text" class="" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
               </div>
             </div>
-            <div class="row justify-content-center mg-t-40 px-3">
-              <div class="col-lg-7 form__group">
-                <input type="text" class="form__input" id="nombre_agente" name="apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                <label class="form__label">Segundo Apellido<span class="tx-danger">*</span></label>
-                <div class="requirements">
-                  Tiene que tener mínimo 3 caracteres
-                </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="">Segundo Apellido<span class="tx-danger">*</span></label>
+                <input type="text" class="" id="nombre_agente" name="apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
               </div>
             </div>
-            <div class="row justify-content-center mg-t-40 px-3">
-              <div class="col-lg-7 form__group">
-                <input type="email" class="form__input" id="email_agente" name="correo_agente" autocomplete="off" placeholder=" " required>
-                <label class="form__label">Correo<span class="tx-danger">*</span></label>
-                <div class="requirements">
-                  Tiene que ser un correo válido
-                </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="">Correo<span class="tx-danger">*</span></label>
+                <input type="email" class="" id="email_agente" name="correo_agente" autocomplete="off" placeholder=" " required>
               </div>
             </div>
-            <div class="row justify-content-center mg-t-40 px-3">
-              <div class="col-lg-7 form__group">
-                <input type="tel" class="form__input" id="tel_agente" name="tel_agente" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
-                <label class="form__label">Teléfono<span class="tx-danger">*</span></label>
-                <div class="requirements">
-                  Debe de ser un número de 10 dígitos.
-                </div>
+            <div class="col-lg-4">
+              <div class="form-group">
+                <label class="">Teléfono<span class="tx-danger">*</span></label>
+                <input type="tel" class="" id="tel_agente" name="tel_agente" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
               </div>
             </div>
 
@@ -452,16 +435,15 @@
               </div>
             </div> -->
 
-            <div class="col-lg-7 mx-auto px-0 px-lg-2 mt-3">
-              <div class="col-sm-12 mt-5 text-center text-md-right px-3 px-lg-2">
+            <div class="col-lg-12 mx-auto px-0 px-lg-2 ">
+              <div class="col-sm-12 text-center text-md-right px-3 px-lg-2">
                 <div class="d-flex justify-content-end">
-                  <button class="px-4 py-1 btn btn-primary" id="btnactualizar_agente_inmob" name="actualizar-agente"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
+                  <button class="px-4 py-1 btn btn-save" id="btnactualizar_agente_inmob" name="actualizar-agente"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
                 </div>
               </div>
             </div>
-        </div>
         </form>
-      </div>
+      
     </div>
 
 

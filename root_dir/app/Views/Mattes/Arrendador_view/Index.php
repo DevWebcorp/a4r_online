@@ -22,6 +22,7 @@
 <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 <!-- or -->
 <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.js"></script>
+<link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
 
 <style>
     .accomd-modations-room .text {
@@ -34,7 +35,7 @@
     }
 </style>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -43,7 +44,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <section class="container-fluid casas mg-b-120 height-casas">
     <h3 class="text-center mb-4 hola">Hola </h3>

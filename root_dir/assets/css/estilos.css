@@ -150,6 +150,23 @@ input[type="tel"], input[type="date"]{
 .input-group-addon, .input-group-btn {
   height: 40px;
 }
+
+.table > caption + thead > tr:first-child > th, .table > colgroup + thead > tr:first-child > th, .table > thead:first-child > tr:first-child > th, .table > caption + thead > tr:first-child > td, .table > colgroup + thead > tr:first-child > td, .table > thead:first-child > tr:first-child > td {
+  border-radius: 0;
+}
+.btn, .btn-enviar{
+    border-radius: 0px !important;
+}
+
+input[type="search"] {
+  border: 1px solid black !important;
+  border-radius: 0 !important;
+}
+.grid-item {
+  border-radius: 0px !important;
+  box-shadow: 0px !important;
+  border: 1px solid #9a9a9a;
+}
 /*PALETA DE COLORES DEL TEMPLATE*/
 /* .colores{
     color:#fff;
