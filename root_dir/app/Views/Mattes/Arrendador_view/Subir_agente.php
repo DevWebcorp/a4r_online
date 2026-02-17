@@ -1,8 +1,16 @@
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<link href="<?= base_url() ?>../../../assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
 <style>
     #datatable1_wrapper {
@@ -35,7 +43,7 @@
   ===== DATOS PERSONALES ARRENDADOR =====
 =============================================-->
 
-<div class="container pd-90">
+<div class="container">
     <div class="row d-empresa">
         <div class="col-12">
             <div class="tab datos-empresa d-flex flex-column flex-md-row  justify-content-center">
@@ -43,7 +51,7 @@
                 <button class="tablinks " onclick="openCity(event, 'Bancarios')" id="d_bancarios"><i class="fa fa-university mr-2" aria-hidden="true"></i>Datos bancarios</button>
                 <button class="tablinks " onclick="openCity(event, 'Fiscales')" id="d_fiscales"><i class="fa fa-file-text mr-2" aria-hidden="true"></i>Datos fiscales</button>
                 <button class="tablinks " onclick="openCity(event, 'Notificaciones')" id="notificaciones"><i class="fa fa-bell mr-2" aria-hidden="true"></i>Notificaciones</button> -->
-                <button class="tablinks p-0 px-lg-4 py-lg-2" onclick="openCity(event, 'Agentes')" id="defaultOpen"><i class="ionicons ion-ios-people h2 mr-2"></i>Agentes</button>
+                <button class="tablinks p-0 px-lg-4 py-lg-2 d-none" onclick="openCity(event, 'Agentes')" id="defaultOpen"><i class="ionicons ion-ios-people h2 mr-2"></i>Agentes</button>
                 <button style="display: none;" class="tablinks" onclick="openCity(event, 'Perfil-agentes')" id="perfil_agentes">Perfil agente</button>
             </div>
 
@@ -373,89 +381,82 @@
             <!--=========================================
          ===== PERFIL AGENTE =====
       =============================================-->
-            <div id="Perfil-agentes" class="tabcontent mb-xl-235">
-                <div class="card form-layout mb-xl-270" style="border:none;">
-                    <div class="text-center">
-                        <h3 class="perfil-agente-empresa">Perfil agente </h3>
+            <div id="Perfil-agentes" class="tabcontent">
+                <section class="section-sub-banner bg-9">
+                    <div class="sub-banner">
+                        <div class="container">
+                            <div class="text text-center">
+                                <h2>Agentes</h2> 
+                                <p>Mi perfil</p> 
+                            </div>
+                        </div>
                     </div>
-                    <form class="mb-xl-270" id="form-perfilagent" enctype="multipart/form-data">
-                        <div class="row justify-content-center mg-t-20 px-3">
-                            <div class="col-lg-7">
-                                <div class="col-sm-12 text-center">
-                                    <img style="width: 140px; height: 140px;" id="img-user" class="img-fluid rounded-circle" src="<?= base_url() ?>/../../assets/img/default.png" />
-                                </div>
+                </section>
+                <form class="" id="form-perfilagent" enctype="multipart/form-data">
+                    <div class="row justify-content-center mg-t-20 px-3">
+                        <div class="col-lg-7">
+                            <div class="col-sm-12 text-center">
+                                <img style="width: 140px; height: 140px;" id="img-user" class="img-fluid rounded-circle" src="<?= base_url() ?>/../../assets/img/default.png" />
                             </div>
-                            <div class="col-lg-7 mg-t-10 mg-sm-t-0">
-                                <div class="file-drop-area">
-                                    <span class="choose-file-button">Subir foto de perfil</span>
-                                    <span id="file-msg" class="file-message">Arrastra el archivo aqui</span>
-                                    <input id="file_user-img" class="file-input" type="file" required name="file_agente" accept=".jpeg, .png, .jpg">
+                        </div>
+                        <div class="col-lg-7 mg-t-10 mg-sm-t-0 mb-lg-4">
+                            <div class="file-drop-area">
+                                <span class="choose-file-button">Subir foto de perfil</span>
+                                <span id="file-msg" class="file-message">Arrastra el archivo aqui</span>
+                                <input id="file_user-img" class="file-input" type="file" required name="file_agente" accept=".jpeg, .png, .jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class=" form-group">
+                            <label class="">Nombre<span class="tx-danger">*</span></label>
+                            <input type="text" class="" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Primer Apellido<span class="tx-danger">*</span></label>
+                            <input type="text" class="" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Segundo Apellido<span class="tx-danger">*</span></label>
+                            <input type="text" class="" id="nombre_agente" name="apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Correo<span class="tx-danger">*</span></label>
+                            <input type="email" class="" id="email_agente" name="correo_agente" autocomplete="off" placeholder=" " required>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Teléfono<span class="tx-danger">*</span></label>
+                            <input type="tel" class="" id="tel_agente" name="tel_agente" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
+                        </div>
+                    </div>
 
-                                </div>
-                            </div>
+                    <div class="col-lg-5">
+                        <label class="">Identificación oficial (agente)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
+                        <div class="file-drop-area">
+                            <span class="choose-file-button">Subir Archivo</span>
+                            <span class="file-message">Arrastra el archivo aqui</span>
+                            <input id="file_agente" class="file-input" type="file" required name="ine_agente" accept=".pdf, .png, .jpg">
                         </div>
-                        <div class="col-lg-4">
-                            <div class=" form-group">
-                                <label class="">Nombre<span class="tx-danger">*</span></label>
-                                <input type="text" class="" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label class="">Primer Apellido<span class="tx-danger">*</span></label>
-                                <input type="text" class="" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="text" class="form__input" id="nombre_agente" name="apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-                                <label class="form__label">Segundo Apellido<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que tener mínimo 3 caracteres
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="email" class="form__input" id="email_agente" name="correo_agente" autocomplete="off" placeholder=" " required>
-                                <label class="form__label">Correo<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que ser un correo válido
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="tel" class="form__input" id="tel_agente" name="tel_agente" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
-                                <label class="form__label">Teléfono<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Debe de ser un número de 10 dígitos.
-                                </div>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="row justify-content-center mg-t-30">
-                            <label class="col-lg-7 form-control-label px-sm-4">Identificación oficial (agente)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
-                            <div class="col-lg-7 mg-t-10 mg-sm-t-0 px-sm-4">
-                                <div class="file-drop-area">
-                                    <span class="choose-file-button">Subir Archivo</span>
-                                    <span class="file-message">Arrastra el archivo aqui</span>
-                                    <input id="file_agente" class="file-input" type="file" required name="ine_agente" accept=".pdf, .png, .jpg">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-7 mx-auto px-0 px-lg-2 mt-3">
-                            <div class="col-sm-12 mt-5 text-center text-md-right px-3 px-lg-2">
-                                <div class="d-flex justify-content-end">
-                                    <button class="px-4 py-1 btn btn-primary" id="btnactualizar_agente_inmob" name="actualizar-agente"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
-                                </div>
+                    <div class="col-lg-12 mx-auto px-0 px-lg-2 mb-lg-5">
+                        <div class="col-sm-12  text-center text-md-right px-3 px-lg-2">
+                            <div class="d-flex justify-content-end">
+                                <button class="px-4 py-1 btn btn-save" id="btnactualizar_agente_inmob" name="actualizar-agente"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
                             </div>
                         </div>
                     </div>
                 </form>
             </div>
-        </div>
+        
 
 
         <!--=========================================
@@ -578,3 +579,14 @@
         </div>
     </div>
 </div>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+    <script src="<?= base_url() ?>/assets/lib/jquery/jquery.js"></script>
+    <script src="<?= base_url() ?>/assets/lib/jquery-ui/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">  
+
+<?= $this->endSection() ?>

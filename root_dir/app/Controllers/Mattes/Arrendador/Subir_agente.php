@@ -44,7 +44,7 @@ class Subir_agente extends BaseController
             echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
             echo view('Mattes/Arrendador_view/Subir_agente');
             echo view('right_panel');
-            echo view('Mattes/Footer');
+            //echo view('Mattes/Footer');
             echo view('fotter_panel' , $data_fotter); 
 
           }else{
