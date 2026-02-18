@@ -1,3 +1,5 @@
+
+
 <section class="inicio mb-5 ">
     <header class="fixed-top mb-5">
         <nav class="navbar navbar-light bg-white navbar-expand-lg head-section" id="menu-navegacion">
@@ -201,51 +203,56 @@
     </header>
 </section>
 
-<script>
-    let persona = <?php echo json_encode($menu);  ?>;
 
-    switch (persona) {
-        //persona fisica
-        case "1":
-            document.getElementById("moral").style.display = "none";
-            document.getElementById("agente-perfil").remove();
-            document.getElementById("inmobiliaria").remove();
-           /*  document.getElementById("agente-perfil").style.display = "none";
-            document.getElementById("inmobiliaria").style.display = "none"; */
-            document.getElementById("moral-mobil").style.display = "none";
-            document.getElementById("agente-mobil").style.display = "none";
-            document.getElementById("agente").style.display = "none";
-            document.getElementById("add_agente").style.display = "none";
-            document.getElementById("mensajes-agente").style.display = "none";
-            document.getElementById("add_agente-mobil").style.display = "none";
-            document.getElementById("mensajes-agente-mobil").style.display = "none";
-            break;
 
-            //persona moral arre
+    <script>
+        let persona = <?php echo json_encode($menu);  ?>;
 
-        case "2":
-            document.getElementById("fisica").style.display = "none";
-            //document.getElementById("agente-perfil").style.display = "none";
-            //document.getElementById("arrendador").style.display = "none";
-            document.getElementById("agente-perfil").remove();
-            document.getElementById("arrendador").remove(); 
-            document.getElementById("fisica-mobil").style.display = "none";
-            document.getElementById("agente").style.display = "none";
-            document.getElementById("agente-mobil").style.display = "none";
-            break;
+        switch (persona) {
+            //persona fisica
+            case "1":
+                document.getElementById("moral").style.display = "none";
+                document.getElementById("agente-perfil").remove();
+                document.getElementById("inmobiliaria").remove();
+            /*  document.getElementById("agente-perfil").style.display = "none";
+                document.getElementById("inmobiliaria").style.display = "none"; */
+                document.getElementById("moral-mobil").style.display = "none";
+                document.getElementById("agente-mobil").style.display = "none";
+                document.getElementById("agente").style.display = "none";
+                document.getElementById("add_agente").style.display = "none";
+                document.getElementById("mensajes-agente").style.display = "none";
+                document.getElementById("add_agente-mobil").style.display = "none";
+                document.getElementById("mensajes-agente-mobil").style.display = "none";
+                break;
 
-        default:
-            document.getElementById("fisica").style.display = "none";
-            document.getElementById("arrendador").remove();
-            document.getElementById("fisica-mobil").style.display = "none";
-            document.getElementById("inmobiliaria").remove();
-            document.getElementById("moral").style.display = "none";
-            document.getElementById("moral-mobil").style.display = "none";
-            document.getElementById("add_agente").style.display = "none";
-            document.getElementById("mensajes-agente").style.display = "none";
-            document.getElementById("add_agente-mobil").style.display = "none";
-            document.getElementById("mensajes-agente-mobil").style.display = "none";
-            break;
-    }
-</script>
+                //persona moral arre
+
+            case "2":
+                document.getElementById("fisica").style.display = "none";
+                //document.getElementById("agente-perfil").style.display = "none";
+                //document.getElementById("arrendador").style.display = "none";
+                document.getElementById("agente-perfil").remove();
+                document.getElementById("arrendador").remove(); 
+                document.getElementById("fisica-mobil").style.display = "none";
+                document.getElementById("agente").style.display = "none";
+                document.getElementById("agente-mobil").style.display = "none";
+                break;
+
+            default:
+                document.getElementById("fisica").style.display = "none";
+                document.getElementById("arrendador").remove();
+                document.getElementById("fisica-mobil").style.display = "none";
+                document.getElementById("inmobiliaria").remove();
+                document.getElementById("moral").style.display = "none";
+                document.getElementById("moral-mobil").style.display = "none";
+                document.getElementById("add_agente").style.display = "none";
+                document.getElementById("mensajes-agente").style.display = "none";
+                document.getElementById("add_agente-mobil").style.display = "none";
+                document.getElementById("mensajes-agente-mobil").style.display = "none";
+                break;
+        }
+    </script>
+
+
+
 
