@@ -42,14 +42,15 @@
     z-index:100;
     padding: 4px !important;
     margin-bottom: 1px !important;
-    color: var(--blanco);
-    background-color: var(--mattes) !important;
+    color: #000;
+    background-color: #ddd !important;
 }
 
 #cpResult li:nth-child(even) {
     z-index:100;
-    color: var(--mattes) !important;
+    color: #000 !important;
     background-color: var(--blanco) !important;
+    border-top: 1px solid black;
 }
 
 #cpResult li:hover {

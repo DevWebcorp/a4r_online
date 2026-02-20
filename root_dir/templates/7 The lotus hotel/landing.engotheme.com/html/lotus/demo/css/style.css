@@ -116,10 +116,10 @@ img {
     overflow:hidden;
     height:1px
 }
-#page-wrap {
+/* #page-wrap {
     overflow:hidden;
     background-color:#f7f7f7
-}
+} */
 .box-border {
     display:inline-block;
     width:100px;

@@ -1,8 +1,18 @@
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
+
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
 <style>
     .cajon{
@@ -11,19 +21,30 @@
     }
 </style>
 
-<div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
+<!-- <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span><strong>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA</strong> <span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div> -->
+
+<section class="section-sub-banner bg-9">
+    <div class="sub-banner">
+        <div class="container">
+            <div class="text text-center">
+                <h2>DETALLE DE LA PROPIEDAD</h2><!-- 
+                <p>Lorem Ipsum is simply dummy text of the printing</p> -->
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="propiedad_archivos mg-t-70 mb-200 ">
     <div class="container">
-        <div class="row" style="margin-top: 135px;">
+        <div class="row" >
             <!-- <nav class="stepper__wrapper">
                 <ul class="stepper">
                     <li class="stepper__item">
@@ -69,9 +90,9 @@
                 </div>
             </div>
 
-            <div class="col-lg-10 mx-auto mt-4">
+          <!--   <div class="col-lg-10 mx-auto mt-4">
                 <h1 class="detalle-prop text-center">Detalle de propiedad</h1>
-            </div>
+            </div> -->
             <div class="col-lg-12 mx-auto">
                 <span style="font-size: 12px;"><span class="text-primary">*</span> Ten en cuenta que los estudiantes suelen pedir fotos de: habitación, baño, sala, cocina, áreas comunes. Puedes subir un total de 10 fotos en formato jpg, png o mp4 con un tamaño máximo de 10 MB</span>
                 <div class="col-12 col-md-10 col-lg-6 mx-auto">
@@ -130,7 +151,7 @@
                         </div> -->
 
                         <div class="form-layout-footer text-right mg-t-30">
-                            <button id="send_form" type="button" class="btn btn-primary mb-2 text-right bordeado"><i
+                            <button id="send_form" type="button" class="btn btn-save mb-2 text-right bordeado"><i
                                     class="fa fa-floppy-o fa-lg mr-1" aria-hidden="true"></i>
                                     Guardar y enviar
                             </button>
@@ -174,6 +195,14 @@
     </div><!-- modal-dialog -->
 </div><!-- modal -->
 
-<script>
-    let id_propiedad = <?php echo json_encode($id_propiedad); ?>;
-</script>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    
+    <script>
+        let id_propiedad = <?php echo json_encode($id_propiedad); ?>;
+    </script>
+<?= $this->endSection() ?>

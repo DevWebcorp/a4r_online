@@ -37,7 +37,7 @@ class Propiedad_archivos extends BaseController
 
       $data_header['styles'] = ["starlight.css" ,"Mattes/Arrendador/Arrendador.css", "Mattes/Principal.css",  "Mattes/Arrendador/Menu_arrendador.css", "Mattes/Arrendador/Propiedad_archivos.css"];
     
-      $data_header['title'] = "Mattes";
+      $data_header['title'] = "Fotos de la propiedad";
       $data_header['description'] = "Formulario con campos para subir los archivos solicitados de la propiedad";
       echo view('header' , $data_header);
       //echo view('head_panel');
@@ -45,7 +45,7 @@ class Propiedad_archivos extends BaseController
       //echo view('left_panel',$data_left);
       echo view('Mattes/Arrendador_view/Propiedad_archivos',$data);
       echo view('right_panel'); 
-      echo view('Mattes/Footer');
+      //echo view('Mattes/Footer');
       echo view('fotter_panel' , $data_fotter); 
 
   }
