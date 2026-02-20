@@ -1,7 +1,3 @@
-
-
-
-
 <?= $this->extend('layout/main') ?>
 
 <!--LIBRERIAS DINAMICAS PARA CSS-->

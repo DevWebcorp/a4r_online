@@ -8,7 +8,7 @@
                 </button>
 
                 <a href="" class="navbar-brand d-lg-none mx-auto">
-                    <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/Mattes_Logo.png" alt="Logo mattes" class="img-fluid logo">
+                    <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo mattes" class="img-fluid logo">
                 </a>
 
                 <!--Barra de navegación -->
@@ -20,15 +20,15 @@
                        <!--  <a href="<?= base_url() ?>/Mattes/Arrendador/Index">
                             <img src="<?= base_url() ?>/../../assets/img/Iconos/home_1.png" class="img-fluid wd-40 rounded-circle ml-2" alt="casa">
                         </a> -->
-                        <li class="nav-item"><a href="<?= base_url() ?>/about" class="mr-3 nav-link py-3">About</a></li>
+                        <!-- <li class="nav-item"><a href="<?= base_url() ?>/about" class="mr-3 nav-link py-3">About</a></li>
                         <li class="nav-item"><a href="<?= base_url() ?>/Inicio" class="mr-3 nav-link py-3">Inicio</a></li>
                         <li class="nav-item"><a href="<?= base_url() ?>/contacto" class="nav-link py-3">Contacto</a></li> 
-                        <li class="nav-item"><a class="d-lg-none nav-link" href="">
+                        <li class="nav-item"><a class="d-lg-none nav-link" href=""> -->
 
                     </ul>
                     <!--LOGOTIPO DEL SITIO-->
                     <a href="<?= base_url() ?>/Mattes/Principal" class="navbar-brand d-none d-lg-block">
-                        <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/Mattes_Logo.png" alt="Logo mattes" class="img-fluid logo">
+                        <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo mattes" class="img-fluid logo">
                     </a>
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item soy-propietario d-none d-lg-inline" style="padding-top: .7rem !important;">

@@ -47,7 +47,7 @@
 </div> -->
 
 <section class="container-fluid casas mg-b-120 height-casas">
-    <h3 class="text-center mb-4 hola">Hola </h3>
+    <h3 class="text-center mb-4 hola font-weight-bold">Bienvenid@ </h3>
     <div class="col-12 col-sm-10 col-lg-6 m-auto" style="margin-bottom: 50px !important;">
         <div class="input-group p-3 p-xl-0">
             <div class="input-group-append">
@@ -61,7 +61,7 @@
 
     <div class="container">
         <div id="sn-propiedades" class="text-center col-12 shadow-lg p-3 mb-5 bg-white rounded" style="height: 230px; display: none ">
-            <h1 class="text-center sin-propiedades"> Sin propiedades</h1>
+            <h1 class="text-center sin-propiedades">Sin propiedades</h1>
         </div>
     </div>
 

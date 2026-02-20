@@ -44,48 +44,43 @@ function get_propiedades() {
                 $(result).each(function(i, v) {
     
                     var precio = v.precio == null ? " -- " : v.precio;
-    
+                    //let casa_estatus = $('estatus_casa').attr('class');
+                    //let casa_estatus = document.getElementsByClassName('estatus_casa');
                     if (v.date_start <= hoy) {
-                        var status = "Disponible";
-    
+                        var status = "Disponible";                        
+                        //casa_estatus.classList.add('disponible');
+                        var background = "linear-gradient(to right, #00b09b, #96c93d)";
                     } else {
-                        var status = "No Disponible"
+                        var status = "No Disponible";
+                        //casa_estatus.classList.add('no-disponible');
+                        var background = "linear-gradient(to right, #f90303, #fe5602)";
                     }
     
                     if (v.imagen == null) {
                         let html = `<div class="grid-item">
                                         <figure>
                                             <img id="img-1" class=" w-100" src="${path}/default_propiedad.png" alt="First slide">
-                                        </figure>
-                                        
-                                        <div class="d-flex row">
-                                            <div class="col-2 d-flex">
-                                                <button class = "detalle-propiedad" id = " ${v.id} " type="button">
-                                                </button>
-                                                <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
-                                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                                </button>
-                                                <div class = "iconos2"></div>
-                                            </div>                                            
+                                        </figure>                                        
+                                       
+                                        <div class="acciones-propiedad">
+                                            <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                            </button>
+                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                            <div class = "iconos2"></div>
+                                        </div> 
                                             
-                                            <div class="row">
-                                                <div class="col-2">
-
-                                                </div>
-                                                <div class="col-10">
-                                                    <p class="info-casa mt-1 overflow-hidden"> ${v.name}</p>
-                                                </div>
-                                                <div class="col-1">
-
-                                                </div>
-                                                <div class="col-5" style="border-top: 1px solid #9a9a9a; border-right:1px solid #9a9a9a; ">
-                                                   
-                                                    <p class="info-casa" style="line-height: 24px;">Estatus: <span> ${status}</span></p>
-                                                </div>
-                                                <div class="col-5" style="border-top: 1px solid #9a9a9a;">
-                                                    <!-- <p class="info-casa">Renta mensual</p> -->
-                                                    <p class="info-casa">Costo: <span>$${precio}</span></p>
-                                                </div>
+                                        <div class="col-12">
+                                            <p class="info-casa mt-1 overflow-hidden text-uppercase"> ${v.name}</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-1"> </div>
+                                            <div class="col-6 px-0">
+                                                <p class="estatus_casa"  style="line-height: 24px;"><span> ${status}</span></p>
+                                            </div>
+                                            <div class="col-4">
+                                                <p class="info-casa"><span>$${precio}</span></p>
                                             </div>
                                         </div>
                                        
@@ -101,27 +96,32 @@ function get_propiedades() {
                                          <figure>
                                             <img id="img-1" class=" w-100" src="${path}/${v.imagen}" alt="First slide">
                                         </figure>
-                                        <div class="d-flex row">
-                                            <div class="col-2">
-                                                <button class = "detalle-propiedad" id="${v.id}" type="button">
-                                                    <i class="ionicons ion-edit h2  text-warning"></i>
-                                                </button>
-                                                <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
-                                                    <i class="fa fa-trash" aria-hidden="true"></i>
-                                                </button>
-                                                
+                                        
+                                        <div class="acciones-propiedad">
+                                            <button class = "detalle-propiedad" id="${v.id}" type="button">
+                                                <i class="ionicons ion-edit h2  text-warning"></i>
+                                            </button>
+                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                        <div id="iconos${i}" class = "iconos"></div>                                        
+                                           
+                                        <div class="col-12">
+                                            <p class="info-casa mt-1 overflow-hidden text-uppercase" style="font-size: 18px !important;">${v.name}</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-1"></div>
+                                            <div class="col-6 px-0">
+                                                <p class="info-casa estatus_casa" style="line-height: 24px;"> <span>${status}</span> </p>
                                             </div>
-                                            <div id="iconos${i}" class = "iconos"></div>
-                                            
-                                            <div class="col-10">
-                                                <p class="info-casa mt-1 overflow-hidden">${v.name}</p>
-                                                <p class="info-casa" style="line-height: 24px;">Estatus: <span>${status}</span> </p>
-                                                <p class="info-casa">Renta mensual</p>
-                                                <p class="info-casa">Costo: <span>$${precio}</span></p>
+                                            <div class="col-4">
+                                                <p class="info-casa"><span>$${precio}</span></p>
                                             </div>
                                         </div>
+                                    </div>
                                         
-                                    </div>`
+                                    `
                         $(".grid").append(html);
                         $("#iconos" + i).append(sello);
                         $("#iconos" + i).append(verifica);
@@ -278,6 +278,7 @@ $(document).keyup(function(event) {
         $('#loader').toggle();
         let valor = $('#buscar').val();
 
+        let elemento = document.getElementsByClassName('estatus_casa');
         const url = `${BASE_URL}Mattes/Api/Arrendador_api/Propiedades_rest/busqueda`;
         $.ajax({
             type: "POST",
@@ -315,12 +316,13 @@ $(document).keyup(function(event) {
                     $(result).each(function(i, v) {
 
                         var precio = v.precio == null ? " -- " : v.precio;
-
+                        
                         if (v.date_start <= hoy) {
                             var status = "Disponible";
-
+                            elemento.style.backgroundColor = '#4cae4c';
                         } else {
-                            var status = "No Disponible"
+                            var status = "No Disponible";
+                            elemento.style.backgroundColor = '#d43f3a';
                         }
 
                         if (v.imagen == null) {
@@ -329,26 +331,28 @@ $(document).keyup(function(event) {
                                         <img id="img-1" class=" w-100" src="${path}/default_propiedad.png" alt="First slide">
                                     </figure>
 
-                                    <div class="d-flex row">
-                                        <div class="col-2">
-                                            <button class = "detalle-propiedad" id = " ${v.id} " type="button">
-                                                <i class="ionicons ion-edit h2  text-warning"></i>
-                                            </button>
-                                                <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
-                                            <div class = "iconos2"></div>
-                                        </div>
-
-                                        <div class="col-10">
-                                            <p class="info-casa mt-2 overflow-hidden"> ${v.name}</p>
-                                            <p class="info-casa" style="line-height: 24px;">Estatus: <span> ${status}</span></p>
-                                            <p class="info-casa">Renta mensual</p>
-                                            <p class="info-casa">Costo: <span>$${precio}</span></p>
-                                        </div>
+                                    <div class="acciones-propiedad">
+                                        <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                            <i class="ionicons ion-edit h2  text-warning"></i>
+                                        </button>
+                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                        </button>
+                                        <div class = "iconos2"></div>
                                     </div>
-                                    
-                                    
+
+                                    <div class="col-12">
+                                        <p class="info-casa mt-2 overflow-hidden text-uppercase" style="font-size: 18px !important;"> ${v.name}</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-1"></div> 
+                                        <div class="col-6 px-0">
+                                            <p class="info-casa estatus_casa" style="line-height: 24px;"> <span> ${status}</span></p>
+                                        </div> 
+                                        <div class="col-4">
+                                            <p class="info-casa"><span>$${precio}</span></p>
+                                        </div> 
+                                    </div> 
                                    
                                 </div>`;
 
@@ -373,10 +377,15 @@ $(document).keyup(function(event) {
                                             <div id="iconos${i}" class = "iconos"></div>
                                         </div>
                                         
-                                        <div class="col-10">
-                                            <p class="info-casa mt-2">${v.name}</p>
-                                            <p class="info-casa" style="line-height: 24px;">Estatus: <span>${status}</span> </p>
-                                            <p class="info-casa">Renta mensual</p>
+                                        <div class="col-1"></div>
+                                        <div class="col-12">
+                                            <p class="info-casa mt-2" style="font-size: 18px !important;">${v.name}</p>
+                                        </div>  
+                                        <div class="col-1"></div>
+                                        <div class="col-5">
+                                            <p class="info-casa estatus_casa" style="line-height: 24px;"> <span>${status}</span> </p>
+                                        </div>
+                                        <div class="col-5">
                                             <p class="info-casa">Costo: <span>$${precio}</span></p>
                                         </div>
                                         
@@ -429,10 +438,6 @@ $(document).keyup(function(event) {
                         });
 
                     });
-
-                   
-
-
 
                 }
 

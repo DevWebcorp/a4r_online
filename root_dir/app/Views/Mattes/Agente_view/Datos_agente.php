@@ -1,13 +1,18 @@
-<script src="<?= base_url() ?>/../../assets/lib/jquery/jquery.js"></script>
-<script src="<?= base_url() ?>/../../assets/lib/jquery-ui/jquery-ui.js"></script>
+<?= $this->extend('layout/main') ?>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link href="../../../../../assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -17,7 +22,18 @@
         </div>
     </div>
 </div>
+ -->
 
+<section class="section-sub-banner bg-9">
+    <div class="sub-banner">
+        <div class="container">
+            <div class="text text-center">
+                <h2>Datos del agente</h2><!-- 
+                <p>Lorem Ipsum is simply dummy text of the printing</p> -->
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="mg-t-80 mg-b-120">
     <div class="container mt-5">
@@ -45,79 +61,70 @@
                         </div>
                     </div>
 
-                    <div class="row mg-t-40 pr-5-5 pr-lg-6 pl-3 pl-lg-4">
-                        <div class="col-lg-7 form__group">
-                            <input type="text" class="form__input" id="nombre_agente" name="nombre_agente"
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Nombre<span class="tx-danger">*</span></label>
+                            <input type="text" class="" id="nombre_agente" name="nombre_agente"
                             pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3"
                             maxlength="25" autocomplete="off" placeholder=" " required>
-                            <label class="form__label">Nombre<span class="tx-danger">*</span></label>
-                            <div class="requirements">
-                                Tiene que tener mínimo 3 caracteres
-                            </div>
                         </div>
                     </div>
-                    <div class="row mg-t-40 pr-5-5 pr-lg-6 pl-3 pl-lg-4">
-                        <div class="col-lg-7 form__group">
-                            <input type="text" class="form__input" id="apellidof" name="apellidof"
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Primer Apellido<span class="tx-danger">*</span></label>
+                            <input type="text" class="" id="apellidof" name="apellidof"
                             pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3"
                             maxlength="25" autocomplete="off" placeholder=" " required>
-                            <label class="form__label">Primer Apellidooiñoi<span
-                                    class="tx-danger">*</span></label>
-                            <div class="requirements">
-                                Tiene que tener mínimo 3 caracteres
-                            </div>
                         </div>
                     </div>
-                    <div class="row mg-t-40 pr-5-5 pr-lg-6 pl-3 pl-lg-4">
-                        <div class="col-lg-7 form__group">
-                            <input type="text" class="form__input" id="apellidos" name="apellidos"
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Segundo Apellido<span class="tx-danger">*</span></label>
+                            <input type="text" class="" id="apellidos" name="apellidos"
                             pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3"
                             maxlength="25" autocomplete="off" placeholder=" " required>
-                            <label class="form__label">Segundo Apellido<span
-                                    class="tx-danger">*</span></label>
-                            <div class="requirements">
-                                Tiene que tener mínimo 3 caracteres
-                            </div>
                         </div>
                     </div>
-                    <div class="row mg-t-40 pr-5-5 pr-lg-6 pl-3 pl-lg-4">
-                        <div class="col-lg-7 form__group">
-                            <input type="email" class="form__input" id="correo" name="correo_agente"
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Correo<span class="tx-danger">*</span></label>
+                            <input type="email" class="" id="correo" name="correo_agente"
                             placeholder=" " required  style="background-color: #e9ecef; border: 1px solid green;" readonly>
-                            <label class="form__label">Correo<span class="tx-danger">*</span></label>
                         </div>
                     </div>
-                    <div class="row mg-t-40 pr-5-5 pr-lg-6 pl-3 pl-lg-4">
-                        <div class="col-lg-7 form__group">
-                            <input type="tel" class="form__input" id="telefono_agente" name="telefono"
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Teléfono<span class="tx-danger">*</span></label>
+                            <input type="tel" class="" id="telefono_agente" name="telefono"
                             pattern="^[0-9]+" minlength="10" maxlength="10"
                             autocomplete ="off" placeholder=" " required>
-                            <label class="form__label">Teléfono<span class="tx-danger">*</span></label>
-                            <div class="requirements">
-                                Solo se permiten números
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" id="show_hide_password">
+                        <div class="form-group">
+                            <label class="">Contraseña<span class="tx-danger">*</span></label>
+                            <input placeholder=" " type="password" class="" name="password" id="update_password1" required
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off">
+                            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+                            <div class="input-group-addon" style="border-radius: 10px; padding: 0.5rem 0.75rem">
+                                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row col-lg-7 mx-auto mg-t-30 input-group" id="show_hide_password">
-                        <label class="col-12 px-0 form-control-label">Contraseña<span class="tx-danger">*</span></label>
-                        <input placeholder=" " type="password" class="form-control" name="password" id="update_password1" required
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off">
-                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
-                        <div class="input-group-addon" style="border-radius: 10px; padding: 0.5rem 0.75rem">
-                            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                    <div class="col-lg-4 mx-auto mg-t-30 input-group" id="show_hide_password2">
+                        <div class="form-group">
+                            <label class="">Repetir contraseña<span class="tx-danger">*</span></label>
+                            <input placeholder=" " type="password" class="" name="password" id="update_password2" required
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off">
+                            <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
+                            <div class="input-group-addon" style="border-radius: 10px; padding: 0.5rem 0.75rem">
+                                <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row col-lg-7 mx-auto mg-t-30 input-group" id="show_hide_password2">
-                        <label class="col-12 px-0  form-control-label">Repetir contraseña<span class="tx-danger">*</span></label>
-                        <input placeholder=" " type="password" class="form-control" name="password" id="update_password2" required
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" autocomplete="off">
-                        <!-- <i class="formulario__validacion-estado fas fa-times-circle"></i> -->
-                        <div class="input-group-addon" style="border-radius: 10px; padding: 0.5rem 0.75rem">
-                            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
                     <input type="hidden" class="form-control" id="id_user" name="id_user">
                     <input type="hidden" class="form-control" id="id_identity" name="id_identity">
                     <input type="hidden" class="form-control" id="name-img" name="name_img">
@@ -134,6 +141,16 @@
     </div>
 </section>
 
-<script>
-    let token = <?php echo json_encode($token); ?>;
-</script>
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+    <script src="<?= base_url() ?>/../../assets/lib/jquery/jquery.js"></script>
+    <script src="<?= base_url() ?>/../../assets/lib/jquery-ui/jquery-ui.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   
+    <script>
+        let token = <?php echo json_encode($token); ?>;
+    </script>
+
+<?= $this->endSection() ?>

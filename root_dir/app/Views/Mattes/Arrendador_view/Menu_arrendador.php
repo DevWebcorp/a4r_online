@@ -2,7 +2,7 @@
 
 <section class="inicio mb-5 ">
     <header class="fixed-top mb-5">
-        <nav class="navbar navbar-light bg-white navbar-expand-lg head-section" id="menu-navegacion">
+        <nav class="navbar navbar-light bg-menu navbar-expand-lg head-section" id="menu-navegacion">
             <div class="container-fluid">
                 <!-- Botón del menú responsive -->
                 <button type="button" class="navbar-toggler d-lg-none order-1" data-toggle="collapse" data-target="#menu-principal" aria-controls="menu-principal" arial-expanded=" false" arial-label="Desplegar menu de navegacion">
@@ -10,7 +10,7 @@
                 </button>
 
                 <a href="<?= base_url() ?>/Inicio" class="navbar-brand d-lg-none mx-auto">
-                    <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/LogoRMattes.png" alt="Logo mattes" class="img-fluid logo">
+                    <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo mattes" class="img-fluid logo">
                 </a>
 
                 <!--Barra de navegación -->
@@ -149,7 +149,7 @@
                         <li class="nav-item inicio-sesion px-3 py-1 my-lg-auto d-none d-lg-inline">
                             <div class="dropdown show">
                                 <a class=" " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-bars fa-2x text-dark" aria-hidden="true"></i>
+                                    <i class="fa fa-bars fa-2x text-white" aria-hidden="true"></i>
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
