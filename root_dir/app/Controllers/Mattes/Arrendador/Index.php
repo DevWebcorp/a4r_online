@@ -35,9 +35,9 @@ class Index extends BaseController
       echo view('header' , $data_header);
       //echo view('head_panel');
       if($id_group == 3){
-        //echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
+        echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
       } else {
-       // echo view('Mattes/Agente_view/Menu_agente', $data_menu);
+        echo view('Mattes/Agente_view/Menu_agente', $data_menu);
       }
       //echo view('Mattes/Arrendador_view/Menu_arrendador', $data_menu);
       echo view('Mattes/Arrendador_view/Header_arrendador', $data);

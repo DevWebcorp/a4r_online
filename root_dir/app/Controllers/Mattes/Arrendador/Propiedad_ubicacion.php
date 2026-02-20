@@ -47,7 +47,7 @@ class Propiedad_ubicacion extends BaseController
       $data_header['styles'] = ["starlight.css", "Mattes/Arrendador/Arrendador.css", "Mattes/Principal.css", /* "Mattes/Arrendador/Detalle_propiedad.css", */ "Mattes/Arrendador/Menu_arrendador.css",
       "Mattes/Arrendador/Propiedad_ubicacion.css"];
 
-      $data_header['title'] = "Mattes";
+      $data_header['title'] = "Ubicacion de la propiedad";
       $data_header['description'] = "Formulario con campos para llenar la ubicación de la propiedad";
 
       $data['id_propiedad'] = $id_propiedad;
@@ -58,7 +58,7 @@ class Propiedad_ubicacion extends BaseController
       //echo view('Mattes/Arrendador_view/Header_arrendador'); 
       echo view('Mattes/Arrendador_view/Propiedad_ubicacion', $data);
       echo view('right_panel');
-      echo view('Mattes/Footer');
+      //echo view('Mattes/Footer');
       echo view('fotter_panel', $data_fotter);
     } else {
       return redirect()->to(base_url());

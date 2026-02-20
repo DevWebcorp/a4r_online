@@ -17,20 +17,20 @@
 }
 
 .borde {
-    border: 1px solid black;
     padding: 0.5rem 1rem;
+    border: 1px solid black;
 }
 
 /* ############  CP SEARCH ############### */
 #cpResult {
-    list-style: none !important;
-    padding: 0px !important;
-    width: 250px !important;
     position: absolute !important;
-    margin-top: 39px;
-    min-width: 100%;
     z-index: 999999;
     overflow-y: auto;
+    width: 250px !important;
+    min-width: 100%;
+    padding: 0px !important;
+    margin-top: 39px;
+    list-style: none !important;
 }
 
 #searchResult:hover {
@@ -39,17 +39,17 @@
 }
 
 #cpResult li {
-    background-color: var(--mattes) !important;
-    color: var(--blanco);
     z-index:100;
     padding: 4px !important;
     margin-bottom: 1px !important;
+    color: var(--blanco);
+    background-color: var(--mattes) !important;
 }
 
 #cpResult li:nth-child(even) {
-    background-color: var(--blanco) !important;
-    color: var(--mattes) !important;
     z-index:100;
+    color: var(--mattes) !important;
+    background-color: var(--blanco) !important;
 }
 
 #cpResult li:hover {
@@ -69,11 +69,11 @@
 }
 
 /*Gradiente del color al header de agregar propiedades*/
-.gradiente-header{
+/* .gradiente-header{
     background: rgb(204,204,204);
     background: linear-gradient(180deg, rgba(204,204,204,1) 0%, rgba(204,204,204,1) 20%, rgba(255,255,255,1) 100%);
 }
-
+ */
 /*Estilo al carousel como flechas, tamaño, etc*/
 .carousel-control-prev,
 .carousel-control-next{
@@ -88,16 +88,16 @@
 
 .carousel-control-prev-icon::before {
     left: 20px !important;
-    background-color: var(--blanco);
-    border-radius: 10px !important;
     padding: 0 .5rem !important;
+    border-radius: 10px !important;
+    background-color: var(--blanco);
 }
 
 .carousel-control-next-icon::before{
     right: 20px !important;
-    background-color: var(--blanco);
-    border-radius: 10px !important;
     padding: 0 .5rem !important;
+    border-radius: 10px !important;
+    background-color: var(--blanco);
 }
 
 .b-elemento,
@@ -109,19 +109,19 @@
 /*Sobreescribo estilos de starlight del carousel*/
 .carousel-control-prev-icon::before,
 .carousel-control-next-icon::before {
-   font-weight: bold;
    font-size: 30px;
+   font-weight: bold;
 }
 
 .cajon{
-   height: 352px !important;
    width: 540px !important;
+   height: 352px !important;
 }
 
 .carousel-control-next, .carousel-control-prev {
-    font-weight: bold;
+    opacity: .8 !important;
     font-size: 30px;
-    opacity: .8 !important;    
+    font-weight: bold;    
 }
 
 .carousel-indicators li.active{
@@ -148,50 +148,50 @@
 
 .choose-file-button {
     flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(33, 140, 230, 0.6);
-    border-radius: 3px;
     padding: 8px 15px;
     margin-right: 10px;
-    font-size: 12px;
+    border: 1px solid rgba(33, 140, 230, 0.6);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.04);
     text-transform: uppercase;
+    font-size: 12px;
 }
 
 .file-message {
+    overflow: hidden;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: small;
     font-weight: 300;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .file-input {
     position: absolute;
-    left: 0;
     top: 0;
-    height: 100%;
+    left: 0;
     width: 100%;
-    cursor: pointer;
+    height: 100%;
     opacity: 0;
+    cursor: pointer;
 }
 
-.form-control,
+/* .form-control,
 .dataTables_filter input,
 .modal-content {
     border-radius: 10px !important;
-}
+} */
 .modal-header{
     border-top-left-radius: 10px !important;
     border-top-right-radius: 10px !important;
 }
 
-th:first-child { 
+/* th:first-child { 
     border-top-left-radius: 10px; 
 }
 th:last-child {   
     border-top-right-radius: 10px; 
-}
+} */
 
 /* table.dataTable.no-footer {
     border-bottom-left-radius: 10px;

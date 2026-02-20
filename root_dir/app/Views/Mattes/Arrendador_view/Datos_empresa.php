@@ -1,4 +1,3 @@
-
 <!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
 <?= $this->extend('layout/main') ?>
 
@@ -222,30 +221,32 @@
             <h3 class="datos-fiscales-empresa mb-5"> Datos fiscales <span><br>(opcional)</span></h3>
           </div>
           <form class="" id="form_fiscales" enctype="multipart/form-data">
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label class="">RFC</label>
-                <input type="text" class="" id="rfc" name="rfc" pattern="^([A-ZÑ\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))([A-Z\d]{3})" minlength="12" maxlength="13" autocomplete="off" placeholder=" " required>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="">RFC</label>
+                  <input type="text" class="" id="rfc" name="rfc" pattern="^([A-ZÑ\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))([A-Z\d]{3})" minlength="12" maxlength="13" autocomplete="off" placeholder=" " required>
+                </div>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-group">
-                <label class="">Dirección fiscal</label>
-                <input type="text" class="" id="direccion_fiscal" name="direccion_fiscal" minlength="13" maxlength="100" autocomplete="off" placeholder=" " required>
-                <input id="id_usuariofis" type="hidden" name="id_usuariofis">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label class="">Dirección fiscal</label>
+                  <input type="text" class="" id="direccion_fiscal" name="direccion_fiscal" minlength="13" maxlength="100" autocomplete="off" placeholder=" " required>
+                  <input id="id_usuariofis" type="hidden" name="id_usuariofis">
+                </div>
               </div>
-            </div>
-            <div class="col-12 row mx-auto px-0 px-lg-2 mt-5">
-              <div class="col-12 text-center text-md-right px-0 pr-sm-2">
-                <div class="d-flex flex-column flex-sm-row justify-content-end">
-                  <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_fiscales_inmob" name="continuar-fiscales-inmob">
-                    <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
-                  </button>
-                  <div id="omitir">
+              <div class="col-12 row mx-auto px-0 px-lg-2 mt-5">
+                <div class="col-12 text-center text-md-right px-0 pr-sm-2">
+                  <div class="d-flex flex-column flex-sm-row justify-content-end">
+                    <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_fiscales_inmob" name="continuar-fiscales-inmob">
+                      <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
+                    </button>
+                    <div id="omitir">
+                    </div>
+                    <button class="btn btn-save" id="btnactualizar_fiscales_inmob" name="actualizar-fiscales-inmob">
+                      <i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar
+                    </button>
                   </div>
-                  <button class="btn btn-save" id="btnactualizar_fiscales_inmob" name="actualizar-fiscales-inmob">
-                    <i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar
-                  </button>
                 </div>
               </div>
             </div>
@@ -379,66 +380,67 @@
             <h3 class="perfil-agente-empresa">Perfil agente </h3>
           </div>
           <form class="mb-xl-270" id="form-perfilagent" enctype="multipart/form-data">
-            <div class="row justify-content-center mg-t-20 px-3">
-              <div class="col-lg-7">
-                <div class="col-sm-12 text-center">
-                  <img style="width: 140px; height: 140px;" id="img-user" class="img-fluid rounded-circle" src="<?= base_url() ?>/assets/img/default.png" />
+            
+              <div class="row justify-content-center mg-t-20 px-3">
+                <div class="col-lg-7">
+                  <div class="col-sm-12 text-center">
+                    <img style="width: 140px; height: 140px;" id="img-user" class="img-fluid rounded-circle" src="<?= base_url() ?>/assets/img/default.png" />
+                  </div>
+                </div>
+                <div class="col-lg-7 mg-t-10 mg-sm-t-0 mt-4 mb-lg-5">
+                  <div class="file-drop-area">
+                    <span class="choose-file-button">Subir foto de perfil</span>
+                    <span id="file-msg" class="file-message">Arrastra el archivo aqui</span>
+                    <input id="file_user-img" class="file-input" type="file" required name="file_agente" accept=".jpeg, .png, .jpg">
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-7 mg-t-10 mg-sm-t-0 mt-4 mb-lg-5">
-                <div class="file-drop-area">
-                  <span class="choose-file-button">Subir foto de perfil</span>
-                  <span id="file-msg" class="file-message">Arrastra el archivo aqui</span>
-                  <input id="file_user-img" class="file-input" type="file" required name="file_agente" accept=".jpeg, .png, .jpg">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">Nombre<span class="tx-danger">*</span></label>
+                  <input type="text" class="" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="form-group">
-                <label class="">Nombre<span class="tx-danger">*</span></label>
-                <input type="text" class="" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="form-group">
-                <label class="">Primer Apellido<span class="tx-danger">*</span></label>
-                <input type="text" class="" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="form-group">
-                <label class="">Segundo Apellido<span class="tx-danger">*</span></label>
-                <input type="text" class="" id="nombre_agente" name="apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="form-group">
-                <label class="">Correo<span class="tx-danger">*</span></label>
-                <input type="email" class="" id="email_agente" name="correo_agente" autocomplete="off" placeholder=" " required>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="form-group">
-                <label class="">Teléfono<span class="tx-danger">*</span></label>
-                <input type="tel" class="" id="tel_agente" name="tel_agente" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
-              </div>
-            </div>
-
-            <!--   <div class="row justify-content-center mg-t-30">
-              <label class="col-lg-7 form-control-label px-sm-4">Identificación oficial (agente)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
-              <div class="col-lg-7 mg-t-10 mg-sm-t-0 px-sm-4">
-                <div class="file-drop-area">
-                  <span class="choose-file-button">Subir Archivo</span>
-                  <span class="file-message">Arrastra el archivo aqui</span>
-                  <input id="file_agente" class="file-input" type="file" required name="ine_agente" accept=".pdf, .png, .jpg">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">Primer Apellido<span class="tx-danger">*</span></label>
+                  <input type="text" class="" id="nombre_agente" name="apellidof" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
                 </div>
               </div>
-            </div> -->
-
-            <div class="col-lg-12 mx-auto px-0 px-lg-2 ">
-              <div class="col-sm-12 text-center text-md-right px-3 px-lg-2">
-                <div class="d-flex justify-content-end">
-                  <button class="px-4 py-1 btn btn-save" id="btnactualizar_agente_inmob" name="actualizar-agente"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">Segundo Apellido<span class="tx-danger">*</span></label>
+                  <input type="text" class="" id="nombre_agente" name="apellidos" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">Correo<span class="tx-danger">*</span></label>
+                  <input type="email" class="" id="email_agente" name="correo_agente" autocomplete="off" placeholder=" " required>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">Teléfono<span class="tx-danger">*</span></label>
+                  <input type="tel" class="" id="tel_agente" name="tel_agente" pattern="^[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
+                </div>
+              </div>
+              <!--   <div class="row justify-content-center mg-t-30">
+                <label class="col-lg-7 form-control-label px-sm-4">Identificación oficial (agente)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
+                <div class="col-lg-7 mg-t-10 mg-sm-t-0 px-sm-4">
+                  <div class="file-drop-area">
+                    <span class="choose-file-button">Subir Archivo</span>
+                    <span class="file-message">Arrastra el archivo aqui</span>
+                    <input id="file_agente" class="file-input" type="file" required name="ine_agente" accept=".pdf, .png, .jpg">
+                  </div>
+                </div>
+              </div> -->
+              <div class="col-lg-12 mx-auto px-0 px-lg-2 ">
+                <div class="col-sm-12 text-center text-md-right px-3 px-lg-2">
+                  <div class="d-flex justify-content-end">
+                    <button class="px-4 py-1 btn btn-save" id="btnactualizar_agente_inmob" name="actualizar-agente"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -503,38 +505,38 @@
             <div id="imagen" class="text-center"></div>
           </div>
           <div class="mg-t-20">
-            <label class="form-control-label">Nombre: <span><span class="tx-danger">*</span></label>
-            <div class="mg-sm-t-0">
-              <input class="form-control" type="text" name="nombre" id="upd-nombre" required>
+            <div class="form-group">
+              <label class="">Nombre: <span><span class="tx-danger">*</span></label>
+              <input class="" type="text" name="nombre" id="upd-nombre" required>
             </div>
           </div>
 
           <div class="mg-t-20">
-            <label class="form-control-label">Primer Apellido: <span><span class="tx-danger">*</span></label>
-            <div class="mg-sm-t-0">
-              <input class="form-control" type="text" name="apellido" id="upd-apellido" required>
+            <div class="form-group">
+              <label class="">Primer Apellido: <span><span class="tx-danger">*</span></label>
+              <input class="" type="text" name="apellido" id="upd-apellido" required>
+            </div>           
+          </div>
+
+          <div class="mg-t-20">
+            <div class="form-group">
+              <label class="">Segundo Apellido: <span class="tx-danger">*</span></label>
+              <input class="" type="text" name="apellidos" id="upd-apellidos" required>
+            </div>            
+          </div>
+
+          <div class="mg-t-20">
+            <div class="form-group">
+              <label class="">Correo: <span class="tx-danger">*</span></label>
+              <input type="email" class="" name="correo" id="upd-correo" readonly>
             </div>
           </div>
 
           <div class="mg-t-20">
-            <label class="form-control-label">Segundo Apellido: <span class="tx-danger">*</span></label>
-            <div class="mg-sm-t-0">
-              <input class="form-control" type="text" name="apellidos" id="upd-apellidos" required>
-            </div>
-          </div>
-
-          <div class="mg-t-20">
-            <label class="form-control-label">Correo: <span class="tx-danger">*</span></label>
-            <div class="mg-sm-t-0">
-              <input type="email" class="form-control" name="correo" id="upd-correo" readonly>
-            </div>
-          </div>
-
-          <div class="mg-t-20">
-            <label class="form-control-label">Teléfono: <span class="tx-danger">*</span></label>
-            <div class="mg-sm-t-0">
-              <input class="form-control" type="text" class="form-control" id="upd-phone" name="telefono" required>
-            </div>
+            <div class="form-group">
+              <label class="">Teléfono: <span class="tx-danger">*</span></label>
+              <input class="" type="text" class="form-control" id="upd-phone" name="telefono" required>
+            </div>            
           </div>
 
           <input class="form-control" type="hidden" class="form-control" id="id_agente" name="id" required>
@@ -554,7 +556,7 @@
         </div>
         <div class="modal-footer">
           <div class="mg-t-20">
-            <button id="update-agente" type="submit" class="btn btn-warning pd-x-20" style="background-color: #da850a; border-color:#da850a;"><i class="fa fa-pencil mr-1" aria-hidden="true"></i>Editar</button>
+            <button id="update-agente" type="submit" class="btn btn-teal pd-x-20" style="background-color: #da850a; border-color:#da850a;"><i class="fa fa-pencil mr-1" aria-hidden="true"></i>Editar</button>
           </div>
           <div class="mg-t-20">
             <button type="button" class="btn btn btn-danger pd-x-20" data-dismiss="modal"><i class="fa fa-times mr-1" aria-hidden="true"></i>Cancelar</button>

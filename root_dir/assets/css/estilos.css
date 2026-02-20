@@ -4,20 +4,20 @@
 }
 /*DATOS DEL PROPIETARIO*/
 .form-group input, select {
-    display: block !important; 
+    display: block !important;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    padding: 0 12px; 
     margin-bottom: 5px; 
     border: 2px solid #232323;
-    width: 100%;
-    line-height: 35px;
-    height: 40px;
-    padding: 0 12px;
 }
 input,
 select, 
 textarea,
 .form-control{
-    border-radius: 0px !important;
     display: block;
+    border-radius: 0px !important;
 } 
 textarea{
     width: 100%;
@@ -33,62 +33,62 @@ input[type="tel"], input[type="date"]{
 }
 
 .btn-save{
-    margin-top: 20px !important;
     width: 200px !important;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
-    font-size: 15px !important;
+    margin-top: 20px !important;
     border: 2px solid #4cae4c;
-    background-color: #4cae4c;
-    color: #fff;
     border-radius: 0;
+    color: #fff;
+    background-color: #4cae4c;
+    font-size: 15px !important;
 }
 .btn-save:hover {
     border-color: #4cae4c !important;
-    background-color: #fff !important;
     color: #4cae4c !important;
+    background-color: #fff !important;
 }    
 .btn-teal{
-    margin-top: 20px !important;
     width: 200px !important;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
-    font-size: 15px !important;
+    margin-top: 20px !important;
     border: 2px solid #eea236 !important;
-    background-color: #eea236 !important;
-    color: #fff !important;
     border-radius: 0 !important;
+    color: #fff !important;
+    background-color: #eea236 !important;
+    font-size: 15px !important;
 }
 .btn-teal:hover {
     border-color: #eea236 !important;
-    background-color: #fff !important;
+    border-radius: 0px !important;
     color: #eea236 !important;
-    border-radius: 0px !important;    
+    background-color: #fff !important;    
 } 
 .btn-danger{
-    margin-top: 20px !important;
     width: 200px !important;
     padding-top: 12px !important;
     padding-bottom: 12px !important;
-    font-size: 15px !important;
+    margin-top: 20px !important;
     border: 2px solid #ee242a !important;
-    background-color: #ee242a !important;
-    color: #fff;
     border-radius: 0 !important;
+    color: #fff;
+    background-color: #ee242a !important;
+    font-size: 15px !important;
 }
 .btn-danger:hover {
     border: 2px solid #ee242a !important;
-    background-color: #fff !important;
-    color: #ee242a !important;
     border-radius: 0px !important;
+    color: #ee242a !important;
+    background-color: #fff !important;
 } 
 .btn-danger:hover > a{
     color: #ee242a !important;
 }
 
 .file-drop-area {
-    border: 2px solid rgb(0, 0, 0);
     padding: 1px;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 0;
 }
 .choose-file-button {
@@ -98,35 +98,35 @@ input[type="tel"], input[type="date"]{
 .titulo{
     color: #232323;
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 20px;
+    font-weight: bold;
 }
 .tab{
     border: 1px solid transparent;
 }
 .tablinks.active,
 .nav-tabs .nav-link.active{
-  background-color: #357ebd !important;
+  border: 1px solid #000 !important;
   border-radius: 0px !important;
-  border: 1px solid #357ebd !important;
   color: white !important;
+  background-color: #000 !important;
 }
 .tablinks.faltante,
 .nav-tabs .nav-link,
 .tab button {
-  background-color: white !important;
-  color: #357ebd;
+  border: 1px solid #000;
   border-radius: 8px !important;
-  border: 1px solid #357ebd;
   border-radius: 0px !important;
+  color: #000;
+  background-color: white !important;
 }
 .tablinks.faltante:hover,
 .nav-tabs .nav-link:hover,
 .tab button:hover {
-  background-color: #357ebd !important;
+  border: 1px solid #000;
   border-radius: 0px !important;
-  border: 1px solid #357ebd;
   color: white;
+  background-color: #000 !important;
 }
 .cajon{
     max-width: 100% !important;
@@ -135,10 +135,10 @@ input[type="tel"], input[type="date"]{
 
 .input-group-addon {
     padding: 10px 22px 10px 7px;
-    color: #000;
-    background-color: #fff;
     border: 2px solid #000;
     border-radius: 0px !important;
+    color: #000;
+    background-color: #fff;
 }
 .input-group-addon a .fa{
     color: #000;
@@ -157,15 +157,21 @@ input[type="tel"], input[type="date"]{
 .btn, .btn-enviar{
     border-radius: 0px !important;
 }
+.btn-enviar{    
+    background-color: #000 !important;
+}
 
 input[type="search"] {
   border: 1px solid black !important;
   border-radius: 0 !important;
 }
 .grid-item {
+  border: 1px solid #9a9a9a;
   border-radius: 0px !important;
   box-shadow: 0px !important;
-  border: 1px solid #9a9a9a;
+}
+.table-responsive{
+    display: inline-table !important;
 }
 /*PALETA DE COLORES DEL TEMPLATE*/
 /* .colores{

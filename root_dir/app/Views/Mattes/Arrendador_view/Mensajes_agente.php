@@ -1,11 +1,19 @@
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<link href="<?= base_url() ?>../../../assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 999999999;">
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 999999999;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -14,17 +22,17 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="alert bg-warning mg-t-100 d-none" id="alert_correo" role="alert">
+<!-- <div class="alert bg-warning mg-t-100 d-none" id="alert_correo" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span><strong>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA</strong> <span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div> -->
 
 <section class="propiedades mg-b-210">
     <div class="container">
@@ -252,6 +260,17 @@
     <input class="id_propiedad" type="hidden" name="id_renter" id="alumno">
 </form>
 
-<script>
-    let id_user = <?php echo json_encode($user_id); ?>;
-</script>
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+
+    <script>
+        let id_user = <?php echo json_encode($user_id); ?>;
+    </script>
+
+<?= $this->endSection() ?>
+
+

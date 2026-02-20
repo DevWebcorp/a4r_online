@@ -1,11 +1,21 @@
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
 
-<link href="<?= base_url() ?>../../../assets/lib/SpinKit/spinkit.css" rel="stylesheet">
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 999999999;">
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
+
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 999999999;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -14,11 +24,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 
-<section class="propiedades mg-b-120 height-avisos">
+<section class="propiedades mg-b-120 " style="height: auto;">
     <div class="container">
         <div class="row">
             <div class="col-12 mg-b-120 mb-md-4">
@@ -30,7 +40,7 @@
                         <a class="nav-link pos-relative" id="pregunta-tab" data-toggle="tab" href="#pregunta" role="tab" aria-controls="pregunta" aria-selected="false">Dudas de tus propiedades <span id="noti-preguntas"></span></a>
                     </li>
                     <li id="tb-comunicados" class="nav-item" role="presentation">
-                        <a class="nav-link pos-relative" id="mensajes_chat" data-toggle="tab" href="#comunicados" role="tab" aria-controls="comunicados" aria-selected="false">Comunicación con Mattes <span id="noti-comunicacion notificacion-propiedad"></span></a>
+                        <a class="nav-link pos-relative" id="mensajes_chat" data-toggle="tab" href="#comunicados" role="tab" aria-controls="comunicados" aria-selected="false">Comunicación <span id="noti-comunicacion notificacion-propiedad"></span></a>
                     </li>
                 </ul>
                 <div class="tab-content height-visitas" id="myTabContent">
@@ -260,6 +270,14 @@
     <input class="id_propiedad" type="hidden" name="id_renter" id="alumno">
 </form>
 
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+
 <script>
     let id_usuario = <?php echo json_encode($user_id); ?>;
     let id_group = <?php echo json_encode($group); ?>;
@@ -321,3 +339,5 @@
         });
     });
 </script>
+
+<?= $this->endSection() ?>

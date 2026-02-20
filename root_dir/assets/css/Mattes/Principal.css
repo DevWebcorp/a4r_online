@@ -53,9 +53,9 @@
 /*Generales*/
 
 html {
-    font-size: 14px !important;
-    min-height: 100% !important;
     position: relative !important;
+    min-height: 100% !important;
+    font-size: 14px !important;
 }
 
 body {
@@ -70,44 +70,44 @@ body {
 
 /* BOTONES */
 .actualizar{
-    background-color: var(--azul) !important;
     border: 1px solid var(--azul) !important;
-    color: white !important;
     border-radius: 10px !important;
-    text-transform: uppercase;
+    color: white !important;
+    background-color: var(--azul) !important;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .cancelar {
-    background-color: var(--rojo) !important;
     border: 1px solid var(--rojo) !important;
-    color: white !important;
     border-radius: 10px !important;
-    text-transform: uppercase  !important;
+    color: white !important;
+    background-color: var(--rojo) !important;
     cursor: pointer;
+    text-transform: uppercase  !important;
 }
 
 .reasignar {
-    background-color: var(--amarillo) !important;
     border: 1px solid var(--amarillo) !important;
-    color: white !important;
     border-radius: 10px !important;
-    text-transform: uppercase !important;
+    color: white !important;
+    background-color: var(--amarillo) !important;
     cursor: pointer;
+    text-transform: uppercase !important;
 }
 
 .btn-aceptar {
-    background-color: var(--verde) !important;
     border: 1px solid var(--verde) !important;
-    color: white !important;
     border-radius: 10px !important;
-    text-transform: uppercase !important;
+    color: white !important;
+    background-color: var(--verde) !important;
     cursor: pointer;
+    text-transform: uppercase !important;
 }
 .btn-teal,
 .bg-teal{
-    background-color: var(--verde) !important;
     color: var(--blanco) !important;
+    background-color: var(--verde) !important;
     text-transform: uppercase !important;
 }
 .btn-teal{
@@ -126,17 +126,17 @@ body {
     cursor: pointer;
 }
 .btn-enviar{
-    background-color: var(--tabla) !important;
-    color: var(--blanco) !important;
-    cursor: pointer;
     border-radius: 10px !important;
+    color: var(--blanco) !important;
+    background-color: var(--tabla) !important;
+    cursor: pointer;
 }
 
 .btn-primary{
-    background-color: var(--azul) !important;
     border: 1px solid var(--azul) !important;
-    text-transform: uppercase !important;
+    background-color: var(--azul) !important;
     cursor: pointer;
+    text-transform: uppercase !important;
 }
 
 .bg-danger,
@@ -150,15 +150,15 @@ body {
 }
 
 .btn-sweet {
+    color: white !important;
     background-color: var(--mattes8) !important;
     text-transform: uppercase !important;
-    color: white !important;
 }
 
 p,
 a {
-    font-size: 1.2rem;
     font-family: 'Gothic';
+    font-size: 1.2rem;
 }
 
 label,
@@ -168,8 +168,8 @@ select,
 textarea,
 .form__label,
 table.dataTable tbody th, table.dataTable tbody td  {
-    font-size: 1.1rem !important;
     font-family: 'Gothic' !important;
+    font-size: 1.1rem !important;
 }
 
 h1,
@@ -214,35 +214,35 @@ table.dataTable tbody th, table.dataTable tbody td{
 /*Imagen de la pagina principal*/
 
 .home {
-    background-image: url('../../img/banner/inicio.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
     position: relative;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    height: 100vh;
+    background-image: url('../../img/banner/inicio.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 .titulo {
-    font-family: 'Gothicb';
-    font-size: 4rem;
-    color: var(--blanco);
-    text-align: center;
     line-height: 1.2;
     margin-bottom: 4.5rem;
+    color: var(--blanco);
+    text-align: center;
+    font-family: 'Gothicb';
+    font-size: 4rem;
 }
 
 .ladrillos {
+    height: 1400px;
     background-image: url('../../img/banner/Ladrillos.png');
-    background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 1400px;
+    background-position: center;
+    background-size: cover;
 }
 
 .busqueda-depa {
@@ -266,49 +266,49 @@ table.dataTable tbody th, table.dataTable tbody td{
 /*========== Buscador "Escribe tu universidad" ========== */
 .campo-buscar,
 .boton-buscar {
-    background-color: transparent;
     color: var(--blanco);
-    font-weight: lighter
+    background-color: transparent;
+    font-weight: lighter;
 }
 
 
 /*Icono de la lupa*/
 .boton-buscar {
+    padding: 1rem !important;
     border-top: 5px solid var(--mattes);
+    border-right: none;
     border-bottom: 5px solid var(--mattes);
     border-left: 5px solid var(--mattes);
-    border-right: none;
     border-top-left-radius: 64px;
-    border-bottom-left-radius: 64px;
-    border-bottom-right-radius: 0 !important;
     border-top-right-radius: 0 !important;
-    padding: 1rem !important;
-    background-color: var(--mattes);
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 64px;
     opacity: .7;
+    background-color: var(--mattes);
 }
 
 
 /*Input universidad*/
 .campo-buscar {
+    padding: 1rem 1.5rem !important;
     border-top: 5px solid var(--mattes);
+    border-right: 5px solid var(--mattes);
     border-bottom: 5px solid var(--mattes);
     border-left: none;
-    border-right: 5px solid var(--mattes);
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 64px !important;
     border-top-left-radius: 0 !important;
     border-top-right-radius: 64px !important;
-    padding: 1rem 1.5rem !important;
-    background-color: var(--mattes);
+    border-bottom-right-radius: 64px !important;
+    border-bottom-left-radius: 0 !important;
     opacity: .7;
+    background-color: var(--mattes);
 }
 
 .boton-buscar:hover,
 .boton-buscar:focus,
 .campo-buscar:focus {
-    color: var(--blanco);
     border-color: var(--mattes) !important;
     outline: none;
+    color: var(--blanco);
     background-color: var(--mattes);
     font-family: "Gothic";
     font-size: 1.3rem;
@@ -328,32 +328,32 @@ table.dataTable tbody th, table.dataTable tbody td{
 /*Estilos al placeholder en distintos navegadores*/
 .campo-buscar::-webkit-input-placeholder {
     color: var(--blanco);
-    font-size: 1.3rem;
     letter-spacing: .2rem;
     font-family: "Gothic";
+    font-size: 1.3rem;
 }
 
 .campo-buscar:-ms-input-placeholder {
     color: var(--blanco);
-    font-size: 1.3rem;
     letter-spacing: .2rem;
     font-family: "Gothic";
+    font-size: 1.3rem;
 }
 
 .campo-buscar::placeholder {
     color: var(--blanco);
-    font-size: 1.3rem;
     letter-spacing: .2rem;
     font-family: "Gothic";
+    font-size: 1.3rem;
 }
 
 
 /*Posicionamiento del buscador de universidades*/
 #formulario-buscar {
     width: 290px;
-    font-family: "Gothic";
     border-radius: 33px;
     box-shadow: 2px 3px 10px 1px var(--negro);
+    font-family: "Gothic";
 }
 
 
@@ -477,10 +477,10 @@ table.dataTable tbody th, table.dataTable tbody td{
 }
 
 .footer {
-    background-color: var(--gris);
-    color: var(--blanco);
-    padding: 3rem 0;
     position: relative;
+    padding: 3rem 0;
+    color: var(--blanco);
+    background-color: var(--gris);
 }
 
 
@@ -506,12 +506,12 @@ table.dataTable tbody th, table.dataTable tbody td{
 @media (min-width: 576px) {
     .notificaciones::after,
     .notificaciones::before {
-        content: ' ';
         position: absolute;
+        top: 11rem;
         width: 40px;
         height: 2px;
         background-color: var(--mattes);
-        top: 11rem;
+        content: ' ';
     }
     .notificaciones::before {
         left: 22px;
@@ -527,8 +527,8 @@ table.dataTable tbody th, table.dataTable tbody td{
     }
     .notificaciones::after,
     .notificaciones::before {
-        width: 120px;
         top: 8rem;
+        width: 120px;
     }
     .notificaciones::before {
         left: -5px;
@@ -568,15 +568,15 @@ table.dataTable tbody th, table.dataTable tbody td{
 }
 
 table.dataTable thead tr th {
-    background-color:var(--tabla);
     color: var(--blanco);
+    background-color: #000;
     text-align: center;
 }
 
-.starrr a {    
-    font-size: 16px;
+.starrr a {
     padding: 0 .5px;
-    color: #EAA654;
+    color: #EAA654;    
+    font-size: 16px;
     text-decoration: none; 
 }
 
@@ -633,14 +633,14 @@ th:last-child {
 
 /* CSS AUTOCOMPLETE */ 
 .autoComplete_wrapper > ul > li mark {
-    background-color: transparent !important;
     color: var(--mattes) !important;
+    background-color: transparent !important;
     font-weight: bold;
 }
 
 .autoComplete_wrapper > ul > li:hover {
-    cursor: pointer;
     background-color: rgba(0, 124, 239, 0.15) !important;
+    cursor: pointer;
 }
 
 .autoComplete_wrapper > ul > li[aria-selected="true"] {
@@ -648,19 +648,19 @@ th:last-child {
 }
 
 .autoComplete_wrapper > ul  {
-    list-style: none !important;
-    padding: 0px !important;
-    width: 250px !important;
     position: absolute !important;
-    margin-top: 0 !important;
+    z-index: 999 !important;    
+    left: -30px !important;
+    overflow-y: auto !important;
+    width: 250px !important;
     min-width: 100% !important;
-    z-index: 999 !important;
+    height: 430px !important;
+    padding: 0px !important;
     padding-top: .7rem !important;
     padding-bottom: .7rem !important;
-    height: 430px !important;
+    margin-top: 0 !important;
+    list-style: none !important;
     transition: all .5s ease !important;
-    overflow-y: auto !important;    
-    left: -30px !important;
 }
 
 
@@ -671,32 +671,32 @@ th:last-child {
 
 .autoComplete_wrapper > input:focus::placeholder {
     padding: 0.1rem 0.6rem;
-    font-size: 0.95rem;
     color: var(--mattes) !important;
+    font-size: 0.95rem;
 }
 
 .autoComplete_wrapper > input {
     width: 100% !important;
     height: 40px;
     padding-left: 5px !important;
-    font-size: 1rem;
-    color: white !important;
-    border-radius: 8px;
     border: 1px solid var(--mattes) !important;
+    border-radius: 8px;
     outline: none;
+    color: white !important;
     background-color: var(--mattes) !important;
+    font-size: 1rem;
 }
 
 .autoComplete_wrapper > input::placeholder {
     /* color: rgba(0, 0, 0, 0.5); */
     color: white !important;
-    transition: all 0.3s ease;
     -webkit-transition: all -webkit-transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .autoComplete_wrapper {
-    display: inline-block;
     position: relative;
+    display: inline-block;
     width: 100% !important;
 }
 
@@ -706,8 +706,8 @@ th:last-child {
 
 /* AVISO PRIVACIDAD */
 .subtitulo{
-    font-size: 1.3rem !important;
     font-family: "Gothicb";
+    font-size: 1.3rem !important;
 
 }
 
@@ -717,29 +717,29 @@ th:last-child {
 }
 
 ul > li {
+    line-height: 2;
     font-family: "Gothic";
     font-size: 1.2rem;
-    line-height: 2;
 
 }
 
 ol > li {
+    line-height: 2;
     font-family: "Gothic";
     font-size: 1.2rem;
-    line-height: 2;
 }
 
 .subtitle{
-    font-size: 5em !important;
-    font-family: "Gothicb";
     color: var(--mattes);
+    font-family: "Gothicb";
+    font-size: 5em !important;
 
 }
 
 .contacto{
-    font-size: 3.6em !important;
-    font-family: "Gothicb";
     color: var(--mattes);
+    font-family: "Gothicb";
+    font-size: 3.6em !important;
 }
 
 .mg-t-140 {
@@ -756,9 +756,9 @@ ol > li {
 }
 
 .text-info-card{
-    font-size: 1.5rem;
     line-height: 2;
     text-align: justify;
+    font-size: 1.5rem;
 
 }
 
@@ -767,9 +767,9 @@ ol > li {
 }
 
 .title-preguntas{
+    white-space: inherit !important;
     font-family: "Gothicb";
     font-size: 1.2rem;
-    white-space: inherit !important;
 }
 
 .img-redes {
@@ -782,8 +782,8 @@ ol > li {
 }
 
 .border-card {
-    border: 1px solid rgba(0,0,0,.2) !important;
     margin: 3px;
+    border: 1px solid rgba(0,0,0,.2) !important;
 }
 
 .bd-bt{

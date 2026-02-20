@@ -47,7 +47,7 @@ class Propiedades extends BaseController
       echo view('Mattes/Arrendador_view/Header_arrendador');
       echo view('Mattes/Arrendador_view/Propiedades', $data);
       echo view('right_panel');
-      echo view('Mattes/Footer');
+      //echo view('Mattes/Footer');
       echo view('fotter_panel', $data_fotter);
     }else{
       return redirect()->to(base_url('inicia-session'));

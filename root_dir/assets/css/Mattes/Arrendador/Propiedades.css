@@ -8,49 +8,52 @@
 
 .nav-tabs {
     margin-bottom: 1rem;
-    border-bottom: 1px solid #0370b8;
+    border-bottom: 1px solid #000 !important;
 }
 
 .nav-tabs .nav-link {
     margin-right: .3rem;
-    border: 1px solid var(--mattes);
+    border: 1px solid #000;
+}
+.nav-tabs {
+  border-bottom: 1px solid #000;
 }
 
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active {
-    color: white;
-    font-size: 16.8px;
-    background-color: var(--mattes);
-    border-color: var(--mattes);
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    border-color: #000;
     border-top-left-radius: .25rem !important;
     border-top-right-radius: .25rem !important;
+    color: white;
+    background-color: #000;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    font-size: 16.8px;
 }
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
-    color: var(--blanco);
-    background-color: var(--mattes);
-    border-color: var(--mattes);
+    border-color: #000;
     border-top-left-radius: .25rem !important;
     border-top-right-radius: .25rem !important;
+    color: var(--blanco);
+    background-color: #000;
 }
 
 .nav-tabs>li>a,
 .nav-tabs a {
-    font-size: 16.8px;
-    color: var(--mattes);
     border-top-left-radius: .25rem !important;
     border-top-right-radius: .25rem !important;
+    color: #000;
+    font-size: 16.8px;
 }
 
 .pregunta,
 .comunicados,
 #preguntas_propiedades,
 #preguntas_agentes {
-    overflow-x: auto !important;
     display: block;
+    overflow-x: auto !important;
     background-color: transparent;
 }
 
@@ -58,17 +61,17 @@
     .pregunta,
     .comunicados,
     #preguntas_propiedades{
-        width: 100%;
-        overflow-x: hidden !important;
         display: inline-table;
+        overflow-x: hidden !important;
+        width: 100%;
     }
 }
 
 @media (min-width:768px) {
     #preguntas_agentes{
-        width: 100%;
-        overflow-x: hidden !important;
         display: inline-table;
+        overflow-x: hidden !important;
+        width: 100%;
     }
     .height-avisos{
         height: 600px;
@@ -90,13 +93,13 @@
 }
 
 .propiedad {
-    color: #2b60f1;
-    text-decoration: underline;
-    font-family: "Gothicb";
     visibility: visible;
-    cursor: pointer;
     border: 0;
+    color: #2b60f1;
     background: none;
+    cursor: pointer;
+    font-family: "Gothicb";
+    text-decoration: underline;
 }
 
 .form-control,
@@ -109,29 +112,29 @@
     border-top-right-radius: 10px !important;
 }
 
-th:first-child { 
+/* th:first-child { 
     border-top-left-radius: 10px; 
 }
 th:last-child {   
     border-top-right-radius: 10px; 
-}
+} */
 
-table{
+/* table{
     border-radius: 10px;
 }
 
 table.dataTable.no-footer {
-    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-}
+    border-bottom-left-radius: 10px;
+} */
 
 .notificacion-propiedad{
-    background-color: red;
-    color: #fff;
     top: 0;
+    padding: 0 7px;
     /*right: 140px;*/
     border-radius: 10px;
-    padding: 0 7px;
+    color: #fff;
+    background-color: red;
     font-family: 'Gothicb';
     font-size: 14px;
 }
@@ -150,4 +153,7 @@ table.dataTable.no-footer {
     .height-visitas{
         height: 280px;
     }    
+}
+#citas-agentes{
+    display: inline-table;
 }
