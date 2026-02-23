@@ -5,8 +5,7 @@
 }
   
 .enviado {
-    background-color: var(--mattes2);
-    border-radius: 20px;
+    background-color: #075E54;
     border: none !important;
     color: white;
     padding: 10px;
@@ -14,7 +13,6 @@
   
 .recibido {
     background-color: lightgray;
-    border-radius: 20px;
     border: none !important;
     padding: 10px;
 }

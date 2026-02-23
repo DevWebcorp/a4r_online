@@ -342,37 +342,35 @@
         ===== AGENTES =====
       =============================================-->
 
-            <div id="Agentes" class="tabcontent mb-470 mb-md-280">
-                <div class="card form-layout mb-xl-270 height-agentes" style="border: none;">
-                    <div class="text-center">
-                        <h3 class="agentes-empresa mb-3"> Agentes</h3>
-                        <p class="mb-0">Presúmenos a tu Equipo</p>
-                        <div class="col-12 mg-t-10 mg-sm-t-0 text-md-right">
-                            <button class="btn btn-enviar mb-3" id="addagent">
-                                <i class="ionicons ion-person-add text-white h3"></i> <br>
-                                <span>Añadir agente</span>
-                            </button>
+            <div id="Agentes" class="tabcontent " style="height: auto;">
+                <div class="text-center">
+                    <h3 class="mt-lg-5 mb-3"> Agentes</h3>
+                    <p class="mb-0">Presúmenos a tu Equipo</p>
+                    <div class="col-12 mg-t-10 mg-sm-t-0 text-md-right">
+                        <button class="btn btn-enviar mb-3" id="addagent">
+                            <i class="ionicons ion-person-add text-white h3"></i> <br>
+                            <span>Añadir agente</span>
+                        </button>
 
-                            <!-- <img src="<?= base_url() ?>/../../assets/img/Iconos_Mattes/Iconos/Mattes_Menu_Subir agentes.png" class="img-fluid rounded-circle ml-2" id="addagent" alt="Icono empresa" style="width:120px;cursor: pointer;"> -->
-                        </div>
-                        <div>
-                            <table id="datatable1" class="table display table-responsive datos-agentes" style="width: 100% !important; ">
-                                <thead>
-                                    <tr>
-                                        <th>Foto</th>
-                                        <th>Nombre</th>
-                                        <th>Propiedades</th>
-                                        <th>Activo/Inactivo </th>
-                                        <th>Enviar acceso </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-
+                        <!-- <img src="<?= base_url() ?>/../../assets/img/Iconos_Mattes/Iconos/Mattes_Menu_Subir agentes.png" class="img-fluid rounded-circle ml-2" id="addagent" alt="Icono empresa" style="width:120px;cursor: pointer;"> -->
                     </div>
+                    <div>
+                        <table id="datatable1" class="table display table-responsive datos-agentes" style="width: 100% !important; ">
+                            <thead>
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nombre</th>
+                                    <th>Propiedades</th>
+                                    <th>Activo/Inactivo </th>
+                                    <th>Enviar acceso </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
 
@@ -573,8 +571,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="update-agente" type="submit" class="btn btn-warning pd-x-20" style="background-color: #da850a; border-color:#da850a;"><i class="fa fa-pencil mr-1" aria-hidden="true"></i>Editar</button>
-                    <button type="button" class="btn btn btn-danger pd-x-20" data-dismiss="modal"><i class="fa fa-times mr-1" aria-hidden="true"></i>Cancelar</button>
+                    <button id="update-agente" type="submit" class="btn btn-teal pd-x-20" style="background-color: #da850a; border-color:#da850a;"><i class="fa fa-pencil mr-1" aria-hidden="true"></i>Editar</button>
+                    <button type="button" class="btn btn-danger pd-x-20" data-dismiss="modal"><i class="fa fa-times mr-1" aria-hidden="true"></i>Cancelar</button>
                 </div>
             </form>
         </div>

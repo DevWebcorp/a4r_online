@@ -22,6 +22,9 @@
   .file-drop-area {
     width: auto !important;
   }
+   #datatable1{
+    display: block !important;
+   }
 </style>
 
 <!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
@@ -35,7 +38,7 @@
   </div>
 </div> -->
 
-<section class="section-sub-banner bg-9">
+<section class="section-sub-banner bg-inmobiliaria">
     <div class="sub-banner">
         <div class="container">
             <div class="text text-center">
@@ -68,7 +71,7 @@
         <button class="tablinks mr-2" onclick="openCity(event, 'Bancarios')" id="d_bancarios"><i class="fa fa-university mr-2" aria-hidden="true"></i>Datos bancarios</button>
         <button class="tablinks mr-2" onclick="openCity(event, 'Fiscales')" id="d_fiscales"><i class="fa fa-file-text mr-2" aria-hidden="true"></i>Datos fiscales</button>
         <button class="tablinks mr-2" onclick="openCity(event, 'Notificaciones')" id="notificaciones"><i class="fa fa-bell mr-2" aria-hidden="true"></i>Notificaciones</button>
-        <button class="tablinks p-0 px-lg-4 py-lg-2 mr-2" onclick="openCity(event, 'Agentes')" id="agentes"> 
+        <button class="tablinks mr-2" onclick="openCity(event, 'Agentes')" id="agentes"> 
           <i class="fa fa-users mr-1" aria-hidden="true"></i>
           <!-- <i class="ionicons ion-ios-people h2 mr-2"></i> -->
           Agentes
@@ -77,7 +80,7 @@
       </div>
 
       <div id="Personales" class="tabcontent mb-340 mb-sm-360 mb-md-280 mb-lg-270 mb-xl-250">
-        <div class="col-12 mb-430 mb-sm-360 mb-md-280 mb-lg-270 mb-xl-250">
+        <div class=" mb-430 mb-sm-360 mb-md-280 mb-lg-270 mb-xl-250">
           
            <!--  <div class="text-center">
               <h3 class="datos-personales-empresa mb-sm-5">Ahora un poco de ti </h3>
@@ -85,82 +88,77 @@
                 documentos que pedimos a continuación son necesarios para poder subir tu propiedad en la plataforma. </p>
             </div> -->
             <form class="mb-430 mb-sm-360 mb-md-280 mb-lg-270 mb-xl-250" id="form_perso_emp" enctype="multipart/form-data">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="">Nombre inmobiliaria<span class="tx-danger">*</span></label>
-                      <input type="text" class="" id="inmobiliaria_name" name="nombre_inmobiliaria" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="50" autocomplete="off" placeholder=" " required>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="">Nombre inmobiliaria<span class="tx-danger">*</span></label>
+                    <input type="text" class="" id="inmobiliaria_name" name="nombre_inmobiliaria" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="50" autocomplete="off" placeholder=" " required>
+                  </div>
+                </div>
+                <!-- <div class="row justify-content-center mg-t-40">
+                  <div class="col-lg-7 form__group px-sm-4">
+                    <input type="text" class="form__input" id="rfc_inmobiliaria" name="rfc_inmobiliaria" pattern="^([A-ZÑ\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))([A-Z\d]{3})" minlength="12" maxlength="13" autocomplete="off" placeholder=" " required>
+                    <label class="form__label px-sm-2">RFC<span class="tx-danger">*</span></label>
+                    <div class="requirements">
+                      No coincide el formato
                     </div>
                   </div>
-                  <!-- <div class="row justify-content-center mg-t-40">
-                    <div class="col-lg-7 form__group px-sm-4">
-                      <input type="text" class="form__input" id="rfc_inmobiliaria" name="rfc_inmobiliaria" pattern="^([A-ZÑ\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))([A-Z\d]{3})" minlength="12" maxlength="13" autocomplete="off" placeholder=" " required>
-                      <label class="form__label px-sm-2">RFC<span class="tx-danger">*</span></label>
-                      <div class="requirements">
-                        No coincide el formato
-                      </div>
-                    </div>
-                  </div> -->
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="">Razón social<span class="tx-danger">*</span></label>
-                      <input type="text" class="" id="razonsocial" name="razonsocial_inmobiliaria" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="5" maxlength="100" autocomplete="off" placeholder=" " required>
+                </div> -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="">Razón social<span class="tx-danger">*</span></label>
+                    <input type="text" class="" id="razonsocial" name="razonsocial_inmobiliaria" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="5" maxlength="100" autocomplete="off" placeholder=" " required>
+                  </div>
+                </div>
+                <!-- <div class="row justify-content-center mg-t-40">
+                  <div class="col-lg-7 form__group px-sm-4">
+                    <input type="text" class="form__input" id="dir_inmobiliaria" name="direccion_inmobiliaria"  minlength="13" maxlength="100" autocomplete="off" placeholder=" " required>
+                    <label class="form__label px-sm-2">Dirección<span class="tx-danger">*</span></label>
+                    <div class="requirements">
+                      Tiene que tener mínimo 13 caracteres
                     </div>
                   </div>
-                  <!-- <div class="row justify-content-center mg-t-40">
-                    <div class="col-lg-7 form__group px-sm-4">
-                      <input type="text" class="form__input" id="dir_inmobiliaria" name="direccion_inmobiliaria"  minlength="13" maxlength="100" autocomplete="off" placeholder=" " required>
-                      <label class="form__label px-sm-2">Dirección<span class="tx-danger">*</span></label>
-                      <div class="requirements">
-                        Tiene que tener mínimo 13 caracteres
-                      </div>
-                    </div>
-                  </div> -->
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="">Representante legal<span class="tx-danger">*</span></label>
-                      <input type="text" class="" id="representante" name="representante_legal" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="13" maxlength="100" autocomplete="off" placeholder=" " required>
+                </div> -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="">Representante legal<span class="tx-danger">*</span></label>
+                    <input type="text" class="" id="representante" name="representante_legal" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="13" maxlength="100" autocomplete="off" placeholder=" " required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="">Número telefónico<span class="tx-danger">*</span></label>
+                    <input type="tel" class="" id="tel_inmobiliaria" name="telefono_inmobiliaria" pattern="[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
+                  </div>
+                </div>
+                <!--  <div class="row justify-content-center mg-t-30">
+                  <label class="col-lg-7 form-control-label px-sm-4">Comprobante de domicilio (inmobiliaria)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
+                  <div class="col-lg-7 mg-t-10 mg-sm-t-0 px-sm-4">
+                    <div class="file-drop-area">
+                      <span class="choose-file-button">Subir Archivo</span>
+                      <span class="file-message">Arrastra el archivo aqui</span>
+                      <input id="file_comp" class="file-input" type="file" required name="file" accept=".pdf, .png, .jpg">
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="form-group">
-                      <label class="">Número telefónico<span class="tx-danger">*</span></label>
-                      <input type="tel" class="" id="tel_inmobiliaria" name="telefono_inmobiliaria" pattern="[0-9]+" minlength="10" maxlength="10" autocomplete="off" placeholder=" " required>
+                </div> -->
+                <div class="col-sm-12 d-none">
+                  <div class="form-group mt-3 text-center">
+                    <div class="custom-control custom-checkbox mb-3 text-primary">
+                      <!-- <input type="checkbox" class="custom-control-input" id="customControlValidation1" name="terminosycond" required>
+                      <label class="custom-control-label" for="customControlValidation1">Términos y condiciones</label> -->
                     </div>
+                    <input id="id_usuarioper" type="hidden" name="id_usuarioper">
                   </div>
-                  <!--  <div class="row justify-content-center mg-t-30">
-                    <label class="col-lg-7 form-control-label px-sm-4">Comprobante de domicilio (inmobiliaria)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
-                    <div class="col-lg-7 mg-t-10 mg-sm-t-0 px-sm-4">
-                      <div class="file-drop-area">
-                        <span class="choose-file-button">Subir Archivo</span>
-                        <span class="file-message">Arrastra el archivo aqui</span>
-                        <input id="file_comp" class="file-input" type="file" required name="file" accept=".pdf, .png, .jpg">
-                      </div>
-                    </div>
-                  </div> -->
-                  <div class="col-sm-12 d-none">
-                    <div class="form-group mt-3 text-center">
-                      <div class="custom-control custom-checkbox mb-3 text-primary">
-                        <!-- <input type="checkbox" class="custom-control-input" id="customControlValidation1" name="terminosycond" required>
-                        <label class="custom-control-label" for="customControlValidation1">Términos y condiciones</label> -->
-                      </div>
-                      <input id="id_usuarioper" type="hidden" name="id_usuarioper">
-                    </div>
-                  </div>
-                  <div class="col-12 row mx-auto px-0 px-lg-2">
-                    <div class="col-sm-12 text-center px-0 pr-sm-2 text-md-right">
-                      <div class="d-flex flex-column flex-sm-row justify-content-end">
-                        <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_inmobiliaria" name="continuar-inmob" type="button">
-                          <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
-                        </button>
-                        <button class="btn btn-save" id="btnactualizar-inmob-per" name="actualizarper-inmob" type="submit"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
-                      </div>
-                    </div>
+                </div>
+                <div class="col-12 pr-sm-2">
+                  <div class="d-flex flex-column flex-sm-row justify-content-end align-items-end">
+                    <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_inmobiliaria" name="continuar-inmob" type="button">
+                      <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
+                    </button>
+                    <button class="btn btn-save" id="btnactualizar-inmob-per" name="actualizarper-inmob" type="submit"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
                   </div>
                 </div>
               </div>
-
             </form>
           
         </div>
@@ -175,36 +173,32 @@
             <h3 class="datos-bancarios-empresa mb-sm-5"> Datos bancarios <span><br>(opcional)</span></h3>
           </div>
           <form class="" id="form_bancarios_inmobiliaria" enctype="multipart/form-data">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <label class="">Nombre</label>
-                    <input type="text" class="" id="nombre_inmobi" name="inmobiliaria_nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="60" autocomplete="off" placeholder=" " required>
-                  </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">Nombre</label>
+                  <input type="text" class="" id="nombre_inmobi" name="inmobiliaria_nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="60" autocomplete="off" placeholder=" " required>
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <label class="">Banco</label>
-                    <input type="text" class="" id="banco_nombre" name="banco_nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="4" maxlength="30" autocomplete="off" placeholder=" " required>
-                  </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">Banco</label>
+                  <input type="text" class="" id="banco_nombre" name="banco_nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="4" maxlength="30" autocomplete="off" placeholder=" " required>
                 </div>
-                <div class="col-lg-4">
-                  <div class="form-group">
-                    <label class="">CLABE</label>
-                    <input type="text" class="" id="clabe_banco" name="clabe_bancaria" pattern="^[0-9]+" minlength="18" maxlength="18" autocomplete="off" placeholder=" " required>
-                    <input id="id_usuarioban" type="hidden" name="id_usuarioban">
-                  </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form-group">
+                  <label class="">CLABE</label>
+                  <input type="text" class="" id="clabe_banco" name="clabe_bancaria" pattern="^[0-9]+" minlength="18" maxlength="18" autocomplete="off" placeholder=" " required>
+                  <input id="id_usuarioban" type="hidden" name="id_usuarioban">
                 </div>
-                <div class="col-12 row mx-auto px-0 px-lg-2">
-                  <div class="col-12 text-center text-md-right px-0 pr-sm-2">
-                    <div class="d-flex flex-column flex-sm-row justify-content-end">
-                      <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_inmob-banco" name="continuarbanco-inmob">
-                        <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
-                      </button>
-                      <button class="btn btn-save" id="btnactualizar_banco_inmob" name="actualizarban-inmob"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
-                    </div>
-                  </div>
+              </div>
+              <div class="col-12 pr-sm-2">
+                <div class="d-flex flex-column flex-sm-row justify-content-end align-items-end">
+                  <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_inmob-banco" name="continuarbanco-inmob">
+                    <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
+                  </button>
+                  <button class="btn btn-save" id="btnactualizar_banco_inmob" name="actualizarban-inmob"><i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
                 </div>
               </div>
             </div>
@@ -235,20 +229,19 @@
                   <input id="id_usuariofis" type="hidden" name="id_usuariofis">
                 </div>
               </div>
-              <div class="col-12 row mx-auto px-0 px-lg-2 mt-5">
-                <div class="col-12 text-center text-md-right px-0 pr-sm-2">
-                  <div class="d-flex flex-column flex-sm-row justify-content-end">
-                    <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_fiscales_inmob" name="continuar-fiscales-inmob">
-                      <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
-                    </button>
-                    <div id="omitir">
-                    </div>
-                    <button class="btn btn-save" id="btnactualizar_fiscales_inmob" name="actualizar-fiscales-inmob">
-                      <i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar
-                    </button>
+              <div class="col-12 pr-sm-2">
+                <div class="d-flex flex-column flex-sm-row justify-content-end align-items-end">
+                  <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_fiscales_inmob" name="continuar-fiscales-inmob">
+                    <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
+                  </button>
+                  <div id="omitir">
                   </div>
+                  <button class="btn btn-save" id="btnactualizar_fiscales_inmob" name="actualizar-fiscales-inmob">
+                    <i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar
+                  </button>
                 </div>
               </div>
+              
             </div>
           </form>
         
@@ -314,17 +307,16 @@
                         <input id="id_usuarionot" type="hidden" name="id_usuarionot">
                       </div>
                     </div>
-                    <div class="col-lg-12 row mx-auto px-0 text-md-right mt-5">
-                      <div class="col-sm-12 text-center text-md-right pl-lg-0">
-                        <div class="d-flex flex-column flex-sm-row justify-content-end">
-                          <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_notificaciones_inmob" name="continuar-notis-inmob">
-                            <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
-                          </button>
-                          <button class="btn btn-save" id="btnactualizar_notificaciones_inmob" name="actualizar-notis-inmob">
-                            <i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
-                        </div>
+                    <div class="col-sm-12 pl-lg-0">
+                      <div class="d-flex flex-column flex-sm-row justify-content-end align-items-end">
+                        <button class="btn cancelar btn-danger continuar-momento mr-sm-2 mb-2 mb-sm-0" id="btncontinuar_notificaciones_inmob" name="continuar-notis-inmob">
+                          <i class="fa fa-sign-out mr-1" aria-hidden="true"></i>Salir sin guardar
+                        </button>
+                        <button class="btn btn-save" id="btnactualizar_notificaciones_inmob" name="actualizar-notis-inmob">
+                          <i class="fa fa-floppy-o mr-1" aria-hidden="true"></i>Guardar</button>
                       </div>
                     </div>
+                    
                   </div>
                 </form>
               
@@ -396,7 +388,7 @@
                 </div>
               </div>
             <div class="row">
-              <div class="col-lg-4">
+              <div class="col-lg-4 mt-5 mt-lg-0">
                 <div class="form-group">
                   <label class="">Nombre<span class="tx-danger">*</span></label>
                   <input type="text" class="" id="nombre_agente" name="nombre_agente" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25" autocomplete="off" placeholder=" " required>

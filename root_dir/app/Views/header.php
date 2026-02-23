@@ -33,7 +33,7 @@
     <title><?=$title?></title>
 
     <!--favicon -->
-    <link rel="icon" href="<?=base_url()?>/assets/img/Mattes.png" type="image">
+    <link rel="icon" href="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/favicon.png') ?>" type="image">
 
     <!-- vendor css -->
     <link href="<?=base_url()?>/assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">

@@ -31,7 +31,7 @@ class Propiedades extends BaseController
         "Mattes/Arrendador/Propiedades.css", "Mattes/Principal.css", "Mattes/Arrendador/Arrendador.css", 
         "Mattes/Arrendador/Menu_arrendador.css"];
 
-      $data_header['title'] = "Propiedades";
+      $data_header['title'] = "Avisos de propietario";
       $data_header['description'] = "Vista con especificaciones de las propiedades"; 
       $data['user_id'] = $user_id;
       $data['group'] = $id_group;

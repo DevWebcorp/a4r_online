@@ -48,7 +48,7 @@ class Propiedad_conversacion extends BaseController
 
         
       
-        $data_header['title'] = "Mattes";
+        $data_header['title'] = "Conversación";
         $data_header['description'] = "Módulo que muestra una conversacion de arrendador y arrendatario";
         $data['id_usuario'] = $id;
         $data['group'] = $type_group;
@@ -58,8 +58,8 @@ class Propiedad_conversacion extends BaseController
           //echo view('left_panel',$data_left);
           
           echo view('Mattes/Arrendador_view/Propiedad_conversacion', $data);
-          echo view('right_panel');  
-          echo view('Mattes/Footer');
+         // echo view('right_panel');  
+         // echo view('Mattes/Footer');
           echo view('fotter_panel' , $data_fotter); 
       } else {
         return redirect()->to(base_url('inicia-session'));

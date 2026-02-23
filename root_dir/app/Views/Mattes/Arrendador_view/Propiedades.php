@@ -1,5 +1,3 @@
-
-
 <!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
 <?= $this->extend('layout/main') ?>
 
@@ -26,9 +24,20 @@
     </div>
 </div> -->
 
+<style>
+ 
+   @media(min-width: 992px){
+    #citas_propiedades{
+        display: inline-table !important;
+    } 
+    #preguntas_propiedades{
+        display: inline-table !important;
+    }
+    
+   }
+</style>
 
-
-<section class="propiedades mg-b-120 " style="height: auto;">
+<section class="propiedades  " style="height: auto;">
     <div class="container">
         <div class="row">
             <div class="col-12 mg-b-120 mb-md-4">
@@ -43,8 +52,8 @@
                         <a class="nav-link pos-relative" id="mensajes_chat" data-toggle="tab" href="#comunicados" role="tab" aria-controls="comunicados" aria-selected="false">Comunicación <span id="noti-comunicacion notificacion-propiedad"></span></a>
                     </li>
                 </ul>
-                <div class="tab-content height-visitas" id="myTabContent">
-                    <div class="tab-pane fade show active height-visitas" id="visita" role="tabpanel" aria-labelledby="visita-tab">
+                <div class="tab-content " id="myTabContent">
+                    <div class="tab-pane fade show active" id="visita" role="tabpanel" aria-labelledby="visita-tab">
                         <table id="citas_propiedades" class="table display table-responsive tablas_mattes " style=" width: 100%;">
                             <thead class="text-uppercase">
                                 <tr>
@@ -63,7 +72,7 @@
                         </table>
                     </div>
 
-                    <div class="tab-pane fade height-preguntas" id="pregunta" role="tabpanel" aria-labelledby="pregunta-tab">
+                    <div class="tab-pane fade " id="pregunta" role="tabpanel" aria-labelledby="pregunta-tab">
                         <table id="preguntas_propiedades" class="table display table-responsive tablas_mattes pregunta" style="width: 100%;">
                             <thead>
                                 <tr>

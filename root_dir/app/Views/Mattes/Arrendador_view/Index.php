@@ -60,8 +60,9 @@
     </div>
 
     <div class="container">
-        <div id="sn-propiedades" class="text-center col-12 shadow-lg p-3 mb-5 bg-white rounded" style="height: 230px; display: none ">
-            <h1 class="text-center sin-propiedades">Sin propiedades</h1>
+        <div id="sn-propiedades" class="text-center col-12 p-3 mb-5" style="height: 230px; display: none ">
+            <h1 class="text-center ">Sin propiedades</h1>
+            <img class="img-fluid mg-b-20" src="<?= base_url() ?>/assets/img/anuncio1.jpg" />
         </div>
     </div>
 

@@ -98,10 +98,10 @@ function get_propiedades() {
                                         </figure>
                                         
                                         <div class="acciones-propiedad">
-                                            <button class = "detalle-propiedad" id="${v.id}" type="button">
+                                            <button class = "detalle-propiedad" id="${v.id}" type="button" title="Editar propiedad">
                                                 <i class="ionicons ion-edit h2  text-warning"></i>
                                             </button>
-                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar" title="Eliminar propiedad">
                                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                             </button>
                                         </div>
@@ -332,10 +332,10 @@ $(document).keyup(function(event) {
                                     </figure>
 
                                     <div class="acciones-propiedad">
-                                        <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                        <button class = "detalle-propiedad" id = " ${v.id} " type="button" title="Editar propiedad">
                                             <i class="ionicons ion-edit h2  text-warning"></i>
                                         </button>
-                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar" title="Eliminar propiedad">
                                             <i class="fa fa-trash" aria-hidden="true"></i>
                                         </button>
                                         <div class = "iconos2"></div>
@@ -368,10 +368,10 @@ $(document).keyup(function(event) {
                                     </figure>
                                     <div class="d-flex row">
                                         <div class="col-2">
-                                            <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                            <button class = "detalle-propiedad" id = " ${v.id} " type="button" title="Editar propiedad">
                                                 <i class="ionicons ion-edit h2  text-warning"></i>
                                             </button>
-                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar" title="Eliminar propiedad">
                                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                             </button>
                                             <div id="iconos${i}" class = "iconos"></div>

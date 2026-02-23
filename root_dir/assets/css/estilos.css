@@ -27,6 +27,7 @@ textarea{
 
 input[type="text"]{
     color: #000;
+    border: 2px solid #000;
 }
 input[type="tel"], input[type="date"]{
     padding: 0 12px;
@@ -104,6 +105,7 @@ input[type="tel"], input[type="date"]{
 }
 .tab{
     border: 1px solid transparent;
+    background-color:transparent;
 }
 .tablinks.active,
 .nav-tabs .nav-link.active{
@@ -171,12 +173,27 @@ input[type="search"] {
   border-radius: 0px !important;
   box-shadow: 0px !important;
 }
-.table-responsive{
+/* .table-responsive{
     display: inline-table !important;
-}
+} */
 .bg-menu{
     background-color: #025272 !important;
 }
+.bg-inmobiliaria{  
+    background-image: url('../../assets/img/a4r/datos-inmobiliaria.png');;     
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-propiedad{  
+    background-image: url('../../assets/img/a4r/anuncio8.jpg');;     
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ 
+
 /*PALETA DE COLORES DEL TEMPLATE*/
 /* .colores{
     color:#fff;

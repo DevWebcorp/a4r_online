@@ -303,7 +303,7 @@ table.dataTable tbody th, table.dataTable tbody td{
     background-color: var(--mattes);
 }
 
-.boton-buscar:hover,
+/* .boton-buscar:hover,
 .boton-buscar:focus,
 .campo-buscar:focus {
     border-color: var(--mattes) !important;
@@ -312,18 +312,18 @@ table.dataTable tbody th, table.dataTable tbody td{
     background-color: var(--mattes);
     font-family: "Gothic";
     font-size: 1.3rem;
-}
+} */
 
 .form-control {
     padding: 0.35rem 0.75rem;
     font-size: 1.3rem;
 }
 
-.form-control:focus {
+/* .form-control:focus {
     border-color: var(--mattes) !important;
     opacity: .7;
 }
-
+ */
 
 /*Estilos al placeholder en distintos navegadores*/
 .campo-buscar::-webkit-input-placeholder {
@@ -584,9 +584,11 @@ table.dataTable thead tr th {
     color: #EAA654;
     text-decoration: none; 
 }
+.navbar {
+    border-radius: 0px !important;
+}
 
-
-.dataTables_filter input,
+/* .dataTables_filter input,
 .modal-content,
 .modal-body {
     border-radius: 10px !important;
@@ -602,7 +604,7 @@ th:first-child {
 th:last-child {   
     border-top-right-radius: 10px; 
 }
-
+ */
 .filters th:first-child { 
     border-top-left-radius: 0px; 
 }

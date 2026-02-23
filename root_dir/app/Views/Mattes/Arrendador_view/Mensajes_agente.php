@@ -34,10 +34,27 @@
     </div>
 </div> -->
 
-<section class="propiedades mg-b-210">
+<style>
+ 
+   @media(min-width: 992px){
+    #citas_agentes{
+        display: inline-table !important;
+    } 
+    #preguntas_propiedades{
+        display: inline-table !important;
+    }
+   }
+   @media(min-width: 448px){
+      #mensajes_agentes{
+        display: inline-table !important;
+    }
+   }
+</style>
+
+<section class="propiedades">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mb-lg-5">
                 <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
                     <li class="nav-item ml-lg-3 mr-2" role="presentation">
                         <a class="nav-link active" id="visita-tab" data-toggle="tab" href="#visita" role="tab" aria-controls="visita" aria-selected="true">Visitas a propiedades de tus agentes</a>
@@ -46,10 +63,10 @@
                         <a class="nav-link" id="pregunta-tab" data-toggle="tab" href="#pregunta" role="tab" aria-controls="pregunta" aria-selected="false">Dudas de propiedades de tus agentes</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="comunicados-tab" data-toggle="tab" href="#comunicados" role="tab" aria-controls="comunicados" aria-selected="false">Comunicación Mattes</a>
+                        <a class="nav-link" id="comunicados-tab" data-toggle="tab" href="#comunicados" role="tab" aria-controls="comunicados" aria-selected="false">Comunicación</a>
                     </li>
                 </ul>
-                <div class="tab-content height-visitas-agentes" id="myTabContent">
+                <div class="tab-content" id="myTabContent" style="height: auto;">
                     <div class="tab-pane fade show active height-visitas-agente" id="visita" role="tabpanel" aria-labelledby="visita-tab">
                         <table id="citas_agentes" class="table display table-responsive tablas_mattes " style="width: 100%;">
                             <thead>
