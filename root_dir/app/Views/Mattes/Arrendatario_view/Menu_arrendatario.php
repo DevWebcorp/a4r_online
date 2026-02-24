@@ -8,7 +8,7 @@
                 </button>
 
                 <a href="<?= base_url() ?>/Inicio" class="navbar-brand d-lg-none mx-auto">
-                    <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/LogoRMattes.png" alt="Logo mobil" class="img-fluid logo">
+                    <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo mobil" class="img-fluid logo">
                 </a>
 
                 <!--Barra de navegación -->
@@ -54,7 +54,7 @@
 
                     <!--LOGOTIPO DEL SITIO-->
                     <a href="<?= base_url() ?>/Inicio" class="navbar-brand d-none d-lg-block">
-                        <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/LogoRMattes.png" alt="Logo desktop" class="img-fluid logo">
+                        <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo desktop" class="img-fluid logo">
                     </a>
 
                     <ul class="navbar-nav ml-lg-auto">

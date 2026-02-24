@@ -51,7 +51,7 @@ input {
     pointer-events: none;
 }
 
-input[type=text]:valid:not(:focus):not(:placeholder-shown),
+/* input[type=text]:valid:not(:focus):not(:placeholder-shown),
 input[type=tel]:valid:not(:focus):not(:placeholder-shown),
 input[type=email]:valid:not(:focus):not(:placeholder-shown),
 input[type=number]:valid:not(:focus):not(:placeholder-shown),
@@ -86,7 +86,7 @@ input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
 input[type=date]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
 textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
     max-height: 200px;
-}
+} */
 
 .requirements {
     color: #999;

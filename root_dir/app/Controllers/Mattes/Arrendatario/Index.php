@@ -9,8 +9,8 @@ class Index extends BaseController
    
   public function index(){
     //$request = \Config\Services::request();
-    $data_header['title'] = "Mattes";
-    $data_header['description'] = "Página principal del sitio";
+    $data_header['title'] = "Mapa de propiedades";
+    $data_header['description'] = "Vista principal del arrendatario";
     $session = session();
     $user_id = $session->get('unique');
     $acceso = Acceso();

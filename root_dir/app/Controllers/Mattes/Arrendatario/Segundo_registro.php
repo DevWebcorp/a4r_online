@@ -25,7 +25,7 @@ class Segundo_registro extends BaseController
 
         //Vars
         $data_header['title'] = "Regístrate";
-        $data_header['description'] = "Registro del arrendatario";
+        $data_header['description'] = "Documentacion del arrendatario";
         echo view('header' , $data_header);
         
         echo view('Mattes/Arrendatario_view/Menu_arrendatario',$data_menu);

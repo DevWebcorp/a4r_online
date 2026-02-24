@@ -1,24 +1,31 @@
-<script src="<?= base_url() ?>/../../assets/lib/jquery/jquery.js"></script>
-<script src="<?= base_url() ?>/../../assets/lib/jquery-ui/jquery-ui.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link href="<?= base_url() ?>/../../assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <!--prefijo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
-<div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
+<!-- <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span><strong>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA</strong> <span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div> -->
 
 <section class="segundo-registro mg-b-120 mg-t-70">
     <div class="container mt-5">
@@ -27,7 +34,7 @@
                 <h1 class="registrate"><?= $title ?></h1>
             </div>
             <div class="col-12">
-                <h2 class="text-center mt-3">Sé parte de Mattes</h2>
+                <!-- <h2 class="text-center mt-3">Sé parte de Mattes</h2> -->
 
                 <!-- <div class="progress mt-3 mb-5">
                     <div class="progress-bar progress-bar-striped bg-sucess progress-bar-animated" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
@@ -70,28 +77,25 @@
                 </div>
 
                 <form class="mg-b-90 mb-lg-4" id="segundo-registro" enctype="multipart/form-data">
-                    <div class="row justify-content-center mg-t-40 px-3">
-                        <div class="col-lg-7 form__group">
-                            <input type="text" name="universidad" id="autoComplete" class="form__input" placeholder=" " required style="background-color: white !important; color: rgba(0,0,0,.8) !important; border: 1px solid #28a745 !important;">
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="">Universidad más cercana<span class="tx-danger">*</span></label>
+                            <input type="text" name="universidad" id="autoComplete" class="" placeholder=" " required style="background-color: white !important; color: rgba(0,0,0,.8) !important; ">
                             <input type="hidden" name="id_univ" id="univ" class="form__input">
-                            <label class="form__label">Universidad más cercana<span class="tx-danger">*</span></label>
                         </div>
                     </div>
-                    <div class="row justify-content-center mg-t-40 px-3">
-                        <div class="col-lg-7 form__group">
-                            <input type="text" class="form__input" id="nombre" name="nombre_career" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="60" placeholder=" ">
-                            <label class="form__label" for="nombre">Carrera</label>
-                            <div class="requirements">
-                                Tiene que tener mínimo 3 caracteres
-                            </div>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="" for="nombre">Carrera</label>
+                            <input type="text" class="" id="nombre" name="nombre_career" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="60" placeholder=" ">
                         </div>
                     </div>
-                    <div class="row justify-content-center mg-t-40 px-3">
-                        <div class="col-lg-7 form__group">
-                            <select class="form__input select2" name="estado" id="estado" data-placeholder="Selecciona una opción" required>
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="" for="estado">¿De qué estado vienes?<span class="tx-danger">*</span></label>
+                            <select class="" name="estado" id="estado" data-placeholder="Selecciona una opción" required>
                                 <option value="">Selecciona una opción</option>
                             </select>
-                            <label class="form__label" for="estado">¿De qué estado vienes?<span class="tx-danger">*</span></label>
                         </div>
                     </div>
                     <!-- <div class="row justify-content-center mg-t-40 px-3">
@@ -118,11 +122,12 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="form-group mt-4 text-center">
-                        <label><input type="checkbox" required id="terminos" class="mr-1" value="">Términos y condiciones</label>
+                    <div class="col-12 ml-auto form-group mt-4 text-center">
+                        <label for="terminos">Términos y condiciones </label>
+                        <input type="checkbox" required id="terminos" class="mr-1" value="">
                     </div>
 
-                    <div class="col-lg-7 mx-auto">
+                    <div class="col-lg-12">
                         <div class="text-right mt-3">
                             <button type="submit" class="btn-teal px-4 py-1" id="siguiente" name="registro-uno"><span style="font-size:18px; cursor: pointer;">Siguiente<i class="fa fa-arrow-circle-right fa-lg ml-1" aria-hidden="true"></i></span>
                             </button>
@@ -133,3 +138,17 @@
         </div>
     </div>
 </section>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+<script src="<?= base_url() ?>/../../assets/lib/jquery/jquery.js"></script>
+<script src="<?= base_url() ?>/../../assets/lib/jquery-ui/jquery-ui.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
+
+
+<?= $this->endSection() ?>

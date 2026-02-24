@@ -27,8 +27,8 @@ class Registro extends BaseController {
         //echo view('left_panel',$data_left);
         echo view('Mattes/Arrendatario_view/Menu_arrendatario',$data_menu);
         echo view('Mattes/Arrendatario_view/Registro');
-        echo view('right_panel');
-        echo view('Mattes/Footer');
+        //echo view('right_panel');
+        //echo view('Mattes/Footer');
         echo view('fotter_panel' , $data_fotter);
     }   
 }
