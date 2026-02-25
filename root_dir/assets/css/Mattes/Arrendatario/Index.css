@@ -216,10 +216,14 @@ submit {
 }
 
 .btn-mattes {
-    background-color: var(--mattes);
+    background-color: #1a365d;
     color: var(--blanco);
     border-radius: 10px;
     font-size: 17px;
+    padding: 12px 30px;
+}
+.btn-mattes:hover{
+    background-color: #0f2440;
 }
 
 .gm-style .gm-style-iw-c {
@@ -234,10 +238,11 @@ submit {
 
 .boton-precio {
     padding: 10px 7px;
-    border: 1px solid green;
+    border: 1px solid #eee;
     border-right: transparent;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    background-color: #dedede;
 }
 
 #max,
@@ -379,3 +384,8 @@ submit {
 .autoComplete_wrapper > ul > li {
     height: 75px !important;
 }
+@media(min-width: 992 px){
+    .sin-propiedades{
+        padding-left: 93px !important;
+    }
+} 

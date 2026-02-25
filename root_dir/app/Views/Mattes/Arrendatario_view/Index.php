@@ -30,6 +30,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
 
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
+
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
 <style>
     @media(min-width:992px) {
         .m-l-lg-2 {
@@ -61,22 +73,22 @@
     </div>
 </div>
 
-<div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
+<!-- <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA<span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div> -->
 
 <section id="sec_filtros" class="filtro mb-200 mg-t-90">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 bg-filtros-mattes">
+            <div class="col-12">
                 <div style="">
-                    <h3 class="resultados-busqueda">Resultados de búsqueda</h3>
+                    <h3 class="">Resultados de búsqueda</h3>
                     <div class="ml-lg-4 mx-auto d-none d-lg-block">
                         <div class="d-flex align-items-center ">
                             <div class="filtro-icono" style="color:#000;">
@@ -101,7 +113,7 @@
                                         <div class="mg-lg-r-30">
                                             <label class="px-0 mt-3 form-control-label">Universidad <span style="color: red !important;">*</span></label>
                                             <div class="col-sm-12 mg-t-10 mg-sm-t-0 px-0 was-validated">
-                                                <input type="text" name="universidad" id="autoComplete" class="form-control universidad" autocomplete="off" required placeholder="BUSCA TU UNIVERSIDAD" style="background-color: white !important; color: rgba(0,0,0,.8) !important; border: 1px solid #28a745 !important;">
+                                                <input type="text" name="universidad" id="autoComplete" class="form-control universidad" autocomplete="off" required placeholder="BUSCA TU UNIVERSIDAD" style="background-color: white !important; color: rgba(0,0,0,.8) !important; ">
                                                 <input type="hidden" name="id_univ" id="univ" class="form-control ">
                                                 <input type="hidden" name="latitud" id="latitud" class="form-control ">
                                                 <input type="hidden" name="longitud" id="longitud" class="form-control ">
@@ -110,7 +122,7 @@
 
                                         <div class="mg-lg-r-30">
                                             <label class="col-sm-12 form-control-label px-0 mt-3">Distancia <span style="color: red !important;">*</span></label>
-                                            <div class="col-sm-12 mg-t-10 mg-sm-t-0 px-0 was-validated">
+                                            <div class="col-sm-12 mg-t-10 mg-sm-t-0 px-0 ">
                                                 <select id="kilometros" name="distancia" class="form-control select2" data-placeholder="Selecciona una opción" required>
                                                     <option value="">SELECCIONA</option>
                                                     <option value="1000">1 km</option>
@@ -125,16 +137,16 @@
                                             <label class="col-lg-8 px-0 mb-0 m-l-lg-2" style="margin-top: 1.2rem; ">Precio
                                                 <div class="col-12 col-lg-9 d-flex flex-column flex-lg-row px-0">
                                                     <div class="mb-1 mb-lg-0 mr-lg-1">
-                                                        <div class="d-flex align-items-center was-validated">
+                                                        <div class="d-flex align-items-center ">
                                                             <p class="mr-lg-1 mt-2">Min</p>
-                                                            <i class="fa fa-usd boton-precio bg-white" aria-hidden="true"></i>
+                                                            <i class="fa fa-usd boton-precio" aria-hidden="true"></i>
                                                             <input class="form-control" type="text" id="min" name="precio_min" value="<?= $min[0]->price; ?>" style="padding-bottom: 1.3rem; padding-top: 1.3rem;">
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <div class="d-flex align-items-center was-validated">
+                                                        <div class="d-flex align-items-center ">
                                                             <p class="ml-lg-2 mr-lg-1 mt-2">Max</p>
-                                                            <i class="fa fa-usd boton-precio bg-white" aria-hidden="true"></i>
+                                                            <i class="fa fa-usd boton-precio" aria-hidden="true"></i>
                                                             <input class="form-control col-lg-8" type="text" id="max" name="precio_max" value="<?= $max[0]->price; ?>" style="padding-bottom: 1.3rem; padding-top: 1.3rem;">
                                                         </div>
                                                     </div>
@@ -266,6 +278,7 @@
                 <h3 class="text-center ">Propiedades</h3>
                 <div class="container casas mg-b-20 propiedades-busqueda">
                     <div class="grid mx-auto mt-lg-1">
+                        <img src="<?= base_url() ?>/assets/img/sin-propiedades.png" class="sin-propiedades" alt="">
                     </div>
                     <div class="page-load-status mg-t-20">
                         <div class="loader-ellips infinite-scroll-request">

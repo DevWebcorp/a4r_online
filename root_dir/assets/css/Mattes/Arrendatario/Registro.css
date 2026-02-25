@@ -182,7 +182,7 @@ input {
     pointer-events: none;
 }
 
-input[type=text]:valid:not(:focus):not(:placeholder-shown),
+/* input[type=text]:valid:not(:focus):not(:placeholder-shown),
 input[type=tel]:valid:not(:focus):not(:placeholder-shown),
 input[type=email]:valid:not(:focus):not(:placeholder-shown),
 input[type=number]:valid:not(:focus):not(:placeholder-shown),
@@ -225,7 +225,7 @@ textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
     overflow: hidden;
     color: red;
     font-family: "Gothici";
-}
+} */
 
 .stepper {
 	margin: 0;

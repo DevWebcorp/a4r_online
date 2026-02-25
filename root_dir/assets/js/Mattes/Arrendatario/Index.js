@@ -11,8 +11,7 @@ if(uni == ""){
     
     $(document).ready(function() {
         $("#form-busqueda").submit();
-    });
-   
+    });   
 }
 
 $(".starrr").starrr({
@@ -36,9 +35,6 @@ function precios() {
     precio_minimo = parseFloat($('#min').val());
     precio_maximo = parseFloat($('#max').val());
 }
-
-
-
 
 select_alojamiento();
 
@@ -102,9 +98,7 @@ $(document).on('submit', '#form-busqueda', function() {
                 x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
                 y: 90 // vertical axis - can be a number or a string indicating unity. eg: '2em'
             },
-
-        }).showToast();
-        
+        }).showToast();        
     } else if (min_price > precio_maximo) {
         Toastify({
             text: "El precio mínimo no puede ser mayor al máximo",
@@ -118,7 +112,6 @@ $(document).on('submit', '#form-busqueda', function() {
                 x: 50, // horizontal axis - can be a number or a string indicating unity. eg: '2em'
                 y: 90 // vertical axis - can be a number or a string indicating unity. eg: '2em'
             },
-
         }).showToast();
     } else {
         $.ajax({
@@ -133,8 +126,6 @@ $(document).on('submit', '#form-busqueda', function() {
                 longitud = parseFloat($("#longitud").val());
                 kilometros = parseInt($("#kilometros").val());
                 initMap(latitud, longitud, kilometros, data);
-
-              
                 //event.preventDefault();
             },
             cache: false,
@@ -156,13 +147,11 @@ function initMap(lat, lng, kilometros, data) {
             lat: 19.398894572801836,
             lng: -99.15639584258695
         };
-
     } else {
         var myLatLng = {
             lat: lat,
             lng: lng
         };
-
     }
 
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -181,7 +170,6 @@ function initMap(lat, lng, kilometros, data) {
             icon: BASE_URL + "/assets/icons/ubicacion.png",
             size: new google.maps.Size(10, 10),
             //title: data[0].name
-
         });
         marker.addListener("click", toggleBounce);
 
@@ -205,7 +193,6 @@ function initMap(lat, lng, kilometros, data) {
         });
 
 
-
         var container = $('.grid');
         $(container).children().remove();
 
@@ -216,9 +203,7 @@ function initMap(lat, lng, kilometros, data) {
                 lat: parseFloat(v.latitud),
                 lng: parseFloat(v.longitud)
             };
-
             //  console.log(pocision);
-
             let radio = check(pocision, myLatLng, kilometros);
             if (radio) {
                 const path = `${BASE_URL}/writable/uploads/Mattes/Arrendador`;
@@ -230,12 +215,10 @@ function initMap(lat, lng, kilometros, data) {
                     icon: BASE_URL + "/assets/icons/marker.png",
                     size: new google.maps.Size(10, 10),
                     title: v.name
-
                 });
 
                 //console.log(path);
                 //marker2.addListener("click", toggleBounce);
-
 
                 function toggleBounce() {
                     if (marker2.getAnimation() !== null) {
@@ -247,15 +230,11 @@ function initMap(lat, lng, kilometros, data) {
                         }, 2000);
                     }
                 }
-
-
-
                 distancia = parseInt(v.distancia);
                 km = distancia / 1000;
                 console.log(km);
 
                 let info =
-
                     `<table>
                        <tr>
                            <td>
@@ -277,15 +256,13 @@ function initMap(lat, lng, kilometros, data) {
 
                 marker2.addListener("click", () => {
                     toggleBounce(),
-                        infowindow.open({
-                            title: v.name,
-                            anchor: marker2,
-                            map,
-                            shouldFocus: false
-                        });
+                    infowindow.open({
+                        title: v.name,
+                        anchor: marker2,
+                        map,
+                        shouldFocus: false
+                    });
                 });
-
-
 
                 var precio = v.precio == null ? " -- " : v.precio;
                 var sello = v.stamp_mattes == "1" ? `<img style="height: 90px !important;width: 89px !important;right: 0px !important;" id = "${v.stamp_mattes}" class = "sello-mattes" src = "${BASE_URL}assets/img/Iconos/best_mattes.png">` : `<div id = "${v.stamp_mattes}" class = "sello-mattes"></div>`;
@@ -296,20 +273,19 @@ function initMap(lat, lng, kilometros, data) {
 
                 // console.log(nombrencode);
 
-                let html = `<a  href="${BASE_URL}detalle-propiedad/${nombrencode}" target="_blank">
-                                <div class="grid-item" data-img="${v.imagen}">
-                                      <figure>
-                                         <img id="img-1" class=" w-100" src="${path}/${v.imagen}" alt="First slide">
-                                     </figure>
-                                     <p id="${v.name}" class="info-casa my-0 text-center" style="margin-left: 0px !important; line-height: 17px !important; ">${mayusname}</p>
-                                     <div id="iconos${i}" class = "iconos"></div>
-                                     <div id="estrellas${i}" class="starrr  text-center"> </div>
-                                     <p class="info-casa  mt-2">Distancia <i class="fa fa-road" aria-hidden="true"></i><span>&nbsp${km} KM</span></p>
-                                     <p class="info-casa">Costo: <span>$ ${precio} MXN</span></p>
-                                </div>
-                            </a>`;
-
-
+                let html = 
+                `<a  href="${BASE_URL}detalle-propiedad/${nombrencode}" target="_blank">
+                    <div class="grid-item" data-img="${v.imagen}">
+                            <figure>
+                                <img id="img-1" class=" w-100" src="${path}/${v.imagen}" alt="First slide">
+                            </figure>
+                            <p id="${v.name}" class="info-casa my-0 text-center" style="margin-left: 0px !important; line-height: 17px !important; ">${mayusname}</p>
+                            <div id="iconos${i}" class = "iconos"></div>
+                            <div id="estrellas${i}" class="starrr  text-center"> </div>
+                            <p class="info-casa  mt-2">Distancia <i class="fa fa-road" aria-hidden="true"></i><span>&nbsp${km} KM</span></p>
+                            <p class="info-casa">Costo: <span>$ ${precio} MXN</span></p>
+                    </div>
+                </a>`;
 
                 $(".grid").append(html);
                 $("#iconos" + i).append(sello);
@@ -320,9 +296,7 @@ function initMap(lat, lng, kilometros, data) {
                 $("#estrellas" + i).starrr({
                     rating: v.estrellas,
                     readOnly: true,
-
                 });
-
 
                 tippy('.grid-item', {
                     //content: 'My tooltip!',
@@ -357,7 +331,6 @@ function initMap(lat, lng, kilometros, data) {
                 isFitWidth: true,
                 originLeft: false
             });
-
         });
 
         function getPenPath() {
@@ -399,7 +372,6 @@ function initMap(lat, lng, kilometros, data) {
             },
         }).showToast(); */
     }
-
 }
 
 function check(marker, circle, radius) {
@@ -416,7 +388,6 @@ $(document).keyup(function (event) {
         $('#loader').toggle();
         $("#form-busqueda").submit();
         $('#loader').toggle();
-
     }
 });
 
