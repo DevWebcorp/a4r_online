@@ -1,13 +1,19 @@
-<script src="<?= base_url() ?>/assets/lib/jquery/jquery.js"></script>
-<script src="<?= base_url() ?>/assets/lib/jquery-ui/jquery-ui.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">    
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -16,7 +22,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="mb-120 mg-t-120">
     <div class="container-fluid">
@@ -83,14 +89,9 @@
             <div class="col-12">
                 <div class="form-layout " style="border: none;">
                     <div class="text-center">
-                        <h3 class="datos-personales"> Ahora un poco de ti </h3>
-                        <p>En Mattes buscamos la seguridad de toda nuestra comunidad, tanto estudiantes
-                            como propietarios, es por esto que los
-                            documentos que pedimos a continuación son necesarios para poder subir tu
-                            propiedad en la plataforma. </p>
                     </div>
                     <form class="mb-200" id="form-personales" enctype="multipart/form-data">
-                        <div class="row justify-content-center mg-t-20">
+                        <div class="row justify-content-center mg-t-20 mb-5">
                             <div class="col-lg-7 mg-b-20 text-center">
                                 <div class="col-sm-6 mx-auto">
                                     <img style="width: 140px; height: 140px;" class="img-fluid rounded-circle" id="img" src="<?= base_url() ?>/../../assets/img/default.png" />
@@ -104,57 +105,49 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center mg-t-40">
-                            <div class="col-lg-7 form__group">
-                                <input id="nombre" type="text" class="form__input" placeholder=" " required name="nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25">
-                                <label class="form__label">Nombre<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que tener mínimo 3 caracteres
-                                </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Nombre<span class="tx-danger">*</span></label>
+                                <input id="nombre" type="text" class="" placeholder=" " required name="nombre" pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25">
                             </div>
                         </div>
-                        <div class="row justify-content-center mg-t-40">
-                            <div class="col-lg-7 form__group">
-                                <input id="apellido" type="text" class="form__input" placeholder=" " name="apellido" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25">
-                                <label class="form__label">Primer apellido<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que tener mínimo 3 caracteres
-                                </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Primer apellido<span class="tx-danger">*</span></label>
+                                <input id="apellido" type="text" class="" placeholder=" " name="apellido" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="3" maxlength="25">
                             </div>
                         </div>
-                        <div class="row justify-content-center mg-t-40">
-                            <div class="col-lg-7 form__group">
-                                <input id="am" type="text" class="form__input" placeholder=" " name="segundo_apellido" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="4" maxlength="25">
-                                <label class="form__label">Segundo apellido<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que tener mínimo 4 caracteres
-                                </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Segundo apellido<span class="tx-danger">*</span></label>
+                                <input id="am" type="text" class="" placeholder=" " name="segundo_apellido" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+" minlength="4" maxlength="25">
                             </div>
                         </div>
-                        <div class="row justify-content-center mg-t-40">
-                            <div class="col-lg-7  form__group">
-                                <input id="telefono" type="text" class="form__input" placeholder=" " name="celular" required pattern="^[0-9]+" minlength="10" maxlength="10">
-                                <label class="form__label">Número celular<span class="tx-danger">*</span></label>
-                                <div class="requirements">
-                                    Tiene que tener 10 dígitos
-                                </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Número celular<span class="tx-danger">*</span></label>
+                                <input id="telefono" type="text" class="" placeholder=" " name="celular" required pattern="^[0-9]+" minlength="10" maxlength="10">
                             </div>
                         </div>
-                        <div class="files-d row justify-content-center mg-t-20">
-                            <label class="col-lg-7 form-control-label">Identificación oficial<span class="tx-danger">*</span></label>
-                            <div class="col-lg-6">
-                                <div class="file-drop-area">
-                                    <span class="choose-file-button">Subir Archivo</span>
-                                    <span class="file-message">Arrastra el archivo aqui</span>
-                                    <input id="file-identificacion" class="file-input" type="file" name="file_identificacion" accept=".pdf">
+
+                        <div class="col-lg-6 files-d">
+                            <div class="form-group">
+                                <label class="">Identificación oficial<span class="tx-danger">*</span></label>
+                                <div class="">
+                                    <div class="file-drop-area">
+                                        <span class="choose-file-button">Subir Archivo</span>
+                                        <span class="file-message">Arrastra el archivo aqui</span>
+                                        <input id="file-identificacion" class="file-input" type="file" name="file_identificacion" accept=".pdf">
+                                    </div>
+                                    <!-- <small id="passwordHelpBlock" class="form-text text-muted">
+                                        El archivo debe ser pdf
+                                    </small> -->
                                 </div>
-                                <!-- <small id="passwordHelpBlock" class="form-text text-muted">
-                                    El archivo debe ser pdf
-                                </small> -->
-                            </div>
-                            <div class="col-lg-1 text-center">
-                                <i class="fa fa-file-pdf-o fa-3x text-danger" aria-hidden="true" id="text-val"></i> <br>
-                                <a id="down_ine" class="down-doc" download>Ver archivo</a>
+                                <div class="col-lg-1 text-center">
+                                    <i class="fa fa-file-pdf-o fa-3x text-danger" aria-hidden="true" id="text-val"></i> <br>
+                                    <a id="down_ine" class="down-doc" download>Ver archivo</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-sm-12 mt-4">
@@ -169,7 +162,7 @@
                             </div><!-- form-group -->
                         </div>
 
-                        <div class="col-lg-7 row mx-auto px-0 px-lg-2 mt-3">
+                        <div class="col-lg-12 px-0 px-lg-2 mt-3 mb-5">
                             <div class="col-sm-12 text-center text-md-right px-0">
                                 <div class="d-flex flex-column flex-sm-row justify-content-end">
                                     <button class="btn btn-teal px-4 py-1" type="submit"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i>Actualizar</button>
@@ -388,11 +381,15 @@
                 </div>
             </div>
         </div>
-
-
-
-    </div> <!-- div container fin -->
+    </div> 
 </div>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>  
+<script src="<?= base_url() ?>assets/lib/jquery/jquery.js"></script>
+<script src="<?= base_url() ?>assets/lib/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 <script>
     let id_usuario = <?php echo json_encode($id_usuario); ?>;
@@ -418,3 +415,6 @@
     });
     
 </script>
+
+<?= $this->endSection() ?>
+

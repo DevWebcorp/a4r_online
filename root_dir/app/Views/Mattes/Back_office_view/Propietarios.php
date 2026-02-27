@@ -1,12 +1,25 @@
-<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<section class="propiedades-tabla mb-200 mg-t-90" style="height=auto;">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
+<section class="propiedades-tabla mb-5 mg-t-90" style="height=auto;">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="propiedades mt-3">Propietarios</h4>
+                <h3 class="text-center mt-3">Propietarios</h4>
             </div>
         </div>
     </div>
@@ -89,5 +102,16 @@
                 </div>
             </form>
         </div>
-    </div><!-- modal-dialog -->
+    </div>
 </div>
+
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+<?= $this->endSection() ?>
+

@@ -46,12 +46,12 @@
     overflow-x: auto !important;
 }
 
-@media(min-width:1644px) {
+/* @media(min-width:1444px) {
     #propietarios {
         display: inline-table;
         overflow-x: hidden !important;
     }
-}
+} */
 
 .propiedades,
 .mensajesbo,
@@ -382,7 +382,7 @@
 }
 
 .dataTables_filter input, .modal-content {
-    border-radius: 10px !important;
+    border-radius: 0px !important;
 }
 
 .tab-boprop{
@@ -492,6 +492,18 @@
     }
 }
 
+select {
+  border-radius: 0px !important;
+}
+
+ #reporte_contacto{
+    display: block;
+}
+@media(min-width:1200px) {
+    #reporte_contacto{
+        display: inline-table;
+    }
+}
 /* @media(min-width: 992px){
     .footer{
         position: fixed;

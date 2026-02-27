@@ -1,13 +1,25 @@
-<script src="<?= base_url() ?>assets/lib/jquery/jquery.js"></script>
-<script src="<?= base_url() ?>assets/lib/jquery-ui/jquery-ui.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">    
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link href="<?= base_url() ?>assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<style>
+    .tab {
+        border-bottom: 1px solid transparent;
+    }
+</style>
+
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -16,7 +28,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="mg-t-120 mg-b-120">
     <div class="container">
@@ -31,89 +43,82 @@
             ===== DATOS PERSONALES =====
         =============================================-->
         <div id="Personales" class="tabcontent">
-            <div class="col-12">
-                <div class="form-layout " style="border: none;">
-                   
-                    <form class="mg-b-80 mb-md-0 " id="alta_agente" enctype="multipart/form-data">
-                        <div class="row justify-content-center mg-t-20 px-3">
-                            <div class="col-lg-7 px-0">
-                                <div class="col-12 text-center">
-                                    <div class="col-12">
-                                        <img style="width: 150px;" class="img-fluid rounded-circle" id="img" src="<?= base_url() ?>/../../assets/img/default.png" />
-                                    </div>
+            <div class="form-layout " style="border: none;">
+                <form class="mg-b-80 mb-md-0 " id="alta_agente" enctype="multipart/form-data">
+                    <div class="row justify-content-center mg-t-20 px-3">
+                        <div class="col-lg-7 px-0">
+                            <div class="col-12 text-center">
+                                <div class="col-12">
+                                    <img style="width: 150px;" class="img-fluid rounded-circle" id="img" src="<?= base_url() ?>/../../assets/img/default.png" />
                                 </div>
-                                <div class="col-12 mg-t-10 mg-sm-t-20">
-                                    <div class="file-drop-area">
-                                        <span class="choose-file-button">Subir Archivo</span>
-                                        <span class="file-message">Arrastra el archivo aqui</span>
-                                        <input id="file-user" class="file-input" type="file" name="file" accept=".jpg, .png">
-                                    </div>
+                            </div>
+                            <div class="col-12 mg-t-10 mg-sm-t-20 mb-4">
+                                <div class="file-drop-area">
+                                    <span class="choose-file-button">Subir Archivo</span>
+                                    <span class="file-message">Arrastra el archivo aqui</span>
+                                    <input id="file-user" class="file-input" type="file" name="file" accept=".jpg, .png">
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="text" class="form__input" id="nombre_agente" name="nombre_agente" placeholder=" " required minlength="3" maxlength="25" aria-describedby="passwordHelpBlock">
-                                <label class="form__label">Nombre<span class="tx-danger">*</span></label>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Nombre<span class="tx-danger">*</span></label>
+                                <input type="text" class="" id="nombre_agente" name="nombre_agente" placeholder=" " required minlength="3" maxlength="25" aria-describedby="passwordHelpBlock">
                             </div>
                         </div>
-
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="text" class="form__input" id="apellidof" name="apellidof" placeholder=" " required minlength="3" maxlength="25" aria-describedby="passwordHelpBlock">
-                                <label class="form__label">Primer Apellido<span class="tx-danger">*</span></label>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Primer Apellido<span class="tx-danger">*</span></label>
+                                <input type="text" class="" id="apellidof" name="apellidof" placeholder=" " required minlength="3" maxlength="25" aria-describedby="passwordHelpBlock">
                             </div>
                         </div>
-
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="text" class="form__input" id="apellidos" name="apellidos" placeholder=" " required minlength="3" maxlength="25" aria-describedby="passwordHelpBlock">
-                                <label class="form__label">Segundo Apellido<span class="tx-danger">*</span></label>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Segundo Apellido<span class="tx-danger">*</span></label>
+                                <input type="text" class="" id="apellidos" name="apellidos" placeholder=" " required minlength="3" maxlength="25" aria-describedby="passwordHelpBlock">
                             </div>
                         </div>
-
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="email" class="form__input" id="correo" name="correo_agente" placeholder=" " required>
-                                <label class="form__label">Correo<span class="tx-danger">*</span></label>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Correo<span class="tx-danger">*</span></label>
+                                <input type="email" class="" id="correo" name="correo_agente" placeholder=" " required>
                             </div>
                         </div>
-
-                        <div class="row mg-t-40 px-3">
-                            <div class="col-lg-7 form__group">
-                                <input type="text" class="form__input" id="telefono_agente" name="telefono" placeholder=" " required pattern="^[0-9]+" minlength="10" maxlength="10" title="Solo se permiten números">
-                                <label class="form__label">Teléfono<span class="tx-danger">*</span></label>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Teléfono<span class="tx-danger">*</span></label>
+                                <input type="text" class="" id="telefono_agente" name="telefono" placeholder=" " required pattern="^[0-9]+" minlength="10" maxlength="10" title="Solo se permiten números">
                             </div>
                         </div>
-
-                        <div class="row justify-content-center mg-t-30">
-                            <label class="col-lg-7 form-control-label px-sm-4">Identificación oficial (agente)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
-                            <div class="col-lg-6 mg-t-10 mg-sm-t-0 px-sm-4">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label class="">Identificación oficial (agente)<span class="tx-danger">*</span><sub> Archivos pdf o imagen</sub></label>
                                 <div class="file-drop-area">
                                     <span class="choose-file-button">Actualizar Archivo</span>
                                     <span class="file-message">Arrastra el archivo aqui</span>
                                     <input id="file_agente" class="file-input" type="file" required name="ine_agente" accept=".pdf, .png, .jpg">
                                 </div>
-                            </div>
-                            <div class="col-lg-1 text-center text-lg-left">
-                                <i class="fa fa-file-pdf-o fa-3x text-danger" aria-hidden="true" id="text-val"></i> <br>
-                                <a id="down_ine" class="down-doc" download>Ver archivo</a>
+                               
+                                <div class="col-lg-1 text-center text-lg-left">
+                                    <i class="fa fa-file-pdf-o fa-3x text-danger" aria-hidden="true" id="text-val"></i> <br>
+                                    <a id="down_ine" class="down-doc" download>Ver archivo</a>
+                                </div>
                             </div>
                         </div>
-
                         <input type="hidden" class="form-control" id="id_user" name="id_user">
                         <input type="hidden" class="form-control" id="id_identity" name="id_identity">
                         <input type="hidden" class="form-control" id="name-img" name="name_img">
-
-                        <div class="col-lg-7 mx-auto">
+                        <div class="col-12">
                             <div class="text-right">
-                                <button class="col-sm-4 col-xl-3 px-4 py-1 btn btn-aceptar mt-3" id="enviar_agente" name="enviar_agente"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i>Actualizar</button>
+                                <button class="px-4 py-2 btn btn-aceptar btn-teal mt-3" id="enviar_agente" name="enviar_agente"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i>Actualizar</button>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div> <!-- div row fin -->
+                    </div>
+                </form>
+            </div>
         </div>
 
         <!--=========================================
@@ -187,6 +192,13 @@
     </div> <!-- div container fin -->
 </div>
 
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>  
+<script src="<?= base_url() ?>assets/lib/jquery/jquery.js"></script>
+<script src="<?= base_url() ?>assets/lib/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 <script>
     let id_usuario = <?php echo json_encode($id_usuario); ?>;
     let id_group = <?php echo json_encode($group); ?>;
@@ -210,3 +222,7 @@
         }); 
     });
 </script>
+
+<?= $this->endSection() ?>
+
+

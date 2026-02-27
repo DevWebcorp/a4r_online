@@ -1,11 +1,20 @@
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
-<link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+<?= $this->extend('layout/main') ?>
+
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 99999999;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 99999999;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -14,9 +23,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<section class="inicio mb-200 mg-t-80">
+<section class="inicio mb-lg-5 mg-t-80">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 mt-5 height-inicio">
@@ -114,5 +123,14 @@
                 </div>
             </form>
         </div>
-    </div><!-- modal-dialog -->
-</div><!-- modal -->
+    </div>
+</div>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+
+<?= $this->endSection() ?>

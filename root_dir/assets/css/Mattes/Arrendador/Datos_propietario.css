@@ -178,7 +178,7 @@ input:checked+.slider:before {
 .tab button {
     float: left;
     padding: 10px 30px;
-    border-radius: 8px;
+    border-radius: 0px;
     outline: none;
     background-color: inherit;
     cursor: pointer;
@@ -201,9 +201,9 @@ input:checked+.slider:before {
 
 .datos-propietario .tablinks.active,
 .datos-propietario .tablinks:hover {
-    border-radius: 8px !important;
+    border-radius: 0px !important;
     color: white;
-    background-color: #0088F7 !important;
+    background-color: #000 !important;
 }
 
 @media(min-width:992px) {
@@ -422,7 +422,7 @@ input:checked+.slider:before {
 
 .form-control,
 .dataTables_filter input {
-    border-radius: 10px !important;
+    border-radius: 0px !important;
 }
 
 .form__group {

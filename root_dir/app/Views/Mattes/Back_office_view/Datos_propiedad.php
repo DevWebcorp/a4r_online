@@ -52,7 +52,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 mt-lg-5 mg-b-120 ">
+        <div class="col-12 mt-lg-5 ">
             <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                 <li class="nav-item tab-boprop ml-sm-2 mr-sm-1 ml-md-3 mr-md-2" role="presentation">
                     <a class="nav-link active" id="bo-tab" data-toggle="tab" href="#bo" role="tab" aria-controls="bo" aria-selected="true"><i class="fa fa-address-card-o mr-2" aria-hidden="true"></i>Estatus</a>
@@ -78,7 +78,7 @@
             </ul>
 
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active bg-body rounded mt-4 mb-bo-estatus" id="bo" role="tabpanel" aria-labelledby="bo-tab">
+                <div class="tab-pane fade show active bg-body rounded mt-4 mb-lg-5" id="bo" role="tabpanel" aria-labelledby="bo-tab">
                     <form id="updaStatus">
                         <div class="col-12 row">
                             <div class="col-12 col-lg-5 text-center mt-4 order-2 order-lg-0">
@@ -196,7 +196,7 @@
 
                         <input type="hidden" id="id" name="id">
 
-                        <div class="col-lg-7 row mx-auto px-0 px-lg-2 mt-5">
+                        <div class="col-lg-12 row mx-auto px-0 px-lg-2">
                             <div class="col-sm-12 text-center px-0 pr-sm-2 text-md-right">
                                 <div class="d-flex flex-column flex-sm-row justify-content-end">
                                     <button type="submit" class="btn-teal mb-5 px-4 py-1"><i class="fa fa-pencil fa-lg mr-1" aria-hidden="true"></i><span style="font-size:18px;">Actualizar</span></button>
@@ -218,7 +218,7 @@
                                     <form method="POST" class=" " id="upd_ubicacion">
                                         <div class="container">
                                             <div class="row">
-                                            <div class="col-lg-9">
+                                            <div class="col-lg-6">
                                                 <div class="form-group">
                                                     <label class="">Dirección [calle, número, colonia, CP, estado]</label>
                                                     <div class="input-group col-12 px-0  mg-t-10 mg-sm-t-0">
@@ -294,20 +294,20 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-3">
+                                                <!-- <div class="col-lg-3">
                                                     <div class="form-group">
                                                         <label class="">Universidad más cercana</label>
-                                                            <input type="text" name="universidad" id="autoComplete" class="" autocomplete="off" style="background-color: white !important; color: rgba(0,0,0,.8) !important; ">
-                                                            <input type="hidden" name="id_univ" id="id_univ" class="form-control ">
-                                                        </div>
+                                                        <input type="text" name="universidad" id="autoComplete" class="" autocomplete="off" style="background-color: white !important; color: rgba(0,0,0,.8) !important; ">
+                                                        <input type="hidden" name="id_univ" id="id_univ" class="form-control ">
                                                     </div>
+                                                </div> -->
                                                 
-                                                    <div class="col-lg-3">
-                                                        <div class="form-group">
-                                                            <label class="">Distancia</label>
-                                                            <input type="text" id="distancia" name="distancia" class="" placeholder=" " readonly style="background-color: #e9ecef;">
-                                                        </div>
+                                                <!-- <div class="col-lg-3">
+                                                    <div class="form-group">
+                                                        <label class="">Distancia</label>
+                                                        <input type="text" id="distancia" name="distancia" class="" placeholder=" " readonly style="background-color: #e9ecef;">
                                                     </div>
+                                                </div> -->
                                                 <!-- <div class="col-12 col-lg-11 px-0 mt-4 mb-4 pr-lg-4">
                                                     <div class="d-flex flex-column flex-sm-row justify-content-end">
                                                         <button class="btn btn-outline-primary" id="calcular" type="button"><i class="fa fa-calculator mr-1" aria-hidden="true"></i>Calcular Distancia</button>
@@ -316,7 +316,7 @@
                                             </div>
 
                                             <div class="mt-3 mt-lg-5">
-                                                <div class=" pt-4" id="map" style="height: 500px;">
+                                                <div class=" pt-4" id="map" style="height: 500px; border-radius: 0px;">
                                                 </div>
                                             </div>
                                         </div>

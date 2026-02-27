@@ -38,7 +38,7 @@ class Propietarios extends BaseController
         echo view('Mattes/Back_office_view/Menu_BO');
         echo view('Mattes/Back_office_view/Propietarios');
         echo view('fotter_panel' , $data_fotter);  
-        echo view('Mattes/Footer');
+        //echo view('Mattes/Footer');
       } else {
         return redirect()->to(base_url('inicia-session'));
       }

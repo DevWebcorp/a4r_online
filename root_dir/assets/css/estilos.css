@@ -106,6 +106,7 @@ input[type="tel"], input[type="date"]{
 .tab{
     border: 1px solid transparent;
     background-color:transparent;
+    border-bottom: 1px solid #000;
 }
 .tablinks.active,
 .nav-tabs .nav-link.active{

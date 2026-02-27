@@ -30,7 +30,7 @@ class Reportes extends BaseController
             echo view('header', $data_header);
             echo view('Mattes/Back_office_view/Menu_BO');
             echo view('Mattes/Back_office_view/Reportes_view'); 
-            echo view('Mattes/Footer');
+           // echo view('Mattes/Footer');
             echo view('fotter_panel', $data_fotter);  
 
             

@@ -36,7 +36,7 @@ class Alumnos extends BaseController
         echo view('header', $data_header);
         echo view('Mattes/Back_office_view/Menu_BO');
         echo view('Mattes/Back_office_view/Alumnos'); 
-        echo view('Mattes/Footer');
+       // echo view('Mattes/Footer');
         echo view('fotter_panel', $data_fotter);  
       } else {
         return redirect()->to(base_url('inicia-session'));
