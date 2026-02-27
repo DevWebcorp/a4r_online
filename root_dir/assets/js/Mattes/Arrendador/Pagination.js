@@ -57,35 +57,27 @@ function get_propiedades() {
                     }
     
                     if (v.imagen == null) {
-                        let html = `<div class="grid-item">
-                                        <figure>
-                                            <img id="img-1" class=" w-100" src="${path}/default_propiedad.png" alt="First slide">
-                                        </figure>                                        
-                                       
-                                        <div class="acciones-propiedad">
-                                            <button class = "detalle-propiedad" id = " ${v.id} " type="button">
-                                            </button>
-                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
-                                            <div class = "iconos2"></div>
-                                        </div> 
-                                            
-                                        <div class="col-12">
-                                            <p class="info-casa mt-1 overflow-hidden text-uppercase"> ${v.name}</p>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-1"> </div>
-                                            <div class="col-6 px-0">
-                                                <p class="estatus_casa"  style="line-height: 24px;"><span> ${status}</span></p>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="info-casa"><span>$${precio}</span></p>
-                                            </div>
-                                        </div>
-                                       
-                                    </div>`;
-    
+                        let html = 
+
+                        `<div class="col-xs-4">
+                            <div class="accomd-modations-room">
+                                <div class="img">
+                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                </div>
+                                <div class="text">
+                                    <h2><a href="#">Luxury Room</a></h2>
+                                    <p class="price">
+                                        <span class="amout">$${precio}</span>/days
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`
+                        
+                        
+                        
+                        
+                        
+                        
                         $(".grid").append(html);
     
                     } else {

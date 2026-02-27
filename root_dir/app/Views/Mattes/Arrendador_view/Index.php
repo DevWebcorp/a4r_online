@@ -1,4 +1,188 @@
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
+
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+
+    <!--prefijo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
+<!-- <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="d-flex align-items-center justify-content-start">
+        <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
+        <span><strong>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA</strong> <span id="success"></span></span>
+    </div>
+</div> -->
+
+<style>
+    .tab{
+        border: 1px solid transparent;
+        background-color:transparent;
+    }
+    .tablinks.active,
+    .nav-tabs .nav-link.active{
+        border: 1px solid #000 !important;
+        border-radius: 0px !important;
+        color: white !important;
+        background-color: #000 !important;
+    }
+    .tablinks.faltante,
+    .nav-tabs .nav-link,
+    .tab button {
+        border: 1px solid #000;
+        border-radius: 8px !important;
+        border-radius: 0px !important;
+        color: #000;
+        background-color: white !important;
+    }
+    .tablinks.faltante:hover,
+    .nav-tabs .nav-link:hover,
+    .tab button:hover {
+        border: 1px solid #000;
+        border-radius: 0px !important;
+        color: white;
+        background-color: #000 !important;
+    }
+</style>
+
+
+
+ <section class="section-accomd awe-parallax bg-14">
+            <div class="container">
+                <div class="accomd-modations">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="accomd-modations-header">
+                                <h2 class="heading">ROOMS & RATES</h2>
+                                <img src="images/icon-accmod.png" alt="icon">
+                                <p>Semper ac dolor vitae accumsan. Cras interdum hendrerit lacinia. Phasellus accumsan urna vitae molestie interdum. Nam sed placerat libero, non eleifend dolor.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="accomd-modations-content owl-single">
+                                
+                                <div class="row grid">
+
+                                    <!-- ITEM -->
+                                    <div class="col-xs-4">
+                                        <div class="accomd-modations-room">
+                                            <div class="img">
+                                                <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                                            </div>
+                                            <div class="text">
+                                                <h2><a href="#">Luxury Room</a></h2>
+                                                <p class="price">
+                                                    <span class="amout">$320</span>/days
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END / ITEM -->
+                            
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- END / ACCOMD ODATIONS -->
+
+
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+<script src="<?= base_url() ?>/../../assets/lib/jquery/jquery.js"></script>
+<script src="<?= base_url() ?>/../../assets/lib/jquery-ui/jquery-ui.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
+
+
+<?= $this->endSection() ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
@@ -36,7 +220,7 @@
     
 </style>
 
-<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -45,7 +229,7 @@
             </div>
         </div>
     </div>
-</div> -->
+</div> 
 
 <section class="container-fluid casas mg-b-120 height-casas">
     <h3 class="text-center mb-4 hola font-weight-bold">Bienvenid@ </h3>
@@ -83,7 +267,7 @@
 
 </section>
 
-<!--Modal cancelar -->
+
 <div id="modal_eliminar" class="modal fade">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content bd-0 tx-14">
@@ -100,7 +284,7 @@
                         <br>
                         <p style="color:red; text-align:center;">No se podrán deshacer los cambios una vez realizada la acción</p>
                         <input type="hidden" id="id_delete" name="id_delete">
-                    </div><!-- card -->
+                    </div>
                 </div>
 
                 <div class="modal-footer">
@@ -109,9 +293,9 @@
                 </div>
             </form>
         </div>
-    </div><!-- modal-dialog -->
-</div><!-- modal -->
+    </div>
+</div>
 
 <form method="POST" id="propiedad_id">
     <input class="id_propiedad" type="hidden" name="id" id="id">
-</form>
+</form> -->
