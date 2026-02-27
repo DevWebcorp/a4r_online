@@ -29,7 +29,7 @@ class Inicio extends BaseController
 
         $data_fotter['external_scripts'] = ["https://maps.googleapis.com/maps/api/js?key=AIzaSyCwD3Bk71LnFRTi329E7GRyqPQDTpDGXgk&libraries=places" , "https://polyfill.io/v3/polyfill.min.js?features=default"];
  
-        $data_header['title'] = "Mattes";
+        $data_header['title'] = "Home BO";
         $data_header['description'] = "Pagina principal que ve el BO";
         echo view('header' , $data_header);
         //echo view('left_panel',$data_left);

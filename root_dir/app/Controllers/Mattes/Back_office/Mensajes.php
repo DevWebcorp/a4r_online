@@ -35,7 +35,7 @@ class Mensajes extends BaseController
         //Vars
         //$data['id_usuario'] = $id;
         $data['group'] = $id_group;
-        $data_header['title'] = "Mattes";
+        $data_header['title'] = "Mensajes BO";
         $data_header['description'] = "Detalle del alumno que ve el BO";
         echo view('header' , $data_header);
         //echo view('left_panel',$data_left);

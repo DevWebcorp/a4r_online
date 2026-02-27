@@ -51,13 +51,13 @@ class Datos_Propiedad extends BaseController
                     "Mattes/Principal.css"
                 ];
                 
-                $data_header['title'] = "Mattes";
+                $data_header['title'] = "Detalle propiedad BO";
                 $data_header['description'] = "Detalle de propiedad que ve el BO";
                 echo view('header', $data_header);
                 echo view('Mattes/Back_office_view/Menu_BO');
                 echo view('Mattes/Back_office_view/Datos_propiedad',$data);
                 echo view('fotter_panel', $data_fotter);
-                echo view('Mattes/Footer');
+                //echo view('Mattes/Footer');
             } else {
                 return redirect()->to(base_url());
             }

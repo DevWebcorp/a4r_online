@@ -30,7 +30,7 @@ class Propiedades extends BaseController
       ];
 
  
-        $data_header['title'] = "Mattes";
+        $data_header['title'] = "Propiedades";
         $data_header['description'] = "Tabla de propiedades a mostrar al BO";
         echo view('header' , $data_header);
         echo view('Mattes/Back_office_view/Menu_BO');

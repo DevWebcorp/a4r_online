@@ -59,6 +59,20 @@
         #autoComplete {
             color: black !important;
         }
+        .form-control {
+            border: 2px solid #000 !important;
+            border-radius: 0px !important;
+            height: calc(1.5em + .75rem + 2px) !important;
+        }
+        #btn-buscar{
+            border-radius: 0px !important;
+            height: calc(1.5em + .75rem + 2px) !important;
+        }
+        .boton-precio{
+            border-radius: 0px !important;
+            border: 2px solid #000;
+            border-right: 2px solid transparent;
+        }
     }
 </style>
 
@@ -254,7 +268,7 @@
                                             </div>
                                         </div>
                                         <div class="text-right pt-2 pt-lg-0 mt-lg-50 mb-1 mt-lg-5">
-                                            <button id="btn-buscar" type="submit" class="col-12 col-md-auto btn-mattes px-4 py-1"><i class="fa fa-search mr-1" aria-hidden="true"></i>BUSCAR</button>
+                                            <button id="btn-buscar" type="submit" class="col-12 col-md-auto btn-mattes px-4 py-1"><i class="fa fa-search mr-1 d-none d-xl-inline-block" aria-hidden="true"></i>BUSCAR</button>
                                         </div>
                                     </div>
                                 </form>

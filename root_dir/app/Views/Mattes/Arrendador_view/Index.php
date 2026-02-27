@@ -33,6 +33,7 @@
         left: 0;
         right: 0;
     }
+    
 </style>
 
 <!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">

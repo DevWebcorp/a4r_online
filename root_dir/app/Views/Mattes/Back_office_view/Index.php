@@ -4,6 +4,7 @@
 <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
 <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
 
+
 <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 99999999;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">

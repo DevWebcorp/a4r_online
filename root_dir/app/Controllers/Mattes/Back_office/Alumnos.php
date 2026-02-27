@@ -29,7 +29,7 @@ class Alumnos extends BaseController
         ];
       
  
-        $data_header['title'] = "Mattes";
+        $data_header['title'] = "Alumnos BO";
         $data_header['description'] = "Tabla de alumnos o arrendatarios que ve el BO";
 
       

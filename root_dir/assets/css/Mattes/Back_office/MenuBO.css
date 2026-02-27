@@ -12,11 +12,11 @@
 
 .dropdown-menu {
     top: 40px !important;
-    left: auto !important;
     right: 0px;
-    background-color: #b7e9f3 !important;
-    color: white !important;
+    left: auto !important;
     width: 280px;
+    color: white !important;
+    background-color: #e2b811!important;
 }
 
 .dropdown-item {
@@ -25,8 +25,8 @@
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: #0088f7 !important;
     color: white !important;
+    background-color: #000 !important;
 }
 
 .dropdown-item:focus>img,
@@ -35,13 +35,13 @@
 }
 
 .notificacion {
-    background-color: red !important;
-    color: #fff !important;
     position: absolute !important;
     top: 0 !important;
     right: 114px !important;
-    border-radius: 10px !important;
     padding: 0 7px !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+    background-color: red !important;
     font-family: 'Gothicb' !important;
     font-size: 14px !important;
 }
@@ -54,38 +54,38 @@
 }
 
 .switch input {
-    opacity: 0;
     width: 0;
     height: 0;
+    opacity: 0;
 }
 
 .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     background-color: #cccccc;
+    cursor: pointer;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 .slider:before {
     position: absolute;
-    font-family: 'FontAwesome';
-    content: "\f00d";
-    height: 26px;
-    width: 26px;
-    left: 4px;
     bottom: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    color: #2132f9;
     background-color: white;
+    content: "\f00d";
     -webkit-transition: .4s;
     transition: .4s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #2132f9;
+    font-family: 'FontAwesome';
 }
 
 input:checked+.slider {
@@ -188,18 +188,18 @@ input:checked+.slider:before {
 }
 
 .boton-menu:before {
+    color: #000;
     content: '\f142 ';
     font-family: 'FontAwesome';
-    color: #0088F7;
     font-size: 3rem;
 }
 
 .icono-cerrar:before {
-    content: '\f00d';
     position: absolute;
-    font-size: 3rem;
     top: 19px;
     right: 23px;
+    content: '\f00d';
+    font-size: 3rem;
 }
 
 .navbar-light .navbar-toggler {
@@ -212,13 +212,13 @@ input:checked+.slider:before {
     outline: none !important;
 }
 
- .navbar-light .navbar-nav .nav-link {   
+ .navbar-light .navbar-nav .nav-link {
+    border-bottom: 2px solid var(--mattes);
+    color: rgba(0,0,0,1) !important;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;   
     /*text-align: center;*/
     text-transform: uppercase;
-    border-bottom: 2px solid var(--mattes);
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-    color: rgba(0,0,0,1) !important;
 }
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
     color: white !important;
@@ -227,12 +227,12 @@ input:checked+.slider:before {
 @media(min-width:992px){
     .navbar-light .navbar-nav .nav-link {   
         border-bottom: 2px solid transparent;
-        text-transform: none;
         background-color: transparent !important;
+        text-transform: none;
     }
     .navbar-light:hover .navbar-nav:hover .nav-link:hover{
-        color: var(--mattes) !important;
         border-bottom: 2px solid var(--mattes);
+        color: var(--mattes) !important;
     }
 }
 
@@ -255,9 +255,9 @@ input:checked+.slider:before {
 
 @media(min-width:992px){
     .navbar-light .navbar-nav .nav-link {
-        background-color: transparent;
         border-radius: none;
         color: var(--mattes2);
+        background-color: transparent;
     }
     .height-reportes{
         height: 455px;
@@ -287,11 +287,11 @@ input:checked+.slider:before {
 }
 
 .backoffice .tablinks {
-    background-color: white !important;
+    border: 1px solid #000;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
     color: var(--mattes);
-    border: 1px solid #0088F7;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    background-color: white !important;
 }
 
 .tab {
@@ -304,11 +304,11 @@ input:checked+.slider:before {
         border-bottom: 1px solid var(--mattes);
     }
     .backoffice .tablinks {
-        background-color: white !important;
-        color: var(--mattes);
         border-bottom: 1px solid transparent;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        color: var(--mattes);
+        background-color: white !important;
     }
 }
 
@@ -318,6 +318,10 @@ input:checked+.slider:before {
 
 .backoffice .tablinks.active,
 .backoffice .tablinks:hover {
-    background-color: #0088F7 !important;
     color: white;
+    background-color: #000 !important;
+}
+
+.bg-menu {
+  background-color: #025272 !important;
 }

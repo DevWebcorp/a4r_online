@@ -1,48 +1,48 @@
 #btnRuser i {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 27px;
     margin-top: 0;
     margin-left: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 27px;
 }
 
 #btnLeftMenu i {
+    margin-top: 0;
     color: rgba(255, 255, 255, 0.7);
     font-size: 27px;
-    margin-top: 0;
 }
 
 .navicon-left {
+    position: static;
+    z-index: 100;
+    justify-content: left;
+    box-sizing: inherit;
     background-color: black !important;
     text-align: left;
-    justify-content: left;
-    z-index: 100;
-    position: static;
-    box-sizing: inherit;
 }
 
 .navicon-right {
-    background-color: black !important;
+    position: static;
+    z-index: 100;
     align-items: flex-end;
     justify-content: right;
-    z-index: 100;
-    position: static;
+    background-color: black !important;
 }
 
 .navicon-middle {
-    background-color: black !important;
+    position: static;
+    z-index: 100;
     align-items: flex-end;
     justify-content: center;
-    z-index: 100;
-    position: static;
+    background-color: black !important;
 }
 
 .logo-mattes {
-    max-width: 85px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3px;
     justify-content: center;
+    max-width: 85px;
+    margin-top: 3px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -55,38 +55,38 @@
 }
 
 .switch input {
-    opacity: 0;
     width: 0;
     height: 0;
+    opacity: 0;
 }
 
 .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     background-color: #cccccc;
+    cursor: pointer;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 .slider:before {
     position: absolute;
-    font-family: 'FontAwesome';
-    content: "\f00d";
-    height: 26px;
-    width: 26px;
-    left: 4px;
     bottom: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    color: #2132f9;
     background-color: white;
+    content: "\f00d";
     -webkit-transition: .4s;
     transition: .4s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #2132f9;
+    font-family: 'FontAwesome';
 }
 
 input:checked+.slider {
@@ -129,32 +129,32 @@ input:checked+.slider:before {
 
 .choose-file-button {
     flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(33, 140, 230, 0.6);
-    border-radius: 3px;
     padding: 8px 15px;
     margin-right: 10px;
-    font-size: 12px;
+    border: 1px solid rgba(33, 140, 230, 0.6);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.04);
     text-transform: uppercase;
+    font-size: 12px;
 }
 
 .file-message {
+    overflow: hidden;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: small;
     font-weight: 300;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .file-input {
     position: absolute;
-    left: 0;
     top: 0;
-    height: 100%;
+    left: 0;
     width: 100%;
-    cursor: pointer;
+    height: 100%;
     opacity: 0;
+    cursor: pointer;
 }
 
 .mt-100 {
@@ -171,17 +171,17 @@ input:checked+.slider:before {
 
 .tab {
     width: 100%;
-    background-color: #fff;
     border: transparent;
+    background-color: #fff;
 }
 
 .tab button {
-    background-color: inherit;
     float: left;
+    padding: 10px 30px;
     border-radius: 8px;
     outline: none;
+    background-color: inherit;
     cursor: pointer;
-    padding: 10px 30px;
     transition: 0.3s;   
 }
 
@@ -190,9 +190,9 @@ input:checked+.slider:before {
 }
 
 .datos-propietario .tablinks {
-    background-color: white !important;
-    color: black;
     border: 1px solid #ddd;
+    color: black;
+    background-color: white !important;
 }
 .datos-propietario .tablinks:nth-child(6){
     border-bottom-right-radius: 8px;
@@ -201,16 +201,16 @@ input:checked+.slider:before {
 
 .datos-propietario .tablinks.active,
 .datos-propietario .tablinks:hover {
-    background-color: #0088F7 !important;
-    color: white;
     border-radius: 8px !important;
+    color: white;
+    background-color: #0088F7 !important;
 }
 
 @media(min-width:992px) {
     .datos-propietario .tablinks {
-        background-color: #ddd !important;
-        color: black;
         border-right: 1px solid #aaa;
+        color: black;
+        background-color: #ddd !important;
     }
     .datos-propietario .tablinks:nth-child(6){
         border-top-right-radius: 8px;
@@ -254,12 +254,12 @@ input:checked+.slider:before {
     .notificaciones::before,
     .d-propiedad::after,
     .d-propiedad::before {
-        content: ' ';
         position: absolute;
+        top: 0.6em;
         width: 120px;
         height: 2px;
         background-color: currentcolor;
-        top: 0.6em;
+        content: ' ';
     }
     .datos-personales::before {
         left: -20px;
@@ -426,25 +426,25 @@ input:checked+.slider:before {
 }
 
 .form__group {
-    margin: auto;
     position: relative;
+    margin: auto;
 }
 
 .form__input {
     display: block;
     width: 100%;
-    background: none;
-    color: #000;
-    font-size: 18px;
     padding: 8px 12px 8px 5px;
     border: none;
     border: 1px solid #ccc;
+    color: #000;
+    background: none;
+    font-size: 18px;
 }
 
 .form__input:focus {
+    padding-bottom: 8px;
     outline: none;
     color: #000;
-    padding-bottom: 8px;
 }
 
 input {
@@ -456,44 +456,44 @@ input {
     position: absolute;
     top: -23px;
     left: 16px;
-    font-size: 18px;
-    color: #212529;
     width: 95%;
+    color: #212529;
+    font-size: 18px;
 }
 
 .form__label {
     position: absolute;
-    color: #212529;
-    font-size: 18px;
-    left: 24px;
     top: 6px;
+    left: 24px;
+    color: #212529;
     transition: 0.5s ease all;
+    font-size: 18px;
     pointer-events: none;
 }
-
+/* 
 input[type=text]:valid:not(:focus):not(:placeholder-shown),
 input[type=tel]:valid:not(:focus):not(:placeholder-shown),
 input[type=email]:valid:not(:focus):not(:placeholder-shown),
 input[type=date]:valid:not(:focus):not(:placeholder-shown),
 input[type=number]:valid:not(:focus):not(:placeholder-shown) {
+    padding-right: calc(1.5em + .75rem) !important;
+    border: 1px solid #28a745;
     background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right calc(.375em + .1875rem) center;
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
-    border: 1px solid #28a745;
-    padding-right: calc(1.5em + .75rem) !important;
 }
 
 input[type=text]:invalid:not(:focus):not(:placeholder-shown),
 input[type=tel]:invalid:not(:focus):not(:placeholder-shown),
 input[type=email]:invalid:not(:focus):not(:placeholder-shown)
 input[type=number]:invalid:not(:focus):not(:placeholder-shown) {
+    padding-right: calc(1.5em + .75rem) !important;
+    border: 1px solid #dc3545;
     background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-position: right calc(.375em + .1875rem) center;
     background-size: calc(.75em + .375rem) calc(.75em + .375rem);
-    border: 1px solid #dc3545;
-    padding-right: calc(1.5em + .75rem) !important;
 }
 
 input[type=text]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
@@ -502,32 +502,32 @@ input[type=email]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
 input[type=date]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
 input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
     max-height: 200px;
-    /* padding: 0 20px 20px 50px; */
+   
 }
 
 .requirements {
-    color: #999;
-    max-height: 0;
-    transition: 0.28s;
     overflow: hidden;
+    max-height: 0;
+    color: #999;
     color: red;
+    transition: 0.28s;
     font-family: "Gothici";
 }
-
+ */
 .badge {
 	font-family: "Gothicb";
 }
 
 .stepper {
-	margin: 0;
-	padding: 0;
-	border: 1px solid #0088F7;
-	display: inline-flex;
-	flex-direction: row;
 	position: relative;
-	list-style: none;
+	display: inline-flex;
 	overflow: hidden;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #0088F7;
     border-radius: 10px;
+	list-style: none;
 }
 
 .stepper__wrapper {
@@ -545,45 +545,45 @@ input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .stepper__link {
-	background: white;
-	color: black;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
+	padding: 10px 0 10px 40px;
+	color: black;
+	background: white;
 	text-align: center;
 	text-decoration: none;
-	padding: 10px 0 10px 40px;
-	position: relative;
 }
 
 .stepper__link::after {
-	content: " ";
-	display: block;
-	width: 0;
-	height: 0;
 	position: absolute;
-	top: 42%;
-    margin-top: -27px;
-    left: 100%;
-    width: 23px;
-    display: block;
-    width: 20px;
-    height: 65px;
-    background-color: #025272;
-    border-radius: 0% 80% 80% 0% ;
     z-index: 2;
+	top: 42%;
+    left: 100%;
+	display: block;
+    display: block;
+	width: 0;
+    width: 23px;
+    width: 20px;
+	height: 0;
+    height: 65px;
+    margin-top: -27px;
+    border-radius: 0% 80% 80% 0% ;
+    background-color: #025272;
+	content: " ";
 }
 
 .stepper {
-	margin: 0;
-	padding: 0;
-	border: 1px solid #0088F7;
-	display: inline-flex;
-	flex-direction: row;
 	position: relative;
-	list-style: none;
+	display: inline-flex;
 	overflow: hidden;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #0088F7;
+	list-style: none;
 }
 
 .stepper__wrapper {
@@ -601,21 +601,21 @@ input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .stepper__link {
-	background: white;
-	color: black;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	height: 100%;
+	padding: 10px 0 10px 40px;
+	color: black;
+	background: white;
 	text-align: center;
 	text-decoration: none;
-	padding: 10px 0 10px 40px;
-	position: relative;
 }
 
 .stepper__link:hover {
-	background-color: white;
 	color: #000;
+	background-color: white;
 }
 
 .stepper__link:hover::after {
@@ -623,8 +623,8 @@ input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .stepper__link--active, .stepper__link--active:hover {
-	background-color: #025272;
 	color: #fff;
+	background-color: #025272;
 }
 
 .stepper__link--active::after, .stepper__link--active:hover::after {
@@ -632,8 +632,8 @@ input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .stepper__link--done {
-	background-color: white;
 	color: #000;
+	background-color: white;
 }
 
 .stepper__link--done::after {
@@ -645,13 +645,13 @@ input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .stepper__wrapper a:hover{
-    text-decoration: none;
     cursor: default;
+    text-decoration: none;
 }
 
 .stepper__link--disabled, .stepper__link--disabled:hover {
-	background-color: #ccc;
 	color: #333;
+	background-color: #ccc;
 }
 
 .stepper__link--disabled::after, .stepper__link--disabled:hover::after {
@@ -670,12 +670,12 @@ input[type=number]:invalid:not(:focus):not(:placeholder-shown)~.requirements {
     }
     .detalle-prop::after,
     .detalle-prop::before {
-        content: ' ';
         position: absolute;
+        top:1.5rem;
         width: 80px;
         height: 3px;
         background-color: currentcolor;
-        top:1.5rem;
+        content: ' ';
     }
     .detalle-prop::before {
         left: 2px;

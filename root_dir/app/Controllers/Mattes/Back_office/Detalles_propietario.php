@@ -38,7 +38,7 @@ class Detalles_propietario extends BaseController
         //Vars
         $data['group'] = $id_group;
         $data['id_usuario'] = $id;
-        $data_header['title'] = "Mattes";
+        $data_header['title'] = "Detalles propietario BO";
         $data_header['description'] = "Detalle del alumno que ve el BO";
         echo view('header' , $data_header);
         //echo view('left_panel',$data_left);

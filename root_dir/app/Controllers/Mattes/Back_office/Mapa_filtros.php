@@ -30,7 +30,7 @@ class Mapa_filtros extends BaseController
     ];
       
  
-    $data_header['title'] = "Mattes";
+    $data_header['title'] = "Filtros BO";
     $data_header['description'] = "Página principal del sitio";
 
     $model_propiedad = model('App\Models\Mattes\Arrendador_models\Detalle_propiedad');

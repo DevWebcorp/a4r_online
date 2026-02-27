@@ -32,7 +32,7 @@ class Subir_propietario extends BaseController {
         /* $data_fotter['external_scripts'] = [ "https://polyfill.io/v3/polyfill.min.js?features=default", 'https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.js'
         ]; */
  
-        $data_header['title'] = "Mattes";
+        $data_header['title'] = "Propietarios BO";
         $data_header['description'] = "Tabla de propietarios que hay";
         echo view('header' , $data_header);
         echo view('Mattes/Back_office_view/Menu_BO');

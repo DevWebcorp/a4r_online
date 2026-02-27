@@ -4,21 +4,21 @@
 
 .dropdown-menu {
     top: 40px !important;
-    left: auto !important;
     right: 0px;
-    background-color: #e1bd85 !important;
-    color: white !important;    
+    left: auto !important;
+    color: white !important;
+    background-color: #e1bd85 !important;    
 }
 
 .dropdown-item {
-    border-bottom: 1px solid #fff !important;
     z-index: 9999;
+    border-bottom: 1px solid #fff !important;
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: #025272 !important;
     color: white !important;
+    background-color: #025272 !important;
 }
 
 .dropdown-item:focus>img,
@@ -27,9 +27,9 @@
 }
 
 .pl-6 {
-    padding-left: 5.5rem !important;
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
+    padding-left: 5.5rem !important;
 }
 
 .pr-6 {
@@ -44,28 +44,28 @@
 
 
 .boton-menu:before {
+    color: #0088F7;
     content: '\f142 ';
     font-family: 'FontAwesome';
-    color: #0088F7;
     font-size: 3rem;
 }
 
 .icono-cerrar:before {
-    content: '\f00d';
     position: absolute;
-    font-size: 3rem;
     top: 17px;
     right: 28px;
+    content: '\f00d';
+    font-size: 3rem;
 }
 
 .notificacion {
-    background-color: red;
-    color: #fff;
     position: absolute;
     top: 0;
     right: 140px;
-    border-radius: 10px;
     padding: 0 7px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: red;
     font-family: 'Gothicb';
     font-size: 14px;
 }
@@ -91,13 +91,13 @@
 .navbar-light .navbar-toggler {
     border-color: transparent !important;
 }
-.navbar-light .navbar-nav .nav-link {   
+.navbar-light .navbar-nav .nav-link {
+    border-bottom: 2px solid var(--mattes);
+    color: rgba(0,0,0,1) !important;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;   
     text-align: center;
     text-transform: uppercase;
-    border-bottom: 2px solid var(--mattes);
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-    color: rgba(0,0,0,1) !important;
 }
 
 .navbar-light:hover .navbar-nav:hover .nav-link:hover {
@@ -110,13 +110,13 @@
         text-transform: none;
     }
     .navbar-light:hover .navbar-nav:hover .nav-link:hover{
-        color: var(--mattes) !important;
         border-bottom: 2px solid var(--mattes);
+        color: var(--mattes) !important;
     }
     #user > .nav-link{
-        background-color: transparent !important;
-        color: white !important;
         border-bottom: 2px solid transparent !important;
+        color: white !important;
+        background-color: transparent !important;
     }
 }
 
@@ -133,9 +133,9 @@
 @media(min-width:992px){
     .navbar-light .navbar-nav .nav-link.active,
     .navbar-light .navbar-nav .nav-link:hover {
-        background-color: transparent;
         border-radius: none;
         color: var(--mattes2);
+        background-color: transparent;
     }
     .nav-link:focus > img, .nav-link:hover > img {
         filter: invert(0) !important;

@@ -4,23 +4,23 @@
 }
 
 #searchResult {
-    list-style: none !important;
-    padding: 0px !important;
-    width: 250px !important;
     position: absolute !important;
-    margin-top: 10px !important;
-    min-width: 100%;
     z-index: 9999;
-    overflow-y: scroll; 
-    transition: all .5s ease;
-    height: auto;
+    overflow-y: scroll;
     overflow-y: auto;
+    width: 250px !important;
+    min-width: 100%;
+    height: auto;
+    padding: 0px !important;
+    margin-top: 10px !important;
     border-radius: 10px;
+    list-style: none !important; 
+    transition: all .5s ease;
 }
 
 #searchResult li {
-    background-color: var(--blanco) !important;
     color: var(--mattes);
+    background-color: var(--blanco) !important;
     font-size: 1.1rem !important;
 }
 
@@ -30,13 +30,13 @@
 }
 
 #searchResult li:last-child {
-    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 #searchResult li:hover {
-    cursor: pointer !important;
-    background-color: var(--mattes) !important;
     color: var(--blanco) !important;
+    background-color: var(--mattes) !important;
+    cursor: pointer !important;
 }
 
 .mg-t-200 {
@@ -49,30 +49,30 @@
 
 .tab button.active,
 .tab button:hover {
-    background-color: var(--mattes) !important;
     color: var(--blanco) !important;
+    background-color: #000 !important;
 }
 
 .tab button {
-    background-color: transparent;
-    color: var(--mattes);
     float: left;
-    border-top: 1px solid var(--mattes) ;
-    border-right: 1px solid var(--mattes) ;
-    border-left: 1px solid var(--mattes) ;
-    outline: none;
+    padding: 10px 16px;
+    border-top: 1px solid #000 ;
+    border-right: 1px solid #000 ;
+    border-left: 1px solid #000 ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    outline: none;
+    color: #000;
+    background-color: transparent;
     cursor: pointer;
-    padding: 10px 16px;
     transition: 0.3s;
 }
 
 .tab {
     width: 100%;
-    background-color: #fff;
     border-color: transparent;
     border-bottom: 1px solid var(--mattes);
+    background-color: #fff;
 }
 
 .file-drop-area {
@@ -89,32 +89,32 @@
 
 .choose-file-button {
     flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(33, 140, 230, 0.6);
-    border-radius: 3px;
     padding: 8px 15px;
     margin-right: 10px;
-    font-size: 12px;
+    border: 1px solid rgba(33, 140, 230, 0.6);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.04);
     text-transform: uppercase;
+    font-size: 12px;
 }
 
 .file-message {
+    overflow: hidden;
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-size: small;
     font-weight: 300;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .file-input {
     position: absolute;
-    left: 0;
     top: 0;
-    height: 100%;
+    left: 0;
     width: 100%;
-    cursor: pointer;
+    height: 100%;
     opacity: 0;
+    cursor: pointer;
 }
 
 .switch {
@@ -125,38 +125,38 @@
 }
 
 .switch input {
-    opacity: 0;
     width: 0;
     height: 0;
+    opacity: 0;
 }
 
 .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     background-color: #cccccc;
+    cursor: pointer;
     -webkit-transition: .4s;
     transition: .4s;
 }
 
 .slider:before {
     position: absolute;
-    font-family: 'FontAwesome';
-    content: "\f00d";
-    height: 26px;
-    width: 26px;
-    left: 4px;
     bottom: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    color: #2132f9;
     background-color: white;
+    content: "\f00d";
     -webkit-transition: .4s;
     transition: .4s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #2132f9;
+    font-family: 'FontAwesome';
 }
 
 input:checked+.slider {
@@ -186,9 +186,9 @@ input:checked+.slider:before {
 }
 
 .registrate {
-    color: var(--mattes);
     position: relative;
     display: inline-block;
+    color: var(--mattes);
     font-size: 3.5rem;
 }
 
@@ -196,16 +196,16 @@ input:checked+.slider:before {
     width: 290px;
     height: 340px;
     margin-bottom: 5px;
-    background-color: #fff;
     border-radius: 10px;
+    background-color: #fff;
     box-shadow: 0px 0px 4px 1px #000;
 }
 
 .renta-propiedad {
+    width: 290px;
+    height: 227px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    height: 227px;
-    width: 290px;
 }
 
 .info-renta {
@@ -213,13 +213,13 @@ input:checked+.slider:before {
 }
 
 .titulo-propiedad {
-    font-family: "Gothicb";
     color: var(--mattes);
+    font-family: "Gothicb";
 }
 
 .disponibilidad {
-    font-family: "Gothicb";
     color: var(--rojo);
+    font-family: "Gothicb";
 }
 
 .precio {
@@ -227,14 +227,14 @@ input:checked+.slider:before {
 }
 
 .mercadopago-button {
-    background: var(--mattes) !important;
-    font-size: 14px !important;
-    border-radius: 20px !important;
-    margin-left: 5px;
     padding-right: 3rem !important;
     padding-left: 3rem !important;
+    margin-left: 5px;
     border: 1px solid var(--mattes);
+    border-radius: 20px !important;
+    background: var(--mattes) !important;
     transition: all .5s ease;
+    font-size: 14px !important;
 }
 
 
@@ -247,20 +247,20 @@ input:checked+.slider:before {
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-    color: var(--blanco);
-    background-color: var(--mattes);
     border-color: var(--mattes);
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
+    color: var(--blanco);
+    background-color: var(--mattes);
 }
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
-    color: var(--blanco);
-    background-color: var(--mattes);
     border-color: var(--mattes);
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
+    color: var(--blanco);
+    background-color: var(--mattes);
 }
 
 .nav-tabs .nav-link {
@@ -274,32 +274,32 @@ input:checked+.slider:before {
 }
 
 .chat-box {
-    height: 350px;
     overflow-y: scroll;
+    height: 350px;
     margin-top: 40px;
 }
   
 .enviado {
-    background-color: var(--mattes2);
-    border-radius: 20px;
-    border: none !important;
-    color: white;
     padding: 10px;
+    border: none !important;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--mattes2);
 }
   
 .recibido {
-    background-color: lightgray;
-    border-radius: 20px;
-    border: none !important;
     padding: 10px;
+    border: none !important;
+    border-radius: 20px;
+    background-color: lightgray;
 }
 
 .renta-propiedad-titulo{
+    position: relative;
     color: var(--mattes);
+    text-align: center;
     font-family: 'Gothicb';
     text-decoration: underline;
-    position: relative;
-    text-align: center;
 }
 @media(min-width: 576px) {
     .renta-propiedad-titulo {
@@ -308,12 +308,12 @@ input:checked+.slider:before {
 
     .renta-propiedad-titulo::after,
     .renta-propiedad-titulo::before {
-        content: ' ';
         position: absolute;
+        top: 0.6em;
         width: 40px;
         height: 3px;
         background-color: currentcolor;
-        top: 0.6em;
+        content: ' ';
     }  
     .renta-propiedad-titulo::before {
         left: 37px;

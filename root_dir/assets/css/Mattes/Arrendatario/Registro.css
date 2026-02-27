@@ -1,7 +1,7 @@
 /*Lineas a lado de la palabra registrate*/
 .registrate {
-    text-decoration: underline;
     color: var(--mattes);
+    text-decoration: underline;
 }
 
 @media(min-width:576px){
@@ -10,12 +10,12 @@
     }
     .registrate::after,
     .registrate::before {
-        content: ' ';
         position: absolute;
+        top: 0.6em;
         width: 120px;
         height: 3px;
         background-color: currentcolor;
-        top: 0.6em;
+        content: ' ';
     }
     
     .registrate::before {
@@ -35,17 +35,17 @@
 }
 
 #searchResult {
-    list-style: none !important;
-    padding: 0px !important;
-    width: 250px !important;
     position: absolute !important;
-    margin-top: 10px !important;
-    min-width: 100%;
     z-index: 9999;
     overflow-y: scroll;
-    transition: all .5s ease;
     
-    overflow-y: auto;    
+    overflow-y: auto;
+    width: 250px !important;
+    min-width: 100%;
+    padding: 0px !important;
+    margin-top: 10px !important;
+    list-style: none !important;
+    transition: all .5s ease;    
 }
 
 #searchResult:hover {
@@ -54,15 +54,15 @@
 }
 
 #searchResult li {
-    background-color: var(--mattes) !important;
-    color: var(--blanco);
     padding: 4px !important;
     margin-bottom: 1px !important;
+    color: var(--blanco);
+    background-color: var(--mattes) !important;
 }
 
 #searchResult li:nth-child(even) {
-    background-color: var(--blanco) !important;
     color: var(--mattes) !important;
+    background-color: var(--blanco) !important;
 }
 
 #searchResult li:hover {
@@ -73,8 +73,8 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button {
-  background: none;
   border: 0;
+  background: none;
 }
 
 .fa-cc-mastercard,
@@ -102,11 +102,11 @@ button {
 }
 
 .propiedad{
-    color: #2b60f1;
-    text-decoration: underline;
-    font-family: "Gothicb";
 	visibility: visible;
+    color: #2b60f1;
     cursor: pointer;
+    font-family: "Gothicb";
+    text-decoration: underline;
 }
 
 .btn-res {
@@ -131,35 +131,35 @@ th:last-child {
 }
 
 table.dataTable.no-footer {
-    border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 /*Estilos animados a los inputs*/
 .form__group {
-    margin: auto;
     position: relative;
+    margin: auto;
 }
 
 .form__input {
     display: block;
     width: 100%;
-    background: none;
-    color: #000;
-    font-size: 18px;
     padding: 8px 12px 8px 5px;
     border: none;
     border: 1px solid #ccc;
+    color: #000;
+    background: none;
+    font-size: 18px;
 }
 
 .form__input:focus {
+    padding-bottom: 8px;
     outline: none;
     color: #000;
-    padding-bottom: 8px;
 }
 
 input {
-    caret-color: var(--mattes);
+    caret-color: #000;
 }
 
 .form__input:focus+.form__label,
@@ -167,18 +167,18 @@ input {
     position: absolute;
     top: -23px;
     left: 16px;
-    font-size: 18px;
-    color: #212529;
     width: 95%;
+    color: #212529;
+    font-size: 18px;
 }
 
 .form__label {
     position: absolute;
-    color: #212529;
-    font-size: 18px;
-    left: 24px;
     top: 6px;
+    left: 24px;
+    color: #212529;
     transition: 0.5s ease all;
+    font-size: 18px;
     pointer-events: none;
 }
 
@@ -228,29 +228,29 @@ textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 } */
 
 .stepper {
-	margin: 0;
-	padding: 0;
-	border: 1px solid #025272;
-	display: inline-flex;
-	flex-direction: column;
 	position: relative;
-	list-style: none;
+	display: inline-flex;
 	overflow: hidden;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	border: 1px solid #025272;
     border-radius: 10px;
+	list-style: none;
     
 }
 
 @media(min-width:576px){
     .stepper {
-        margin: 0;
-        padding: 0;
-        border: 1px solid #025272;
-        display: inline-flex;
-        flex-direction: row;
         position: relative;
-        list-style: none;
+        display: inline-flex;
         overflow: hidden;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        border: 1px solid #025272;
         background-color: #ccc;
+        list-style: none;
     } 
 }
 .stepper__wrapper {
@@ -272,47 +272,47 @@ textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .stepper__link {
-	background: #ccc;
-	color: black;
+	position: relative;
 	display: flex;
     justify-content: center;
 	width: 100%;
 	height: 100%;
-	text-align: center;
-	text-decoration: none;
-	position: relative;
     border-right: 1px solid #025272;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+	color: black;
+	background: #ccc;
+	text-align: center;
+	text-decoration: none;
     
 }
 
 @media(min-width:576px){
-    .stepper__link {
-        padding: 2px 10px 2px 10px;        
+    .stepper__link {        
 	    flex-direction: column;
+        padding: 2px 10px 2px 10px;
     }
 }
  .stepper__link::after {
-	content: " ";
-	display: block;
 	position: absolute;
+    z-index: 2;
 	top: 42%;
-    margin-top: -27px;
     left: 100%;
-    width: 23px;
+	display: block;
     display: block;
+    width: 23px;
     width: 20px;
     height: 65px;
+    margin-top: -27px;
     border-color: #025272;
     border-radius: 0% 80% 80% 0% ;
-    z-index: 2;
+	content: " ";
 } 
 
 
 .stepper__link--active, .stepper__link--active:hover {
-	background-color: #025272;
 	color: #fff;
+	background-color: #025272;
 }
 
 .stepper__link--active::after, .stepper__link--active:hover::after {
@@ -320,8 +320,8 @@ textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .stepper__link--disabled, .stepper__link--disabled:hover {
-	background-color: #ccc;
 	color: #333;
+	background-color: #ccc;
 }
 
 .stepper__link--disabled::after, .stepper__link--disabled:hover::after {
@@ -344,22 +344,23 @@ textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
 }
 
 .tablinks.faltante{
-    background-color: var(--gris) !important;
-    color: white;
-    border-radius: 8px !important;
     border: 1px solid black;
+    border-radius: 8px !important;
+    color: white;
+    background-color: var(--gris) !important;
 }
 
 .tablinks.visited{
-    background-color: var(--verde) !important;
-    color: white;
+    border: 1px solid #000;
     border-radius: 8px !important;
-    border: 1px solid black;
+    border-radius: 0px !important;
+    color: #000;
+    background-color: #fff !important;
 }
 
 .tablinks.active {
-    background-color: #0088F7 !important;
-    color: white;
-    border-radius: 8px !important;
     border: 1px solid black;
+    border-radius: 8px !important;
+    color: white;
+    background-color: #000 !important;
 }

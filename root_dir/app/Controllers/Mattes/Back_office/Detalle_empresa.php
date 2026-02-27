@@ -38,7 +38,7 @@ class Detalle_empresa extends BaseController
         //Vars
         $data['id_usuario'] = $id;
         $data['group'] = $id_group;
-        $data_header['title'] = "Datos empresa";
+        $data_header['title'] = "Detalle empresa BO";
         $data_header['description'] = "Detalle del alumno que ve el BO";
         echo view('header' , $data_header);
         //echo view('left_panel',$data_left);

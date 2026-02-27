@@ -1,6 +1,22 @@
+<style>
+    .bg-menu {
+        background-color: #025272 !important;
+        color: white;
+    }
+     .navbar-light .navbar-nav .nav-link {
+        color: white !important;
+    }
+    .dropdown-menu {
+        background-color: #e2b811 !important;
+    }
+    .dropdown-item:hover {
+        background-color: #025272 !important;
+        color: white !important;
+    }
+</style>
 <section class="menu-arrendatario mb-5">
     <header class="fixed-top mb-5">
-        <nav class="navbar navbar-light bg-white navbar-expand-lg head-section" id="menu-navegacion">
+        <nav class="navbar bg-menu navbar-expand-lg head-section" id="menu-navegacion">
             <div class="container-fluid">
                 <!-- Botón del menú responsive -->
                 <button type="button" class="navbar-toggler d-lg-none order-1" data-toggle="collapse" data-target="#menu-principal" aria-controls="menu-principal" arial-expanded=" false" arial-label="Desplegar menu de navegacion">
@@ -35,13 +51,9 @@
                                 Rentadas
                             </a></li>
 
-                        <a style="cursor: pointer;" onclick="history.back()" class="d-none d-lg-block">
-                            <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/Mattes_Atras.png" alt="Atras" class="img-fluid wd-50 rounded-circle ml-2">
-                        </a>
+                        
 
-                        <li class="nav-item"><a href="<?= base_url() ?>/about" class="mr-3 nav-link py-3">About</a></li>
-                        <li class="nav-item order-lg- px-3"><a href="<?= base_url() ?>/Inicio" class="mr-3 nav-link py-3">Inicio</a></li>
-                        <li class="nav-item"><a href="<?= base_url() ?>/Mattes/contacto" class="nav-link py-3">Contacto</a></li>
+                        
                         <!-- <li class="nav-item"><a class="d-lg-none nav-link" href="">
                                 <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/Mattes_Menu_Ayuda.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Icono mensajes">
                                 Ayuda
@@ -58,30 +70,17 @@
                     </a>
 
                     <ul class="navbar-nav ml-lg-auto">
-                        <li class="nav-item inicio-sesion px-3 pt-2 d-none d-lg-inline">
-                            <a href="<?= base_url() ?>/favoritos" class="nav-link" style="border-bottom: 2px solid transparent;">
-                                <i class="fa fa-heart" aria-hidden="true" style="font-size: 2.3em;"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item soy-propietario pt-1 d-none d-lg-inline">
-                            <a class="nav-link noti" style="border-bottom: 2px solid transparent;">
-                                <div class="pos-relative" style="cursor: pointer;">
-                                    <img src="<?= base_url() ?>/assets/img/Iconos/Campanita.png" class="img-fluid wd-50 rounded-circle ml-2 campana" alt="notificaciones">
-                                    <p class="notificacion-general"></p>
-                                </div>
-                            </a>
-                        </li>
-
+                        
                         <?php
                         if ($verificado != null) {
                             if ($verificado['verify'] == 0) {
-                                echo ('<li class="nav-item inicio-sesion px-3 pb-2 d-none d-lg-inline">
+                                echo ('<li class="nav-item inicio-sesion px-3 pb-2 d-none">
                                 <a href="' . base_url() . '/datos-alumno" class="nav-link" style="border-bottom: 2px solid transparent;">
                                     <img src="' . base_url() . '/assets/img/profile.png" class="img-fluid wd-50 rounded-circle ml-2" alt="perfil" title="Perfil no verificado">
                                 </a>
                                 </li>');
                             } else {
-                                echo ('<li class="nav-item inicio-sesion px-3 pb-2 d-none d-lg-inline">
+                                echo ('<li class="nav-item inicio-sesion px-3 pb-2 d-none">
                                 <a href="' . base_url() . '/datos-alumno" class="nav-link" style="border-bottom: 2px solid transparent;">
                                     <img src="' . base_url() . '/assets/img/verified-user.png" class="img-fluid wd-50 rounded-circle ml-2" alt="perfil" title="Perfil verificado">
                                 </a>
@@ -106,17 +105,17 @@
                         <li class="nav-item inicio-sesion px-3 py-1 my-lg-auto d-none d-lg-inline">
                             <div class="dropdown show d-none d-lg-block">
                                 <a class=" " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-bars fa-2x text-dark" aria-hidden="true"></i>
+                                    <i class="fa fa-bars fa-2x " style="color: #e2b811;" aria-hidden="true"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="<?= base_url() ?>/home-alumno">
                                         <img src="<?= base_url() ?>/assets/img/Iconos/Home_outline.png" class="img-fluid wd-40 rounded-circle ml-2" alt="icono inicio">
                                         Home
                                     </a>
-                                    <a id="fisica" class="dropdown-item" href="<?= base_url() ?>/datos-alumno">
+                                    <!-- <a id="fisica" class="dropdown-item" href="<?= base_url() ?>/datos-alumno">
                                         <img src="<?= base_url() ?>/assets/img/Iconos/Usuario.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Icono persona">
                                         Mi cuenta
-                                    </a>
+                                    </a> -->
                                     <!-- <a id="moral" class="dropdown-item"
                                         href="<?= base_url() ?>/Mattes/Arrendatario/Mensajes">
                                         <img src="<?= base_url() ?>/../../assets/img/Iconos_Mattes/Iconos/IconoMattes_Citas.png"

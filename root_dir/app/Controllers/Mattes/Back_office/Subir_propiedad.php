@@ -38,7 +38,7 @@ class Subir_propiedad extends BaseController
                     "Mattes/Principal.css"
                 ];
                 
-                $data_header['title'] = "Mattes";
+                $data_header['title'] = "Subir propiedad BO";
                 $data_header['description'] = "Detalle de propiedad que ve el BO";
                 echo view('header', $data_header);
                 echo view('Mattes/Back_office_view/Menu_BO');

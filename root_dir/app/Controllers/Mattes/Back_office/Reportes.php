@@ -23,7 +23,7 @@ class Reportes extends BaseController
                 "Mattes/Principal.js", "Mattes/Back_office/Reporte.js"
             ];
       
-            $data_header['title'] = "Mattes";
+            $data_header['title'] = "Reportes BO";
             $data_header['description'] = "Descargar de archivos csv";
 
       

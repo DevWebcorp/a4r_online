@@ -1,6 +1,6 @@
 <section class="inicio mb-5">
     <header class="fixed-top mb-5">
-        <nav class="navbar navbar-light bg-white navbar-expand-lg head-section" id="menu-navegacion">
+        <nav class="navbar bg-menu navbar-expand-lg head-section" id="menu-navegacion">
             <div class="container-fluid">
                 <!-- Botón del menú responsive -->
                 <button type="button" class="navbar-toggler d-lg-none order-1" data-toggle="collapse"
@@ -10,7 +10,7 @@
                 </button>
 
                 <a href="" class="navbar-brand d-lg-none mx-auto">
-                    <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/LogoRMattes.png" alt="Logo mattes" class="img-fluid logo">
+                    <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo mattes" class="img-fluid logo">
                 </a>
 
                 <!--Barra de navegación -->
@@ -50,9 +50,7 @@
                         <i class="fa fa-whatsapp ml-3 mr-2" aria-hidden="true" style="font-size: 1.7em;"></i>
                            Reporte WhatsApp
                         </a></li>
-                        <li class="nav-item"><a href="<?= base_url() ?>/about" class="mr-3 nav-link py-3">About</a></li>
-                        <li class="nav-item"><a href="<?= base_url() ?>/Inicio" class="mr-3 nav-link py-3">Inicio</a></li>
-                        <li class="nav-item"><a href="<?= base_url() ?>/contacto" class="nav-link py-3">Contacto</a></li>
+                        
                         <li class="nav-item"><a class="d-lg-none nav-link" href="<?= base_url() . "/login/sign_out" ?>">
                             <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/Mattes_Menu_Cerrar sesion.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Salir">
                             Cerrar sesión
@@ -60,24 +58,16 @@
                     </ul>
                     <!--LOGOTIPO DEL SITIO-->
                     <a href="<?= base_url() ?>/Inicio" class="navbar-brand d-none d-lg-block">
-                        <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/LogoRMattes.png" alt="Logo mattes"
+                        <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo mattes"
                             class="img-fluid logo">
                     </a>
                     <ul class="navbar-nav ml-lg-auto"> 
-                        <li class="nav-item soy-propietario p-1 d-none d-lg-inline">
-                            <a class="nav-link noti" style="border-bottom: 2px solid transparent;">
-                                <div class="pos-relative" style="cursor: pointer;">
-                                    <img src="<?= base_url()?>/assets/img/Iconos/Campanita.png"
-                                        class="img-fluid wd-50 rounded-circle mt-lg-3 ml-2 campana" alt="notificaciones">
-                                    <p class="notificacion-general"></p>
-                                </div>
-                            </a>
-                        </li>   
+                           
                         <li class="nav-item inicio-sesion px-3 py-1 my-lg-auto d-none d-lg-inline">
                             <div class="dropdown show">
                                 <a class=" " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-bars fa-2x text-dark" aria-hidden="true"></i>
+                                    <i class="fa fa-bars fa-2x" style="color: #e2b811;" aria-hidden="true"></i>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <a class="dropdown-item" href="<?= base_url() ?>/back-office">

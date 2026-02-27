@@ -24,7 +24,7 @@ class Contacto_por_whats extends BaseController {
                     "Mattes/Principal.js", "Mattes/Back_office/Reporte_whats.js"
                 ];
         
-                $data_header['title'] = "Mattes";
+                $data_header['title'] = "Contacto whats BO";
                 $data_header['description'] = "Descargar de archivos csv";
 
                 echo view('header', $data_header);

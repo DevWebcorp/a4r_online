@@ -35,6 +35,17 @@
     </div>
 </div> -->
 
+<section class="section-sub-banner  bg-propiedad">
+    <div class="sub-banner">
+        <div class="container">
+            <div class="text text-center">
+                <h2>DETALLE DE LA PROPIEDAD</h2><!-- 
+                <p>Lorem Ipsum is simply dummy text of the printing</p> -->
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="registro mg-b-120 mg-t-70">
     <div class="container mt-5">
         <div class="row mt-5">
