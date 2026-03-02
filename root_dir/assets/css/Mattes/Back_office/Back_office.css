@@ -468,16 +468,16 @@
 
 .datos-alumno .tablinks.active,
 .datos-alumno .tablinks:hover {
-    background-color: #0088F7 !important;
+    background-color: #000 !important;
     color: white;
-    border-radius: 8px !important;
+    border-radius: 0px !important;
 }
 
 @media(min-width:992px) {
     .datos-alumno .tablinks {
-        background-color: #ddd !important;
+        background-color: #fff !important;
         color: black;
-        border-right: 1px solid #aaa;
+        border: 1px solid #000;
     }
     .datos-alumno .tablinks:nth-child(6){
         border-top-right-radius: 8px;

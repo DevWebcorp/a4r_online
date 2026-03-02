@@ -120,7 +120,7 @@
     font-size: 18px;
     padding: 8px 12px 8px 5px;
     border: none;
-    border: 1px solid #ccc;
+    border: 2px solid #000;
     font-family: "Gothic";
 }
 
@@ -155,7 +155,7 @@ input {
     pointer-events: none;
 }
 
-input[type=text]:valid:not(:focus):not(:placeholder-shown),
+/* input[type=text]:valid:not(:focus):not(:placeholder-shown),
 input[type=tel]:valid:not(:focus):not(:placeholder-shown),
 input[type=email]:valid:not(:focus):not(:placeholder-shown),
 input[type=number]:valid:not(:focus):not(:placeholder-shown),
@@ -191,7 +191,7 @@ input[type=date]:invalid:not(:focus):not(:placeholder-shown)~.requirements,
 textarea:invalid:not(:focus):not(:placeholder-shown)~.requirements {
     max-height: 200px;
 }
-
+ */
 .file-drop-area {
     position: relative;
     display: flex;
