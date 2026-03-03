@@ -9,8 +9,8 @@ class Mapa_filtros extends BaseController
     
 
     $data_header['styles'] = ["starlight.css", "Mattes/Principal.css", 
-      "Mattes/Inicio.css", "animate.css", "Mattes/Arrendatario/Arrendatario.css",
-      "Mattes/Back_office/MenuBO.css", "Mattes/Arrendatario/Index.css",
+      "Mattes/Inicio.css", "animate.css", 
+      "Mattes/Back_office/MenuBO.css", 
       "Mattes/Back_office/Mapa.css"
     ];
   
@@ -41,7 +41,7 @@ class Mapa_filtros extends BaseController
     echo view('header', $data_header);
     echo view('Mattes/Back_office_view/Menu_BO');
     echo view('Mattes/Back_office_view/Mapa_filtros', $data); 
-    echo view('Mattes/Footer');
+    //echo view('Mattes/Footer');
     echo view('fotter_panel', $data_fotter);  
 
   }
