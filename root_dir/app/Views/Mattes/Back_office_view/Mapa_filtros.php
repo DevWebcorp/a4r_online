@@ -1,6 +1,3 @@
-
-
-
 <!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
 <?= $this->extend('layout/main') ?>
 
@@ -31,9 +28,9 @@
         }
     }
     .dropdown-menu {
-        top: none !important;
+        /* top: 0px !important;
         right: 0px;
-        left: none !important;
+        left: 0px !important; */
         width: auto;
         background-color: #fff !important;
         border-bottom-color: #ddd;
@@ -48,7 +45,6 @@
 <!--  <h3 style="margin-top: 7rem;">Resultados de búsqueda</h3> -->
  <!-- CHECK AVAILABILITY -->
 <section class="section-check-availability  " style="margin-top: 4.5rem;">
-    
     <div class="container">
         <div class="check-availability">
             <div class="row">
@@ -59,7 +55,7 @@
                     <form id="form-busqueda" action="" method="post">
                         <div class="availability-form">
                             <!-- <input type="text" name="arrive" class="awe-calendar from" placeholder="Universidad"> -->
-                            <select class="awe-select" name="adults">
+                            <select class="awe-select" name="universidad">
                                 <option value="" selected disabled>Universidad</option>
                                 <option value="1000">UNAM</option>
                                 <option value="2000">IPN</option>
@@ -68,7 +64,7 @@
                                 <option value="10000">UVM</option>
                             </select>
 
-                            <select class="awe-select" name="adults">
+                            <select class="awe-select" name="distancia">
                                 <option value="" selected disabled>Distancia</option>
                                 <option value="1000">1 km</option>
                                 <option value="2000">2 km</option>
@@ -76,23 +72,121 @@
                                 <option value="10000">10 km</option>
                             </select>
 
-                            <select class="awe-select" name="adults">
+                            <select class="awe-select" name="precio_min">
                                 <option value="" selected disabled>Min</option>
                                 <option value="1000">$1,000</option>
                                 <option value="20000">$2,000</option>
                                 <option value="30000">$3,000</option>
                             </select>
-                            <select class="awe-select" name="children">
+
+                            <select class="awe-select" name="precio_max">
                                 <option value="" selected disabled>Max</option>
                                 <option value="15000">$15,000</option>
                                 <option value="25000">$25,0000</option>
                                 <option value="50000">$50,000</option>
                             </select>
+
                             <div class="vailability-submit" style="margin-right: 1rem;">
                                 <button class="awe-btn awe-btn-8" data-toggle="modal" data-target="#exampleModal">Avanzados</button>
                             </div>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-success text-white">
+                                            <h5 class="modal-title" id="exampleModalLabel">Filtros avanzados</h5>
+                                            <button type="button" style="color: white !important;" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                                <p aria-hidden="true">&times;</p>
+                                            </button>
+                                        </div>
+                                        <div class="mg-t-20">
+                                            <label class="col-sm-12 form-control-label">Tipo</label>
+                                            <div class="col-sm-12 mg-sm-t-0">
+                                                <select id="tipo-alojamiento" name="tipo_alojamiento" class="form-control select2">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mg-t-20">
+                                            <label class="col-sm-12 form-control-label">Fecha de ingreso<span class="tx-danger"></span></label>
+                                            <div class="col-sm-12 mg-t-10 mg-sm-t-0">
+                                                <input type="date" name="fecha_ingreso" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="mg-t-20">
+                                            <label class="col-sm-12 form-control-label">Número de roomies</label>
+                                            <div class="col-sm-12 mg-t-10 mg-sm-t-0">
+                                                <select id="rommie" name="rommie" class="form-control select2">
+                                                    <option value="">Selecciona</option>
+                                                    <option value="0">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 px-0 mg-t-20">
+                                            <label class="col-sm-12 form-control-label">Número de baños</label>
+                                            <div class="col-sm-12 mg-t-10 mg-sm-t-0">
+                                                <select id="baños" name="numero_baños" class="form-control select2" data-placeholder="Choose Browser">
+                                                    <option value="">Selecciona</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0 mg-t-20">
+                                            <label class="col-sm-12 form-control-label">Petfriendly</label>
+                                            <div class="col-sm-12 mg-t-10 mg-sm-t-0">
+                                                <select id="petfriendly" name="petfriendly" class="form-control select2">
+                                                    <option value="">Selecciona</option>
+                                                    <option value="Si">Si</option>
+                                                    <option value="No">No</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 px-0 mg-t-20">
+                                            <label class="col-sm-12 form-control-label">Disponible para: </label>
+                                            <div class="col-sm-12 mg-t-10 mg-sm-t-0">
+                                                <select id="disponible" name="disponible" class="form-control select2">
+                                                    <option value="">Selecciona</option>
+                                                    <option value="Mujeres">Mujeres</option>
+                                                    <option value="Hombres">Hombres</option>
+                                                    <option value="Mixto">Mixto</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mg-t-20">
+                                            <input type="checkbox" id="capacidades-diferentes" name="capacidades">
+                                            <label for="capacidad-diferentes"> Acceso para personas con capacidades diferentes</label>
+                                            <input type="checkbox" id="wifi" name="wifi">
+                                            <label for="wifi"> Wifi</label><br>
+                                            <input type="checkbox" id="limpieza" name="limpieza">
+                                            <label for="limpieza"> Limpieza</label><br>
+                                            <input type="checkbox" id="estacionamiento" name="estacionamiento">
+                                            <label for="estacionamiento"> Estacionamiento</label><br>
+                                            <input type="checkbox" id="seguridad" name="seguridad">
+                                            <label for="seguridad"> Seguridad</label><br>
+                                            <input type="checkbox" id="lavadora" name="lavadora">
+                                            <label for="lavadora"> Lavadora</label><br>
+                                            <input type="checkbox" id="cocina" name="cocina">
+                                            <label for="cocina"> Cocina</label><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="vailability-submit">
-                                <button class="awe-btn awe-btn-13">Buscar</button>
+                                <button id="btn-buscar" type="submit" class="awe-btn awe-btn-13">Buscar</button>
                             </div>
                         </div>
                     </form>
@@ -137,7 +231,7 @@
                                 </div>
                             </button>
                             <div class="collapse navbar-collapse" id="filtros">
-                                <form class=" " id="form-busqueda">
+                                <form class=" " id="form-busqueda2">
                                     <div class="d-flex flex-column flex-lg-row ">
                                         <!-- <div class="mg-lg-r-30">
                                             <label class="px-0 mt-3 form-control-label">Universidad <span style="color: red !important;">*</span></label>
@@ -183,7 +277,7 @@
                                            <!--  <button type="button" class="btn btn-success col-12 col-md-auto" data-toggle="modalh" data-target="#exampleModal2">
                                                 <i class="fa fa-filter mr-1" aria-hidden="true"></i>Filtros avanzados
                                             </button> -->
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
                                                         <div class="modal-header bg-success text-white">
@@ -277,7 +371,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                        <!--  <div class="text-right pt-2 pt-lg-0 mt-lg-5 mb-1">
                                             <button id="btn-buscar" type="submit" class="col-12 col-md-auto btn-mattes px-4 py-1"><i class="fa fa-search mr-1" aria-hidden="true"></i>BUSCAR</button>

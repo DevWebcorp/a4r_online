@@ -45,7 +45,7 @@
                         <i class="fa fa-file-excel-o ml-3 mr-2" aria-hidden="true" style="font-size: 1.7em;"></i>
                            Reportes
                         </a></li>
-                        <li class="nav-item"><a class="d-lg-none nav-link py-3"href="<?= base_url() ?>/reporte_whats">
+                        <li class="nav-item"><a class="d-lg-none nav-link py-3" href="<?= base_url() ?>/reporte_whats">
                         <!-- <img src="<?= base_url() ?>/../../assets/img/Iconos_Mattes/Iconos/Mattes_Menu_Avisos.png" class="img-fluid wd-40 rounded-circle ml-2" alt="icono inicio"> -->
                         <i class="fa fa-whatsapp ml-3 mr-2" aria-hidden="true" style="font-size: 1.7em;"></i>
                            Reporte WhatsApp
