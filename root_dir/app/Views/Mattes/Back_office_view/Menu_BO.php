@@ -16,31 +16,39 @@
                 <!--Barra de navegación -->
                 <div class="collapse navbar-collapse bg-menu text-center" id="menu-principal">
                     <ul class="navbar-nav mr-lg-auto">
-                        <li class="nav-item"><a class="d-lg-none nav-link"href="<?= base_url() ?>/back-office">
+                        <li class="nav-item"><a class="d-lg-none nav-link" href="<?= base_url() ?>/back-office">
                             <img src="<?= base_url() ?>/assets/img/Iconos/Home_outline.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Inicio">
                             Home
                         </a></li>
-                        <li class="nav-item"><a class="d-lg-none nav-link py-3"href="<?= base_url() ?>/Mattes/Back_office/Mapa_filtros">
-                            <i class="fa fa-map-marker fa-lg ml-3 mr-2" aria-hidden="true"></i>
-                            Ubicación propiedades
-                        </a></li>
-                        <li class="nav-item"><a class="d-lg-none nav-link"href="<?= base_url() ?>/propiedades">
+                        <!-- <li class="nav-item">
+                            <a class="d-lg-none nav-link py-3" href="<?= base_url() ?>/Mattes/Back_office/Mapa_filtros">
+                                <i class="fa fa-map-marker fa-lg ml-3 mr-2" aria-hidden="true"></i>
+                                Ubicación propiedades
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="d-lg-none nav-link py-3" href="<?= base_url() ?>/a4r/back_office/Busqueda">
+                                <i class="fa fa-map-marker fa-lg ml-3 mr-2" aria-hidden="true"></i>
+                                Ubicación propiedades
+                            </a>
+                        </li>
+                        <li class="nav-item"><a class="d-lg-none nav-link" href="<?= base_url() ?>/propiedades">
                             <img src="<?= base_url() ?>/assets/img/Iconos/Mis_Propiedades.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Propiedades">
                             Propiedades
                         </a></li>
-                        <li class="nav-item"><a class="d-lg-none nav-link"href="<?= base_url() ?>/propietarios">
+                        <li class="nav-item"><a class="d-lg-none nav-link" href="<?= base_url() ?>/propietarios">
                             <img src="<?= base_url() ?>/assets/img/Iconos/Usuario.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Propietarios">
                             Propietarios
                         </a></li>
-                        <li class="nav-item"><a class="d-lg-none nav-link py-3"href="<?= base_url() ?>/alumnos">
+                        <li class="nav-item"><a class="d-lg-none nav-link py-3" href="<?= base_url() ?>/alumnos">
                             <i class="fa fa-users fa-lg ml-3 mr-2" aria-hidden="true"></i>
                             Alumnos
                         </a></li>
-                        <li class="nav-item"><a class="d-lg-none nav-link"href="<?= base_url() ?>/mensajes-bo">
+                        <li class="nav-item"><a class="d-lg-none nav-link" href="<?= base_url() ?>/mensajes-bo">
                             <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/Mattes_Menu_Avisos.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Mensajes">
                             Mensajes
                         </a></li>
-                        <li class="nav-item"><a class="d-lg-none nav-link py-3"href="<?= base_url() ?>/reportes">
+                        <li class="nav-item"><a class="d-lg-none nav-link py-3" href="<?= base_url() ?>/reportes">
                         <!-- <img src="<?= base_url() ?>/../../assets/img/Iconos_Mattes/Iconos/Mattes_Menu_Avisos.png" class="img-fluid wd-40 rounded-circle ml-2" alt="icono inicio"> -->
                         <i class="fa fa-file-excel-o ml-3 mr-2" aria-hidden="true" style="font-size: 1.7em;"></i>
                            Reportes
@@ -75,7 +83,7 @@
                                             class="img-fluid wd-40 rounded-circle ml-2" alt="icono inicio">
                                         Home
                                     </a>
-                                    <a class="dropdown-item py-3" href="<?= base_url() ?>/busqueda">
+                                    <a class="dropdown-item py-3" href="<?= base_url() ?>/a4r/back_office/Busqueda">
                                         <i class="fa fa-map-marker fa-lg ml-3 mr-2" aria-hidden="true"></i>
                                         Ubicación propiedades
                                     </a>

@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
 <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
 
+<link href="<?= base_url() ?>/assets/css/Mattes/Back_office/Mapa.css" rel="stylesheet">
 <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
 
 <?= $this->endSection() ?>
@@ -18,7 +19,7 @@
 
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
-<?= $this->include('Layout/header_arrendatario') ?>
+<?= $this->include('Layout/header_BO') ?>
 
 
 <style>
@@ -170,16 +171,22 @@
                                         <div class="col-12 mg-t-20">
                                             <input type="checkbox" id="capacidades-diferentes" name="capacidades">
                                             <label for="capacidad-diferentes"> Acceso para personas con capacidades diferentes</label>
+
                                             <input type="checkbox" id="wifi" name="wifi">
                                             <label for="wifi"> Wifi</label><br>
+
                                             <input type="checkbox" id="limpieza" name="limpieza">
                                             <label for="limpieza"> Limpieza</label><br>
+
                                             <input type="checkbox" id="estacionamiento" name="estacionamiento">
                                             <label for="estacionamiento"> Estacionamiento</label><br>
+
                                             <input type="checkbox" id="seguridad" name="seguridad">
                                             <label for="seguridad"> Seguridad</label><br>
+
                                             <input type="checkbox" id="lavadora" name="lavadora">
                                             <label for="lavadora"> Lavadora</label><br>
+                                            
                                             <input type="checkbox" id="cocina" name="cocina">
                                             <label for="cocina"> Cocina</label><br>
                                         </div>
@@ -199,11 +206,9 @@
 </section>
 <!-- END / CHECK AVAILABILITY -->
 
- <!-- ATTRACTIONS -->
+
 <section class="section-attractions bg-white" style="margin-top: 287px; padding-top: 5px;">
-    <!-- MAPS -->
-    <div class="attraction-maps" id="attraction-maps"></div>
-    <!-- END / MAPS -->
+    <div class="attraction-maps" id="attraction-maps"></div> 
 
     <div class="container">
         <div class="attraction">
@@ -297,14 +302,13 @@
         </div>
     </div>
 </section>
-<!-- END / ATTRACTIONS -->
+
    
-<!--HTML-->
+
 
 <?= $this->endSection() ?>
 
-<?= $this->section('scripts') ?>
-    <script>
-        // Aquí van los scripts específicos de esta página
-    </script>
+<?= $this->section('scripts') ?>        
+    <script src="<?= base_url() ?>/assets/js/Mattes/Back_office/Mapa_filtros.js"></script>
+    
 <?= $this->endSection() ?>

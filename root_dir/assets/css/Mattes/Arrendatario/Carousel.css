@@ -32,8 +32,10 @@
 
 .precio {
     margin-right: 20px;
-    font-size: 1.4rem !important;
     font-family: "Gothicb" !important;
+    font-weight: bold;
+    font-size: 40px;
+    color: #232323;
 }
 
 .icon {
@@ -146,7 +148,7 @@
 }
 
 .favorito{
-    color: #2b60f1;
+    color: red;
 	visibility: visible;
     cursor: pointer;
     border: 0;
@@ -155,7 +157,7 @@
 }
 
 .favorito-o{
-    color: #2b60f1;
+    color: red;
 	visibility: visible;
     cursor: pointer;
     border: 0;

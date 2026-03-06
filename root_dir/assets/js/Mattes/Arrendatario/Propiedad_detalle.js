@@ -195,13 +195,13 @@ function get_detalles() {
             //console.log(lat,lng);
 
             // SERVICIOS PROPIEDAD
-            var disability = result['detalles'][0]['disability'] == "1" ? `<img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Capacidades diferentes.png" title="Discapacidad">` : `<i class = "icon-vacio"></i>`;
-            var wifi = result['detalles'][0]['wifi'] == "1" ? `<img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Wifi.png" title="Wifi">` : `<i class="icon-vacio"></i>`;
-            var limpieza = result['detalles'][0]['cleaning'] == "1" ? `<img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Limpieza.png" title="Limpieza">` : `<i class="icon-vacio"></i>`;
-            var estacionamiento = result['detalles'][0]['parking'] == "1" ? `<img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Estacionamiento.png" title="Estacionamiento">` : `<i class="icon-vacio"></i>`;
-            var seguridad = result['detalles'][0]['security'] == "1" ? `<img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Seguridad.png" title="Seguridad">` : `<i class="icon-vacio"></i>`;
-            var lavadora = result['detalles'][0]['washer'] == "1" ? `<img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Lavadora.png" title="Lavadora">` : `<i class="icon-vacio"></i>`;
-            var cocina = result['detalles'][0]['kitchen_room'] == "1" ? `<img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Cocina.png" title="Cocina">` : `<i class="icon-vacio"></i>`;
+            var disability = result['detalles'][0]['disability'] == "1" ? `<div class="text-center"><img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Capacidades diferentes.png" title="Discapacidad"><p class="servicio-icono">Discapacidad</p> </div>` : `<i class = "icon-vacio"></i>`;
+            var wifi = result['detalles'][0]['wifi'] == "1" ? `<div class="text-center"><img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Wifi.png" title="Wifi"> <p class="servicio-icono">Wifi</p></div>` : `<i class="icon-vacio"></i>  `;
+            var limpieza = result['detalles'][0]['cleaning'] == "1" ? `<div class="text-center"><img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Limpieza.png" title="Limpieza"><p class="servicio-icono">Limpieza</p></div>` : `<i class="icon-vacio"></i>`;
+            var estacionamiento = result['detalles'][0]['parking'] == "1" ? `<div class="text-center"><img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Estacionamiento.png" title="Estacionamiento"><p class="servicio-icono">Estacionamiento</p></div>` : `<i class="icon-vacio"></i>`;
+            var seguridad = result['detalles'][0]['security'] == "1" ? `<div class="text-center"><img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Seguridad.png" title="Seguridad"><p class="servicio-icono">Seguridad</p></div>` : `<i class="icon-vacio"></i>`;
+            var lavadora = result['detalles'][0]['washer'] == "1" ? `<div class="text-center"><img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Lavadora.png" title="Lavadora"><p class="servicio-icono">Lavadora</p></div>` : `<i class="icon-vacio"></i>`;
+            var cocina = result['detalles'][0]['kitchen_room'] == "1" ? `<div class="text-center"><img class = "icon" src = "${BASE_URL}/assets/img/Iconos_Mattes/Iconos/Mattes_Cocina.png" title="Cocina"><p class="servicio-icono">Cocina</p></div>` : `<i class="icon-vacio"></i>`;
 
             // DETALLES PROPIEDAD
 

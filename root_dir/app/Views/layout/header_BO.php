@@ -22,19 +22,28 @@
             <nav class="header_menu">
                 <ul class="menu">
                     <li class="current-menu-item">
-                        <a href="<?= base_url() ?>/home-alumno">Home </a>
+                        <a href="<?= base_url() ?>/back-office">Home </a>
                     </li>
                     <li>
-                        <a href="<?= base_url() ?>/datos-alumno">Mi cuenta</a>
+                        <a href="<?= base_url() ?>/a4r/back_office/Busqueda">Ubicacion de propiedades</a>
                     </li>
                     <li>
-                        <a href="<?= base_url() ?>/mensajes">Notificaciones</a>
+                        <a href="<?= base_url() ?>/propiedades">Propiedades</a>
                     </li>
                     <li>
-                        <a href="<?= base_url() ?>/favoritos">Favoritos</a>
+                        <a href="<?= base_url() ?>/propietarios">Propietarios</a>
                     </li>
                     <li>
-                        <a href="<?= base_url() ?>/rentadas">Rentadas</a>
+                        <a href="<?= base_url() ?>/alumnos">Alumnos</a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url() ?>/mensajes-bo">Mensajes</a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url() ?>/reportes">Reportes</a>
+                    </li>
+                    <li>
+                        <a href="<?= base_url() ?>/reporte_whats">Reporte contacto</a>
                     </li>
                     <li>
                         <a href="<?= base_url() . "/login/sign_out" ?>">Cerrar sesión</a>

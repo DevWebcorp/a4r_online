@@ -94,8 +94,8 @@ class Propiedad_detalle extends BaseController
 
     
       echo view('Mattes/Arrendatario_view/Propiedad_detalle', $data);
-      echo view('right_panel');
-      echo view('Mattes/Footer');
+      //echo view('right_panel');
+      //echo view('Mattes/Footer');
       echo view('fotter_panel' , $data_fotter);  
     } else {
 
@@ -127,10 +127,10 @@ class Propiedad_detalle extends BaseController
       $data['verify'] = 0;
 
       echo view('header' , $data_header);
-      echo view('Mattes/Menu_principal');
+     // echo view('Mattes/Menu_principal');
       echo view('Mattes/Arrendatario_view/Propiedad_detalle', $data);
-      echo view('right_panel');
-      echo view('Mattes/Footer');
+     // echo view('right_panel');
+     // echo view('Mattes/Footer');
       echo view('fotter_panel' , $data_fotter);
     }
     

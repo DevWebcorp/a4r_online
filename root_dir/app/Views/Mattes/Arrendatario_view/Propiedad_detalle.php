@@ -1,23 +1,29 @@
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.js"></script>
 
 
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<link rel="stylesheet" href="/assets/lib/Carousel/owlcarousel/owl.carousel.min.css">
-<link rel="stylesheet" href="/assets/lib/Carousel/owlcarousel/owl.theme.default.min.css">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css" />
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.css">
+	<link rel="stylesheet" href="/assets/lib/Carousel/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="/assets/lib/Carousel/owlcarousel/owl.theme.default.min.css">
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+
+
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">    
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+<?= $this->include('Layout/header_arrendatario') ?>
 
 <div id="loader" class="modal fade show load">
 	<div class="modal-dialog modal-dialog-vertical-center" role="document">
@@ -49,20 +55,66 @@
 		width: 100% !important;
 		max-height: 380px !important;
 	} */
+	.fa-heart{
+		color: red !important;
+	}
+	.icon{
+		border: 2px solid #eea236;
+		margin-right: 6px;
+	}
+	#agendar_cita{
+		font-size: 18px;
+		padding: .7em 2em;
+		text-transform: uppercase;
+		border-radius: 0px;
+	}
+	#btn_wa{
+		border-color: #4cae4c;
+		color: #4cae4c;
+		font-size: 18px;
+		padding: .7em 2em;
+		text-transform: uppercase;
+	}
+	#btn_wa:hover {
+		border-color: #4cae4c;
+		background-color: #4cae4c;
+		box-shadow: inset 0 0 0 2em #4cae4c;
+		color: #fff;
+	}
+	.precio > h1{
+		font-weight: bold !important;
+	}
+	.form-control {
+		border: 2px solid black;
+	}
+	#send-questions{
+		padding: .7em 1em;
+		border-radius: 0px;
+	}
 
 </style>
 
-<div class="alert bg-warning mg-t-120 d-none" id="succes-alert" role="alert">
+<!-- <div class="alert bg-warning mg-t-120 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA <span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div> -->
 
-<div class="container mg-t-120 mg-b-150">
+<section class="section-sub-banner bg-16">
+    <div class="sub-banner">
+        <div class="container">
+            <div class="text text-center">
+                <h2 class="titulo-prop text-uppercase title"></h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container mg-b-150">
 	<div class="row mg-t-30">
 		<div class="col-12 col-md-3 text-center">
 			<h2 class="titulo-prop text-uppercase title"></h2>
@@ -86,11 +138,11 @@
 					</div>
 					<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
+						<span class="sr-only">Anterior</span>
 					</a>
 					<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
+						<span class="sr-only">Siguiente</span>
 					</a>					
 				</div>
 				<!-- Carousel Navigatiom -->
@@ -107,41 +159,40 @@
 					</div>
 					<a class="carousel-control-prev" href="#carousel-thumbs" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
+						<span class="sr-only">Anterior</span>
 					</a>
 					<a class="carousel-control-next" href="#carousel-thumbs" role="button" data-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
+						<span class="sr-only">Siguiente</span>
 					</a>
 				</div>
 			</div>
 			<!--descripcion -->
 			<div class="col-12 shadow-sm p-3 mb-2 bg-body rounded border mt-3 bg-light">
 				<h3 class="title">Descripción</h3>
-				<img src="<?= base_url() ?>/assets/icons/recibo.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr>
+				<!-- <img src="<?= base_url() ?>/assets/icons/recibo.gif" alt="Computer man" style="width:48px;height:48px;">
+				<hr> -->
 				<p class="info-des mt-2"></p>
 			</div>
 			<!--Detalles -->
 			<div class="col-12 shadow-sm p-3 mt-3 mb-2 bg-body rounded border bg-light text-center">
 				<h3 class="title">Detalles</h3>
-				<img src="<?= base_url() ?>/assets/icons/edificio.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr>
+				<!-- <img src="<?= base_url() ?>/assets/icons/edificio.gif" alt="Computer man" style="width:48px;height:48px;">
+				<hr> -->
 				<div class="detalles info-prop"></div>
 			</div>
-			<div class="col-12 text-center shadow-sm p-3 mb-3 bg-body rounded border mt-3 bg-light">
-				<h3 class="title">Servicios</h3>
-				<img src="<?= base_url() ?>/assets/icons/camion.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr>
-				<div id="iconos" class="iconos-s mg-t-10"></div>
+			<div class="col-12 text-left">
+				<h3 class="servicios">Servicios</h3>
+				<p>Estos son los servicios con los que cuenta esta propiedad</p>
+				<div id="iconos" class="d-flex justify-content-between iconos-s mg-t-10"></div>
 			</div>
 		</div>
 
 		<div class="col-lg-4 propietario text-center mt-lg-precio">
-			<div class="col-12 shadow-sm p-3 mb-3 bg-body rounded border mt-lg-2 bg-light">
-				<h3 class="title">Precio</h3>
+			<div class="col-12">
+				<!-- <h3 class="title">Precio</h3>
 				<img src="<?= base_url() ?>/assets/icons/precio.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr>
+				<hr> -->
 				<div class="precio"></div>
 			</div>
 			<div id="datos_inmob" class="col-12 shadow-sm p-3 mb-3 bg-body rounded border  propietario text-center mt-6 bg-light">
@@ -159,25 +210,27 @@
 					if(isset($alumno_verify)){
 						if($alumno_verify){
 							echo('<button id = "agendar_cita" class="col-12 mg-t-5 mg-l-5 agendar-cita btn-efect group-btn fill"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar cita</button>');
-							echo('<button id="btn_wa" class="col-12 mg-t-5 mg-l-5 btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp" aria-hidden="true"></i> Enviar Mensaje</button>');
+							echo('<button id="btn_wa" class="col-12 mg-t-5 mg-l-5 btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i> Enviar Mensaje</button>');
 						}
 						
 					}else{
 						echo('<button id = "agendar_cita" class="col-12 mg-t-5 mg-l-5 agendar-cita btn-efect group-btn fill"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar cita</button>');
-						echo('<button id="btn_wa" class="col-12 mg-t-5 mg-l-5 btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp" aria-hidden="true"></i> Enviar Mensaje</button>');
+						echo('<button id="btn_wa" class="col-12 mg-t-5 mg-l-5 btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i> Enviar Mensaje</button>');
 
 					}
 
 				?>
 				<!-- <button id="btn_rentar" class="col-12 mg-t-5 mg-l-5 rentar-casa btn-efect group-btn up"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Rentar</button> -->
-			</div>
-			<div class="col-12 shadow-sm p-3 mb-2 bg-body rounded border mt-2 bg-light">
-				<h3 class="title">Ubicación</h3>
-				<img src="<?= base_url() ?>/assets/icons/casa.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr>
-				<div class="distancia info-prop mg-t-10">Distancia a la universidad: </div>
-				<div class="col-12 mg-b-50  mt-2" id="map" style="height: 320px;"></div>
-			</div>
+			</div>		
+
+		</div>
+
+		<div class="col-12">
+			<h3 class="title">Ubicación de la propiedad</h3>
+			<!-- <img src="<?= base_url() ?>/assets/icons/casa.gif" alt="Computer man" style="width:48px;height:48px;">
+			<hr> -->
+			<!-- <div class="distancia info-prop mg-t-10">Distancia a la universidad: </div> -->
+			<div class="col-12 mg-b-50  mt-2" id="map" style="height: 320px;"></div>
 		</div>
 	</div>
 	
@@ -196,7 +249,6 @@
 					<button id="send-questions" class="col-6 enviar-dudas" type="submit"><i class="fa fa-question-circle" aria-hidden="true"></i> Enviar</button>
 				</div>
 			</div>
-
 		</form>
 		<div class="questions"></div>
 	</div>
@@ -353,6 +405,22 @@
 	}
 </style>
 
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>  
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.js"></script>
+
+<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
 	/*  $("[id^=carousel-thumbs]").carousel({
 	interval: false
@@ -399,3 +467,6 @@
 		$("#carousel-thumbs").carousel(thumbNum);
 	});
 </script>
+
+<?= $this->endSection() ?>
+

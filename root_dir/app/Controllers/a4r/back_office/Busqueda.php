@@ -36,8 +36,8 @@ class Busqueda extends BaseController
     $data['min'] = $model_propiedad->precio_min();
 
 
-    return view('a4r/back_office/Busqueda');
-    echo view('fotter_panel', $data_fotter);  
+    return view('a4r/back_office/Busqueda', $data_fotter);
+    //echo view('fotter_panel', $data_fotter);  
   }
   
 }
