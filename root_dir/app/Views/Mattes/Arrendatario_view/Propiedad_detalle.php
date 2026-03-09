@@ -44,6 +44,15 @@
 	}
 	.compartir{
 		position: inherit;
+		text-decoration: none;
+	}
+	.compartir:hover{
+		border-radius: 0px !important;		
+	}
+	.btn-info:hover{
+		background-color: #fff !important;
+		color: #17a2b8;
+		border-color: #17a2b8;
 	}
 	/* .fade.show{
 		background-color: black !important;
@@ -91,6 +100,9 @@
 		padding: .7em 1em;
 		border-radius: 0px;
 	}
+	.form-control {
+		height: 45px;
+	}
 
 </style>
 
@@ -116,18 +128,21 @@
 
 <div class="container mg-b-150">
 	<div class="row mg-t-30">
-		<div class="col-12 col-md-3 text-center">
-			<h2 class="titulo-prop text-uppercase title"></h2>
+		<div class="col-12 col-md-8">
+			<div class="d-flex">
+				<h2 class="titulo-prop text-uppercase title"></h2>
+				<div class="favorito-btn group ml-3" title="Agregar a favoritos"></div>
+			</div>
 			<div id="estrellas" class="starrr mg-b-10"></div>
 		</div>
-
-		<div class="col-12 col-md-2 text-center favorito-btn group"></div>
-
-		<div class="col-12 col-md-4 text-center">
-			<a class="compartir" href="javascript:getlink();"><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir</a>
+		<div class="col-12 col-md-4 text-right">
+			<a class="compartir btn btn-info" href="javascript:getlink();"><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir</a>
 		</div>
 	</div>
 
+	<div class="col-12 pl-0">
+		<div class="precio d-lg-none"></div>
+	</div>
 
 	<div class="row">
 		<div id="wrap" class="col-lg-8 mt-5 my-lg-5 text-center">
@@ -168,37 +183,34 @@
 				</div>
 			</div>
 			<!--descripcion -->
-			<div class="col-12 shadow-sm p-3 mb-2 bg-body rounded border mt-3 bg-light">
-				<h3 class="title">Descripción</h3>
+			<div class="col-12 text-left mt-4">
+				<h3 class="title text-uppercase">Descripción</h3>
 				<!-- <img src="<?= base_url() ?>/assets/icons/recibo.gif" alt="Computer man" style="width:48px;height:48px;">
 				<hr> -->
 				<p class="info-des mt-2"></p>
 			</div>
-			<!--Detalles -->
-			<div class="col-12 shadow-sm p-3 mt-3 mb-2 bg-body rounded border bg-light text-center">
-				<h3 class="title">Detalles</h3>
+			
+			<div class="col-12 text-left mt-4">
+				<h3 class="servicios">Servicios</h3>
+				<p>Estos son los servicios con los que cuenta esta propiedad</p>
+				<div id="iconos" class="d-flex flex-column flex-md-row justify-content-between iconos-s mg-t-10"></div>
+			</div>
+
+			<div class="col-12 text-left mt-4 d-lg-none">
+				<h3 class="title text-uppercase">Detalles</h3>
 				<!-- <img src="<?= base_url() ?>/assets/icons/edificio.gif" alt="Computer man" style="width:48px;height:48px;">
 				<hr> -->
 				<div class="detalles info-prop"></div>
 			</div>
-			<div class="col-12 text-left">
-				<h3 class="servicios">Servicios</h3>
-				<p>Estos son los servicios con los que cuenta esta propiedad</p>
-				<div id="iconos" class="d-flex justify-content-between iconos-s mg-t-10"></div>
-			</div>
 		</div>
 
 		<div class="col-lg-4 propietario text-center mt-lg-precio">
-			<div class="col-12">
-				<!-- <h3 class="title">Precio</h3>
-				<img src="<?= base_url() ?>/assets/icons/precio.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr> -->
+			<div class="col-12 d-none d-lg-block">
 				<div class="precio"></div>
 			</div>
-			<div id="datos_inmob" class="col-12 shadow-sm p-3 mb-3 bg-body rounded border  propietario text-center mt-6 bg-light">
-				<h3 class="title">Contacto</h3>
-				<img src="<?= base_url() ?>/assets/icons/fax.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr>
+
+			<div id="datos_inmob" class="col-12 mt-5">
+				<h3 class="title">Propietario</h3>
 				<figure class="photo-prop"></figure>
 				<p class="info-nprop mt-2"></p>
 				<p id="n_inmobiliaria"></p>
@@ -221,32 +233,43 @@
 
 				?>
 				<!-- <button id="btn_rentar" class="col-12 mg-t-5 mg-l-5 rentar-casa btn-efect group-btn up"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Rentar</button> -->
-			</div>		
+			</div>
+			<div class="col-12 text-left mt-4 d-none d-lg-block">
+				<h3 class="title text-uppercase">Detalles</h3>
+				<!-- <img src="<?= base_url() ?>/assets/icons/edificio.gif" alt="Computer man" style="width:48px;height:48px;">
+				<hr> -->
+				<div class="detalles info-prop"></div>
+			</div>	
 
 		</div>
+		
+	</div>
 
-		<div class="col-12">
-			<h3 class="title">Ubicación de la propiedad</h3>
-			<!-- <img src="<?= base_url() ?>/assets/icons/casa.gif" alt="Computer man" style="width:48px;height:48px;">
-			<hr> -->
-			<!-- <div class="distancia info-prop mg-t-10">Distancia a la universidad: </div> -->
-			<div class="col-12 mg-b-50  mt-2" id="map" style="height: 320px;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h3 class="title text-uppercase mt-5 mt-lg-0">Ubicación de la propiedad</h3>
+				<!-- <img src="<?= base_url() ?>/assets/icons/casa.gif" alt="Computer man" style="width:48px;height:48px;">
+				<hr> -->
+				<!-- <div class="distancia info-prop mg-t-10">Distancia a la universidad: </div> -->
+				<div class="col-12 mg-b-50  mt-2" id="map" style="height: 320px; border-radius: 0px;"></div>
+			</div>
 		</div>
 	</div>
 	
 
 	<div class="col-12 shadow-sm p-3 pb-lg-5 mb-3 bg-body rounded border mt-2 mt-lg-4">
-		<h3 class="title">Preguntas y respuestas</h3>
+		<h3 class="title"><i class="fa fa-question-circle" aria-hidden="true"></i> Preguntas y respuestas</h3>
 		<hr>
 		<h5 class="mensaje text-center">Inicia sesión para preguntarle al propietario</h5>
 		<form id="form-questions" enctype="multipart/form-data" class="group">
 			<div class="row mg-t-20">
-				<div class="col-sm-8 mg-t-10 mg-sm-t-0 mg-b-10">
+				<div class="col-12 mg-t-10 mg-sm-t-0 mg-b-10">
 					<input id="dudas" name="dudas" class="form-control select2" placeholder="Deja tus preguntas y dudas aquí" required>
 					<input class="propiedad" type="hidden" name="propiedad" id="propiedad">
 				</div>
-				<div class="col-sm-8 col-lg-4 col-md-4 mg-md-t-5 text-center">
-					<button id="send-questions" class="col-6 enviar-dudas" type="submit"><i class="fa fa-question-circle" aria-hidden="true"></i> Enviar</button>
+				<div class="col-12 text-right mg-md-t-5">
+					<button id="send-questions" class="col-6 col-md-2 float-right enviar-dudas" type="submit"><i class="fa fa-question-circle" aria-hidden="true"></i> Enviar</button>
 				</div>
 			</div>
 		</form>
@@ -269,7 +292,7 @@
 
 
 	<div class="col-12 shadow-sm p-3 mb-5 bg-body rounded border mt-3 mt-lg-4 opinions">
-		<h3 class="title">Reseñas</h3>
+		<h3 class="title"><i class="fa fa-star" aria-hidden="true"></i> Reseñas</h3>
 		<hr>
 	</div>
 

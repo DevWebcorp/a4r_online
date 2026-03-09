@@ -170,7 +170,7 @@ function get_detalles() {
 
             // DATOS PROPIEDAD
             var titulo = result['detalles'][0]['propiedad'];
-            var description = `<span>` + result['detalles'][0]['description'] + `</span>`;
+            var description = result['detalles'][0]['description'] ;
             var status = result['detalles'][0]['date_start'];
             var fecha = `<span>` + moment(status).format('LL') + `</span>`;
             let precio = parseFloat(result['detalles'][0]['price']);

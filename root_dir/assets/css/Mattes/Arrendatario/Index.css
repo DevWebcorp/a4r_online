@@ -15,37 +15,37 @@
 @media(min-width: 1145px){
     #map {
         height:450px;
-        width: 550px;
+        width: 100%;
     }
 }
 @media(min-width: 1200px){
     #map {
-        width: 600px;
+        width: 100%;
     }
 }
 
 @media(min-width: 1280px){
     #map {
         height:590px;
-        width: 640px;
+        width: 100%;
     }
 }
 @media(min-width: 1440px){
     #map {
        /*  height:500px; */
-        width: 720px;
+        width: 100%;
     }
 }
 @media(min-width: 1500px){
     #map {
         /* height:550px; */
-        width: 800px;
+        width: 100%;
     }
 }
 
 @media(min-width: 1540px){
     #map {
-        width: 810px;
+        width: 100%;
     }
 }
 
@@ -384,7 +384,7 @@ submit {
 .autoComplete_wrapper > ul > li {
     height: 75px !important;
 }
-@media(min-width: 992 px){
+@media(min-width: 992px){
     .sin-propiedades{
         padding-left: 93px !important;
     }
