@@ -62,10 +62,10 @@ function get_propiedades() {
                         `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                    <a href="#"><img src="${path}/propiedad_prueba.jpg" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#">Luxury Room</a></h2>
+                                    <h2><a href="#">${v.name}</a></h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
@@ -74,47 +74,27 @@ function get_propiedades() {
                         </div>`
                         
                         
-                        
-                        
-                        
-                        
-                        $(".grid").append(html);
+                        $(".grid-template").append(html);
     
                     } else {
                         var sello = v.stamp_mattes == "1" ? `<img id = "${v.stamp_mattes}" class = "sello-mattes" src = "${BASE_URL}assets/img/Iconos/Certificacion.png">` : `<div id = "${v.stamp_mattes}" class = "sello-mattes"></div>`;
                         var verifica = v.verified == "1" ? `<img class = "verifica-propiedad" src = "${BASE_URL}assets/img/Iconos/Medalla.png">` : `<div class = "verifica-propiedad"></div>`;
                         var posiciona = v.positioning == "1" ? `<img class = "posiciona-propiedad" src = "${BASE_URL}assets/img/Iconos_Mattes/Iconos/Mattes_Posiciona tu popiedad.png">` : `<div class = "posiciona-propiedad"></div>`;
-                        let html = `<div class="grid-item">
-                                         <figure>
-                                            <img id="img-1" class=" w-100" src="${path}/${v.imagen}" alt="First slide">
-                                        </figure>
-                                        
-                                        <div class="acciones-propiedad">
-                                            <button class = "detalle-propiedad" id="${v.id}" type="button" title="Editar propiedad">
-                                                <i class="ionicons ion-edit h2  text-warning"></i>
-                                            </button>
-                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar" title="Eliminar propiedad">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
-                                        </div>
-                                        <div id="iconos${i}" class = "iconos"></div>                                        
-                                           
-                                        <div class="col-12">
-                                            <p class="info-casa mt-1 overflow-hidden text-uppercase" style="font-size: 18px !important;">${v.name}</p>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-1"></div>
-                                            <div class="col-6 px-0">
-                                                <p class="info-casa estatus_casa" style="line-height: 24px;"> <span>${status}</span> </p>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="info-casa"><span>$${precio}</span></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                        
-                                    `
-                        $(".grid").append(html);
+                        let html = `<div class="col-xs-4">
+                            <div class="accomd-modations-room">
+                                <div class="img">
+                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                </div>
+                                <div class="text">
+                                    <h2><a href="#">${v.name}</a></h2>
+                                    <p class="price">
+                                        <span class="amout">$${precio}</span>/days
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`
+
+                        $(".grid-template").append(html);
                         $("#iconos" + i).append(sello);
                         $("#iconos" + i).append(verifica);
                         $("#iconos" + i).append(posiciona);
@@ -250,7 +230,7 @@ function get_propiedades() {
                 console.log("aqui va el vacio");
                // console.log("esta vacio")
                 //$(".grid").addClass('shadow-none p-3 mb-5 bg-light rounded text-center');
-                //$(".grid").append('<p>'+'NO HAY PROPIEDADES'+'</P>')
+                //$(".grid").append('<p>'+'NO HAY PROPIEDADES'+'</p>')
                 
 
             }
@@ -318,74 +298,40 @@ $(document).keyup(function(event) {
                         }
 
                         if (v.imagen == null) {
-                            let html = `<div class="grid-item">
-                                    <figure>
-                                        <img id="img-1" class=" w-100" src="${path}/default_propiedad.png" alt="First slide">
-                                    </figure>
+                            let html = `<div class="col-xs-4">
+                            <div class="accomd-modations-room">
+                                <div class="img">
+                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                </div>
+                                <div class="text">
+                                    <h2><a href="#">${v.name}</a></h2>
+                                    <p class="price">
+                                        <span class="amout">$${precio}</span>/days
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`;
 
-                                    <div class="acciones-propiedad">
-                                        <button class = "detalle-propiedad" id = " ${v.id} " type="button" title="Editar propiedad">
-                                            <i class="ionicons ion-edit h2  text-warning"></i>
-                                        </button>
-                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar" title="Eliminar propiedad">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </button>
-                                        <div class = "iconos2"></div>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <p class="info-casa mt-2 overflow-hidden text-uppercase" style="font-size: 18px !important;"> ${v.name}</p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-1"></div> 
-                                        <div class="col-6 px-0">
-                                            <p class="info-casa estatus_casa" style="line-height: 24px;"> <span> ${status}</span></p>
-                                        </div> 
-                                        <div class="col-4">
-                                            <p class="info-casa"><span>$${precio}</span></p>
-                                        </div> 
-                                    </div> 
-                                   
-                                </div>`;
-
-                            $(".grid").append(html);
+                            $(".grid-template").append(html);
 
                         } else {
                             var sello = v.stamp_mattes == "1" ? `<img id = "${v.stamp_mattes}" class = "sello-mattes" src = "${BASE_URL}assets/img/Iconos/Certificacion.png">` : `<div id = "${v.stamp_mattes}" class = "sello-mattes"></div>`;
                             var verifica = v.verified == "1" ? `<img class = "verifica-propiedad" src = "${BASE_URL}assets/img/Iconos/Medalla.png">` : `<div class = "verifica-propiedad"></div>`;
                             var posiciona = v.positioning == "1" ? `<img class = "posiciona-propiedad" src = "${BASE_URL}assets/img/Iconos_Mattes/Iconos/Mattes_Posiciona tu popiedad.png">` : `<div class = "posiciona-propiedad"></div>`;
-                            let html = `<div class="grid-item">
-                                     <figure>
-                                        <img id="img-1" class=" w-100" src="${path}/${v.imagen}" alt="First slide">
-                                    </figure>
-                                    <div class="d-flex row">
-                                        <div class="col-2">
-                                            <button class = "detalle-propiedad" id = " ${v.id} " type="button" title="Editar propiedad">
-                                                <i class="ionicons ion-edit h2  text-warning"></i>
-                                            </button>
-                                            <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar" title="Eliminar propiedad">
-                                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                            </button>
-                                            <div id="iconos${i}" class = "iconos"></div>
-                                        </div>
-                                        
-                                        <div class="col-1"></div>
-                                        <div class="col-12">
-                                            <p class="info-casa mt-2" style="font-size: 18px !important;">${v.name}</p>
-                                        </div>  
-                                        <div class="col-1"></div>
-                                        <div class="col-5">
-                                            <p class="info-casa estatus_casa" style="line-height: 24px;"> <span>${status}</span> </p>
-                                        </div>
-                                        <div class="col-5">
-                                            <p class="info-casa">Costo: <span>$${precio}</span></p>
-                                        </div>
-                                        
-                                    </div>
-                                        
-                                    
-                                </div>`
-                            $(".grid").append(html);
+                            let html = `<div class="col-xs-4">
+                            <div class="accomd-modations-room">
+                                <div class="img">
+                                    <a href="#"><img src="${path}/propiedad_prueba.jpg" alt=""></a>
+                                </div>
+                                <div class="text">
+                                    <h2><a href="#">${v.name}</a></h2>
+                                    <p class="price">
+                                        <span class="amout">$${precio}</span>/days
+                                    </p>
+                                </div>
+                            </div>
+                        </div>`
+                            $(".grid-template").append(html);
                             $("#iconos" + i).append(sello);
                             $("#iconos" + i).append(verifica);
                             $("#iconos" + i).append(posiciona);
