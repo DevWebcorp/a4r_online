@@ -62,7 +62,7 @@ function get_propiedades() {
                         `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/propiedad_prueba.jpg" alt=""></a>
+                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
                                 </div>
                                 <div class="text">
                                     <h2><a href="#">${v.name}</a></h2>
@@ -83,7 +83,7 @@ function get_propiedades() {
                         let html = `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                    <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
                                 </div>
                                 <div class="text">
                                     <h2><a href="#">${v.name}</a></h2>
@@ -321,7 +321,7 @@ $(document).keyup(function(event) {
                             let html = `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/propiedad_prueba.jpg" alt=""></a>
+                                    <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
                                 </div>
                                 <div class="text">
                                     <h2><a href="#">${v.name}</a></h2>

@@ -62,34 +62,33 @@
 </style>
 
 
-
  <section class="section-accomd ">
-            <div class="container">
-                <div class="accomd-modations">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="accomd-modations-header">
-                                <h2 class="heading">Mis propiedades</h2>
-                                <p>A continuación, te mostramos tus propiedades registradas en nuestra plataforma con las cuales cuentas en este momento.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="accomd-modations-content owl-single">
-                                
-                                <div class="row grid-template">
+    <div class="container">
+        <div class="accomd-modations">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="accomd-modations-header">
+                        <h2 class="heading">Mis propiedades</h2>
+                        <p>A continuación, te mostramos tus propiedades registradas en nuestra plataforma con las cuales cuentas en este momento.</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="accomd-modations-content owl-single">
+                        
+                        <div class="row grid-template">
 
-                              
-                            
-                                </div>
-
-                            </div>
+                        
+                    
                         </div>
+
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-        </section>
-        <!-- END / ACCOMD ODATIONS -->
+</section>
+<!-- END / ACCOMD ODATIONS -->
 
 
 
