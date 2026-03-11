@@ -59,16 +59,23 @@
     .accomd-modations-room .text .price .amout {
         color: #fff !important;
     }
+    .accomd-modations-room .img img {
+        height: 330px;
+        overflow: hidden;
+    }
+    .accomd-modations {
+        padding: 0;
+    }
 </style>
 
 
- <section class="section-accomd ">
+ <section class="section-accomd mb-5">
     <div class="container">
         <div class="accomd-modations">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="accomd-modations-header">
-                        <h2 class="heading">Mis propiedades</h2>
+                    <div class="">
+                        <h2 class="heading mb-4">Mis propiedades</h2>
                         <p>A continuación, te mostramos tus propiedades registradas en nuestra plataforma con las cuales cuentas en este momento.</p>
                     </div>
                 </div>

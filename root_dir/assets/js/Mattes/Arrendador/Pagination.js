@@ -65,7 +65,7 @@ function get_propiedades() {
                                     <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#">${v.name}</a></h2>
+                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
@@ -86,7 +86,7 @@ function get_propiedades() {
                                     <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#">${v.name}</a></h2>
+                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
@@ -304,7 +304,7 @@ $(document).keyup(function(event) {
                                     <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#">${v.name}</a></h2>
+                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
@@ -324,7 +324,7 @@ $(document).keyup(function(event) {
                                     <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#">${v.name}</a></h2>
+                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
