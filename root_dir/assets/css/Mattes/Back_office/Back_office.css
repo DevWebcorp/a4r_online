@@ -3,7 +3,7 @@
     overflow-x: auto !important;
 }
 
-@media(min-width:2410px) {
+@media(min-width:992px) {
     .tablas_mattes {
         display: inline-table;
         overflow-x: hidden !important;
@@ -57,10 +57,10 @@
 .mensajesbo,
 .estatusbo,
 .reporte {
-    color: var(--mattes);
-    text-decoration: underline;
     position: relative;
+    color: var(--mattes);
     text-align: center;
+    text-decoration: underline;
 }
 
 
@@ -77,12 +77,12 @@
     .mensajesbo::before,
     .estatusbo::after,
     .estatusbo::before  {
-        content: ' ';
         position: absolute;
+        top: 0.6em;
         width: 40px;
         height: 3px;
         background-color: currentcolor;
-        top: 0.6em;
+        content: ' ';
     }
 
     .propiedades::after,
@@ -90,8 +90,8 @@
     .estatusbo::after,
     .estatusbo::after,
     .estatusbo::before {
-        height: 2px;
         width: 100px;
+        height: 2px;
     }
 
     .propiedades::before {
@@ -138,12 +138,12 @@
     }
     .reporte::before,
     .reporte::after  {
-        content: ' ';
         position: absolute;
-        height: 2px;
-        width: 100px;
-        background-color: currentcolor;
         top: 0.6em;
+        width: 100px;
+        height: 2px;
+        background-color: currentcolor;
+        content: ' ';
     }
     .reporte::before {
         left: 5px;
@@ -189,7 +189,7 @@
         margin-top: 5rem !important;
     }
     .mb-lg-260{
-        margin-bottom: 260px !important
+        margin-bottom: 260px !important;
     }
     .reporte::before {
         left: 115px;
@@ -233,8 +233,8 @@
 .detalle-property,
 .detalle-alumnobo{
     color: var(--mattes);
-    text-decoration: underline;
     font-family: "Gothic";
+    text-decoration: underline;
 }
 
 @media(min-width:576px) {
@@ -253,12 +253,12 @@
     .detalle-property::before,
     .detalle-alumnobo::after,
     .detalle-alumnobo::before {
-        content: ' ';
         position: absolute;
+        top: 0.6em;
         width: 120px;
         height: 2px;
         background-color: currentcolor;
-        top: 0.6em;
+        content: ' ';
     }
     .preguntas-respuestas::after,
     .preguntas-respuestas::before {
@@ -437,17 +437,17 @@
 
  .tab {
     width: 100%;
-    background-color: #fff;
     border: transparent;
+    background-color: #fff;
 }
 
 .tab button {
-    background-color: inherit;
     float: left;
+    padding: 10px 30px;
     border-radius: 8px;
     outline: none;
+    background-color: inherit;
     cursor: pointer;
-    padding: 10px 30px;
     transition: 0.3s;
     
 }
@@ -457,9 +457,9 @@
 }
 
 .datos-alumno .tablinks {
-    background-color: white !important;
-    color: black;
     border: 1px solid #ddd;
+    color: black;
+    background-color: white !important;
 }
 .datos-alumno .tablinks:nth-child(6){
     border-bottom-right-radius: 8px;
@@ -468,16 +468,16 @@
 
 .datos-alumno .tablinks.active,
 .datos-alumno .tablinks:hover {
-    background-color: #000 !important;
-    color: white;
     border-radius: 0px !important;
+    color: white;
+    background-color: #000 !important;
 }
 
 @media(min-width:992px) {
     .datos-alumno .tablinks {
-        background-color: #fff !important;
-        color: black;
         border: 1px solid #000;
+        color: black;
+        background-color: #fff !important;
     }
     .datos-alumno .tablinks:nth-child(6){
         border-top-right-radius: 8px;

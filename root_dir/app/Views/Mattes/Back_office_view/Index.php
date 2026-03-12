@@ -13,6 +13,14 @@
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
 
+<style>
+    @media(min-width:992px) {
+    .table-responsive {
+        display: inline-table;
+        overflow-x: hidden !important;
+    }
+}
+</style>
 
 <!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 99999999;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">

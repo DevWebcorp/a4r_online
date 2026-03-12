@@ -40,7 +40,7 @@
 <section class="propiedades  " style="height: auto;">
     <div class="container">
         <div class="row">
-            <div class="col-12 mg-b-120 mb-md-4">
+            <div class="col-12 mt-5 mg-b-120 mb-md-4">
                 <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
                     <li id="tb-visitas" class="nav-item ml-lg-3 mr-2" role="presentation">
                         <a class="nav-link active pos-relative" id="visita-tab" data-toggle="tab" href="#visita" role="tab" aria-controls="visita" aria-selected="true">Visitas a tus propiedades <span id="noti-visitas notificacion-propiedad"></span></a>

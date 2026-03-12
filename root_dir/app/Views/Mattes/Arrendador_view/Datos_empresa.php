@@ -22,9 +22,9 @@
   .file-drop-area {
     width: auto !important;
   }
-   #datatable1{
+  /*  #datatable1{
     display: block !important;
-   }
+   } */
 </style>
 
 <!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">

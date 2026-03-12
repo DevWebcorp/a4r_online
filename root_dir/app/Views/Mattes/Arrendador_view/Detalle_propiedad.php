@@ -12,6 +12,12 @@
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
 
+<style>
+    .tab {
+        border-bottom: 0px;
+    }
+</style>
+
 
 <!-- <div class="alert bg-warning mg-t-100 d-none" id="alert_correo" role="alert">
     <button type="button" class="close" aria-label="Close">
