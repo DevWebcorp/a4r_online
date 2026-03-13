@@ -193,8 +193,8 @@
 .details:nth-of-type(5){
     color: black;
     font-family: "Gothicbi" !important;
-    line-height: 0.7rem;
-    font-size: 15px;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
 }
 
 .details span{
@@ -205,30 +205,35 @@
     font-family: "Gothic" !important;
     font-size: 1rem;
 }
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  width: 40px !important;
-  height: 40px !important;
-}
 .carousel-control-next, .carousel-control-prev {
    opacity: 1 !important; 
 }
-.carousel-control-next-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     background-image: none !important;
     border: 2px solid white;
     border-radius: 20px;
+    width: 40px !important;
+    height: 40px !important;
 }
-.carousel-control-prev-icon {
-  background-image: none !important;
-    border: 2px solid white;
-    border-radius: 20px;
-}
-.carousel-control-next-icon::before {
+
+.carousel-control-next-icon::before,
+.carousel-control-prev-icon::before {
   color: white;
-}
-span:nth-of-type(1) {
-  color: white !important;
 }
 .carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
    background-color: black !important;
    border: 2px solid black;
+}
+
+.whats{
+    position: absolute;
+    font-size: 15px;
+    font-family: "Gothicb";
+    bottom: 70px;
+    width: 87%;
+    visibility: visible;
+}
+.agendar-cita{
+    width: 87%;
 }

@@ -6,7 +6,7 @@
 <!--LIBRERIAS DINAMICAS PARA CSS-->
 <?= $this->section('css') ?>
 <!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css" />
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
@@ -95,15 +95,18 @@
 	}
 	.form-control {
 		border: 2px solid black;
+		height: 45px;
 	}
 	#send-questions{
 		padding: .7em 1em;
 		border-radius: 0px;
 	}
-	.form-control {
-		height: 45px;
+	.room-detail_book {
+		margin-top: 0px;
 	}
-
+	.w-new {
+		width: 100% !important;
+	}
 </style>
 
 <!-- <div class="alert bg-warning mg-t-120 d-none" id="succes-alert" role="alert">
@@ -126,678 +129,6 @@
     </div>
 </section>
 
-
-<!-- ROOM DETAIL -->
-<section class="section-room-detail bg-white">
-	<div class="container">
-		
-		<!-- DETAIL -->
-		<div class="room-detail">
-			<div class="row">
-				<div class="col-lg-9">
-					
-					<!-- LAGER IMGAE -->
-					<div class="room-detail_img">
-						<div class="room_img-item">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/lager/img-1.jpg" alt="">    
-							<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-						</div>
-						<div class="room_img-item">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/lager/img-2.jpg" alt="">    
-							<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-						</div>
-						<div class="room_img-item">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/lager/img-3.jpg" alt="">    
-							<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-						</div>
-						<div class="room_img-item">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/lager/img-5.jpg" alt="">    
-							<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-						</div>
-						<div class="room_img-item">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/lager/img-6.jpg" alt="">    
-							<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-						</div>
-						<div class="room_img-item">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/lager/img-7.jpg" alt="">    
-							<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-						</div>
-						<div class="room_img-item">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/lager/img-5.jpg" alt="">    
-							<h6>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h6>
-						</div>
-					</div>
-					<!-- END / LAGER IMGAE -->
-					
-					<!-- THUMBNAIL IMAGE -->
-					<div class="room-detail_thumbs">
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-2.jpg" alt=""></a>
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-3.jpg" alt=""></a>
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-4.jpg" alt=""></a>
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-5.jpg" alt=""></a>
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-6.jpg" alt=""></a>
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-7.jpg" alt=""></a>
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-8.jpg" alt=""></a>
-						<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/img-6.jpg" alt=""></a>
-					</div>
-					<!-- END / THUMBNAIL IMAGE -->
-
-				</div>
-
-				<div class="col-lg-3">
-
-					<!-- FORM BOOK -->
-					<div class="room-detail_book">
-
-						<div class="room-detail_total">
-							<img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/icon-logo.png" alt="" class="icon-logo">
-							
-							<h6>STARTING ROOM FROM</h6>
-							
-							<p class="price">
-								<span class="amout">$260</span>  /days
-							</p>
-						</div>
-						
-						<div class="room-detail_form">
-							<label>Arrive</label>
-							<input type="text" class="awe-calendar from" placeholder="Arrive Date">
-							<label>Depature</label>
-							<input type="text" class="awe-calendar to" placeholder="Departure Date">
-							<label>Adult</label>
-							<select class="awe-select">
-								<option>1</option>
-								<option>2</option>
-								<option selected>3</option>
-								<option>4</option>
-							</select>
-							<label>Chirld</label>
-							<select class="awe-select">
-								<option>1</option>
-								<option>2</option>
-								<option selected>3</option>
-								<option>4</option>
-							</select>
-							<button class="awe-btn awe-btn-13">Book Now</button>
-						</div>
-
-					</div>
-					<!-- END / FORM BOOK -->
-
-				</div>
-			</div>
-		</div>
-		<!-- END / DETAIL -->
-		
-		<!-- TAB -->
-		<div class="room-detail_tab">
-			
-			<div class="row">
-				<div class="col-md-3">
-					<ul class="room-detail_tab-header">
-						<li><a href="#overview" data-toggle="tab">OVERVIEW</a></li>
-						<li class="active"><a href="#amenities" data-toggle="tab">amenities</a></li>
-						<li><a href="#package" data-toggle="tab">PACKAGE</a></li>
-						<li><a href="#rates" data-toggle="tab">RATES</a></li>
-						<li><a href="#calendar" data-toggle="tab">Calendar</a></li>
-					</ul>
-				</div>
-								
-				<div class="col-md-9">
-					<div class="room-detail_tab-content tab-content">
-						
-						<!-- OVERVIEW -->
-						<div class="tab-pane fade" id="overview">
-
-							<div class="room-detail_overview">
-								<h5 class='text-uppercase
-								'>de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
-								<p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
-
-								<div class="row">
-									<div class="col-xs-6 col-md-4">
-										<h6>SPECIAL ROOM</h6>
-										<ul>
-											<li>Max: 4 Person(s)</li>
-											<li>Size: 35 m2 / 376 ft2</li>
-											<li>View: Ocen</li>
-											<li>Bed: King-size or twin beds</li>
-										</ul>
-									</div>
-									<div class="col-xs-6 col-md-4">
-										<h6>SERVICE ROOM</h6>
-										<ul>
-											<li>Oversized work desk</li>
-											<li>Hairdryer</li>
-											<li>Iron/ironing board upon request</li>
-										</ul>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-						<!-- END / OVERVIEW -->
-
-						<!-- AMENITIES -->
-						<div class="tab-pane fade active in" id="amenities">
-							
-							<div class="room-detail_amenities">
-								<p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
-								
-								<div class="row">
-									<div class="col-xs-6 col-lg-4">
-										<h6>LIVING ROOM</h6>
-										<ul>
-											<li>Oversized work desk</li>
-											<li>Hairdryer</li>
-											<li>Iron/ironing board upon request</li>
-										</ul>
-									</div>
-									<div class="col-xs-6 col-lg-4">
-										<h6>KITCHEN ROOM</h6>
-										<ul>
-											<li>AM/FM clock radio</li>
-											<li>Voicemail</li>
-											<li>High-speed Internet access</li>
-										</ul>
-									</div>
-									<div class="col-xs-6 col-lg-4">
-										<h6>balcony</h6>
-										<ul>
-											<li>AM/FM clock radio</li>
-											<li>Voicemail</li>
-											<li>High-speed Internet access</li>
-										</ul>
-									</div>
-									<div class="col-xs-6 col-lg-4">
-										<h6>bedroom</h6>
-										<ul>
-											<li>Coffee maker</li>
-											<li>25 inch or larger TV</li>
-											<li>Cable/satellite TV channels</li>
-											<li>AM/FM clock radio</li>
-											<li>Voicemail</li>
-										</ul>
-									</div>
-									<div class="col-xs-6 col-lg-4">
-										<h6>bathroom</h6>
-										<ul>
-											<li>Dataport</li>
-											<li>Phone access fees waived</li>
-											<li>24-hour Concierge service</li>
-											<li>Private concierge</li>
-										</ul>
-									</div>
-									<div class="col-xs-6 col-lg-4">
-										<h6>Oversized work desk</h6>
-										<ul>
-											<li>Dataport</li>
-											<li>Phone access fees waived</li>
-											<li>24-hour Concierge service</li>
-											<li>Private concierge</li>
-										</ul>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-						<!-- END / AMENITIES -->
-
-						<!-- PACKAGE -->
-						<div class="tab-pane fade" id="package">
-					
-							<div class="room-detail_package">
-
-								<!-- ITEM package -->
-								<div class="room-package_item">
-								
-									<div class="text">
-										<h4><a href="#">package standar</a></h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-															
-										<div class="room-package_price">
-											<p class="price">
-												<span class="amout">$260</span> / Package
-											</p>
-											<a href="#" class="awe-btn awe-btn-default">Book package</a>
-										</div>
-									</div>
-								</div>
-								<!-- END / ITEM package -->
-															
-								<!-- ITEM package -->
-								<div class="room-package_item">
-								
-									<div class="text">
-										<h4><a href="#">package standar</a></h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-															
-										<div class="room-package_price">
-											<p class="price">
-												<span class="amout">$260</span> / Package
-											</p>
-											<a href="#" class="awe-btn awe-btn-default">Book package</a>
-										</div>
-									</div>
-								</div>
-								<!-- END / ITEM package -->
-								
-								<!-- ITEM package -->
-								<div class="room-package_item">
-								
-									<div class="text">
-										<h4><a href="#">package standar</a></h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-															
-										<div class="room-package_price">
-											<p class="price">
-												<span class="amout">$260</span> / Package
-											</p>
-											<a href="#" class="awe-btn awe-btn-default">Book package</a>
-										</div>
-									</div>
-								</div>
-								<!-- END / ITEM package -->
-							</div>
-					
-						</div>
-						<!-- END / PACKAGE -->
-
-						<!-- RATES -->
-						<div class="tab-pane fade" id="rates">
-
-							<div class="room-detail_rates">
-								<table>
-									<thead>
-										<tr>
-											<th>Rate Period</th>
-											<th>Nightly</th>
-											<th>Weekend Night</th>
-											<th>Weekly</th>
-											<th>Monthly</th>
-											<th>Event</th>
-										</tr>
-									</thead>
-									<tr>
-										<td>
-											<h6>Spring/Summer Season</h6>
-											<ul>
-												<li>Jun 1 - Aug 31</li>
-												<li>3 night minimum stay</li>
-											</ul>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$320</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$23</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$120</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$100</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$89</span></p>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<h6>Summer/Fall Season</h6>
-											<ul>
-												<li>Jun 1 - Aug 31</li>
-												<li>3 night minimum stay</li>
-											</ul>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$320</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$23</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$120</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$100</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$89</span></p>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<h6>Christmas Season</h6>
-											<ul>
-												<li>Jun 1 - Aug 31</li>
-												<li>3 night minimum stay</li>
-											</ul>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$320</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$23</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$120</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$100</span></p>
-										</td>
-										<td>
-											<p class="price"><span class="amout">$89</span></p>
-										</td>
-									</tr>
-								</table>
-							</div>
-
-						</div>
-						<!-- END / RATES -->
-
-						<!-- CALENDAR -->
-						<div class="tab-pane fade" id="calendar">
-
-							<div class="room-detail_calendar-wrap row">
-
-								<div class="col-sm-6">
-									<!-- CALENDAR ITEM -->
-									<div class="calendar_custom">
-								
-										<div class="calendar_title">
-											<span class="calendar_month">JUNE</span>
-											<span class="calendar_year">2015</span>
-									
-											<a href="#" class="calendar_prev calendar_corner"><i class="lotus-icon-left-arrow"></i></a>
-										</div>
-									
-										<table class="calendar_tabel">
-
-											<thead>
-												<tr>
-													<th>Su</th>
-													<th>Mo</th>
-													<th>Tu</th>
-													<th>We</th>
-													<th>Th</th>
-													<th>Fr</th>
-													<th>Sa</th>
-												</tr>
-											</thead>
-
-											<tr>
-												<td></td>
-												<td class="apb-calendar_current-date">
-													<a href="#"><small>1</small></a>
-												</td>
-												<td><a href="#"><small>2</small></a></td>
-												<td><a href="#"><small>3</small></a></td>
-												<td><a href="#"><small>4</small></a></td>
-												<td><a href="#"><small>5</small></a></td>
-												<td><a href="#"><small>6</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>7</small></a></td>
-												<td><a href="#"><small>8</small></a></td>
-												<td><a href="#"><small>9</small></a></td>
-												<td><a href="#"><small>10</small></a></td>
-												<td class="apb-calendar_current-select"><a href="#"><small>11</small></a></td>
-												<td class="apb-calendar_current-select"><a href="#"><small>12</small></a></td>
-												<td><a href="#"><small>13</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>14</small></a></td>
-												<td><a href="#"><small>15</small></a></td>
-												<td class="not-available"><a href="#"><small>16</small></a></td>
-												<td class="not-available"><a href="#"><small>17</small></a></td>
-												<td><a href="#"><small>18</small></a></td>
-												<td><a href="#"><small>19</small></a></td>
-												<td><a href="#"><small>20</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>21</small></a></td>
-												<td><a href="#"><small>22</small></a></td>
-												<td><a href="#"><small>23</small></a></td>
-												<td><a href="#"><small>24</small></a></td>
-												<td><a href="#"><small>25</small></a></td>
-												<td><a href="#"><small>26</small></a></td>
-												<td><a href="#"><small>27</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>28</small></a></td>
-												<td><a href="#"><small>29</small></a></td>
-												<td><a href="#"><small>30</small></a></td>
-												<td><a href="#"><small>31</small></a></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-
-										</table>
-									
-									</div>
-									<!-- END CALENDAR ITEM -->
-								</div>
-
-								<div class="col-sm-6">
-
-									<!-- CALENDAR ITEM -->
-									<div class="calendar_custom">
-								
-										<div class="calendar_title">
-											<span class="calendar_month">JUNE</span>
-											<span class="calendar_year">2015</span>
-									
-											<a href="#" class="calendar_next calendar_corner"><i class="lotus-icon-right-arrow"></i></a>
-										</div>
-									
-										<table class="calendar_tabel">
-
-											<thead>
-												<tr>
-													<th>Su</th>
-													<th>Mo</th>
-													<th>Tu</th>
-													<th>We</th>
-													<th>Th</th>
-													<th>Fr</th>
-													<th>Sa</th>
-												</tr>
-											</thead>
-
-											<tr>
-												<td></td>
-												<td class="apb-calendar_current-date">
-													<a href="#"><small>1</small></a>
-												</td>
-												<td><a href="#"><small>2</small></a></td>
-												<td><a href="#"><small>3</small></a></td>
-												<td><a href="#"><small>4</small></a></td>
-												<td><a href="#"><small>5</small></a></td>
-												<td><a href="#"><small>6</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>7</small></a></td>
-												<td><a href="#"><small>8</small></a></td>
-												<td><a href="#"><small>9</small></a></td>
-												<td><a href="#"><small>10</small></a></td>
-												<td class="apb-calendar_current-select"><a href="#"><small>11</small></a></td>
-												<td class="apb-calendar_current-select"><a href="#"><small>12</small></a></td>
-												<td><a href="#"><small>13</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>14</small></a></td>
-												<td><a href="#"><small>15</small></a></td>
-												<td class="not-available"><a href="#"><small>16</small></a></td>
-												<td class="not-available"><a href="#"><small>17</small></a></td>
-												<td><a href="#"><small>18</small></a></td>
-												<td><a href="#"><small>19</small></a></td>
-												<td><a href="#"><small>20</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>21</small></a></td>
-												<td><a href="#"><small>22</small></a></td>
-												<td><a href="#"><small>23</small></a></td>
-												<td><a href="#"><small>24</small></a></td>
-												<td><a href="#"><small>25</small></a></td>
-												<td><a href="#"><small>26</small></a></td>
-												<td><a href="#"><small>27</small></a></td>
-											</tr>
-
-											<tr>
-												<td><a href="#"><small>28</small></a></td>
-												<td><a href="#"><small>29</small></a></td>
-												<td><a href="#"><small>30</small></a></td>
-												<td><a href="#"><small>31</small></a></td>
-												<td></td>
-												<td></td>
-												<td></td>
-											</tr>
-
-										</table>
-									
-									</div>
-									<!-- END CALENDAR ITEM -->
-								</div>
-								
-								<div class="calendar_status text-center col-sm-12">
-									<span>Available</span>
-									<span class="not-available">Not Available</span>
-								</div>
-							</div>
-
-						</div>
-						<!-- END / CALENDAR -->
-
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-		<!-- END / TAB -->
-
-		<!-- COMPARE ACCOMMODATION -->
-		<div class="room-detail_compare">
-			<h2 class="room-compare_title">COMPARE ACCOMMODATION</h2>
-
-			<div class="room-compare_content">
-				
-				<div class="row">
-					<!-- ITEM -->
-					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="room-compare_item">
-							<div class="img">
-								<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/compare/img-1.jpg" alt=""></a>
-							</div>  
-						
-							<div class="text">
-								<h2><a href="#">LUxury room</a></h2>
-						
-								<ul>
-									<li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-									<li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-									<li><i class="lotus-icon-view"></i> View: Ocen</li>
-								</ul>
-						
-								<a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
-						
-							</div>
-						
-						</div>
-					</div>
-					<!-- END / ITEM -->
-					
-					<!-- ITEM -->
-					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="room-compare_item">
-							<div class="img">
-								<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/compare/img-2.jpg" alt=""></a>
-							</div>  
-						
-							<div class="text">
-								<h2><a href="#">Family Room</a></h2>
-						
-								<ul>
-									<li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-									<li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-									<li><i class="lotus-icon-view"></i> View: Ocen</li>
-								</ul>
-						
-								<a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
-						
-							</div>
-						
-						</div>
-					</div>
-					<!-- END / ITEM -->
-					
-					<!-- ITEM -->
-					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="room-compare_item">
-							<div class="img">
-								<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/compare/img-3.jpg" alt=""></a>
-							</div>  
-						
-							<div class="text">
-								<h2><a href="#">standard Room</a></h2>
-						
-								<ul>
-									<li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-									<li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-									<li><i class="lotus-icon-view"></i> View: Ocen</li>
-								</ul>
-						
-								<a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
-						
-							</div>
-						
-						</div>
-					</div>
-					<!-- END / ITEM -->
-					
-					<!-- ITEM -->
-					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="room-compare_item">
-							<div class="img">
-								<a href="#"><img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/detail/compare/img-4.jpg" alt=""></a>
-							</div>  
-						
-							<div class="text">
-								<h2><a href="#">couple Room</a></h2>
-						
-								<ul>
-									<li><i class="lotus-icon-person"></i> Max: 2 Person(s)</li>
-									<li><i class="lotus-icon-bed"></i> Bed: King-size or twin beds</li>
-									<li><i class="lotus-icon-view"></i> View: Ocen</li>
-								</ul>
-						
-								<a href="#" class="awe-btn awe-btn-default">VIEW DETAIL</a>
-						
-							</div>
-						
-						</div>
-					</div>
-					<!-- END / ITEM -->
-				</div>
-
-			</div>
-		</div>
-		<!-- END / COMPARE ACCOMMODATION -->
-
-	</div>
-</section>
-<!-- END / SHOP DETAIL -->
 
 <div class="container mg-b-150">
 	<div class="row mg-t-30">
@@ -838,13 +169,9 @@
 				<div id="carousel-thumbs" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="carousel-item active" data-slide-number="0">
-							<div class="row mx-0 thumbs">
-								
-							</div>
+							<div class="row mx-0 thumbs"></div>
 						</div>
-						<div id="#prueba">
-						</div>
-						
+						<div id="#prueba"></div>
 					</div>
 					<a class="carousel-control-prev" href="#carousel-thumbs" role="button" data-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -856,83 +183,200 @@
 					</a>
 				</div>
 
-				<!-- Carrusel de Miniaturas -->
-				<div id="carousel-thumbs" class="owl-carousel owl-theme">
-					<div class="item"><h4>1</h4></div>
-					<div class="item"><h4>2</h4></div>
-					<div class="item"><h4>3</h4></div>
-				</div>
 			</div>
-			
-			
-			
 			
 			<!--descripcion -->
-			<div class="col-12 text-left mt-4">
+			<!-- <div class="col-12 text-left mt-4">
 				<h3 class="title text-uppercase">Descripción</h3>
-				<!-- <img src="<?= base_url() ?>/assets/icons/recibo.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr> -->
 				<p class="info-des mt-2"></p>
-			</div>
+			</div> -->
 			
-			<div class="col-12 text-left mt-4">
+			<!-- <div class="col-12 text-left mt-4">
 				<h3 class="servicios">Servicios</h3>
 				<p>Estos son los servicios con los que cuenta esta propiedad</p>
 				<div id="iconos" class="d-flex flex-column flex-md-row justify-content-between iconos-s mg-t-10"></div>
-			</div>
+			</div> -->
 
-			<div class="col-12 text-left mt-4 d-lg-none">
+			<!-- <div class="col-12 text-left mt-4 d-lg-none">
 				<h3 class="title text-uppercase">Detalles</h3>
-				<!-- <img src="<?= base_url() ?>/assets/icons/edificio.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr> -->
+				
 				<div class="detalles info-prop"></div>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="col-lg-4 propietario text-center mt-lg-precio">
-			<div class="col-12 d-none d-lg-block">
-				<div class="precio"></div>
-			</div>
+			
 
-			<div id="datos_inmob" class="col-12 mt-5">
-				<h3 class="title">Propietario</h3>
-				<figure class="photo-prop"></figure>
-				<p class="info-nprop mt-2"></p>
-				<p id="n_inmobiliaria"></p>
-				<p class="telefono"></p>
-				<p class="correo"></p>
-				<hr>
+			<div class="room-detail_book">
+				<div class="room-detail_total">
+					<!-- <img src="<?= base_url() ?>/templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/icon-logo.png" alt="" class="icon-logo">
+					
+					<h6 class="titulo-prop text-uppercase title"></h6> -->
+					
+					<p class="precio d-none d-lg-block"></p>
+				</div>
+				
+				<div class="room-detail_form">
 
-				<?php 
-					if(isset($alumno_verify)){
-						if($alumno_verify){
-							echo('<button id = "agendar_cita" class="col-12 mg-t-5 mg-l-5 agendar-cita btn-efect group-btn fill"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar cita</button>');
-							echo('<button id="btn_wa" class="col-12 mg-t-5 mg-l-5 btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i> Enviar Mensaje</button>');
+					<h3 class="title" style="text-align: center;">Propietario</h3>
+					<figure class="photo-prop" style="text-align: center;"></figure>
+					<p class="info-nprop mt-2"></p>
+					<p id="n_inmobiliaria"></p>
+					<p class="telefono"></p>
+					<p class="correo"></p>
+					<hr>
+
+					<?php 
+						if(isset($alumno_verify)){
+							if($alumno_verify){
+								echo('<button id = "agendar_cita" class="mg-t-5 mg-l-5 agendar-cita btn-efect group-btn fill" style="right:10px;"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar cita</button>');
+								echo('<button id="btn_wa" class="mg-t-5 mg-l-5 whats btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i> Enviar Mensaje</button>');
+							}						
+						}else{
+							echo('<button id = "agendar_cita" class="mg-t-5 mg-l-5 agendar-cita btn-efect group-btn fill" style="right:10px;"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar cita</button>');
+							echo('<button id="btn_wa" class="mg-t-5 mg-l-5 whats btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i> Enviar Mensaje</button>');
 						}
-						
-					}else{
-						echo('<button id = "agendar_cita" class="col-12 mg-t-5 mg-l-5 agendar-cita btn-efect group-btn fill"><i class="fa fa-calendar" aria-hidden="true"></i> Agendar cita</button>');
-						echo('<button id="btn_wa" class="col-12 mg-t-5 mg-l-5 btn-efect group-btn fill" style="right:10px;"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i> Enviar Mensaje</button>');
+					?>
+					
+				</div>
 
-					}
-
-				?>
-				<!-- <button id="btn_rentar" class="col-12 mg-t-5 mg-l-5 rentar-casa btn-efect group-btn up"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Rentar</button> -->
 			</div>
-			<div class="col-12 text-left mt-4 d-none d-lg-block">
+		
+			<!-- <div class="col-12 text-left mt-4 d-none d-lg-block">
 				<h3 class="title text-uppercase">Detalles</h3>
-				<!-- <img src="<?= base_url() ?>/assets/icons/edificio.gif" alt="Computer man" style="width:48px;height:48px;">
-				<hr> -->
+				
 				<div class="detalles info-prop"></div>
-			</div>	
+			</div> -->	
 
+		</div>
+
+		<!-- TAB -->
+		<div class="col-12">
+			<div class="room-detail_tab">
+				<div class="row">
+					<div class="col-md-3">
+						<ul class="room-detail_tab-header">
+							<li class="active">
+								<a href="#descripcion" data-toggle="tab">DESCRIPCIÓN</a>
+							</li>
+							<li>
+								<a href="#detalles" data-toggle="tab">DETALLES</a>
+							</li>
+							<li>
+								<a href="#servicios" data-toggle="tab">SERVICIOS</a>
+							</li>
+						</ul>
+					</div>
+			
+					<div class="col-md-9">
+						<div class="room-detail_tab-content tab-content">			
+							<!-- DESCRIPCION -->
+							<div class="tab-pane fade active in" id="descripcion">
+								<div class="room-detail_overview">
+									<h5 class="text-uppercase">DESCRIPCIÓN</h5>
+									<p style="font-size: 1.2rem;">Esta habitación o departamento esta alojado a unas cuadras del centro histórico. Nuestra buena ubicación te permite llegar a culaquier lado en transporte ya que esta el metro, metrobus, trolebus y sevicio de RTP.</p>
+									<div class="row">
+										<div class="col-xs-6">
+											<h6>RECAMARA ESPECIAL</h6>
+											<ul>
+												<li>Máximo: 4 Personas</li>
+												<li>Tamaño: 35 m2 / 376 ft2</li>
+												<li>Vista: Oceano</li>
+												<li>Cama: King-size o dos camas</li>
+											</ul>
+										</div>
+										<div class="col-xs-6">
+											<h6>CUARTO DE SERVICIO</h6>
+											<ul>
+												<li>Escritorio de trabajo de gran tamaño</li>
+												<li>Secador de pelo</li>
+												<li>Plancha y tabla de planchar disponibles bajo petición.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- DETALLES -->
+							<div class="tab-pane fade" id="detalles">
+								<h3 class="title text-uppercase">Detalles</h3>
+								<div class="text-left detalles info-prop"></div>
+							</div>
+							
+							<!-- SERVICIOS -->
+							<div class="tab-pane fade" id="servicios">
+								<div class="room-detail_package">
+									<!-- ITEM package -->
+									<div class="room-package_item">
+										<p>Estos son los servicios con los que cuenta esta propiedad</p>
+										<div id="iconos" class="d-flex flex-column flex-md-row justify-content-between iconos-s mg-t-10"></div>
+											<div class="room-detail_amenities">
+											<div class="row">
+												<div class="col-xs-6 col-lg-4">
+													<h6>Discapacidad</h6>
+													<ul>
+														<li>Rampa de acceso</li>
+														<li>Elevador</li>
+														<li>Señalización en braile</li>
+													</ul>
+												</div>
+												<div class="col-xs-6 col-lg-4">
+													<h6>Wifi</h6>
+													<ul>
+														<li>Señal de internet en elevador y pasillos</li>
+														<li>Router amplificador</li>
+													</ul>
+												</div>
+												<div class="col-xs-6 col-lg-4">
+													<h6>Limpieza</h6>
+													<ul>
+														<li>Lavadora y secadora</li>
+														<li>Agua 24/7</li>
+														<li>Lavadero y tendedero de ropa</li>
+													</ul>
+												</div>
+												<div class="col-xs-6 col-lg-4">
+													<h6>Estacionamiento</h6>
+													<ul>
+														<li>Cajón de estacionamiento</li>
+														<li>Ubicación accesible</li>
+													</ul>
+												</div>
+												<div class="col-xs-6 col-lg-4">
+													<h6>Seguridad</h6>
+													<ul>
+														<li>Cámaras de videovigilancia</li>
+														<li>Registro de acceso al edificio</li>
+														<li>Personal de vigilancia</li>
+														<li>Botón de pánico</li>
+													</ul>
+												</div>
+												<div class="col-xs-6 col-lg-4">
+													<h6>Cocina</h6>
+													<ul>
+														<li>Horno de microondas</li>
+														<li>Estufa</li>
+														<li>Fregadero</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
 		</div>
 		
 	</div>
 
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 mt-5">
 				<h3 class="title text-uppercase mt-5 mt-lg-0">Ubicación de la propiedad</h3>
 				<!-- <img src="<?= base_url() ?>/assets/icons/casa.gif" alt="Computer man" style="width:48px;height:48px;">
 				<hr> -->
@@ -960,21 +404,6 @@
 		</form>
 		<div class="questions"></div>
 	</div>
-
-	<!-- <div class="col-sm-12 shadow-sm p-3 mb-5 bg-body rounded border mt-4">
-		<div class="buttons">
-			<h1>Simple hover effects with <code>box-shadow</code></h1>
-			<button class="btn-efect fill">Fill In</button>
-			<button class="btn-efect pulse">Pulse</button>
-			<button class="btn-efect close">Close</button>
-			<button class="btn-efect raise">Raise</button>
-			<button class="btn-efect up">Fill Up</button>
-			<button class="btn-efect slide">Slide</button>
-			<button class="btn-efect offset">Offset</button>
-		</div>
-	</div> -->
-
-
 
 	<div class="col-12 shadow-sm p-3 mb-5 bg-body rounded border mt-3 mt-lg-4 opinions">
 		<h3 class="title"><i class="fa fa-star" aria-hidden="true"></i> Reseñas</h3>
