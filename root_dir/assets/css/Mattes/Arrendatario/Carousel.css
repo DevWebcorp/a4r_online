@@ -205,5 +205,30 @@
     font-family: "Gothic" !important;
     font-size: 1rem;
 }
-
-
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 40px !important;
+  height: 40px !important;
+}
+.carousel-control-next, .carousel-control-prev {
+   opacity: 1 !important; 
+}
+.carousel-control-next-icon {
+    background-image: none !important;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.carousel-control-prev-icon {
+  background-image: none !important;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.carousel-control-next-icon::before {
+  color: white;
+}
+span:nth-of-type(1) {
+  color: white !important;
+}
+.carousel-control-next-icon:hover, .carousel-control-prev-icon:hover {
+   background-color: black !important;
+   border: 2px solid black;
+}
