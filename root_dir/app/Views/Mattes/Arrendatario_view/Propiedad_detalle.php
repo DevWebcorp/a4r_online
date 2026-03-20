@@ -603,6 +603,23 @@
 		$("[id=carousel-selector-" + id + "]").addClass("selected");
 		$("#carousel-thumbs").carousel(thumbNum);
 	});
+
+
+	var owl = $('.carousel slide gallery');
+    owl.owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 4000,
+        loop: true,
+        items: 1,
+        center: true,
+        nav: true,
+        thumbs: true,
+        thumbImage: false,
+        thumbsPrerendered: true,
+        thumbContainerClass: 'owl-thumbs',
+        thumbItemClass: 'owl-thumb-item',
+        navText: ['<span class="prev">＜</span>','<span class="next">＞</span>'],
+	});
 </script>
 
 <?= $this->endSection() ?>

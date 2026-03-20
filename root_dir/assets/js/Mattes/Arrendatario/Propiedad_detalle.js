@@ -108,7 +108,7 @@ function get_detalles() {
                             console.log("soy el inicio");
                             let item =
                                 `<div class="carousel-item" data-slide-number="${i}" data-toggle="lightbox" data-gallery="gallery" data-remote="${path}/${v.pickture}">
-                            <img src="${path}/${v.pickture}" class="d-block w-new" alt="...">
+                                <img src="${path}/${v.pickture}" class="d-block w-new" alt="...">
                         </div>`;
 
                             $('.c-inicio').append(item);
