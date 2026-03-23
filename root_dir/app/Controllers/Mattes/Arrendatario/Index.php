@@ -4,8 +4,7 @@ use App\Controllers\BaseController;
 helper('Acceso');
 helper('Alumno');
 
-class Index extends BaseController
-{
+class Index extends BaseController {
    
   public function index(){
     //$request = \Config\Services::request();

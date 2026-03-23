@@ -76,7 +76,7 @@
     }
 </style>
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -86,7 +86,7 @@
         </div>
     </div>
 </div>
-
+ -->
 <!-- <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>

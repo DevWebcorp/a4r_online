@@ -265,9 +265,9 @@ function initMap(lat, lng, kilometros, data) {
                 });
 
                 var precio = v.precio == null ? " -- " : v.precio;
-                var sello = v.stamp_mattes == "1" ? `<img style="height: 90px !important;width: 89px !important;right: 0px !important;" id = "${v.stamp_mattes}" class = "sello-mattes" src = "${BASE_URL}assets/img/Iconos/best_mattes.png">` : `<div id = "${v.stamp_mattes}" class = "sello-mattes"></div>`;
+                /* var sello = v.stamp_mattes == "1" ? `<img style="height: 90px !important;width: 89px !important;right: 0px !important;" id = "${v.stamp_mattes}" class = "sello-mattes" src = "${BASE_URL}assets/img/Iconos/best_mattes.png">` : `<div id = "${v.stamp_mattes}" class = "sello-mattes"></div>`;
                 var verifica = v.verified == "1" ? `<img class = "verifica-propiedad" src = "${BASE_URL}assets/img/Iconos/Medalla.png">` : `<div class = "verifica-propiedad"></div>`;
-                var posiciona = v.positioning == "1" ? `<img class = "posiciona-propiedad" src = "${BASE_URL}assets/img/Iconos_Mattes/Iconos/Mattes_Posiciona tu popiedad.png">` : `<div class = "posiciona-propiedad"></div>`;
+                var posiciona = v.positioning == "1" ? `<img class = "posiciona-propiedad" src = "${BASE_URL}assets/img/Iconos_Mattes/Iconos/Mattes_Posiciona tu popiedad.png">` : `<div class = "posiciona-propiedad"></div>`; */
 
                 let mayusname = v.name.toUpperCase();
 
@@ -276,14 +276,14 @@ function initMap(lat, lng, kilometros, data) {
                 let html = 
                 `<a  href="${BASE_URL}detalle-propiedad/${nombrencode}" target="_blank">
                     <div class="grid-item" data-img="${v.imagen}">
-                            <figure>
-                                <img id="img-1" class=" w-100" src="${path}/${v.imagen}" alt="First slide">
-                            </figure>
-                            <p id="${v.name}" class="info-casa my-0 text-center" style="margin-left: 0px !important; line-height: 17px !important; ">${mayusname}</p>
-                            <div id="iconos${i}" class = "iconos"></div>
-                            <div id="estrellas${i}" class="starrr  text-center"> </div>
-                            <p class="info-casa  mt-2">Distancia <i class="fa fa-road" aria-hidden="true"></i><span>&nbsp${km} KM</span></p>
-                            <p class="info-casa">Costo: <span>$ ${precio} MXN</span></p>
+                        <figure>
+                            <img id="img-1" class=" w-100" src="${path}/${v.imagen}" alt="First slide">
+                        </figure>
+                        <p id="${v.name}" class="info-casa my-0 text-center" style="margin-left: 0px !important; line-height: 17px !important; ">${mayusname}</p>
+                        <div id="iconos${i}" class = "iconos"></div>
+                        <div id="estrellas${i}" class="starrr  text-center"> </div>
+                        <p class="info-casa  mt-2">Distancia <i class="fa fa-road" aria-hidden="true"></i><span>&nbsp${km} KM</span></p>
+                        <p class="info-casa">Costo: <span>$ ${precio} MXN</span></p>
                     </div>
                 </a>`;
 

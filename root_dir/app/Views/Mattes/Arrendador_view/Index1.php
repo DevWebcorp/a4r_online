@@ -60,212 +60,212 @@
 
 
  <div class="col-md-12">
-                            <div class="accomd-modations-content owl-single">
-                                
-                                <div class="row">
+    <div class="accomd-modations-content owl-single">
+        
+        <div class="row">
 
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Luxury Room</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/days
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-2.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Family Room</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/days
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-3.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Couple Room</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/days
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-4.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Standard</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/day
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-5.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Standard</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/day
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Luxury Room</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-2.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Family Room</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-3.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Couple Room</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-4.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Standard</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-5.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Standard</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
 
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-6.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Standard</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/day
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-6.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Standard</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
 
 
-                                </div>
+        </div>
 
-                                <div class="row">
+        <div class="row">
 
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-6.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Luxury Room</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/days
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-5.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Family Room</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/days
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-4.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Couple Room</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/days
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-3.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Standard</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/day
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-2.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Standard</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/day
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
-                                    
-                                    <!-- ITEM -->
-                                    <div class="col-xs-4">
-                                        <div class="accomd-modations-room">
-                                            <div class="img">
-                                                <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
-                                            </div>
-                                            <div class="text">
-                                                <h2><a href="#">Standard</a></h2>
-                                                <p class="price">
-                                                    <span class="amout">$320</span>/day
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- END / ITEM -->
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-6.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Luxury Room</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-5.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Family Room</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-4.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Couple Room</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/days
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-3.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Standard</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-2.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Standard</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
+            
+            <!-- ITEM -->
+            <div class="col-xs-4">
+                <div class="accomd-modations-room">
+                    <div class="img">
+                        <a href="#"><img src="images/room/img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="text">
+                        <h2><a href="#">Standard</a></h2>
+                        <p class="price">
+                            <span class="amout">$320</span>/day
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- END / ITEM -->
 
-                                </div>
+        </div>
 
-                            </div>
-                        </div>
+    </div>
+</div>
                         
 <script>
     let id_uni = <?php echo json_encode($id_uni); ?>;

@@ -77,23 +77,22 @@
                     <div class="">
                         <h2 class="heading mb-4">Mis propiedades</h2>
                         <p>A continuación, te mostramos tus propiedades registradas en nuestra plataforma con las cuales cuentas en este momento.</p>
+                        <div class="text-center sin-propiedad">
+                            <h3>De momento no cuentas con propiedades registradas. Te invitamos a registrar una.</h3>
+                            <img src="<?= base_url() ?>/assets/img/9527463.jpg" alt="Logo mattes" class="img-fluid w-90 ml-2">
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="accomd-modations-content owl-single">
-                        
                         <div class="row grid-template">
-
-                        
-                    
+                            
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 <!-- END / ACCOMD ODATIONS -->
 
