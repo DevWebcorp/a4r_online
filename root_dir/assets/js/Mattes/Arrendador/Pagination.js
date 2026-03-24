@@ -229,8 +229,8 @@ function get_propiedades() {
                 $('#sn-propiedades').toggle();
                 console.log("aqui va el vacio");
                // console.log("esta vacio")
-                //$(".grid").addClass('shadow-none p-3 mb-5 bg-light rounded text-center');
-                //$(".grid").append('<p>'+'NO HAY PROPIEDADES'+'</p>')
+                $(".grid").addClass('shadow-none p-3 mb-5 bg-light rounded text-center');
+                $(".grid").append('<p>'+'NO HAY PROPIEDADES'+'</p>')
                 
 
             }
