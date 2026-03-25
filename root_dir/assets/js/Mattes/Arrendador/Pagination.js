@@ -63,6 +63,12 @@ function get_propiedades() {
                             <div class="accomd-modations-room">
                                 <div class="img">
                                     <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                    <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                        <i class="ionicons ion-edit h2  text-warning"></i>
+                                    </button>
+                                    <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
                                 </div>
                                 <div class="text">
                                     <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
@@ -84,6 +90,12 @@ function get_propiedades() {
                             <div class="accomd-modations-room">
                                 <div class="img">
                                     <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
+                                    <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                        <i class="ionicons ion-edit h2  text-warning"></i>
+                                    </button>
+                                    <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
                                 </div>
                                 <div class="text">
                                     <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
@@ -229,8 +241,8 @@ function get_propiedades() {
                 $('#sn-propiedades').toggle();
                 console.log("aqui va el vacio");
                // console.log("esta vacio")
-                $(".grid").addClass('shadow-none p-3 mb-5 bg-light rounded text-center');
-                $(".grid").append('<p>'+'NO HAY PROPIEDADES'+'</p>')
+                //$(".grid").addClass('shadow-none p-3 mb-5 bg-light rounded text-center');
+                //$(".grid").append('<p>'+'NO HAY PROPIEDADES'+'</p>')
                 
 
             }
@@ -302,6 +314,12 @@ $(document).keyup(function(event) {
                             <div class="accomd-modations-room">
                                 <div class="img">
                                     <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                    <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                        <i class="ionicons ion-edit h2  text-warning"></i>
+                                    </button>
+                                    <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
                                 </div>
                                 <div class="text">
                                     <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
@@ -322,6 +340,12 @@ $(document).keyup(function(event) {
                             <div class="accomd-modations-room">
                                 <div class="img">
                                     <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
+                                    <button class="detalle-propiedad" id = " ${v.id} " type="button">
+                                        <i class="ionicons ion-edit h2  text-warning"></i>
+                                    </button>
+                                    <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
                                 </div>
                                 <div class="text">
                                     <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
@@ -380,7 +404,8 @@ $(document).keyup(function(event) {
                 }
 
                 $(".detalle-propiedad").on("click", function() {
-                    //alert("OK");
+                    alert("OK");
+                    console.log("ok");
                     let id_propiedad = $(this).attr('id');
                     const url = `${BASE_URL}Mattes/Api/Arrendador_api/Propiedades_rest/validacion`;
                     data = {

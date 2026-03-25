@@ -26,8 +26,8 @@
 <section class="pt-md-1 mt-md-5">
     <div class="container mt-md-5">
         <div class="row ">
-            <div class="col-12 mt-md-3 text-right">
-                <a href="<?= base_url() ?>/subir-propiedad" title="Agregar propiedad" class="btn btn-agregar">
+            <div class="col-12 mt-5 pt-3 pt-lg-0 mt-md-3 text-right">
+                <a href="<?= base_url() ?>/subir-propiedad" title="Agregar propiedad" class="btn btn-agregar mb-3 mb-sm-0">
                     <div class="d-flex align-items-center">
                         <img src="<?= base_url() ?>/assets/img/Iconos/AgregarPropiedad.png" class="img-fluid wd-30 ml-2" alt="Agregar Propiedad">
                         <span>Agregar propiedad</span>

@@ -126,7 +126,7 @@ class Login extends BaseController{
 			'id_user' => $session->get('unique')
 		];
 		$result = $model_sesssion_events->insert($data); */
-		return redirect()->to(base_url());
+		return redirect()->to(base_url().'/a4r/Login');
 	}
 
 	private function user_exist($email , &$array ){

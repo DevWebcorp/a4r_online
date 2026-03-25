@@ -66,32 +66,32 @@
     .accomd-modations {
         padding: 0;
     }
+    .detalle-propiedad{
+        position: absolute;
+        top: 10px;
+        right: 30px;
+    }
+    .eliminar-propiedad{
+        position: absolute;
+        top: 4px;
+        right: 0px;
+    }
+    
 </style>
 
 
  <section class="section-accomd mb-5">
     <div class="container">
-        <div id="sn-propiedades" class="text-center col-12 p-3 mb-5 bg-white rounded" style="height: 230px; display: none ">
-            <h2 class="heading mb-4">Mis propiedades</h2>
-            <p>A continuación, te mostramos tus propiedades registradas en nuestra plataforma con las cuales cuentas en este momento.</p>
-            <div class="col-12">
-                <h3>De momento no cuentas con propiedades registradas. Te invitamos a registrar una.</h3>
-                <!-- <img src="<?= base_url() ?>/assets/img/9527463.jpg" alt="Logo mattes" class="img-fluid ml-2"> -->
-            </div>
-            </h1>
+        <h2 class="heading mb-4 mt-5 mt-lg-0">Mis propiedades</h2>
+         <h5 class="">A continuación, te mostramos tus propiedades registradas en nuestra plataforma con las cuales cuentas en este momento.</h5>
+        <div id="sn-propiedades" class="col-12 p-3 mb-5" style="display:none">
+            <img src="<?= base_url() ?>/assets/img/9527463.jpg" alt="Logo mattes" class="img-fluid ml-2">
+            <h3>De momento no cuentas con propiedades registradas. Te invitamos a registrar una.</h3>
         </div>
+
         <div class="accomd-modations">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="">
-                       
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="accomd-modations-content owl-single">
-                        <div class="row grid-template">
-                        </div>
-                    </div>
+            <div class="accomd-modations-content owl-single">                    
+                <div class="row grid-template">
                 </div>
             </div>
         </div>
@@ -100,6 +100,35 @@
 </section>
 <!-- END / ACCOMD ODATIONS -->
 
+
+<!--Modal eliminar -->
+<div id="modal_eliminar" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bd-0 tx-14">
+            <div class="modal-header bg-danger pd-y-20 pd-x-25">
+                <h6 class="tx-14 mg-b-0 tx-uppercase text-white tx-bold">Eliminar propiedad</h6>
+                <button type="button" class="close text-white " data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="form_delete">
+                <div class="modal-lg">
+                    <div class="pd-80 pd-sm-80 form-layout form-layout-4">
+                        <h5 style="text-align:center;">¿Deseas eliminar la propiedad <span id="mensaje" style="font-weight: bold;"></span>?</h5>
+                        <br>
+                        <p style="color:red; text-align:center;">No se podrán deshacer los cambios una vez realizada la acción</p>
+                        <input type="hidden" id="id_delete" name="id_delete">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button id="delete_prop" type="submit" class="btn btn-danger pd-x-20"><i class="fa fa-check-circle-o mr-1" aria-hidden="true"></i>Aceptar</button>
+                    <button type="button" class="btn btn-secondary pd-x-20" data-dismiss="modal"><i class="fa fa-times-circle mr-1" aria-hidden="true"></i>Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <?= $this->endSection() ?>
