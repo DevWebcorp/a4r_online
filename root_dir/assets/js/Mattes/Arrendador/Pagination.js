@@ -44,15 +44,11 @@ function get_propiedades() {
                 $(result).each(function(i, v) {
     
                     var precio = v.precio == null ? " -- " : v.precio;
-                    //let casa_estatus = $('estatus_casa').attr('class');
-                    //let casa_estatus = document.getElementsByClassName('estatus_casa');
                     if (v.date_start <= hoy) {
-                        var status = "Disponible";                        
-                        //casa_estatus.classList.add('disponible');
+                        var status = "Disponible";                      
                         var background = "linear-gradient(to right, #00b09b, #96c93d)";
                     } else {
                         var status = "No Disponible";
-                        //casa_estatus.classList.add('no-disponible');
                         var background = "linear-gradient(to right, #f90303, #fe5602)";
                     }
     
@@ -62,8 +58,8 @@ function get_propiedades() {
                         `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
-                                    <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                    <img src="${path}/default_propiedad.png" alt="">
+                                    <button class="detalle-propiedad" id ="${v.id} " type="button">
                                         <i class="ionicons ion-edit h2  text-warning"></i>
                                     </button>
                                     <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
@@ -71,7 +67,7 @@ function get_propiedades() {
                                     </button>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
+                                    <h2>${v.name}</h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
@@ -89,8 +85,8 @@ function get_propiedades() {
                         let html = `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
-                                    <button class = "detalle-propiedad" id = " ${v.id} " type="button">
+                                    <img src="${path}/${v.imagen}" alt="">
+                                    <button class="detalle-propiedad" id="${v.id}" type="button">
                                         <i class="ionicons ion-edit h2  text-warning"></i>
                                     </button>
                                     <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
@@ -98,7 +94,7 @@ function get_propiedades() {
                                     </button>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
+                                    <h2>${v.name}</h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
@@ -163,10 +159,9 @@ function get_propiedades() {
                     $('#id').val(id_propiedad);
                     const url = `${BASE_URL}Mattes/Api/Arrendador_api/Propiedades_rest/validacion`;
                     data = {
-                        id_propiedad: id_propiedad
-    
+                        id_propiedad: id_propiedad    
                     }
-                    //console.log(data);
+                    console.log(data);
                     $.ajax({
                         type: "POST",
                         url: url,
@@ -313,7 +308,7 @@ $(document).keyup(function(event) {
                             let html = `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/default_propiedad.png" alt=""></a>
+                                    <img src="${path}/default_propiedad.png" alt="">
                                     <button class = "detalle-propiedad" id = " ${v.id} " type="button">
                                         <i class="ionicons ion-edit h2  text-warning"></i>
                                     </button>
@@ -322,7 +317,7 @@ $(document).keyup(function(event) {
                                     </button>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
+                                    <h2>${v.name}</h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>
@@ -339,8 +334,8 @@ $(document).keyup(function(event) {
                             let html = `<div class="col-xs-4">
                             <div class="accomd-modations-room">
                                 <div class="img">
-                                    <a href="#"><img src="${path}/${v.imagen}" alt=""></a>
-                                    <button class="detalle-propiedad" id = " ${v.id} " type="button">
+                                    <img src="${path}/${v.imagen}" alt="">
+                                   <button class="detalle-propiedad" id="${v.id}" type="button">
                                         <i class="ionicons ion-edit h2  text-warning"></i>
                                     </button>
                                     <button class = "eliminar-propiedad" id = " ${v.id} " type="button" data-toggle="modal" data-target="#modal_eliminar">
@@ -348,7 +343,7 @@ $(document).keyup(function(event) {
                                     </button>
                                 </div>
                                 <div class="text">
-                                    <h2><a href="#" style="cursor: auto;">${v.name}</a></h2>
+                                    <h2>${v.name}</h2>
                                     <p class="price">
                                         <span class="amout">$${precio}</span>/days
                                     </p>

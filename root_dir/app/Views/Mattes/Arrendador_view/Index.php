@@ -6,11 +6,8 @@
 <!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
     <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
-
-    <!--prefijo -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css" />
     <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
 <?= $this->endSection() ?>
 
@@ -77,6 +74,16 @@
         right: 0px;
     }
     
+    .btn-secondary:hover {
+        border-radius: 0px !important;
+        background-color: #fff !important;
+        color: #545b62 !important; 
+        border: 2px solid #545b62 !important;
+    }
+    .accomd-modations-room .text h2 {
+        color: white;
+    }
+    
 </style>
 
 
@@ -103,7 +110,7 @@
 
 <!--Modal eliminar -->
 <div id="modal_eliminar" class="modal fade">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content bd-0 tx-14">
             <div class="modal-header bg-danger pd-y-20 pd-x-25">
                 <h6 class="tx-14 mg-b-0 tx-uppercase text-white tx-bold">Eliminar propiedad</h6>
@@ -112,34 +119,42 @@
                 </button>
             </div>
             <form id="form_delete">
-                <div class="modal-lg">
-                    <div class="pd-80 pd-sm-80 form-layout form-layout-4">
-                        <h5 style="text-align:center;">¿Deseas eliminar la propiedad <span id="mensaje" style="font-weight: bold;"></span>?</h5>
+                <div class="modal-body">
+                    <div class="form-layout form-layout-4">
+                        <h5>¿Deseas eliminar la propiedad <span id="mensaje" style="font-weight: bold;"></span>?</h5>
                         <br>
-                        <p style="color:red; text-align:center;">No se podrán deshacer los cambios una vez realizada la acción</p>
+                        <p style="color:red;">No se podrán deshacer los cambios una vez realizada la acción</p>
                         <input type="hidden" id="id_delete" name="id_delete">
                     </div>
                 </div>
 
                 <div class="modal-footer">
                     <button id="delete_prop" type="submit" class="btn btn-danger pd-x-20"><i class="fa fa-check-circle-o mr-1" aria-hidden="true"></i>Aceptar</button>
-                    <button type="button" class="btn btn-secondary pd-x-20" data-dismiss="modal"><i class="fa fa-times-circle mr-1" aria-hidden="true"></i>Cancelar</button>
+                    <button type="button" class="btn btn-secondary mt-3 py-3 px-5" data-dismiss="modal"><i class="fa fa-times-circle mr-1" aria-hidden="true"></i>Cancelar</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+<form method="POST" id="propiedad_id">
+    <input class="id_propiedad" type="hidden" name="id" id="id">
+</form>
 
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>    
-<script src="<?= base_url() ?>/../../assets/lib/jquery/jquery.js"></script>
-<script src="<?= base_url() ?>/../../assets/lib/jquery-ui/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<!-- or -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.js"></script>
 
 
 <?= $this->endSection() ?>
