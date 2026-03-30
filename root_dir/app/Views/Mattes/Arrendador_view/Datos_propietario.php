@@ -25,7 +25,7 @@
     </div>
 </div> --> 
 
-<section class="section-sub-banner bg-9">
+<section class="section-sub-banner bg-cuenta">
     <div class="sub-banner">
         <div class="container">
             <div class="text text-center">
