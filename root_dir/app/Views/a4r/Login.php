@@ -4,15 +4,17 @@
 <!--LIBRERIAS DINAMICAS PARA CSS-->
 <?= $this->section('css') ?>
 <!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+ <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
 <?= $this->endSection() ?>
 
 
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
+
 <?= $this->include('Layout/header') ?>
 
  <!-- ACCOUNT -->
-        <section class="section-account parallax bg-11">
+        <section class="section-account parallax bg-login">
             <div class="awe-overlay"></div>
             <div class="container">
                 <div class="login-register">

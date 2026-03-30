@@ -182,18 +182,54 @@ input[type="search"] {
     background-color: #025272 !important;
 }
 .bg-inmobiliaria{  
-    background-image: url('../../assets/img/a4r/datos-inmobiliaria.png');;     
+    background-image: url('../../assets/img/a4r/datos-inmobiliaria.png');     
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .bg-propiedad{  
-    background-image: url('../../assets/img/a4r/anuncio8.jpg');;     
+    background-image: url('../../assets/img/a4r/anuncio8.jpg');   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.bg-registro-propietario{
+    background-image: url('/assets/img/a4r/freepik/house-isolated-field.jpg');
+} 
+
+.bg-registro-usuario{  
+    background-image: url('/assets/img/a4r/register1.jpg'); 
+} 
+.bg-registro{  
+    background-image: url('/assets/img/a4r/register3.jpg'); 
+} 
+.bg-login{  
+    background-image: url('/assets/img/a4r/register2.jpg');  
+} 
+
+.bg-registro-propietario,
+.bg-registro-usuario,
+.bg-login,
+.bg-registro{
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-registro-propietario::before,
+.bg-registro-usuario::before,
+.bg-login::before,
+.bg-registro::before{  
+    content: '';
+    position: absolute;
+    top:0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+} 
  
 .servicios{
     color: #232323;
