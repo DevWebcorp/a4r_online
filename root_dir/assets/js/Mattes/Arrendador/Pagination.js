@@ -69,7 +69,7 @@ function get_propiedades() {
                                 <div class="text">
                                     <h2>${v.name}</h2>
                                     <p class="price">
-                                        <span class="amout">$${precio}</span>/days
+                                        <span class="amout">$${precio}</span>
                                     </p>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ function get_propiedades() {
                                 <div class="text">
                                     <h2>${v.name}</h2>
                                     <p class="price">
-                                        <span class="amout">$${precio}</span>/days
+                                        <span class="amout">$${precio}</span>
                                     </p>
                                 </div>
                             </div>
@@ -319,7 +319,7 @@ $(document).keyup(function(event) {
                                 <div class="text">
                                     <h2>${v.name}</h2>
                                     <p class="price">
-                                        <span class="amout">$${precio}</span>/days
+                                        <span class="amout">$${precio}</span>
                                     </p>
                                 </div>
                             </div>
@@ -345,7 +345,7 @@ $(document).keyup(function(event) {
                                 <div class="text">
                                     <h2>${v.name}</h2>
                                     <p class="price">
-                                        <span class="amout">$${precio}</span>/days
+                                        <span class="amout">$${precio}</span>
                                     </p>
                                 </div>
                             </div>

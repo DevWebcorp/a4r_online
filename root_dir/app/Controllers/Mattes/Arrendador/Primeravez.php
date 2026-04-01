@@ -80,7 +80,7 @@ class Primeravez extends BaseController
               //Css cuando se agrega un css ejemplo: ["css1", "css2"]
               $data_header['styles'] = ["starlight.css" , "../lib/jquery-timepicker/jquery.timepicker.css" , "../lib/datatables/jquery.dataTables.css",  "Mattes/Arrendador/Primeravez.css", "Mattes/Principal.css", "Mattes/Arrendador/Arrendador.css", "Mattes/Arrendador/Menu_arrendador.css"];
               //Vars
-              $data_header['title'] = "Mattes";
+              $data_header['title'] = "Regstro por primera vez";
               $data_header['description'] = "Pagina de inicio de primera vez para el arrendador";
               echo view('header' , $data_header);
               //echo view('left_panel',$data_left);
@@ -88,7 +88,7 @@ class Primeravez extends BaseController
               echo view('Mattes/Arrendador_view/Menu_primeravez', $data_menu);
               echo view('Mattes/Arrendador_view/Primeravez');
               //echo view('right_panel');
-              echo view('Mattes/Footer');
+              //echo view('Mattes/Footer');
               echo view('fotter_panel' , $data_fotter);  
           }
           

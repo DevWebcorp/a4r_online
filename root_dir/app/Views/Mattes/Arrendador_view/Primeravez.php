@@ -1,3 +1,15 @@
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
+
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
+
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> -->
 <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
@@ -6,8 +18,8 @@
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span><strong>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA</strong> <span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div>
 
 
 <section id="primeravez">
@@ -16,7 +28,7 @@
             <h1 id="titulo" class="mt-primeravez text-center"> Antes de comenzar, cuéntanos ...</h1>
         </div>
     
-        <div class="col-12 col-lg-8 d-sm-flex mx-auto mt-md-5">
+        <div class="col-12 col-lg-10 d-sm-flex mx-auto mt-md-5">
             <div class="col-sm-4 card-comienzo mr-sm-1 mx-lg-3">
     
                 <div class="col-sm-12 mt-2 mt-md-5 text-center">
@@ -60,3 +72,11 @@
         </div>
     </div>
 </section>
+
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>    
+
+
+
+<?= $this->endSection() ?>
