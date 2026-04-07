@@ -8,7 +8,7 @@
                 </button>
 
                 <a href="<?= base_url() ?>/Inicio" class="navbar-brand d-lg-none mx-auto">
-                    <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/LogoRMattes.png" alt="Logo mattes" class="img-fluid logo">
+                    <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo" class="img-fluid logo">
                 </a>
 
                 <!--Barra de navegación -->
@@ -31,7 +31,7 @@
                     </ul>
                     <!--LOGOTIPO DEL SITIO-->
                     <a href="<?= base_url() ?>/Inicio" class="navbar-brand d-none d-lg-block mr-lg-16">
-                        <img src="<?= base_url() ?>/assets/img/Iconos_Mattes/Iconos/LogoRMattes.png" alt="Logo mattes" class="img-fluid logo">
+                        <img src="<?= base_url() ?>/assets/img/Logo-PlataformA4R.png" alt="Logo mattes" class="img-fluid logo">
                     </a>
                     <ul class="navbar-nav ml-lg-auto">
                         <li class="nav-item inicio-sesion px-3 py-0 my-lg-auto d-none d-lg-inline">

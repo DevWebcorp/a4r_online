@@ -10,6 +10,17 @@
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
 
+<style>
+    .principal {
+        height: auto;
+    }
+    @media(min-width: 992px){
+        .principal {
+            height: 100vh;
+        }
+    }
+</style>
+
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> -->
 <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
@@ -23,16 +34,16 @@
 
 
 <section id="primeravez">
-    <div class="col-12 principal height-primeravez" >
-        <div class="col-12 row justify-content-center ">
-            <h1 id="titulo" class="mt-primeravez text-center"> Antes de comenzar, cuéntanos ...</h1>
+    <div class="col-12 principal">
+        <div class="col-12 row justify-content-center pt-5">
+            <h1 id="titulo" class="mt-5 text-center">Elige una opción</h1>
         </div>
     
         <div class="col-12 col-lg-10 d-sm-flex mx-auto mt-md-5">
             <div class="col-sm-4 card-comienzo mr-sm-1 mx-lg-3">
     
                 <div class="col-sm-12 mt-2 mt-md-5 text-center">
-                    <img id="agente" class="img-fluid" src="<?= base_url() ?>/assets/img/Iconos/Casa.png" alt="">
+                    <img id="" class="img-fluid" src="<?= base_url() ?>/assets/img/a4r/freepik/registro-propietario.jpg" alt="">
                 </div>
                 <div class="col-12 mt-2 mt-md-5">
                     <p class="text-center subtitulo">Solo quiero rentar mi propiedad</p>
@@ -46,7 +57,7 @@
     
             <div class="col-sm-4 card-comienzo mx-sm-2 mx-lg-3">
                 <div class="col-sm-12 mt-2 mt-md-5 text-center">
-                    <img id="agente" class="img-fluid" src="<?= base_url() ?>/assets/img/Iconos/Agente.png" alt="">
+                    <img id="" class="img-fluid" src="<?= base_url() ?>/assets/img/img2.jpg" alt="" style="">
                 </div>
                 <div class="col-12 mt-2 mt-md-5">
                     <p class="text-center subtitulo">Soy agente inmobiliario</p>
@@ -59,7 +70,7 @@
     
             <div class="col-sm-4 card-comienzo ml-sm-2 ml-lg-3">
                 <div class="col-sm-12 mt-2 mt-md-5 text-center">
-                    <img id="agente" class="img-fluid" src="<?= base_url() ?>/assets/img/Iconos/Edificios.png" alt="">
+                    <img id="" class="img-fluid" src="<?= base_url() ?>/assets/img/about/8-min.png" alt="" style="">
                 </div>
                 <div class="col-12 mt-md-5">
                     <p class="text-center subtitulo">Soy parte de una inmobiliaria</p>
