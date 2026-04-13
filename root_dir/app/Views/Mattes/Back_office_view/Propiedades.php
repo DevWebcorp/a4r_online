@@ -15,7 +15,7 @@
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
 
-<section class="propiedades-tabla mb-200 mg-t-90 height-propiedades">
+<section class="propiedades-tabla mb-5 mg-t-90" style="height: auto;">
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -15,7 +15,7 @@
 <!-- CONTENIDO DINAMICO -->
 <?= $this->section('content') ?>
 
-<section class="propiedades mg-t-120 mg-b-40 altura-alumnos">
+<section class="propiedades mg-t-120 mb-5" style="height: auto;">
     <div class="container">
         <div class="row">
             <div class="col-12">

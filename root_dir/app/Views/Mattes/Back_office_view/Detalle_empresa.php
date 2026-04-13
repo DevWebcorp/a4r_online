@@ -59,6 +59,18 @@
     .tab button {
         padding: 10px 30px;
     }
+    .bg-inmobiliaria{
+        position: relative;
+    }
+    .bg-inmobiliaria:before {
+        content: '';
+        position: absolute;        
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.6);
+    }
 </style>
 
 <!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 99999;">
