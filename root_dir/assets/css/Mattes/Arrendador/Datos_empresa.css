@@ -286,9 +286,9 @@ input:checked+.slider:before {
 
 .datos-empresa .tablinks.active,
 .datos-empresa .tablinks:hover {
-    background-color: #0088F7 !important;
+    background-color: #000 !important;
     color: white;
-    border-radius: 8px !important;
+    border-radius: 0px !important;
 }
 
 .datos-agentes {

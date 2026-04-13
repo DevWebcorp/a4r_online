@@ -169,9 +169,9 @@
         ===== DATOS BANCARIOS =====
       =============================================-->
       <div id="Bancarios" class="tabcontent mg-b-30 mb-md-75">
-          <div class="text-center">
+          <!-- <div class="text-center">
             <h3 class="datos-bancarios-empresa mb-sm-5"> Datos bancarios <span><br>(opcional)</span></h3>
-          </div>
+          </div> -->
           <form class="" id="form_bancarios_inmobiliaria" enctype="multipart/form-data">
             <div class="row">
               <div class="col-lg-4">
@@ -211,9 +211,9 @@
         ===== DATOS FISCALES =====
       =============================================-->
       <div id="Fiscales" class="tabcontent mg-b-60 mb-sm-3">
-          <div class="text-center">
+          <!-- <div class="text-center">
             <h3 class="datos-fiscales-empresa mb-5"> Datos fiscales <span><br>(opcional)</span></h3>
-          </div>
+          </div> -->
           <form class="" id="form_fiscales" enctype="multipart/form-data">
             <div class="row">
               <div class="col-lg-6">
@@ -255,9 +255,9 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-                <div class="text-center">
+                <!-- <div class="text-center">
                   <h3 class="notificaciones-empresa mb-5"> Notificaciones </h3>
-                </div>
+                </div> -->
                 <form class="" id="form_notificaciones" enctype="multipart/form-data">
                   <div class="row mg-t-20">
                     <p class="col-sm-6 text-center text-sm-right">Notificaciones en correo</p>
