@@ -5,7 +5,7 @@
 <!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.7/dist/css/autoComplete.01.min.css">
+   
     <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
     <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
 <?= $this->endSection() ?>
@@ -15,11 +15,21 @@
 
 <style>
     @media(min-width:992px) {
-    .table-responsive {
-        display: inline-table;
-        overflow-x: hidden !important;
+        .table-responsive {
+            display: inline-table;
+            overflow-x: hidden !important;
+        }
     }
-}
+    .btn-warning:hover{
+       border-radius: 0px !important; 
+       background-color: #fff !important;
+       color: #da850a !important;
+       border-color: #da850a !important;
+    }
+    .bg-warning{
+        background-color:#da850a !important;
+    }
+   
 </style>
 
 <!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 99999999;">

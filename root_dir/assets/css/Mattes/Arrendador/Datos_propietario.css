@@ -70,6 +70,7 @@
     cursor: pointer;
     -webkit-transition: .4s;
     transition: .4s;
+    width: 60px;
 }
 
 .slider:before {
@@ -91,6 +92,7 @@
 
 input:checked+.slider {
     background-color: #006425;
+    width: 60px;
 }
 
 input:focus+.slider {

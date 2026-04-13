@@ -16,6 +16,21 @@
 <?= $this->section('content') ?>
 
 <style>
+    .bg-propiedad {
+        position: relative;
+    }
+     .bg-propiedad:before {
+        content: '';
+        position: absolute;        
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.6);
+    }
+</style>
+
+<style>
     #preguntas-propiedad_length>label>select,
     #visitas-propiedad_length>label>select {
         background: none;
