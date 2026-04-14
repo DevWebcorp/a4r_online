@@ -1,9 +1,17 @@
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+<!-- EXTENDIENDO EL LAYOUT PRINCIPAL -->
+<?= $this->extend('layout/main') ?>
 
-<link href="<?= base_url() ?>../../../assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+<!--LIBRERIAS DINAMICAS PARA CSS-->
+<?= $this->section('css') ?>
+<!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="<?= base_url() ?>/assets/lib/SpinKit/spinkit.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="<?= base_url() ?>/assets/css/estilos.css" rel="stylesheet">
+<?= $this->endSection() ?>
+
+<!-- CONTENIDO DINAMICO -->
+<?= $this->section('content') ?>
 
 <style>
     /*  .notificacion2 {
@@ -39,20 +47,28 @@
             background-position: 200% center;
         }
     }
-    
+    @media(min-width: 992px){
+        #data-citas{
+            display: inline-table !important;
+        }
+        #preguntas_propiedades{
+            display: inline-table !important;
+        }
+    }
+   
 </style>
 
-<div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
+<!-- <div class="alert bg-warning mg-t-100 d-none" id="succes-alert" role="alert">
     <button type="button" class="close" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
     <div class="d-flex align-items-center justify-content-start">
         <i class="fa fa-exclamation-triangle alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
         <span>SU CORREO ELECTRÓNICO NO HA SIDO VERIFICADO, POR FAVOR VERIFIQUE SU BANDEJA DE ENTRADA <span id="success"></span></span>
-    </div><!-- d-flex -->
-</div><!-- alert -->
+    </div>
+</div> -->
 
-<div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 999999999;">
+<!-- <div id="loader" class="modal fade show" style="display: none; padding-left: 0px; z-index: 999999999;">
     <div class="modal-dialog modal-dialog-vertical-center" role="document">
         <div class="d-flex ht-300 pos-relative align-items-center">
             <div class="sk-chasing-dots">
@@ -61,9 +77,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
-<section class="propiedades mg-t-200 mb-200 height-notificaciones">
+<section class="propiedades mg-t-200">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -74,18 +90,17 @@
 
                     <li class="nav-item  mr-2" role="presentation" id="tb-questions">
                         <a class="nav-link pos-relative" id="pregunta-tab" data-toggle="tab" href="#pregunta" role="tab" aria-controls="pregunta" aria-selected="false">Dudas de propiedades&nbsp<span id="noti-preguntas" class="notificacion-preguntas "></span></a>
-
                     </li>
                     <!--  <a class="nav-link" id="pregunta-tab" data-toggle="tab" href="#pregunta" role="tab" aria-controls="pregunta" aria-selected="false">Pregunta de tus propiedades&nbsp<span class="notificacion-preguntas">1</span></a> -->
 
                     <li class="nav-item" role="presentation" id="tb-comunicados">
-                        <a class="nav-link pos-relative" id="mensajes_chat" data-toggle="tab" href="#comunicados" role="tab" aria-controls="comunicados" aria-selected="false">Comunicación con Mattes&nbsp<span id="noti-comunicacion"></span> </a>
+                        <a class="nav-link pos-relative" id="mensajes_chat" data-toggle="tab" href="#comunicados" role="tab" aria-controls="comunicados" aria-selected="false">Comunicación<span id="noti-comunicacion"></span> </a>
                     </li>
                 </ul>
-                <div class="tab-content height-visitas" id="myTabContent">
+                <div class="tab-content mb-5" id="myTabContent" style="height: auto;">
                     <div class="tab-pane fade show active" id="visita" role="tabpanel" aria-labelledby="visita-tab">
                         <table id="data-citas" class="table table-bordered display table-responsive mt-3 tablas_mattes " style="width: 100%;">
-                            <thead style="border-radius: 10px !important;">
+                            <thead>
                                 <tr>
                                     <th>Propiedad</th>
                                     <th class="wd-15p">Universidad</th>
@@ -104,7 +119,7 @@
                         </table>
                     </div>
 
-                    <div class="tab-pane fade height-preguntas" id="pregunta" role="tabpanel" aria-labelledby="pregunta-tab">
+                    <div class="tab-pane fade" id="pregunta" role="tabpanel" aria-labelledby="pregunta-tab" style="height: auto;">
                         <table id="preguntas_propiedades" class="table display table-bordered table-responsive mt-3 tablas_mattes pregunta" style="width: 100%;">
                             <thead>
                                 <tr>
@@ -126,10 +141,8 @@
                     <div class="tab-pane fade" id="comunicados" role="tabpanel" aria-labelledby="comunicados-tab">
                         <div class="container">
                             <div class="row form-border">
-                                <div class="col-lg-12 col-md-6">
-                                    <div class="row chat-box">
-
-                                    </div>
+                                <div class="col-lg-12 col-md-6 mb-5">
+                                    <div class="row chat-box"></div>
                                     <form method="post" name="conversacion" id="conversacion" enctype="multipart/form-data">
                                         <div class="col-12 mg-t-30 px-0">
                                             <div class="col-sm-12 mg-t-10 mg-sm-t-0 px-0">
@@ -239,61 +252,74 @@
     <input class="id_propiedad" type="hidden" name="id" id="id">
 </form>
 
-<script>
-    let id_usuario = <?php echo json_encode($id_usuario); ?>;
-    let id_group = <?php echo json_encode($group); ?>;
+<?= $this->endSection() ?>
 
-    setTimeout(function() {
-        const url = `${BASE_URL}Mattes/Api/Arrendador_api/Conversacion_rest/noti_visitas`;
-        $.ajax({
-            url: url,
-            type: "GET",
-            //data: data,
-            success: function(data) {
-                if (data == 0) {
-                    $('#noti-visitas').text("");
-                }
-            },
-            dataType: "json",
+<?= $this->section('scripts') ?>    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+
+    <script>
+        let id_usuario = <?php echo json_encode($id_usuario); ?>;
+        let id_group = <?php echo json_encode($group); ?>;
+
+        setTimeout(function() {
+            const url = `${BASE_URL}Mattes/Api/Arrendador_api/Conversacion_rest/noti_visitas`;
+            $.ajax({
+                url: url,
+                type: "GET",
+                //data: data,
+                success: function(data) {
+                    if (data == 0) {
+                        $('#noti-visitas').text("");
+                    }
+                },
+                dataType: "json",
+
+            });
+
+        }, 5000);
+
+        //preguntas
+
+
+        $('#tb-questions').on('click', function() {
+            const url = `${BASE_URL}Mattes/Api/Arrendador_api/Conversacion_rest/noti_preguntas`;
+            $.ajax({
+                url: url,
+                type: "GET",
+                //data: data,
+                success: function(data) {
+                    if (data == 0) {
+                        $('.notificacion-preguntas').text("");
+                    }
+                },
+                dataType: "json",
+
+            });
         });
 
-    }, 5000);
+        //comunicacion
 
-    //preguntas
+        $('#tb-comunicados').on('click', function() {
+            const url = `${BASE_URL}Mattes/Api/Arrendador_api/Conversacion_rest/noti_comunicacion`;
+            $.ajax({
+                url: url,
+                type: "GET",
+                //data: data,
+                success: function(data) {
+                    if (data == 0) {
+                        $('#noti-comunicacion').text("");
+                    }
+                },
+                dataType: "json",
 
-
-    $('#tb-questions').on('click', function() {
-        const url = `${BASE_URL}Mattes/Api/Arrendador_api/Conversacion_rest/noti_preguntas`;
-        $.ajax({
-            url: url,
-            type: "GET",
-            //data: data,
-            success: function(data) {
-                if (data == 0) {
-                    $('.notificacion-preguntas').text("");
-                }
-            },
-            dataType: "json",
-
+            });
         });
-    });
+    </script>
 
-    //comunicacion
 
-    $('#tb-comunicados').on('click', function() {
-        const url = `${BASE_URL}Mattes/Api/Arrendador_api/Conversacion_rest/noti_comunicacion`;
-        $.ajax({
-            url: url,
-            type: "GET",
-            //data: data,
-            success: function(data) {
-                if (data == 0) {
-                    $('#noti-comunicacion').text("");
-                }
-            },
-            dataType: "json",
+<?= $this->endSection() ?>
 
-        });
-    });
-</script>
+

@@ -97,13 +97,21 @@ body {
 }
 
 .btn-aceptar {
-    border: 1px solid var(--verde) !important;
-    border-radius: 10px !important;
-    color: white !important;
-    background-color: var(--verde) !important;
-    cursor: pointer;
-    text-transform: uppercase !important;
+    width: 200px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    margin-top: 20px !important;
+    border: 2px solid #4cae4c;
+    border-radius: 0;
+    color: #fff;
+    background-color: #4cae4c;
+    font-size: 15px !important;
 }
+.btn-aceptar:hover {
+    border-color: #4cae4c !important;
+    color: #4cae4c !important;
+    background-color: #fff !important;
+}  
 .btn-teal,
 .bg-teal{
     color: var(--blanco) !important;

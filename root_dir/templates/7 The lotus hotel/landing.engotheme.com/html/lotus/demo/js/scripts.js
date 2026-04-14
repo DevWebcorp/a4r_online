@@ -140,7 +140,7 @@
                 window_w = $(window).innerWidth();
 
             if (size_point == undefined || size_point == '') {
-                size_point = 1800;
+                size_point = 900;
             }
 
             if (window_w <= size_point) {

@@ -112,10 +112,10 @@
                                         <img src="<?= base_url() ?>/assets/img/Iconos/Home_outline.png" class="img-fluid wd-40 rounded-circle ml-2" alt="icono inicio">
                                         Home
                                     </a>
-                                    <!-- <a id="fisica" class="dropdown-item" href="<?= base_url() ?>/datos-alumno">
+                                     <a id="fisica" class="dropdown-item" href="<?= base_url() ?>/datos-alumno">
                                         <img src="<?= base_url() ?>/assets/img/Iconos/Usuario.png" class="img-fluid wd-40 rounded-circle ml-2" alt="Icono persona">
                                         Mi cuenta
-                                    </a> -->
+                                    </a> 
                                     <!-- <a id="moral" class="dropdown-item"
                                         href="<?= base_url() ?>/Mattes/Arrendatario/Mensajes">
                                         <img src="<?= base_url() ?>/../../assets/img/Iconos_Mattes/Iconos/IconoMattes_Citas.png"
