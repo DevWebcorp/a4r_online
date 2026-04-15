@@ -30,7 +30,7 @@
     .btn-primary{
         font-size: 16px;
     }
-    .header_logo {
+    .header_logo { 
         margin-top: 14px;
     }
 </style>
@@ -44,7 +44,7 @@
                 <img src="<?= base_url() ?>/../../assets/img/a4r/home.png"  class="img-fluid" data-duration="14000" data-bgposition="top center" data-bgpositionend="center" alt="">
 
                 <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="left" data-y="240" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                    <h2 style="font-weight:bold;">¡Encuentra la casa de tus sueños!</h2>
+                    <h2 class="display-4" style="font-weight:bold;">¡Encuentra la casa de tus sueños!</h2>
                 </div>
 
                 <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="left" data-y="280" data-speed="700" data-easing="easeOutBack"  data-start="2000">
