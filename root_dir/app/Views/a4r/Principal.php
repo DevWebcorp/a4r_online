@@ -4,6 +4,7 @@
 <!--LIBRERIAS DINAMICAS PARA CSS-->
 <?= $this->section('css') ?>
 <!-- Aquí puedes agregar hojas de estilo específicas para esta vista -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<?= base_url('/../templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/helper.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?= base_url('/../templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/custom.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?= base_url('/../templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/css/responsive.css') ?>">
@@ -26,6 +27,12 @@
         color: #000;
         text-transform: initial;
     }
+    .btn-primary{
+        font-size: 16px;
+    }
+    .header_logo {
+        margin-top: 14px;
+    }
 </style>
 
  <!-- BANNER SLIDER -->
@@ -34,7 +41,7 @@
     <div id="slider-revolution">
         <ul>
             <li data-transition="fade">
-                <img src="<?= base_url() ?>/../../assets/img/a4r/home.png" data-bgposition="left center" data-duration="14000" data-bgpositionend="center" alt="">
+                <img src="<?= base_url() ?>/../../assets/img/a4r/home.png"  class="img-fluid" data-duration="14000" data-bgposition="top center" data-bgpositionend="center" alt="">
 
                 <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="left" data-y="240" data-speed="700" data-start="1500" data-easing="easeOutBack">
                     <h2 style="font-weight:bold;">¡Encuentra la casa de tus sueños!</h2>
@@ -81,22 +88,44 @@
     <div class="container">
         <div class="content">
             <div class="row">
-                <div class="col col-xs-12">
-                    <div class="ot-heading mb40 row-20">
-                        <h3 class="text-center">Casas en venta</h3>
-                        <p class="sub pr10 pl10">
-                            Descubre nuestras mejores ofertas en casas en venta. Encuentra la casa de tus sueños con nosotros. Tenemos una amplia selección de propiedades para satisfacer tus necesidades y presupuesto. ¡Explora nuestras opciones hoy mismo!
+                <div class="col-12">
+                    <div class="text-center">
+                        <h2 class="font-weight-bold h1">Casas en venta</h2>
+                        <p>
+                            Descubre nuestras mejores propiedades disponibles.
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="accomd-modations-room">
-                        <div class="img">
-                            <img src="<?= base_url('templates/7 The lotus hotel/landing.engotheme.com/html/lotus/demo/images/room/list/img-2.jpg') ?>" alt="">
+                <div class="col-md-4">
+                    <div class="card">                        
+                        <img src="<?= base_url() ?>/../../assets/img/a4r/freepik/japanese-house-entrance-plant.jpg" alt="">
+                        <div class="card-body">
+                            <h2 class="font-weight-bold">Casa moderna</h2>
+                            <p style="font-weight: 600">$3,200,000 MXN</p>
+                            <p>3 habitaciones, 2 baños </p>
+                            <button class="btn btn-primary">Ver detalles</button>
                         </div>
-                        <div class="text">
-                            <h2>Casa moderna</h2>
-                            
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">                        
+                        <img src="<?= base_url() ?>/../../assets/img/a4r/freepik/house-isolated-field.jpg" alt="">
+                        <div class="card-body">
+                            <h2 class="font-weight-bold">Residencia familiar</h2>
+                            <p style="font-weight: 600">$5,800,000 MXN</p>
+                            <p>4 habitaciones, 3 baños </p>
+                            <button class="btn btn-primary">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">                        
+                        <img src="<?= base_url() ?>/../../assets/img/a4r/2575073_2.jpg" alt="">
+                        <div class="card-body">
+                            <h2 class="font-weight-bold">Hogar acogedor</h2>
+                            <p style="font-weight: 600">$1,850,000 MXN</p>
+                            <p>2 habitaciones, 1 baño </p>
+                            <button class="btn btn-primary">Ver detalles</button>
                         </div>
                     </div>
                 </div>
@@ -108,6 +137,56 @@
 
 <!--HTML-->
 
+ <!-- CONTACT -->
+    <section class="section-contact">
+        <div class="container">
+            <div class="contact">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-5">
+
+                        <div class="text">
+                            <h2>¿Interesado en alguna casa?</h2>
+                            <p>¡Contáctanos hoy mismo!</p>
+                            <ul>
+                                <li style="font-size:15px;"><i class="icon lotus-icon-decor"></i> Gran variedad de propiedades</li>
+                                <li style="font-size:15px;"><i class="icon lotus-icon-phone"></i>Asesoría profesional</li>
+                                <li style="font-size:15px;"><i class="icon lotus-icon-person"></i> Proceso sencillo y rápido</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-lg-offset-1">
+                        <div class="contact-form">
+                            <form id="send-contact-form" action="https://landing.engotheme.com/html/lotus/demo/send_mail_contact.php" method="post">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="field-text"  name="name" placeholder="Nombre">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="field-text" name="email" placeholder="Correo">
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="field-text" name="subject" placeholder="Teléfono">
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <input type="text" class="field-text" name="subject" placeholder="Detalles">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button type="submit" class="awe-btn awe-btn-13">Enviar</button>
+                                    </div>
+                                </div>
+                                <div id="contact-content"></div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END / CONTACT -->
 
 <?= $this->endSection() ?>
 
